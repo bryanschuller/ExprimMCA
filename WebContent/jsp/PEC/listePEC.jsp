@@ -31,17 +31,19 @@
 	<H2>
 		<div class="texteH">Documentation</div>
 	</H2>
-	<div id="EXC_PRESENT_DATA_1">		
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="box box-mca-yellow">	
 	
-	<exged:listeDocExged name="DocSaisiePOW" 
-		userCode="USER_STD" loadCode="LOAD_00000000202"
-		styleClass1="LIGNE_A" styleClass2="LIGNE_B">		
-						
-		<exged:paramSearchExged paramName="TYPE_TIERS_OK" />	
-		
-	</exged:listeDocExged>	
-							
-				
+				<exged:listeDocExged name="DocSaisiePOW" 
+					userCode="USER_STD" loadCode="LOAD_00000000202"
+					styleClass1="LIGNE_A" styleClass2="LIGNE_B">		
+									
+					<exged:paramSearchExged paramName="TYPE_TIERS_OK" />	
+					
+				</exged:listeDocExged>	
+			</div>
+		</div>		
 	</div>				
 </div>	
 </td></tr></table>	
@@ -92,52 +94,54 @@
 
 <logic:notEmpty name="listePEC">
 
-	<div id="EXC_PRESENT_DATA_1">
-	
-		<layout:panel  styleClass="EXC_NONE" key="" width="98%" align="center">	
-		<layout:pager linksLocation ="top" maxPageItems ="25"  styleClass="PAGER">
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box box-mca-yellow">
+			<layout:panel  styleClass="EXC_NONE" key="" width="98%" align="center">	
+			<layout:pager linksLocation ="top" maxPageItems ="25"  styleClass="PAGER">
 
-		<layout:collection name="listePEC" property="lstPEC" id="pec" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B" >
-			<layout:collectionItem title="Date de création" property="dateCreation" type="dateYMD" sortable="true"/>
-			<layout:collectionItem title="Type" property="typePEC" type="typePEC" sortable="true"/>
-			<layout:collectionItem title="Adhérent" property="designationAdh" sortable="true"/>
-			<layout:collectionItem title="Net TTC" property="mntFacture" type="money_euro" sortable="true"/>
-			<layout:collectionItem title="PEC MCA" property="mntPrisEnCharge" type="money_euro" sortable="true"/>
-			<layout:collectionItem title="Date d'état" property="dateEtat" type="dateYMD" sortable="true"/>
-			<layout:collectionItem title="Etat" property="etatLib" sortable="true"/>
-			<layout:collectionItem title="">
-			<logic:equal name="pec" property="etat" value="">
-				<a href="<%= (String) request.getContextPath() %>/annulerPEC.do?numPEC=<bean:write name="pec" property="numPEC"/>"><layout:message key="pec.libelle.annuler" /></a>
-			</logic:equal>	
-			<logic:notEqual name="pec" property="etat" value="">
-				<%	isBefore = false;	%>
-				<logic:equal name="pec" property="isAnnulable" value="O">
+			<layout:collection name="listePEC" property="lstPEC" id="pec" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B" >
+				<layout:collectionItem title="Date de création" property="dateCreation" type="dateYMD" sortable="true"/>
+				<layout:collectionItem title="Type" property="typePEC" type="typePEC" sortable="true"/>
+				<layout:collectionItem title="Adhérent" property="designationAdh" sortable="true"/>
+				<layout:collectionItem title="Net TTC" property="mntFacture" type="money_euro" sortable="true"/>
+				<layout:collectionItem title="PEC MCA" property="mntPrisEnCharge" type="money_euro" sortable="true"/>
+				<layout:collectionItem title="Date d'état" property="dateEtat" type="dateYMD" sortable="true"/>
+				<layout:collectionItem title="Etat" property="etatLib" sortable="true"/>
+				<layout:collectionItem title="">
+				<logic:equal name="pec" property="etat" value="">
 					<a href="<%= (String) request.getContextPath() %>/annulerPEC.do?numPEC=<bean:write name="pec" property="numPEC"/>"><layout:message key="pec.libelle.annuler" /></a>
-					<%	isBefore = true;	%>
-				</logic:equal>
-				<logic:equal name="pec" property="isFacturable" value="O">
+				</logic:equal>	
+				<logic:notEqual name="pec" property="etat" value="">
+					<%	isBefore = false;	%>
+					<logic:equal name="pec" property="isAnnulable" value="O">
+						<a href="<%= (String) request.getContextPath() %>/annulerPEC.do?numPEC=<bean:write name="pec" property="numPEC"/>"><layout:message key="pec.libelle.annuler" /></a>
+						<%	isBefore = true;	%>
+					</logic:equal>
+					<logic:equal name="pec" property="isFacturable" value="O">
+						<%	if (true == isBefore) { %> - <% } %>
+						<a href="<%= (String) request.getContextPath() %>/facturerPEC.do?numPEC=<bean:write name="pec" property="numPEC"/>"><layout:message key="pec.libelle.facturer" /></a>
+						<%	isBefore = true;	%>
+					</logic:equal>
 					<%	if (true == isBefore) { %> - <% } %>
-					<a href="<%= (String) request.getContextPath() %>/facturerPEC.do?numPEC=<bean:write name="pec" property="numPEC"/>"><layout:message key="pec.libelle.facturer" /></a>
-					<%	isBefore = true;	%>
-				</logic:equal>
-				<%	if (true == isBefore) { %> - <% } %>
-				<a href="<%= (String) request.getContextPath() %>/detailPEC.do?numPEC=<bean:write name="pec" property="numPEC"/>"><layout:message key="pec.libelle.detail" /></a>
-				<logic:notEqual name="pec" property="etat" value="R">
-					 - <a href="<%= (String) request.getContextPath() %>/imprimerPEC.do?numPEC=<bean:write name="pec" property="numPEC"/>"><layout:message key="pec.libelle.imprimer" /></a>
-				</logic:notEqual>	
-			</logic:notEqual>
-			</layout:collectionItem>
-		</layout:collection>
-	
-		<layout:row> 
-		    <layout:pagerStatus key="pager.status.pager"/> 
-		    <layout:pagerStatus key="pager.status.items.pec"/> 
-		</layout:row> 
+					<a href="<%= (String) request.getContextPath() %>/detailPEC.do?numPEC=<bean:write name="pec" property="numPEC"/>"><layout:message key="pec.libelle.detail" /></a>
+					<logic:notEqual name="pec" property="etat" value="R">
+						 - <a href="<%= (String) request.getContextPath() %>/imprimerPEC.do?numPEC=<bean:write name="pec" property="numPEC"/>"><layout:message key="pec.libelle.imprimer" /></a>
+					</logic:notEqual>	
+				</logic:notEqual>
+				</layout:collectionItem>
+			</layout:collection>
 		
-		</layout:pager>
-		</layout:panel>
-	
+			<layout:row> 
+			    <layout:pagerStatus key="pager.status.pager"/> 
+			    <layout:pagerStatus key="pager.status.items.pec"/> 
+			</layout:row> 
+			
+			</layout:pager>
+			</layout:panel>
+		</div>
 	</div>
+</div>
 
 <br>
 </logic:notEmpty>

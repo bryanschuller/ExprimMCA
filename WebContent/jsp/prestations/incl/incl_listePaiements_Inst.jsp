@@ -31,21 +31,24 @@
 				<div class="headerContPaie">
 					
 				</div>	
-				<div id="EXC_PRESENT_DATA_1">		
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="box box-mca-yellow">
 				
-					<layout:collection name="paiementInst" id="listPresta" title="" property="listePresta" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >			  
-					 
-						<layout:collectionItem title="paie.benef.soins" property="NPNBEN" style="text-align:left;"/>
-						<layout:collectionItem title="paie.nature" property="PRESTA" style="text-align:left;"/>
-						<layout:collectionItem title="paie.date" property="DATPRE"/>
-						<layout:collectionItem title="paie.honoraire" property="HONO" style="text-align:right;" type="money"/>
-						<layout:collectionItem title="paie.base" property="BASE" style="text-align:right;" type="money"/>
-						<layout:collectionItem title="paie.taux" property="TAUX" style="text-align:right;" type="pourcent_entier"/> 
-						<layout:collectionItem title="paie.remb.ss" property="RBSECU" style="text-align:right;" type="money"/>
-						<layout:collectionItem title="paie.remb.mut" property="RBMUT" style="text-align:right;" type="money"/>
-					
-					</layout:collection>		
-				
+							<layout:collection name="paiementInst" id="listPresta" title="" property="listePresta" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >			  
+							 
+								<layout:collectionItem title="paie.benef.soins" property="NPNBEN" style="text-align:left;"/>
+								<layout:collectionItem title="paie.nature" property="PRESTA" style="text-align:left;"/>
+								<layout:collectionItem title="paie.date" property="DATPRE"/>
+								<layout:collectionItem title="paie.honoraire" property="HONO" style="text-align:right;" type="money"/>
+								<layout:collectionItem title="paie.base" property="BASE" style="text-align:right;" type="money"/>
+								<layout:collectionItem title="paie.taux" property="TAUX" style="text-align:right;" type="pourcent_entier"/> 
+								<layout:collectionItem title="paie.remb.ss" property="RBSECU" style="text-align:right;" type="money"/>
+								<layout:collectionItem title="paie.remb.mut" property="RBMUT" style="text-align:right;" type="money"/>
+							
+							</layout:collection>
+						</div>
+					</div>
 				</div>
 			
 			</div>

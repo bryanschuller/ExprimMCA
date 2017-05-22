@@ -5,7 +5,9 @@
 <table class="FORM_BEN" width="90%" align="center">
 <tr><td colspan="2">
 	
-	<div id="EXC_PRESENT_DATA_1">
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box box-mca-yellow">
 		<layout:collection name="lEmails" id="lEmails" title=""
 			styleClass="LIGNE_A" styleClass2="LIGNE_B" >
 				

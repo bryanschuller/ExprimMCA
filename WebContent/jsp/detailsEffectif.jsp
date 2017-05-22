@@ -85,47 +85,49 @@
 	</H2>
 	
 	
-	<div id="EXC_PRESENT_DATA_1">
-		<layout:panel  styleClass="EXC_NONE" key="" width="100%" align="center">
-			<layout:pager linksLocation ="top" maxPageItems ="25"  styleClass="PAGER" > 
-			
-			
-			
-				<layout:collection name="detailEffectifsEntreprise" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B" >
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box box-mca-yellow">
+			<layout:panel  styleClass="EXC_NONE" key="" width="100%" align="center">
+				<layout:pager linksLocation ="top" maxPageItems ="25"  styleClass="PAGER" > 
 				
-					<layout:collectionItem  title="N° Adh." property="numAdherent" style="text-align:right;" />
-					<layout:collectionItem  title="Rang" property="rangBenef" type="rang" />
-					<layout:collectionItem  title="Nom" property="nomPrenom" style="text-align:left;" />
-					<layout:collectionItem  title="N° SS" property="numRO" type="numSS" />
-					<layout:collectionItem  title="Date Nais." property="dateNaissance" type="dateYMD" />
-					<layout:collectionItem  title="Rég." property="regOblig" />
-					<layout:collectionItem  title="Effet Ctr." property="effetContrat" type="dateYMD" />
-					<layout:collectionItem  title="Fin Ctr." property="finContrat" type="dateYMD" />
 				
+				
+					<layout:collection name="detailEffectifsEntreprise" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B" >
 					
-				</layout:collection>
-			
-			
-				<logic:notEqual name="filtresEffectifs" property="benefResume" value="O">
+						<layout:collectionItem  title="N° Adh." property="numAdherent" style="text-align:right;" />
+						<layout:collectionItem  title="Rang" property="rangBenef" type="rang" />
+						<layout:collectionItem  title="Nom" property="nomPrenom" style="text-align:left;" />
+						<layout:collectionItem  title="N° SS" property="numRO" type="numSS" />
+						<layout:collectionItem  title="Date Nais." property="dateNaissance" type="dateYMD" />
+						<layout:collectionItem  title="Rég." property="regOblig" />
+						<layout:collectionItem  title="Effet Ctr." property="effetContrat" type="dateYMD" />
+						<layout:collectionItem  title="Fin Ctr." property="finContrat" type="dateYMD" />
+					
+						
+					</layout:collection>
 				
-					<layout:row> 
-					    <layout:pagerStatus key="pager.status.pager" /> 
-					    <layout:pagerStatus key="pager.status.items.chef"/> 
-					</layout:row>
-				 
-				</logic:notEqual>
 				
-				<logic:equal name="filtresEffectifs" property="benefResume" value="O">
+					<logic:notEqual name="filtresEffectifs" property="benefResume" value="O">
+					
+						<layout:row> 
+						    <layout:pagerStatus key="pager.status.pager" /> 
+						    <layout:pagerStatus key="pager.status.items.chef"/> 
+						</layout:row>
+					 
+					</logic:notEqual>
+					
+					<logic:equal name="filtresEffectifs" property="benefResume" value="O">
+					
+						<layout:row> 
+						    <layout:pagerStatus key="pager.status.pager" /> 
+						    <layout:pagerStatus key="pager.status.items.assure"/> 
+						</layout:row>
+					 
+					</logic:equal>
 				
-					<layout:row> 
-					    <layout:pagerStatus key="pager.status.pager" /> 
-					    <layout:pagerStatus key="pager.status.items.assure"/> 
-					</layout:row>
-				 
-				</logic:equal>
-			
-			</layout:pager>
-		</layout:panel>
+				</layout:pager>
+			</layout:panel>
 	</div>
 
 </logic:notEmpty>

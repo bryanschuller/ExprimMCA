@@ -60,7 +60,7 @@ if(null == internaute){
     -->
 
     <!-- Main content -->
-    <section class="content container-fluid">
+    <section class="content">
       <tiles:insert attribute="body" />
     </section>
     <!-- /.content -->

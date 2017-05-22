@@ -54,27 +54,29 @@
 					<layout:write name="paiementEff" property="NOMPRENOM"  layout="false" />
 					</logic:notEqual>
 				</div>
-				<div id="EXC_PRESENT_DATA_1">
-								
-					<!--  TABLEAU DES LIGNES -->
-					<layout:collection name="paiementEff" id="listPresta" title="" property="listePrestations" styleClass="LIGNE_A" styleClass2="LIGNE_B">
-						 
-						<layout:collectionItem title="paie.benef.soins" property="NPNBEN" style="text-align:left;"/>
-						<layout:collectionItem title="paie.nature" property="PRESTA" style="text-align:left;"/>
-						<layout:collectionItem title="paie.date" property="DATPRE"/>
-						<layout:collectionItem title="paie.honoraire" property="HONO" style="text-align:right;" type="money"/>
-						<layout:collectionItem title="paie.base" property="BASE" style="text-align:right;" type="money"/>
-						<layout:collectionItem title="paie.taux" property="TAUX" style="text-align:right;" type="pourcent_negatif"/> 
-						<layout:collectionItem title="paie.remb.ss" property="RBSECU" style="text-align:right;" type="money"/>
-						<layout:collectionItem title="paie.remb.mut" property="RBMUT" style="text-align:right;" type="money"/>
-					
-					</layout:collection>
-					
-					<!-- TEXTE ASSOCIE AU DECOMPTE  -->
-					<div>
-					 	<layout:write name="paiementEff" property="REMARQUE"  layout="false" />
-					</div>
-				
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="box box-mca-yellow">
+							<!--  TABLEAU DES LIGNES -->
+							<layout:collection name="paiementEff" id="listPresta" title="" property="listePrestations" styleClass="LIGNE_A" styleClass2="LIGNE_B">
+								 
+								<layout:collectionItem title="paie.benef.soins" property="NPNBEN" style="text-align:left;"/>
+								<layout:collectionItem title="paie.nature" property="PRESTA" style="text-align:left;"/>
+								<layout:collectionItem title="paie.date" property="DATPRE"/>
+								<layout:collectionItem title="paie.honoraire" property="HONO" style="text-align:right;" type="money"/>
+								<layout:collectionItem title="paie.base" property="BASE" style="text-align:right;" type="money"/>
+								<layout:collectionItem title="paie.taux" property="TAUX" style="text-align:right;" type="pourcent_negatif"/> 
+								<layout:collectionItem title="paie.remb.ss" property="RBSECU" style="text-align:right;" type="money"/>
+								<layout:collectionItem title="paie.remb.mut" property="RBMUT" style="text-align:right;" type="money"/>
+							
+							</layout:collection>
+							
+							<!-- TEXTE ASSOCIE AU DECOMPTE  -->
+							<div>
+							 	<layout:write name="paiementEff" property="REMARQUE"  layout="false" />
+							</div>
+						</div>
+					</div>				
 				</div> 
 				<!-- SEPARATEUR  pour impression-->
 				<%-- <div height="10px">

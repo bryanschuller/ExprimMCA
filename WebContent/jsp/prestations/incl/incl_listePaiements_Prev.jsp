@@ -59,21 +59,25 @@
 					</logic:iterate>
 					
 				</div>	
-				<div id="EXC_PRESENT_DATA_1">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="box box-mca-yellow">
 				
-					<layout:collection name="paiementPrev" id="listeSoins" title="" property="listePrestations" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >
-					  				 
-						<layout:collectionItem title="paie.benef.soins" property="nomBenef" style="text-align:left;"/>
-						<layout:collectionItem title="paie.garantie" property="libGarantie" style="text-align:left;"/>
-						<layout:collectionItem title="paie.presta.du" property="prestaDu" style="text-align:right;" type="dateYMD"/>
-						<layout:collectionItem title="paie.presta.au" property="prestaAu" style="text-align:right;" type="dateYMD"/>
-						<layout:collectionItem title="paie.montant.presta" property="mntPresta" style="text-align:right;" type="money"/>
-						<layout:collectionItem title="Situation Administrative" property="libSituAdmin" style="text-align:left;"/> 
-						<layout:collectionItem title="paie.presta.du" property="situDu" style="text-align:right;" type="dateYMD"/>
-						<layout:collectionItem title="paie.presta.au" property="situAu" style="text-align:right;" type="dateYMD"/>
-					
-					</layout:collection>
+							<layout:collection name="paiementPrev" id="listeSoins" title="" property="listePrestations" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >
+							  				 
+								<layout:collectionItem title="paie.benef.soins" property="nomBenef" style="text-align:left;"/>
+								<layout:collectionItem title="paie.garantie" property="libGarantie" style="text-align:left;"/>
+								<layout:collectionItem title="paie.presta.du" property="prestaDu" style="text-align:right;" type="dateYMD"/>
+								<layout:collectionItem title="paie.presta.au" property="prestaAu" style="text-align:right;" type="dateYMD"/>
+								<layout:collectionItem title="paie.montant.presta" property="mntPresta" style="text-align:right;" type="money"/>
+								<layout:collectionItem title="Situation Administrative" property="libSituAdmin" style="text-align:left;"/> 
+								<layout:collectionItem title="paie.presta.du" property="situDu" style="text-align:right;" type="dateYMD"/>
+								<layout:collectionItem title="paie.presta.au" property="situAu" style="text-align:right;" type="dateYMD"/>
 							
+							</layout:collection>
+
+						</div>
+					</div>
 				</div>
 			</div>
 			<div>

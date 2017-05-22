@@ -89,61 +89,63 @@
 	
 	<br>
 	
-	<div id="EXC_PRESENT_DATA_1">
-		<p class="LIGNE_A"></p><table cellspacing="0" cellpadding="0" border="0" align="CENTER" class="LIGNE_A"><tr><td valign="top"><table cellspacing="1" cellpadding="1" border="0" width="100%">
-		<tr valign="top">
-			<th class="ON_LEFT"></th>
-			<th class="LIGNE_A">Code LPP</th>
-			<th class="LIGNE_A">Net TTC</th>
-			<th class="LIGNE_A">Taux RO</th>
-			<th class="LIGNE_A">Remb. RO</th>
-			<th class="LIGNE_A">PEC MCA</th>
-			<th class="LIGNE_A">Reste à charge</th>
-			<th class="ON_RIGHT"></th>
-		</tr>
-			<%	String actClass = "LIGNE_A"; %>
-			<logic:iterate name="ActPECDetail" property="lstLignes" id="lgnPec" >
-				<%	if (actClass.equals("LIGNE_A")) {actClass = "LIGNE_B";} else {actClass = "LIGNE_A";} %>
-				<tr>		
-						 <logic:notEqual name="lgnPec" property="codeFormatage" value="TOTAL">
-						
-							<th class="ON_LEFT"><layout:write name="lgnPec" property="libNature" layout="false"/></th>
-							<td class="<%= actClass %>"><layout:write name="lgnPec" property="codeLPP" layout="false"/></td>
-							<td class="<%= actClass %>"><layout:write name="lgnPec" property="mntFacture" type="money" layout="false"/> &euro;</td>
-							<td class="<%= actClass %>"><layout:write name="lgnPec" property="tauxRO" type="pourcent_entier" layout="false"/></td>
-							<td class="<%= actClass %>"><layout:write name="lgnPec" property="rembRO" type="money" layout="false"/> &euro;</td>
-							<td class="<%= actClass %>"><layout:write name="lgnPec" property="rembMut" type="money" layout="false"/> &euro;</td>
-							<td class="<%= actClass %>"><layout:write name="lgnPec" property="resteACharge" type="money" layout="false"/> &euro;</td>
-							<logic:equal name="lgnPec" property="codeFormatage" value="">
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box box-mca-yellow">
+			<p class="LIGNE_A"></p><table cellspacing="0" cellpadding="0" border="0" align="CENTER" class="LIGNE_A"><tr><td valign="top"><table cellspacing="1" cellpadding="1" border="0" width="100%">
+			<tr valign="top">
+				<th class="ON_LEFT"></th>
+				<th class="LIGNE_A">Code LPP</th>
+				<th class="LIGNE_A">Net TTC</th>
+				<th class="LIGNE_A">Taux RO</th>
+				<th class="LIGNE_A">Remb. RO</th>
+				<th class="LIGNE_A">PEC MCA</th>
+				<th class="LIGNE_A">Reste à charge</th>
+				<th class="ON_RIGHT"></th>
+			</tr>
+				<%	String actClass = "LIGNE_A"; %>
+				<logic:iterate name="ActPECDetail" property="lstLignes" id="lgnPec" >
+					<%	if (actClass.equals("LIGNE_A")) {actClass = "LIGNE_B";} else {actClass = "LIGNE_A";} %>
+					<tr>		
+							 <logic:notEqual name="lgnPec" property="codeFormatage" value="TOTAL">
+							
+								<th class="ON_LEFT"><layout:write name="lgnPec" property="libNature" layout="false"/></th>
+								<td class="<%= actClass %>"><layout:write name="lgnPec" property="codeLPP" layout="false"/></td>
+								<td class="<%= actClass %>"><layout:write name="lgnPec" property="mntFacture" type="money" layout="false"/> &euro;</td>
+								<td class="<%= actClass %>"><layout:write name="lgnPec" property="tauxRO" type="pourcent_entier" layout="false"/></td>
+								<td class="<%= actClass %>"><layout:write name="lgnPec" property="rembRO" type="money" layout="false"/> &euro;</td>
+								<td class="<%= actClass %>"><layout:write name="lgnPec" property="rembMut" type="money" layout="false"/> &euro;</td>
+								<td class="<%= actClass %>"><layout:write name="lgnPec" property="resteACharge" type="money" layout="false"/> &euro;</td>
+								<logic:equal name="lgnPec" property="codeFormatage" value="">
+									<th class="ON_RIGHT"><layout:write name="lgnPec" property="message" layout="false"/></th>	
+								</logic:equal>
+								<logic:equal name="lgnPec" property="codeFormatage" value="PARTIEL">
+									<th class="ON_RIGHT" style="color: #FF4500;"><layout:write name="lgnPec" property="message" layout="false"/></th>	
+								</logic:equal>
+								<logic:equal name="lgnPec" property="codeFormatage" value="ERREUR">
+									<th class="ON_RIGHT" style="color: #FF0000;"><layout:write name="lgnPec" property="message" layout="false"/></th>	
+								</logic:equal>
+							</logic:notEqual>	
+							
+							<logic:equal name="lgnPec" property="codeFormatage" value="TOTAL">
+							
+								<th class="ON_LEFT"></th>
+								<th class="TOTAL"><layout:write name="lgnPec" property="libNature" layout="false"/></th>
+								<th class="TOTAL"><layout:write name="lgnPec" property="mntFacture" type="money" layout="false"/> &euro;</th>
+								<th class="TOTAL"></th>
+								<th class="TOTAL"><layout:write name="lgnPec" property="rembRO" type="money" layout="false"/> &euro;</th>
+								<th class="TOTAL"><layout:write name="lgnPec" property="rembMut" type="money" layout="false"/> &euro;</th>
+								<th class="TOTAL"><layout:write name="lgnPec" property="resteACharge" type="money" layout="false"/> &euro;</th>
 								<th class="ON_RIGHT"><layout:write name="lgnPec" property="message" layout="false"/></th>	
-							</logic:equal>
-							<logic:equal name="lgnPec" property="codeFormatage" value="PARTIEL">
-								<th class="ON_RIGHT" style="color: #FF4500;"><layout:write name="lgnPec" property="message" layout="false"/></th>	
-							</logic:equal>
-							<logic:equal name="lgnPec" property="codeFormatage" value="ERREUR">
-								<th class="ON_RIGHT" style="color: #FF0000;"><layout:write name="lgnPec" property="message" layout="false"/></th>	
-							</logic:equal>
-						</logic:notEqual>	
 						
-						<logic:equal name="lgnPec" property="codeFormatage" value="TOTAL">
-						
-							<th class="ON_LEFT"></th>
-							<th class="TOTAL"><layout:write name="lgnPec" property="libNature" layout="false"/></th>
-							<th class="TOTAL"><layout:write name="lgnPec" property="mntFacture" type="money" layout="false"/> &euro;</th>
-							<th class="TOTAL"></th>
-							<th class="TOTAL"><layout:write name="lgnPec" property="rembRO" type="money" layout="false"/> &euro;</th>
-							<th class="TOTAL"><layout:write name="lgnPec" property="rembMut" type="money" layout="false"/> &euro;</th>
-							<th class="TOTAL"><layout:write name="lgnPec" property="resteACharge" type="money" layout="false"/> &euro;</th>
-							<th class="ON_RIGHT"><layout:write name="lgnPec" property="message" layout="false"/></th>	
-					
-						</logic:equal>
-						
-				</tr>
-			</logic:iterate>
-		</table></td></tr></table>
-		
+							</logic:equal>
+							
+					</tr>
+				</logic:iterate>
+			</table></td></tr></table>
+		</div>
 	</div>
-
+</div>
 
 </logic:present>
 

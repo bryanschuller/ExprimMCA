@@ -21,66 +21,69 @@ request.setAttribute("Numiterate", "0");
 <br/><br/>
 
 
-<div id="EXC_PRESENT_DATA_1">
-<layout:panel  styleClass="EXC_NONE" key="" width="98%" align="center">
-<layout:pager linksLocation ="top" maxPageItems ="10"  styleClass="PAGER">
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box box-mca-yellow">
+      <layout:panel  styleClass="EXC_NONE" key="" width="98%" align="center">
+      <layout:pager linksLocation ="top" maxPageItems ="10"  styleClass="PAGER">
 
-<layout:collection name="lstDetsuivi" width="100%" id="lstrecap" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >
- 
-<logic:equal  name ="Numiterate" value ="0" scope="request">
-<layout:collectionItem title="suivi.option"  />
-<layout:collectionItem title="appcot.numeroappel" />
-<layout:collectionItem title="appcot.famille" />
-<layout:collectionItem title="appcot.garantie"  />
-<layout:collectionItem title="appcot.periode"  />
-<layout:collectionItem title="appcot.montant"  />
-<layout:collectionItem title="appcot.regularisation"  />
-<layout:collectionItem title="appcot.total" width="75px" />
-</logic:equal>
+      <layout:collection name="lstDetsuivi" width="100%" id="lstrecap" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >
+       
+      <logic:equal  name ="Numiterate" value ="0" scope="request">
+      <layout:collectionItem title="suivi.option"  />
+      <layout:collectionItem title="appcot.numeroappel" />
+      <layout:collectionItem title="appcot.famille" />
+      <layout:collectionItem title="appcot.garantie"  />
+      <layout:collectionItem title="appcot.periode"  />
+      <layout:collectionItem title="appcot.montant"  />
+      <layout:collectionItem title="appcot.regularisation"  />
+      <layout:collectionItem title="appcot.total" width="75px" />
+      </logic:equal>
 
-<logic:notEqual  name ="Numiterate" value ="0" scope="request">
+      <logic:notEqual  name ="Numiterate" value ="0" scope="request">
 
-<layout:collectionItem title="suivi.option" >
+      <layout:collectionItem title="suivi.option" >
 
-<logic:equal  name ="mode" value ="V" scope="request">
-<a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>"> Visualiser </a>
-</logic:equal>
+      <logic:equal  name ="mode" value ="V" scope="request">
+      <a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>"> Visualiser </a>
+      </logic:equal>
 
-<logic:equal  name ="mode" value ="M" scope="request">
-<a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>"> Modifier </a>
-</logic:equal>
-
-
-</layout:collectionItem>
+      <logic:equal  name ="mode" value ="M" scope="request">
+      <a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>"> Modifier </a>
+      </logic:equal>
 
 
-<layout:collectionItem title="appcot.numeroappel" property="WB2APP"/>
-<layout:collectionItem title="appcot.famille" property="WB2FAM" />
-<layout:collectionItem title="appcot.garantie" property="WB2GAR"/>
-<layout:collectionItem title="appcot.periode" property="WLIBPER" />
-<layout:collectionItem title="appcot.montant" property="WB2MNT" type="money" style="text-align:right;"/>
-<layout:collectionItem title="appcot.regularisation" property="WB2REG" type="money" style="text-align:right;"/>
-<layout:collectionItem title="appcot.total" property="WMNTNET" type="money" style="text-align:right;"/>
+      </layout:collectionItem>
 
-</logic:notEqual>
 
-<%
+      <layout:collectionItem title="appcot.numeroappel" property="WB2APP"/>
+      <layout:collectionItem title="appcot.famille" property="WB2FAM" />
+      <layout:collectionItem title="appcot.garantie" property="WB2GAR"/>
+      <layout:collectionItem title="appcot.periode" property="WLIBPER" />
+      <layout:collectionItem title="appcot.montant" property="WB2MNT" type="money" style="text-align:right;"/>
+      <layout:collectionItem title="appcot.regularisation" property="WB2REG" type="money" style="text-align:right;"/>
+      <layout:collectionItem title="appcot.total" property="WMNTNET" type="money" style="text-align:right;"/>
 
-request.setAttribute("Numiterate", "1");
+      </logic:notEqual>
 
-%>
+      <%
 
-</layout:collection>
+      request.setAttribute("Numiterate", "1");
 
-<layout:row> 
-    <layout:pagerStatus key="pager.status.pager" /> 
-    <layout:pagerStatus key="pager.status.items"/> 
-</layout:row> 
+      %>
 
-</layout:pager>
-</layout:panel>
+      </layout:collection>
+
+      <layout:row> 
+          <layout:pagerStatus key="pager.status.pager" /> 
+          <layout:pagerStatus key="pager.status.items"/> 
+      </layout:row> 
+
+      </layout:pager>
+      </layout:panel>
+    </div>
+  </div>
 </div>
-
 
 
 
