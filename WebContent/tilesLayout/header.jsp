@@ -2,12 +2,9 @@
 <%@ include file="/declaration/taglibs.jsp"%>
 <%@ page import="java.util.Calendar" %>
 
-<div style="position:absolute; left:-300px;" class="pay_vis">
-
+<!-- div style="position:absolute; left:-300px;" class="pay_vis">
 	<img border="0" alt="MCA à Strasbourg" src="<%= (String)request.getContextPath()  %>/images/bandeau_site_MCA_v3.fw.png">
-			
-</div> 
-
+</div --> 
 
 <%
 	Calendar cal=Calendar.getInstance();
@@ -15,16 +12,14 @@
 	int mois = cal.get(Calendar.MONTH) + 1;
 	String todayA = "Le " + cal.get(Calendar.DAY_OF_MONTH) + "/" + mois + "/" + cal.get(Calendar.YEAR);
 %>
-	
-<div style="position:absolute; left:0;" class="pay_mask_imp">
 
-	<table><tr><td>		
-		<img border="0" align="left" alt="MCA à Strasbourg" 
-		height="100" width="321" 
-		src="<%= (String)request.getContextPath()  %>/images/FromMCA/LOGOQ_RNM.bmp">
-	</td><td>
-	
-	
+<a href="/extranet/" class="logo" ></a>
+<nav class="navbar navbar-static-top" role="navigation">
+	<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+	    <span class="sr-only">Toggle navigation</span>
+	</a>
+	<p class="navbar-text">
+	<!--
 		<logic:present name="internaute">
 			<div id="EXC_MESSAGE_INFO" style="margin-left:50px; width:350px;">
 				<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" class="pay_mask_imp">
@@ -43,6 +38,26 @@
 			    </table>
 		    </div>
 		</logic:present>
+	-->
+        <small class="page-subtitle"></small>
+    </p>
+
+    <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav"></ul>
+    </div>
+</nav>
+	
+<div style="position:absolute; left:0;" class="pay_mask_imp">
+
+	<table>
+		<tr><td>		
+			<img border="0" align="left" alt="MCA à Strasbourg" 
+			height="100" width="321" 
+			src="<%= (String)request.getContextPath()  %>/images/FromMCA/LOGOQ_RNM.bmp">
+		</td><td>
+	
+	
+
 	</td></tr></table>
 	
 </div> 
