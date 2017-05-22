@@ -1,0 +1,561 @@
+
+
+BODY 	{
+
+color : #000000;
+font-family : Arial, Helvetica, sans-serif;
+scrollbar-3d-light-color : #FFFFFF;
+scrollbar-arrow-color : #FFFFFF;
+scrollbar-base-color : #FFFFFF;
+scrollbar-dark-shadow-color : #FFFFFF;
+scrollbar-face-color : #FFFFFF;
+scrollbar-highlight-color : #FFFFFF;
+scrollbar-shadow-color : #FFFFFF;
+
+	
+	
+}
+
+
+
+/*	Barre d etat	*/
+.INFOLINE {
+	background-color: #FFEFCF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #231F20;
+	font-weight: bold;
+	height: 22px;
+}
+.INFOLINE_LOGIN {
+	background-color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #231F20;
+	font-weight: bold;
+	height: 22px;
+}
+
+/*	BOUTTONS	*/
+
+INPUT.BOUT1{
+	display:	none;
+}
+
+/*	pages LOGIN, changePSW, changeMAIL, gestionAdresse	*/
+.LOGIN_BACKG{
+	background-color: #FFEFCF;
+	height:100%;
+	vertical-align: middle;
+	
+}
+TABLE.LOGIN_FORM{
+	border: 1px solid #FFFFFF;
+	background-color: #FDB913;
+}
+TD.LOGIN_FORM{
+
+}
+.LOGIN_LABEL{
+	font-size: 12px;
+}
+.ADRESSE_LABEL {
+	width : 60px;
+	vertical-align : top;
+}
+.ADRESSE_DONNEES {
+	text-align : left;
+}
+/*	fin	*/
+
+
+/*	pages MSG	*/
+.BACKG{
+	 height:100%;
+	 vertical-align:top;
+}
+.ENTETE{
+	background-color: #FDB913;
+	border:0;
+	font-weight: bold; 
+	font-size: 11px;
+}
+TABLE.CORPS_MSG{
+	background-color: #FFEFCF;
+	text-align: center;
+	font-size: 11px;
+	border: 1px solid #FFFFFF;
+}
+TABLE.CORPS_MSG TH{
+	background-color: #FFEFCF;
+	text-align: right;
+	font-size: 11px;
+}
+TABLE.CORPS_MSG TD{
+	background-color: #FFEFCF;
+	font-size: 11px;
+}
+TABLE.CORPS_DONNE{
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 11px;
+	border: 1px solid #FFFFFF;
+}
+TABLE.SOUS_CORPS_DONNE{
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 11px;
+	
+}
+TABLE.CORPS_TOTAL{
+	background-color: #FFFFFF;
+	font-size: 9px;
+}
+TABLE.CORPS_TOTAL TH{
+	text-align: left;
+}
+TABLE.CORPS_TOTAL TD{
+	text-align: right;
+}
+TABLE.DONNE{
+	background-color: #231F20;
+}
+TH.DONNE{
+	background-color: #FDB913;
+	font-size: 11px;
+	font-weight: bold;
+}
+TD.DONNE{
+	background-color: #FFD98F;
+	text-align: center;
+	font-size: 11px;
+}
+TD.DONNE_INTER{
+	background-color: #FFEFCF;
+	text-align: center;
+	font-size: 11px;
+}
+TABLE.TOTAL {
+	background-color :  #FFFFFF;
+}
+
+TABLE.TOTAL TD {
+	background-color :  #FFEFCF;
+	text-align: right;
+	font-size: 11px; 
+    font-weight:bold;
+}
+
+TABLE.TOTAL TH {
+	background-color :  #FFFFFF;
+	color :#FDB913;
+	text-align: left;
+	font-size: 11px; 
+	font-weight:bold;
+}
+.SEPARATOR{
+	background-color : #FDB913;
+	height: 1px;
+	font-size: 1px;
+}
+
+
+
+
+select { font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ background-color: #FFEFCF;
+  border: #000000;
+  border-style: solid;
+   border-top-width: 1px;
+ border-right-width: 1px;
+  border-bottom-width: 1px;
+   border-left-width: 1px;
+   }
+
+
+
+
+
+
+
+
+/* definition des liens */
+
+
+A { color : #000000; 
+	text-decoration: none; 
+}
+
+A:link {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color : #000000;
+	font-size: 10px;
+	font-style: normal;
+}
+
+A:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color : #000000;
+	font-weight: bold;
+}
+A:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color : #000000;
+}
+
+
+
+
+
+/* Skin2  - Struts MCA Application */
+
+P.LABEL {
+	text-decoration: none;
+	color : #000000;
+	text-align : left;
+}
+
+TH.LABEL {
+	text-decoration: none;
+	color : #000000;
+}
+
+H3 {
+	color : #000000;
+}
+
+
+
+P.SUBSCRIPTION {
+	text-decoration: none;
+	color : #000000;
+}
+TABLE.SUBSCRIPTION {
+		background-color : #000000;
+}
+TH.SUBSCRIPTION {
+		color : #000000;
+		background-color : #274465;
+		font-weight: bold;			
+}
+TD.SUBSCRIPTION {
+		color : #000000;
+		background-color : #336699;
+}
+
+
+P.SUBS {
+		  color : #000000;
+		  font-weight : bold;
+		  text-align : center;
+}
+
+TABLE.SUBS {		
+		background-color : #274465;
+		border-collapse: collapse;	
+}
+TABLE.subs2 {
+		background-color : #000000;
+}
+
+
+
+TH.SUBS {
+		color : #000000;
+		background-color : #274465;
+		font-weight: bold;			
+		text-align: center; 
+		font-family: arial;
+}
+
+TR.SUBS {
+		background-color : #3366A3;
+}
+
+
+TD.SUBS {
+		color : #000000;
+		background-color : #3366A3;
+}
+
+
+
+
+TD.ERROR {
+	background-color : #ED4F50;
+	text-decoration: none;
+}
+
+
+
+.PAGER {
+	background-color :  #F1F1F3; 
+	text-align: center;
+	text-decoration: none;
+	font-size: 11px;
+	font-weight: bold;
+	color : #000000;
+}
+
+A:link.PAGER  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color : #000000;
+	font-size: 11px;
+	font-style: normal;
+}
+
+A:visited.PAGER  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color : #000000;
+	font-weight: bold;
+}
+A:hover.PAGER  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color : #000000;
+}
+
+TABLE.FORM {		
+		background-color : #336699;
+		
+		
+}
+TABLE.FORM2 TD{
+	border:1px solid #000000;
+}
+
+/*******************************
+ * entête colonnes : titres  *
+ ******************************/
+TH.FORM {
+		color : #000000;
+		background-color : #669999;
+	    text-decoration: none;
+	    font-size: 11px;
+		font-weight: bold;
+		text-align: center; 
+					
+}
+
+TD.FORM {
+	background-color :  #999999;
+    // text-align: center;
+	text-decoration: none;
+	font-size: 11px;
+	color : #000000; 
+	
+}
+
+P.FORM {
+		text-align: center;
+		font-size: 11px;
+}
+
+TABLE.FORM {
+		background-color : #000000;
+		
+}
+TH.FORM2 {
+		color : #000000;
+		background-color : #F4F4F4;
+		font-weight: bold;	
+		font-size: 11px;
+		text-align: center; 		
+}
+TD.FORM2 {
+		background-color :  #CCCCCC;
+text-align: center;
+	text-decoration: none;
+	font-size: 11px;
+	color : #000000; 
+}
+
+TABLE.FORM3 {
+		background-color : #FFFFFF;
+}
+
+TH.FORM3 {
+
+		background-color : #FFFFFF;
+		text-decoration: none;
+		color : #000000; 
+		font-weight: bold;
+		text-align: center; 			
+}
+
+TD.FORM3 {
+		background-color :  #F1F1F3;
+		text-align: center; 
+}
+
+P.FORM3 {
+		text-align: center;
+}
+
+TABLE.FORM4 {
+
+	background-color :  #F1F1F3;
+}
+
+TABLE.FORM4 TD {
+		background-color :  #99CCCC;
+		text-align: right;
+		text-decoration: none;
+		font-size: 11px; 
+        font-weight:bold;
+}
+
+TABLE.FORM4 TH {
+		background-color :  #F1F1F3;
+		text-align: left;
+		text-decoration: none;
+		font-size: 11px; 
+		font-weight:bold;
+}
+
+/**
+ * Calendar classes
+ */
+
+TD.CALENDRIER {
+	background-color: #C2C2C2; 
+	font-weight: bold; 
+	text-align: center; 
+	font-size: 10px;
+}
+
+A.CALENDRIER {
+	text-decoration: none; 
+	color: #000000;
+}
+
+.CALENDARBORDER {
+	background-color: #336699; //#000000; 
+}
+
+.CALENDARTITLE {
+	background-color: #336699; //#C9252C;
+}
+
+.CALENDARWEEK {
+	background-color: #FFFFFF;
+}
+
+.CALENDARWEEKEND {
+	background-color: #FFF4E5;
+}
+
+.CALENDARSELECTED {
+	background-color: #FF8F01;
+}
+
+
+
+IMG {
+	display:none;
+}
+IMG.imprime{
+	display:block;
+}
+
+.masqueimpression {
+	display:none;
+}
+
+
+
+
+
+
+.tah10 {
+	font-family: Tahoma;
+	font-size: 10px;
+	text-decoration: none;
+	color: #000000;
+}
+.tah11 {
+	font-family: Tahoma;
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+}
+.ver10 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold; 
+	font-size: 10px;
+	text-decoration: none;
+	color : #000000;
+}
+
+.ver9b {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold; 
+	font-size: 9px;
+	text-decoration: none;
+	color : #000000;
+}
+
+.ver11 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+}
+.tah9 {
+	font-family: Tahoma;
+	font-size: 9px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.tah9b {
+	font-family: Tahoma;
+	font-size: 9px;
+	text-decoration: none;
+	color : #000000;
+}
+
+
+.ver9 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	text-decoration: none;
+	color: #000000;
+}
+
+h1 {
+	color: #000000;
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+	font-size: 20px;
+
+}
+
+h2 {
+	color: #000000;
+}
+
+h3, h4 {
+	color : #000000;
+	font-weight: bold;
+}
+
+h5, h6 {
+	color : #000000;
+}
+
+
+.TITLE {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold; 
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+}

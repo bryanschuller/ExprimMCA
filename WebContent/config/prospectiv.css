@@ -1,0 +1,232 @@
+<STYLE>
+BODY
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-TOP: 0px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+UL
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-TOP: 0px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+P
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-TOP: 0px;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.errors
+{
+    COLOR: #f00
+}
+INPUT
+{
+    BORDER-RIGHT: #eaeaea 1px solid;
+    BORDER-TOP: #eaeaea 1px solid;
+    BORDER-LEFT: #eaeaea 1px solid;
+    BORDER-BOTTOM: #eaeaea 1px solid
+}
+TEXTAREA
+{
+    BORDER-RIGHT: #eaeaea 1px solid;
+    BORDER-TOP: #eaeaea 1px solid;
+    BORDER-LEFT: #eaeaea 1px solid;
+    BORDER-BOTTOM: #eaeaea 1px solid
+}
+INPUT
+{
+    BORDER-RIGHT: #e6e6e6 1px solid;
+    PADDING-RIGHT: 2px;
+    BORDER-TOP: #bfbfbf 2px solid;
+    PADDING-LEFT: 2px;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 2px;
+    BORDER-LEFT: #e6e6e6 1px solid;
+    COLOR: #666;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #e6e6e6 1px solid;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+SELECT
+{
+    BORDER-RIGHT: #e6e6e6 1px solid;
+    PADDING-RIGHT: 2px;
+    BORDER-TOP: #bfbfbf 2px solid;
+    PADDING-LEFT: 2px;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 2px;
+    BORDER-LEFT: #e6e6e6 1px solid;
+    COLOR: #666;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #e6e6e6 1px solid;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.bouton
+{
+    FONT-SIZE: 13px;
+    COLOR: #666;
+    FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A IMG
+{
+    BORDER-RIGHT: 0px;
+    BORDER-TOP: 0px;
+    BORDER-LEFT: 0px;
+    BORDER-BOTTOM: 0px
+}
+FORM P SPAN
+{
+    DISPLAY: block;
+    FLOAT: left;
+    WIDTH: 150px
+}
+FORM P SPAN.s2
+{
+    DISPLAY: block;
+    FONT-SIZE: 10px;
+    FLOAT: left;
+    WIDTH: 430px
+}
+
+
+FORM P SPAN.s3
+{
+    DISPLAY: block;
+    FLOAT: left;
+    WIDTH: 430px
+}
+.LOGIN_LABEL
+{
+	  FONT-SIZE: 11px;  
+	  font-weight:normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.ERROR
+{
+	  FONT-SIZE: 11px;  
+	  font-weight:normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+H2#vous
+{
+    BACKGROUND: url(/MCA/images/Prospectiv/form_vous.gif) no-repeat;
+    PADDING-TOP: 33px
+}
+H2#conjoint
+{
+    BACKGROUND: url(/MCA/images/Prospectiv/form_conjoint.gif) no-repeat;
+    PADDING-TOP: 33px
+}
+H2#enfants
+{
+    BACKGROUND: url(/MCA/images/Prospectiv/form_enfants.gif) no-repeat;
+    PADDING-TOP: 33px
+}
+H2 SPAN
+{
+    DISPLAY: none
+}
+H2#conjoint
+{
+    PADDING-TOP: 7px;
+    HEIGHT: 26px
+}
+H2#conjoint INPUT
+{
+    DISPLAY: inline
+}
+SELECT
+{
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    FONT-SIZE: 9px;
+    PADDING-BOTTOM: 2px;
+    PADDING-TOP: 2px
+}
+.sans
+{
+    BORDER-RIGHT: 0px;
+    BORDER-TOP: 0px;
+    BORDER-LEFT: 0px;
+    BORDER-BOTTOM: 0px
+}
+FORM P SPAN
+{
+    WIDTH: 130px
+}
+
+
+/* memes styles pour les deux pages de login, n'ajouter qu'une fois */
+		form.LOGIN_FORM {
+			margin:0 auto;
+			padding-top:10px; 
+			width:350px; 
+			background: url(/MCA/images/Prospectiv/login_form_bg.jpg) 0 0 repeat-x; 
+			color:#333; 
+			border-left:#CCC 1px solid; 
+			border-right:#CCC 1px solid;
+		}
+		input.LOGIN_LABEL { border:#999 1px solid; }
+		.LOGIN,.PASSWORD { width:140px; display:block;padding-left:18px; }
+		.LOGIN { background: url(/MCA/images/Prospectiv/icon_user.gif) 0 0 no-repeat; }
+		.PASSWORD { background: url(/MCA/images/Prospectiv/icon_key.gif) 0 0 no-repeat; }
+		form.LOGIN_FORM input.reset,input.valid { border:none; height:30px; padding:0 10px; }
+		form.LOGIN_FORM input.reset { background:url(/MCA/images/Prospectiv/fond_btn_reset.jpg) 0 0 repeat-x; color:#333333; }
+		form.LOGIN_FORM input.valid { background:url(/MCA/images/Prospectiv/fond_btn_valid.jpg) 0 0 repeat-x; color:#FFFFFF; }
+		
+		p.avert { width:350px; margin:0 auto; margin-top:10px; }
+		p.avert a { color:#CF0000; }
+		p.avert a:hover { text-decoration:none; }
+		h2.login { width:350px; margin:0 auto; margin-bottom:10px; }
+		
+		
+		
+		
+		/* nouveaux styles */
+#aff_tarif {
+	background:url(/MCA/images/Prospectiv/fond_tarif.jpg) no-repeat;
+}
+#aff_tarif h1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:22px;
+	color:#6E7173;
+	padding:20px 0 0 90px;
+	margin:0;
+}
+#aff_tarif h2 {
+	padding:0 0 0 90px;
+	margin:0;
+	font-weight:normal;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#CC0001;
+}
+/* complement style existant */
+form p span.s2 {
+	padding:0 0 0 20px;
+	color:#666;
+}
+form p span.s2 {
+	padding:0 0 0 20px;
+	color:#666;
+	width:390px;
+}
+
+
+
+</STYLE>

@@ -1,0 +1,420 @@
+# Resources for parameter 'com.except.struts.ApplicationResources'
+# Project  /EXCEPT / MCA
+
+index.adh.title=Connexion à l'Espace Adhérent
+index.ent.title=Connexion à l'Espace Entreprise
+index.grp.title=Connexion à l'Espace Groupe
+index.ent.heading=Bienvenue dans l'Espace Entreprise
+index.adh.heading=Espace Adhérent
+index.grp.heading=Bienvenue dans l'Espace Groupe
+index.heading=Espace Adhérent
+index.ent.message=Cet accès est réservé aux Entreprises.....
+index.adh.message=Cet accès est réservé aux Adhérents.....
+index.grp.message=Cet accès est réservé aux Groupes.....
+index.deconnexion=Déconnexion
+index.connexion=Connexion
+index.message=Accès
+title.changepassword.edit=Mot de passe personnalisé :
+title.changemail.edit=Modifier mon adresse mail :
+title.msg.ent=MCA - Espace Entreprise
+title.msg.adh=MCA - Espace Adhérent
+title.msg.grp=MCA - Espace Groupe
+title.msg.common=MCA
+title.getmail.edit=Finalisation de votre accès à l'Espace Adhérent :
+msg.changepassword=Saisir un mot de passe de 5 caractères minimum
+hello.message.edit=Veuillez saisir votre Identifiant et votre Mot de passe :
+hello.except.edit=Bienvenue sur le site de la Mutuelle Complémentaire d'Alsace
+hello.adh.info.connexion=Vos informations de connexion figurent sur la partie haute du document comportant votre nouvelle carte...
+app.ent.title=Espace Entreprise
+app.adh.title=Espace Adhérent
+app.adh.title=Espace Groupe
+app.username=Identifiant :
+app.password=Mot de passe :
+app.password.current=Mot de passe actuel :
+app.password.new=Nouveau Mot de passe :
+app.password.confirm=Confirmer :
+app.mail.current=Adresse Mail actuelle :
+app.mail.not.set=Afin de finaliser votre accès à l'Espace Adhérent, veuillez compléter les informations ci-dessous :
+app.mail.not.set2=<p></p>Après enregistrement des ces informations, il sera nécessaire de vous authentifier à nouveau pour accéder à l'Espace Adhérent....
+app.mail.new=Nouvelle adresse Mail :
+app.mail.mail=Mail :
+app.mail.mail2=Adresse Mail :
+app.forgetpswd.txt=Mot de passe oublié ?<br>Veuillez saisir votre identifiant et votre adresse mail<br>afin que nous puissions vous renvoyer vos informations de connexion.
+app.forget.pswd=Mot de passe oublié ?
+app.mail.confirm=Confirmer :
+app.tot.page=Page : {0}/{1}
+error.adh.liste.beneficiaires=<li>Aucun bénéficiaire enregistré...</li>
+error.adh.adress.beneficiaires=<li>Aucune adresse enregistrée..</li>
+error.adh.adress.chg.ok=<li>Modification de votre adresse effectuée</li>
+error.adh.adress.chg.notok=<li>Modification de votre adresse non effectuée</li><br><li>Veuillez réessayer ultérieurement</li>
+error.adh.liste.paiements=<li> Aucun paiement ...</li>
+error.adh.liste.paiements.tiers=<li> Aucun remboursement tiers payant ...</li>
+error.adh.liste.paiements.effectue=<li> Aucun paiement effectué...</li>
+error.adh.liste.paiements.instance=<li> Aucun paiement en instance ...</li>
+error.username.requis= < Identifiant requis
+error.password.requis=< Mot de passe requis
+error.password.notmatch=< Mot de passe différent
+error.mail.requis=< Mail requis
+error.mail.notmatch=< Mail différent
+error.mail.notvalid=< Mail non valide
+error.identifiant.requis=Identifiant requis
+error.changing.password=<li>Modification de votre mot de passe non effectuée<ul><li>Veuillez réessayer ultérieurement</ul></li>
+error.interlocuteur.notfound=<li>Modification de votre mail non effectuée</li><br><li>Veuillez réessayer ultérieurement</li>
+error.setmail=<li>Suite à une erreur nous n'avons pas pu finaliser votre accès</li><br>    Veuillez réessayer ultérieurement.
+error.updating.database=<li>Modification de votre mail non effectuée</li><br><li>Veuillez réessayer ultérieurement</li>
+error.password.notvalid=< Mot de passe non valide
+error.login.incorrect=< Mot de passe non valide
+error.actuallogin.notvalid=<- Mot de passe non valide
+error.id.incorrect=< Identifiant non valide
+
+error.benef.ligne.requis=<li>Ligne imcomplète</li>
+error.benef.secu.incorrect=<li>N° Sécurité sociale incorrecte</li>
+
+
+error.rib.banque.requis=<li>Code banque requis</li>
+error.rib.banque.incorrect=<li>Code banque incorrecte</li>
+error.rib.guichet.requis=<li>Code guichet requis</li>
+error.rib.guichet.incorrect=<li>Code guichet incorrecte</li>
+error.rib.compte.requis=<li>N° Compte requis</li>
+error.rib.compte.incorrect=<li>N° Compte incorrecte</li>
+error.rib.domiciliation.requis=<li>Domiciliation requise</li>
+error.rib.titulaire.requis=<li>Titulaire requis</li>
+error.rib.cle.requis=<li>Clé requise</li>
+error.rib.cle.incorrect=<li>Clé incorrecte</li>
+error.rib.rib.incorrect=<li>RIB incorrecte ( Banque + Guichet + Compte <=> Clé )</li>
+
+error.login.expire=< Mot de passe expiré
+error.ent.liste.effectifs=<li>Aucun effectif dans l'entreprise</li>
+error.ent.liste.appcot=<li>Aucun appel de cotisation à afficher</li>
+error.ent.liste.appdetcot=<li>Aucun élément à afficher</li>
+error.ent.liste.suivi=<li>Aucune télé-déclaration à afficher</li>
+error.ent.mail.appdetcot.ok=<li>Votre demande a été enregistrée</li><br><li>Une copie vous a été envoyée par mail...</li>
+error.ent.prw.appdetcot.err= <li>Suite à un incident votre demande n'a pu aboutir :<ul>Veuillez réessayer ultérieurement...</ul></li>
+error.adress.requis=<li>Adresse requise</li>
+error.cp.requis=<li>Code postal requis</li>
+error.cp.nonvalide=<li>Code postal non valide</li>
+error.vi.requis=<li>Ville requise</li>
+error.montantMvt.requis=Montant requis
+error.typemouvement.requis=Veuillez sélectionner un mouvement
+error.nomprenom.requis=Nom, Prénom requis
+error.dateEffet.requis=<li>Date requise</li>
+error.dateEffet.notvalid=<li>Date d'effet non valide</li>
+error.br=<br>
+error.numadherent.requis=N° Adhérent requis
+error.managing.mouvement= Erreur lors de la création / mise à jour 
+error.deleting.mouvement= Erreur lors de la suppression d'un mouvement
+error.lstnames.vide=Plus de sortie possible ...!
+error.deleting.mouvement=Erreur lors de la suppression
+
+error.connexion= <li>Erreur connexion</li>
+
+
+ent.validation.okA=<li>Validation effectuée, une confirmation par mail vous sera envoyée</li>
+ent.validation.okB=<li>Validation effectuée,une confirmation par mail vous sera envoyée</li>
+ent.validation.err=<li>Une erreur est survenue lors la validation<ul>Veuillez réessayer ultérieurement...</ul></li>
+info.ent.identifiant=Entreprise N\u00B0
+info.ent.societe=Société
+info.ent.siret=Siret
+info.ent.interlocuteur=Interlocuteur
+info.ent.telephone=Téléphone
+info.ent.mail=Mail
+info.adh.identifiant=N° Adhérent
+info.adh.nomcomplet=Nom
+info.adh.nro=N° Sécurité Sociale
+info.adh.anais=Né(e) le
+info.adh.telephone=Téléphone
+info.adh.mail=Mail
+info.adh.adresse=Adresse
+info.adh.adresse.titre= VOTRE ADRESSE ACTUELLE
+info.adh.adresse.modif.titre= NOUVELLE ADRESSE
+
+
+info.adh.adresse.changement=DEMANDE DE CHANGEMENT D'ADRESSE
+info.adh.mail.changement=DEMANDE DE CHANGEMENT DE MAIL
+info.adh.tel.changement=DEMANDE DE CHANGEMENT DE N° DE TELEPHONES
+info.adh.tel.modif.titre=Nouveau N° téléphone fixe :
+info.adh.mobile.modif.titre=Nouveau N° téléphone portable :
+info.adh.rib.changement=DEMANDE DE CHANGEMENT DE RIB
+
+
+
+info.adh.cp=Code Postal
+info.adh.ville=Ville
+info.grp.identifiant=Groupe 
+
+info.interloc.groupe=Groupe :
+info.interloc.contrat=Produit/Option - Garantie :
+info.interloc.periode=Validité :
+info.interloc.fonction=Fonction :
+info.interloc.nom=Genre Nom Prénom :
+info.interloc.tel=N° téléphone fixe:
+info.interloc.mobile=N° téléphone portable :
+info.interloc.fax=N° fax :
+info.interloc.mail=Adresse mail :
+info.interloc.dateeffet=Date d'effet souhaitée (JJ/MM/AAAA):
+
+
+
+adherent.principale.elect=Coordonnées électroniques :
+adherent.principale.coord=Coordonnées postales :
+adherent.principale.rib=Coordonnées bancaires :
+adherent.principale.tel=Coordonnées téléphoniques :
+adherent.principale.periode=Contrat :
+
+
+adherent.dossier=MON DOSSIER 
+adherent.dossier.modif=MON DOSSIER : DEMANDE DE MODIFICATION
+
+message.envoyer=ENVOYER UN MESSAGE
+beneficiaires.second=Vos ayant-droits :
+beneficiaires.princ=Vous :
+beneficiaires.titre=LISTE DES BENEFICIAIRES
+beneficiaires.titre.modif=DEMANDE DE MODIFICATION DES BENEFICIAIRES
+beneficiaires.titre.add=DEMANDE D'AJOUT DE BENEFICIAIRES
+beneficiaires.rang=RANG
+beneficiaires.nom=NOM
+beneficiaires.prenom=PRENOM
+beneficiaires.anais=NE(E) LE
+beneficiaires.regime=REGIME
+beneficiaires.nsecu=N° SECURITE SOCIALE
+beneficiaires.sitfam=SIT. FAMIL.
+beneficiaires.sexe=SEXE
+beneficiaires.num=Enfant N° 
+beneficiaires.regimeo=Régime obligatoire
+envoyer.beneficiaires.modif=<li>Une demande de modification a été envoyée</li>
+envoyer.beneficiaires.add=<li>Une demande d'ajout de bénéficiaire a été envoyée</li>
+envoyer.adh.adresse=<li>Une demande de changement d'adresse a été envoyée</li>
+envoyer.adh.tel=<li>Une demande de changement de N° de téléphone a été envoyée</li>
+envoyer.adh.rib=<li>Une demande de changement de RIB a été envoyée</li>
+envoyer.adh.mail=<li>Une demande de changement d'adresse mail a été envoyée</li>
+envoyer.adh.message=<li>Votre message a été envoyé</li>
+envoyer.demande.non=<font color="#ff0000"><li>Suite à un incident, votre demande ne peut aboutir</li></font>
+envoyer.interloc.change=<li>Votre demande de changement d'interlocuteur a été envoyée</li>
+
+
+
+
+
+menu.ent.titre=Les services en ligne
+menu.adh.titre=Les services en ligne
+menu.adh.option.listebenef=Liste des bénéficiaires
+menu.adh.option.adresse=Gérer votre adresse
+menu.main=Menu principal
+menu.deconnexion=Déconnexion
+menu.ent.option.effectifs=Liste des effectifs de l'entreprise.
+menu.ent.option.appelsdecot=Liste des appels de cotisations de l'entreprise.
+menu.ent.0=Déconnexion... 
+menu.ent.1=Mon compte...
+menu.ent.1.1=Modifier mon mot de passe
+menu.ent.1.2=Modifier mon e-mail
+menu.ent.2=Consulter...
+menu.ent.2.1=Les informations entreprise
+menu.ent.2.2=Les appels de cotisations
+menu.ent.2.3=L'historique des règlements
+menu.ent.3=Effectifs de l'entreprise
+menu.ent.3.1=Déclarer des mouvements 
+menu.ent.4=Formulaires... 
+appcot.titre=LISTE DES APPELS DE COTISATIONS DE L'ENTREPRISE
+appcot.suivi.titre=SUIVI DES TELE-DECLARATIONS
+appcot.recap.suivi.titre=DETAIL TELE-DECLARATION A EFFECTUER POUR LE 
+appcot.recap.titre=APPEL DE COTISATION DE L'ENTREPRISE
+appcot.numeroappel=APPEL N°
+appcot.echeance=ECHEANCE
+appcot.type=TYPE
+appcot.mdp=MODE DE PAIEMENT
+appcot.tot=TOTAL COTISATION
+appcot.totnet=NET A PAYER
+appcot.detail=DETAIL
+appcot.famille=FAMILLE
+appcot.garantie=GARANTIE
+appcot.detail.titre=APPEL DE COTISATION
+appcot.mod.detail.titre= MODIFICATION DE L'APPEL N°
+appcot.visu.detail.titre= VISUALISATION DE L'APPEL N°
+appcot.detail.appcot=DETAIL DE l'APPEL DE COTISATION
+appcot.detail.retour=Retour à la liste
+appcot.nomprenom= NOM - PRENOM
+appcot.adherent=ADHERENT N°
+appcot.periode=PERIODE
+appcot.appel=APPEL DU
+appcot.du=DU
+appcot.au=AU
+appcot.montant=MONTANT
+appcot.regularisation=REGULARISATION
+appcot.total=TOTAL
+appcot.regle=REGLE LE
+appcot.solde=SOLDE
+appcot.observation=OBSERVATION
+appcot.recap.suivi.commentaire=COMMENTAIRE
+appcot.total.echeance=TOTAL ECHEANCE
+appcot.vref= V/REF
+appcot.conjoint=CONJ.
+appcot.enfant=ENF.
+appcot.regime=REGIME
+appcot.cotisation=COTISATION
+appcot.typeregul=TYPE REGULARISATION
+appcot.effet=EFFET LE
+appcot.da=DA
+appcot.commentaire=COMMENTAIRE
+appcot.montantregul=REGULARISATION
+appcot.aucune.regul=Aucune régularisation sur cet appel de cotisation...
+appcot.numvt= N°
+effectifs.titre=LISTE DES EFFECTIFS DE L'ENTREPRISE AU : 
+effectifs.contrat=CONTRATS
+effectifs.validite=VALIDITE
+effectifs.effectif=EFFECTIFS
+effectifs.categorie=CATEGORIE
+effectifs.produit=PRODUIT
+effectifs.option=OPTION
+effectifs.du=DU
+effectifs.au=AU
+effectifs.adherent=ADHERENTS
+effectifs.ben=BENEFICIAIRES
+effectifs.total=TOTAL
+suivi.echeance=DATE ECHEANCE
+suivi.net=NET A PAYER
+suivi.Datelimite=DATE LIMITE RGLT
+suivi.etat=ETAT
+suivi.option=OPTION
+suivi.options=OPTION(S)
+prompt.nomprenom=Nom, Prénom
+prompt.numadh=N° Adhérent
+prompt.date=Date d'effet
+prompt.montantmouvement=Montant Régularisation
+prompt.montantda=Droit d'adhésion
+prompt.montantTotMvt=Total
+prompt.commentaire=Commentaire
+mouvement.title.edit.edit=Modification d'un mouvement
+mouvement.title.view.edit=Visualisation d'un mouvement
+mouvement.title.create.edit=Création d'un mouvement
+format.date=dd/MM/yyyy
+format.num=       .  
+form.select.decompte=Décompte du 
+form.select.paiement=Paiement du
+
+paie.paiement=Paiement du 
+paie.montant=pour un montant de
+paie.decompte=Décompte du 
+paie.rembourse=Remboursé par
+paie.compte=sur le compte
+
+paie.benef.soins=Bénéficiaire
+paie.nature=Prestation
+paie.date=Date
+paie.honoraire=Honoraire
+paie.base=Base Remb.
+paie.taux=Taux
+paie.remb.ss=Remb. S.S.
+paie.remb.mut=Remb. Mut.
+
+remb.regl.ss=Régl. S.S.
+remb.regl.mut=Régl. Mut.
+
+profil.askchange.error=<li>Suite à un incident votre demande n'a pu aboutir :<ul>Veuillez réessayer ultérieurement...</ul></li>
+profil.askchange.ok=La demande de modification de votre profil a été transmise...
+
+button.valide=Valider
+button.save=Sauvegarder
+button.reset=Rétablir
+button.cancel=Annuler
+symbole.euro=?
+paiements.titre= LISTE DES DECOMPTES
+
+beneficiaires.titre=Liste des bénéficiaires : 
+succes.changepassword=<li>Votre demande a été prise en compte :<ul>Mot de passe modifié...</ul></li>
+succes.changemail=<li>Votre demande a été prise en compte :<ul>Votre adresse mail \u00E0 été modifiée... </ul></li>
+succes.setmail=<li>Votre adresse mail a été enregistrée :<ul>Votre accès à l'Espace Adhérent est désormais opérationnel...</ul></li><p></p>
+succes.returnaccesinfo=<li>Votre demande a été enregistrée</li><br><li>Vos informations de connexion ont été renvoyées par mail...</li>
+error.returnaccesinfo1=<li>Impossible de vous renvoyer vos informations de connexion :</li><br>Identifiant non valide.
+error.returnaccesinfo2=<li>Impossible de vous renvoyer vos informations de connexion :</li><br>Accès expiré.
+error.returnaccesinfo3=<li>Impossible de vous renvoyer vos informations de connexion :</li><br>Informations non concordantes.
+error.returnaccesinfo4=<li>Un problème est survenu lors de l'envoi du mail :</li><br>Veuillez réessayer ultérieurement...
+error.returnaccesinfo5=<li>Impossible de vous renvoyer vos informations de connexion :</li><br>Accès à vos informations de connexion impossible.
+
+error.subject.empty=Veuillez renseigner le sujet...<br>
+error.message.empty=Veuillez saisir un message...
+
+error.field.empty =Tous les champs du formulaire doivent être renseignés...<br>
+
+contact.send.ok=Votre message a été transmis...
+
+suscribe.succes=<li>Votre demande d'accès a été enregistrée...</li><br>Dès l'ouverture de ce service vous recevrez un mail avec votre identifiant et mot de passe.
+suscribe.exists=<li>Votre demande est déja enregistrée...</li><br>Dès l'ouverture de ce service vous recevrez un mail avec votre identifiant et mot de passe.
+suscribe.error=<li>Suite à un incident, votre demande n'a pu aboutir :<ul>Veuillez réessayer ultérieurement...</ul></li>
+title.suscribe.adh=Demande d'accès au portail adhérent
+error.suscribe.mail.notvalid=Mail non valide...<br>
+
+error.numadh.notvalid=N° Adhérent non valide...
+suscribe.numahd.notvalide=N° Adhérent non valide...
+suscribe.name.notvalide=Le nom saisi ne correspond pas au N° Adhérent saisi<br>Veuillez saisir le N° Adhérent et le Nom présent sur votre carte MCA...
+suscribe.numadh.notexists=Le N° Adhérent saisi n'existe pas...<br>Veuillez saisir le N° Adhérent et le Nom présent sur votre carte MCA...
+
+
+ctrl.been.name=Nom du been
+ctrl.been.class=Class Java
+ctrl.been.scope=Portée du been
+ctrl.been.value=Valeur
+
+# DEVIS EN LIGNE
+
+error.devis.sexe.requis=Sélectionner votre sexe !!!<BR>
+error.devis.datenais.requis=- Date de naissance non renseignée...<BR>
+error.devis.conjdatenais.requis=- Date de naissance du conjoint non renseignée...<BR>
+error.devis.regime.requis=- Régime d'affiliation non renseigné...<BR>
+error.devis.conjregime.requis=- Régime d'affiliation du conjoint non renseigné...<BR>
+error.devis.garantie.requis=- Niveau de garantie souhaité non renseigné...<BR>
+
+adherent.devis=DEVIS EN LIGNE
+
+
+# Nouveau devis en ligne
+devis.alineaMontant=* Taxe de 2,50% pour la C.M.U. incluse, applicable au 1er janvier 2000 sur les cotisations des Mutuelles, Cies d'Assurances, Institutions de Prévoyance.<br/>* Tarifs fournis à titre indicatif... <br/>
+devis.choose_guarantee=Veuillez choisir une garantie :
+devis.guarantee=Niveau de garantie
+devis.you =Vous
+devis.conjoint=Conjoint
+devis.child=Enfant(s)
+devis.error.notValidOverall=<b>Le symbole <img name="info" src="{0}/images/ast.gif"> indique les champs nécessaires à la validation de votre demande.</b><br/>Veuillez renseigner les zones suivantes :<br/>
+devis.error.notValid.start=<b>Le symbole 
+devis.error.notValid.end= indique les champs nécessaires à la validation de votre demande.<br/></b>Veuillez renseigner les zones suivantes :<br/>
+devis.civil=Civilité
+devis.mister=Mr
+devis.madam=Mme
+devis.Miss=Mlle
+devis.name=Nom
+devis.surname=Prenom
+devis.address=Adresse
+devis.postalCode=Code postal
+devis.city=Ville
+devis.birthdate=Date de naissance
+devis.listDay=--jour--
+devis.listMonth=--mois--
+devis.listYear=--année--
+devis.day=jour
+devis.month=mois
+devis.year=année
+devis.listChoice=-Choix-
+devis.regime=Régime obligatoire
+devis.addChild=Ajouter un enfant
+devis.estimated=Cotisation mensuelle estimée à
+devis.launchCalculation=Calculer
+devis.error.spacesError=&nbsp;&nbsp;&nbsp;&nbsp;&#149;
+devis.error.spacesErrorTitle=&nbsp;&#149;
+devis.error.guarantee=La garantie n'est pas specifiée
+devis.error.birth_day=Jour de naissance
+devis.error.birth_month=Mois de naissance
+devis.error.birth_year=Année de naissance
+devis.error.regime=Régime Obligatoire
+devis.error.guaranteeNotPresent=La garantie '{0}' n'est pas référencé.
+devis.month1=janvier
+devis.month2=février
+devis.month3=mars
+devis.month4=avril
+devis.month5=mai
+devis.month6=juin
+devis.month7=juillet
+devis.month8=août
+devis.month9=septembre
+devis.month10=octobre
+devis.month11=novembre
+devis.month12=décembre
+devis.AFFICHAGE_GENERIQUE={0}

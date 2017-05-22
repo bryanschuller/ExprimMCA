@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<!-- Definitions for Tiles  -->
+<!-- 
+  This file contains definitions common to all struts module.
+  In particular, it contains the main layout and the common menus.
+  There is also the main page as a portal.
+-->
+
+<tiles-definitions>
+
+  <!-- =======================================================  -->
+  <!-- Master definition  									-->
+  <!-- =======================================================  -->
+
+  <!-- Doc index page description  -->
+ 
+  <definition name="layout" path="/tilesLayout/layout.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="menu"   value="/tilesLayout/menu.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+  </definition>
+  
+  <definition name="layoutNoDoss" path="/tilesLayout/layoutNoDoss.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="menu"   value="/tilesLayout/menuNoDoss.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+  </definition>
+  
+  <definition name="layoutErreur" path="/tilesLayout/layoutErreur.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="menu"   value="/tilesLayout/menuNoDoss.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+  </definition>
+  
+  <definition name="layoutLogin" path="/tilesLayout/layoutLogin.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+  </definition>
+  
+  <definition name="layoutMsg" path="/tilesLayout/layoutMsg.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+  </definition>
+  
+
+  
+  <definition name="layoutNoMenu" path="/tilesLayout/layoutNoMenu.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+  </definition>
+  
+  
+  <definition name="layoutXL" path="/tilesLayout/layoutXL.jsp">
+	  <put name="body"   value="" />
+  </definition>
+  
+  <definition name="layoutPopUp" path="/tilesLayout/layoutPopUp.jsp">
+	  <put name="body"   value="" />
+  </definition>
+  
+
+  
+  <definition name="layoutMCA" path="/tilesLayout/layout.jsp">
+	  <put name="header"   value="/tilesLayout/headerMCA.jsp" />
+	  <put name="menu" value="/tilesLayout/menuMCA.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footerMCA.jsp" />
+  </definition>
+  
+    <definition name="pagetestMCA" extends="layoutMCA">
+    	<put name="body"   value="/jsp/blank.jsp" />
+  	</definition>
+  <!-- =======================================================  -->
+  <!-- Main page body definitions  									-->
+  <!-- =======================================================  -->
+
+	<definition name="pageErreur" extends="layoutErreur">
+    	<put name="body"   value="/jsp/erreur/erreur.jsp" />
+  	</definition>
+  	
+  	<definition name="pageErreur403" extends="layoutErreur">
+  		<put name="body" value="/jsp/erreur/erreur403.jsp" />
+  	</definition>
+  	
+  	<definition name="pageErreur404" extends="layoutErreur">
+  		<put name="body" value="/jsp/erreur/erreur404.jsp" />
+  	</definition>
+  	
+  	<definition name="pageErreur500" extends="layoutErreur">
+  		<put name="body" value="/jsp/erreur/erreur500.jsp" />
+  	</definition>
+  	
+  	
+  	<definition name="pageLogin" extends="layoutLogin">
+    	<put name="body"   value="/jsp/formulaires/login.jsp" />
+  	</definition>
+  	
+  	 <definition name="pageLoginGest" extends="layoutLogin">
+    	<put name="body"   value="/jsp/EspaceGest/loginGest.jsp" />
+  	</definition>
+  	
+  	  	<definition name="pageLoginADH" extends="layoutLogin">
+    	<put name="body"   value="/jsp/formulaires/loginADH.jsp" />
+  	</definition>
+  	
+  	  	<definition name="pageLoginENT" extends="layoutLogin">
+    	<put name="body"   value="/jsp/formulaires/loginENT.jsp" />
+  	</definition>
+  	
+  	  	<definition name="pageLoginTIE" extends="layoutLogin">
+    	<put name="body"   value="/jsp/formulaires/loginTIE.jsp" />
+  	</definition>
+  
+
+  	<definition name="pageMaintenance" extends="layoutNoMenu">
+    	<put name="body" value="/jsp/messages/msgMaintenance.jsp" />
+  	</definition>
+  	
+  	<definition name="pagePrblTech" extends="layoutNoMenu">
+    	<put name="body" value="/jsp/messages/msgPrblTech.jsp" />
+  	</definition>
+  	
+  	 <definition name="pageAssistance" extends="layoutNoMenu">
+    	<put name="body" value="/jsp/messages/Assistance.jsp" />
+  	</definition>
+  	
+  	 <definition name="pageIncident" extends="layoutNoMenu">
+    	<put name="body" value="/jsp/messages/msgIncident.jsp" />
+  	</definition>
+  	
+  	<definition name="pageAccueil" extends="layout">
+    	<put name="body" value="/jsp/accueil.jsp" />
+  	</definition>
+  
+	<definition name="pageTexte" extends="layout">
+    	<put name="body" value="/jsp/messages/pageTexte.jsp" />
+  	</definition>
+  
+  	<definition name="pageListeDossiers" extends="layout">
+    	<put name="body"   value="/jsp/listeDossiers.jsp" />
+  	</definition>
+  
+  	<definition name="pageAccederDossier" extends="layout">
+    	<put name="body"   value="/jsp/accederDossier.jsp" />
+  	</definition>
+
+  	<definition name="pageChangementMotPasse" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/changementMotPasse.jsp" />
+  	</definition>
+  	
+  	<definition name="pageSaisieDecPapier" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/saisieDecPapier.jsp" />
+  	</definition>
+  	
+  	<definition name="pageModifInfoInterlocuteur" extends="layout">
+    	<put name="body"   value="/jsp/modifInfoInterlocuteur.jsp" />
+  	</definition>
+  	
+  	<definition name="pageFinaliseInfosInterloc" extends="layout">
+  		<put name="body" value="/jsp/formulaires/finaliseInfosInterloc.jsp"/>
+  	</definition>
+  	
+  	<definition name="pageConfirmeModifInfoInterlocuteur" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/confirmeModifInfoInterlocuteur.jsp" />
+  	</definition>
+  	<definition name="pageErreurModifInfoInterlocuteur" extends="layout">
+    	<put name="body"   value="/jsp/erreurModifInfoInterlocuteur.jsp" />
+  	</definition>
+
+  <definition name="pageDetailAdherent" extends="layout">
+    	<put name="body"   value="/jsp/detailAdherent.jsp" />
+  	</definition>
+  	
+  	<definition name="pageDetailContrat" extends="layout">
+    	<put name="body"   value="/jsp/detailContrat.jsp" />
+  	</definition>
+  	
+  	
+  	
+  	<definition name="pageSemiModifAdresse" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modAdr.jsp" />
+  	</definition>
+  	
+  	<definition name="pageSemiModifBanque" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modRIB.jsp" />
+  	</definition>
+  	
+  	<definition name="pageModifAdresse" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modAdr.jsp" />
+  	</definition>
+  	
+  	<definition name="pageMsgOk" extends="layout">
+    	<put name="body"   value="/jsp/messages/msgOk.jsp" />
+  	</definition>
+  
+  <definition name="pageMsgFinalise" extends="layoutNoMenu">
+    	<put name="body"   value="/jsp/messages/msgOk.jsp" />
+  	</definition>
+  	
+  <definition name="pageMsgErreur" extends="layout">
+    	<put name="body"   value="/jsp/messages/msgErreur.jsp" />
+  	</definition>
+  	
+  	
+  	
+  	<definition name="pageMsgOkMsg" extends="layoutMsg">
+    	<put name="body"   value="/jsp/messages/msgOk.jsp" />
+  	</definition>
+  
+  <definition name="pageMsgErreurMsg" extends="layoutMsg">
+    	<put name="body"   value="/jsp/messages/msgErreur.jsp" />
+  	</definition>
+  	
+  	
+  	
+  
+  	<definition name="pageModifEmails" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modifEmails.jsp" />
+  	</definition>
+  	
+  	<definition name="pageFinaliseEmails" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/finaliseEmails.jsp" />
+  	</definition>
+	
+	<definition name="pageModifAllEmails" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modifAllEmails.jsp" />
+  	</definition>
+  	
+  	<definition name="pagePrestations" extends="layout">
+    	<put name="body"   value="/jsp/prestations/listePaiementsTabbed.jsp" />
+  	</definition>
+  	
+  	<definition name="pagePrestationsTiers" extends="layout">
+  	    	<put name="body"   value="/jsp/prestations/listePaiementsDossierTiers.jsp" />
+  	</definition>
+
+  	<definition name="pageEnvoyerMessage" extends="layout">
+    	<put name="body"   value="/jsp/echanges/envoyerMessage.jsp" />
+  	</definition>
+  	
+  	<definition name="pageUpload" extends="layout">
+    	<put name="body"   value="/jsp/echanges/upload.jsp" />
+  	</definition>
+  	
+  	<definition name="pageListeEchanges" extends="layout">
+    	<put name="body"   value="/jsp/echanges/listeEchanges.jsp" />
+  	</definition>
+  	
+  	<definition name="pageDetailsEchange" extends="layout">
+    	<put name="body"   value="/jsp/echanges/detailsEchange.jsp" />
+  	</definition>
+  	
+  	<definition name="pageRepondreEchange" extends="layout">
+    	<put name="body"   value="/jsp/echanges/repondreEchange.jsp" />
+  	</definition>
+  	
+  	<definition name="pageDetailsEffectif" extends="layout">
+    	<put name="body"   value="/jsp/detailsEffectif.jsp" />
+  	</definition>
+  	
+  	<definition name="pageListeDocuments" extends="layout">
+    	<put name="body"   value="/jsp/listeDocuments.jsp" />
+  	</definition>
+  	  	
+  	<definition name="pageListeDocumentsExged" extends="layout">
+    	<put name="body"   value="/jsp/Exged/listesDocumentsExgedDossier.jsp" />
+  	</definition>
+  	
+  	
+  	<definition name="pageModifTelephone" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/ModifTelephone.jsp" />
+  	</definition>
+  	
+  	<definition name="pageModifInterlocuteur" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modifInfoInterlocuteur.jsp" />
+  	</definition>
+
+  	
+	<definition name="pageAppelsCot" extends="layout">
+    	<put name="body"   value="/jsp/AppelsCot/listeAppCot.jsp" />
+  	</definition>
+
+  	<definition name="pageDetAppelsCot" extends="layout">
+    	<put name="body"   value="/jsp/AppelsCot/listeDetAppCot.jsp" />
+  	</definition>
+  	
+  	
+  	
+  	<definition name="pageForgetPswd" extends="layoutNoMenu">
+  		<put name="body" value="/jsp/formulaires/ForgetPasswordAdhPage.jsp"/>
+  	</definition>
+  	
+  	<!-- ========== Prise En Charge en ligne (PEC) ================================== -->
+	
+  	<definition name="pageListePEC" extends="layout">
+    	<put name="body"   value="/jsp/PEC/listePEC.jsp" />
+  	</definition>
+  	
+  	<definition name="pageDetailPEC" extends="layout">
+    	<put name="body"   value="/jsp/PEC/detailPEC.jsp" />
+  	</definition>
+  	
+  	<definition name="pageFacturerPEC" extends="layout">
+    	<put name="body"   value="/jsp/PEC/facturerPEC.jsp" />
+  	</definition>
+  	
+  	<definition name="pageSaisieAdhPEC" extends="layout">
+    	<put name="body"   value="/jsp/PEC/saisieAdhPEC.jsp" />
+  	</definition>
+  	
+  	<definition name="pageSaisieDetailPEC" extends="layout">
+    	<put name="body"   value="/jsp/PEC/saisieDetailPEC.jsp" />
+  	</definition>
+  	
+  	
+  	<!-- ========== Exged ================================== -->
+	
+  	<definition name="pageListeDecSante" extends="layout">
+    	<put name="body"   value="/jsp/incl/listeDecSante.jsp" />
+  	</definition>
+  	
+  	
+  	
+  	
+  <!-- =======================================================  -->
+  <!-- Démo - Démo - Démo - Démo - Démo - Démo - Démo - Démo -  -->
+  <!-- =======================================================  -->
+  	  	
+	<definition name="layoutDemo" path="/tilesLayout/layout.jsp">
+		<put name="header" value="/tilesLayout/header.jsp" />
+		<put name="menu"   value="" />
+		<put name="body"   value="" />
+		<put name="footer" value="/tilesLayout/footer.jsp" />
+	</definition>
+	
+	
+	<definition name="layoutDemoA1" extends="layoutDemo">
+		<put name="menu"   value="/Demo/menus/menuAdh_1.jsp" />
+	</definition>
+	<definition name="layoutDemoA2" extends="layoutDemo">
+		<put name="menu"   value="/Demo/menus/menuAdh_2.jsp" />
+	</definition>
+	<definition name="layoutDemoE1" extends="layoutDemo">
+		<put name="menu"   value="/Demo/menus/menuEnt_1.jsp" />
+	</definition>
+	<definition name="layoutDemoE2" extends="layoutDemo">
+		<put name="menu"   value="/Demo/menus/menuEnt_2.jsp" />
+	</definition>
+	<definition name="layoutDemoT1" extends="layoutDemo">
+		<put name="menu"   value="/Demo/menus/menuTie_1.jsp" />
+	</definition>
+	
+  
+  	<definition name="pageDemoTest" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/test.jsp" />
+  	</definition>
+  	
+  	<definition name="demoSelect" extends="layoutLogin">
+    	<put name="body"   value="/Demo/demoIndex.jsp" />
+  	</definition>
+  	
+  	<definition name="demoResumA1" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/resum.jsp" />
+  	</definition>
+  	
+  	<definition name="demoDetailA1A1" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/detail.jsp" />
+  	</definition>
+  	
+  	<definition name="demoContratA1A1" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/contrat.jsp" />
+  	</definition>
+  	
+  	<definition name="demoFormulaires" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/formulaires.jsp" />
+  	</definition>
+  	<definition name="demoMdp" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/ChangeMdp.jsp" />
+  	</definition>
+  	<definition name="demoMail" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/ChangeMail.jsp" />
+  	</definition>
+  	
+  	<definition name="demoPaiement" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/paiement.jsp" />
+  	</definition>
+  	
+  	<definition name="demoAppCot" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/appCot.jsp" />
+  	</definition>
+  	
+  	<definition name="demoDecomptes" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/decomptes.jsp" />
+  	</definition>
+  	  	
+  	<definition name="demoTelecharger" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/telecharger.jsp" />
+  	</definition>
+  	
+  	<definition name="demoEchangeList" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/echangeList.jsp" />
+  	</definition>
+  	
+  	<definition name="demoEchangeDetail" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/echangeDetail.jsp" />
+  	</definition>
+  	
+  	<definition name="demoEchangeOuvrir" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/echangeOuvrir.jsp" />
+  	</definition>
+  	
+  	<definition name="demoChangeAdr" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/ChangeAdr.jsp" />
+  	</definition>
+  	
+  	<definition name="demoPaieLigne" extends="layoutDemoA1">
+    	<put name="body"   value="/Demo/DossierADH_1/paiementLigne.jsp" />
+  	</definition>
+  	
+  	
+  	
+  	<definition name="demoResumE1" extends="layoutDemoE1">
+    	<put name="body"   value="/Demo/DossierENT_1/resum.jsp" />
+  	</definition>
+  	<definition name="demoDetailInterloc" extends="layoutDemoE1">
+    	<put name="body"   value="/Demo/DossierENT_1/detailInt.jsp" />
+  	</definition>
+  	<definition name="demoDetailEffectifs" extends="layoutDemoE1">
+    	<put name="body"   value="/Demo/DossierENT_1/detailEff.jsp" />
+  	</definition>
+  	<definition name="demoDetailEffectifsXL" extends="layoutXL">
+    	<put name="body"   value="/Demo/DossierENT_1/incl/effectifs.jsp" />
+  	</definition>
+  	
+  	
+  	<definition name="demoResumT1" extends="layoutDemoT1">
+    	<put name="body"   value="/Demo/DossierTIE_1/resum.jsp" />
+  	</definition>
+  	<definition name="demoPaiementT1" extends="layoutDemoT1">
+    	<put name="body"   value="/Demo/DossierTIE_1/paiementsT1.jsp" />
+  	</definition>
+  	
+  	<definition name="pageNoAction" extends="layoutNoMenu">
+  		<put name="body" value="/jsp/erreur/noAction.jsp" />
+  	</definition>
+	
+	  	<!-- ========== Teledeclarations ================================ -->
+  	
+  	<definition name="pageListeSuiviTeledeclarations" extends="layout">
+  		<put name="body" value="/jsp/teledeclarations/listeSuiviTeledeclarations.jsp" />
+  	</definition>
+  	
+  	<definition name="pageDetailTeledeclaration" extends="layout">
+  		<put name="body" value="/jsp/teledeclarations/detailTeledeclaration.jsp" />
+  	</definition>
+  	
+  	 <definition name="pageGetTelecommentaire" extends="layoutPopUp">
+  		<put name="body" value="/jsp/teledeclarations/teleCommentaire.jsp" />
+  	</definition>
+  	
+  	<definition name="pageManageAppCot" extends="layout">
+  		<put name="body" value="/jsp/teledeclarations/ModifVisuAppelsCot.jsp" />
+  	</definition>
+  	
+   	<definition name="pageMsgValide" extends="layout">
+  		<put name="body" value="/jsp/teledeclarations/msgValide.jsp" />
+  	</definition>	
+  	
+  	<definition name="pageMvtDone" extends="layout">
+  		<put name="body" value="/jsp/teledeclarations/MvtDone.jsp" />
+  	</definition>
+  	
+  	<definition name="pageMouvAppCot" extends="layoutPopUp">
+  		<put name="body" value="/jsp/teledeclarations/mouvementAppCot.jsp" />
+  	</definition>
+  	
+  	<definition name="pageWait" extends="layoutPopUp">
+  		<put name="body" value="/jsp/teledeclarations/wait.jsp"/>
+  	</definition>
+  	
+  	<definition name="pageWaitHtml" extends="layoutPopUp">
+  		<put name="body" value="/jsp/teledeclarations/waitstart.html"/>
+  	</definition>
+  	
+  	<definition name="pageMouvAppCotImpossible" extends="layoutPopUp">
+  		<put name="body" value="/jsp/teledeclarations/mouvementAppCotImpossible.jsp"/>
+  	</definition>
+  	
+  	<definition name="pageNoDoss" extends="layoutNoMenu">
+  		<put name="body" value="/jsp/messages/msgNoDoss.jsp"/>
+  	</definition>
+
+
+  <!-- ======================doc generation================= -->
+  
+   <definition name="pageListeDocWordCollab" extends="layout">
+   		<put name="body" value="/jsp/EspaceCollab/listeDocWordCollab.jsp"/>
+   </definition>
+   
+   <definition name="pageListeVarInDocCollab" extends="layout">
+   		<put name="body" value="/jsp/EspaceCollab/listeVarInDocCollab.jsp"/>
+   </definition>
+   
+    <definition name="pagePromptVarDoc" extends="layout">
+   		<put name="body" value="/jsp/EspaceCollab/promptVarDoc.jsp"/>
+   </definition>
+   
+    <definition name="pageRecapVarDocWord" extends="layout">
+   		<put name="body" value="/jsp/EspaceCollab/RecapVarDocWord.jsp"/>
+   </definition>
+   
+    <definition name="pageMsgCollabEnvoi" extends="layout">
+   		<put name="body" value="/jsp/EspaceCollab/msgCollabEnvoi.jsp"/>
+   </definition>
+   
+  <!-- =========================paiement en ligne ======================= -->
+  
+   <definition name="pagePaiementLigne" extends="layout">
+   		<put name="body" value="/jsp/paiement/PaiementLigne.jsp"/>
+   </definition>
+  
+   <definition name="pagePaiementLigneSIPS" extends="layout">
+   		<put name="body" value="/jsp/paiement/PaiementLigneSIPS.jsp"/>
+   </definition>
+   	
+</tiles-definitions>

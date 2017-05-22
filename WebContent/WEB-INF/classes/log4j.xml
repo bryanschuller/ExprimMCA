@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+
+	
+	<appender name="FileExprimErrorAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="C:/logs_log4j/ExprimWEB_MCA.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+   		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS}\t%-5p%n\tHost : %-15X{remoteHost}%n\tRequestURI = %-15X{requestURI}%n\tQueryString = %-15X{queryString}%n\tInterlocuteur = %-15X{interlocuteur}%n\tidInternaute = %-30X{idInternaute}%n\tDossier : %-13X{dossier}%n\t%m%n"/> 
+    	</layout>
+    	<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="error" />
+			<param name="LevelMax" value="fatal" />
+		</filter>
+	</appender> 
+	
+	<appender name="FileExprimDebugAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="C:/logs_log4j/ExprimWEB_MCA.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+   		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS}\t%-5p\t%m%n"/> 
+    	</layout>
+    	<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="trace" />
+			<param name="LevelMax" value="warn" />
+		</filter>
+	</appender> 
+	
+	
+	 <appender name="TotalAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="C:/logs_log4j/TotalWEB_MCA.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+   		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS}\t%-5p\t%m%n"/> 
+    	</layout>
+	</appender> 
+	
+	<appender name="MaintenanceAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="C:/logs_log4j/AccesMaintenanceWEB_MCA.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+		<param name="Append" value="true"/>
+   		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS}\t%-5p\tHost : %-15X{remoteHost} \t%m%n"/> 
+    	</layout>
+	</appender>
+	
+	
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p (%c.java:%L).%M - %m%n" />
+		</layout>
+    	<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="info" />
+			<param name="LevelMax" value="fatal" />
+		</filter>
+	</appender>
+
+	<appender name="AdministratorEmail" class="org.apache.log4j.net.SMTPAppender">
+		<param name="BufferSize" value="1" />
+		<param name="SMTPHost" value="10.100.100.210" />
+		<param name="From" value="local.exprimweb.mca@except.fr" />
+		<param name="To" value="mschatz@except.fr" />
+		<param name="Subject" value="Alerte ExprimWEB (localhost MCA)" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS}\t%-5p%n\tHost : %-15X{remoteHost} %n\tRequestURI = %-15X{requestURI} %n\tQueryString = %-15X{queryString} %n\tInterlocuteur = %-15X{interlocuteur} %n\tidInternaute = %-30X{idInternaute} %n\tDossier : %-13X{dossier}%n%n\t%m%n"/> 
+    	</layout>
+	</appender>
+	
+	
+
+
+	<logger name="com.exprimweb.maintenance" >
+		<level value="warn"/> 
+		<appender-ref ref="MaintenanceAppender" />
+ 	</logger>
+ 	 	 	
+	<logger name="com.exprimweb" >
+		<level value="trace"/> 
+		<appender-ref ref="FileExprimErrorAppender" />
+		<appender-ref ref="FileExprimDebugAppender" />
+		<appender-ref ref="AdministratorEmail" />
+		<appender-ref ref="STDOUT" />
+ 	</logger> 	 	 	
+	<logger name="com.exgedweb" >
+		<level value="trace"/> 
+		<appender-ref ref="FileExprimErrorAppender" />
+		<appender-ref ref="FileExprimDebugAppender" />
+		<appender-ref ref="AdministratorEmail" />
+		<appender-ref ref="STDOUT" />
+ 	</logger> 	 	 	
+	<logger name="com.except" >
+		<level value="trace"/> 
+		<appender-ref ref="FileExprimErrorAppender" />
+		<appender-ref ref="FileExprimDebugAppender" />
+		<appender-ref ref="AdministratorEmail" />
+		<appender-ref ref="STDOUT" />
+ 	</logger>
+ 	
+	<root>
+		<priority value="info" />
+		<appender-ref ref="TotalAppender" />
+	</root> 
+
+
+
+
+</log4j:configuration>

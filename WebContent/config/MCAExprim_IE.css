@@ -1,0 +1,59 @@
+
+@media all{
+	
+	#EXC_MESSAGE {
+		border: 1px solid #A54A00;
+		padding: 20px 40px 20px 40px;
+		float: left;
+		margin-top: 60px;
+		margin-left: 80px;
+		margin-bottom: 20px;
+		background-color: #FFEFCF;
+		font-family: "Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+	}
+	
+	#menuLeft a {
+		float: left;
+		color: #0c4da2;
+		background-color: transparent;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-bottom: 0px;
+		padding-top: 0px; 
+		margin: 0px;
+		text-align: center;
+		text-decoration: none;
+		font-family: "Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif; 
+		font-size: 12px; 
+		font-weight: bold;
+		background-image: url(../images/FromMCA/menu_normal.gif);
+		background-repeat: repeat-x;
+		height: 35px; 
+		max-width: 100px; 
+		white-space : normal; 
+		border: 1px solid #231F20;
+	/*	display: inline; */
+		line-height: 18px; 
+	
+	
+	}
+	
+	div.wait_mask {
+		display:none;
+		position:absolute;
+		top:0px;
+		left:0px;
+		background :  url("../images/wait_IE.gif") no-repeat;
+		background-position:center;
+		height : 100%;
+		width : 100%;
+	/*	max-width: 1000px; 
+		min-width: 800px; */
+		margin:0;
+		padding:0;
+		z-index:1;
+	
+	}
+
+}

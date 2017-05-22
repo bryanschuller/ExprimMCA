@@ -1,0 +1,67 @@
+9
+
+dir
+92
+svn://localhost/MCA_WEB/WEB-INF/src/com/except/struts
+svn://localhost
+
+
+
+2008-03-26T13:30:47.640624Z
+92
+svnuser
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+606d1805-853d-994c-a5d8-2166b93aae00
+
+form
+dir
+
+MainMenu.properties
+file
+
+
+
+
+2008-02-14T14:31:30.497383Z
+5e8af76e32042f2e452c93b556a261c0
+2008-02-14T10:44:41.604739Z
+19
+svnuser
+
+modele
+dir
+
+dtb
+dir
+
+ApplicationResources.properties
+file
+93
+
+
+
+2008-04-24T08:49:06.327940Z
+7d3d14f083b1195cc76eb32914c11610
+2008-04-30T13:20:05.767419Z
+93
+svnuser
+
+action
+dir
+
+util
+dir
+

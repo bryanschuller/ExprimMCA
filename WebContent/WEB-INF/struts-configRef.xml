@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    
+    <!-- ========== Data Source Configuration =============================== -->
+    <data-sources/>
+    
+    <!-- ========== Form Bean Definitions ================================== -->
+    <form-beans>
+        <form-bean dynamic="false" name="loginForm" type="com.except.struts.form.LoginForm"/>
+        
+        <form-bean dynamic="false" name="adressForm" type="com.except.struts.form.AdressForm"/>
+        
+        <form-bean dynamic="false" name="changePasswordForm" type="com.except.struts.form.ChangePasswordForm"/>
+        
+        <form-bean dynamic="false" name="changeMailForm" type="com.except.struts.form.ChangeMailForm"/>
+        
+        <form-bean dynamic="false" name="setMailForm" type="com.except.struts.form.SetMailForm"/>
+        
+        <form-bean dynamic="false" name="MouvementForm" type="com.except.struts.form.MouvementForm"/>
+        
+        <form-bean dynamic="false" name="teleCommentaireForm" type="com.except.struts.form.TeleCommentaireForm"/>
+        
+        <form-bean dynamic="false" name="selectDecPaie" type="com.except.struts.form.ListePaiementsForm"/>
+              
+        <form-bean dynamic="false" name="changeInterForm" type="com.except.struts.form.ChangeInterForm"/>
+     
+        <form-bean dynamic="false" name="contactForm" type="com.except.struts.form.ContactForm"/>
+        
+        <form-bean dynamic="false" name="SubscribeForm" type="com.except.struts.form.SubscribeForm"/>
+     
+        <form-bean dynamic="false" name="devisForm" type="com.except.struts.form.DevisForm"/>
+        
+        <form-bean dynamic="false" name="forgetPasswordForm" type="com.except.struts.form.ForgetPasswordForm"/>
+        
+ <!-- ========== Dossier Adhérent ================================== -->
+   
+        <form-bean dynamic="false" name="modBenefForm" type="com.except.struts.form.ModBenefForm"/>
+        
+        <form-bean dynamic="false" name="actBenefForm" type="com.except.struts.form.ActionsForm"/>
+        
+        <form-bean dynamic="false" name="modRIBForm" type="com.except.struts.form.RIBForm"/>
+        
+        <form-bean dynamic="false" name="messageForm" type="com.except.struts.form.MessageForm"/>
+        
+        <form-bean dynamic="false" name="changeTelForm" type="com.except.struts.form.ChangeTelForm"/>
+                       <!-- ====================================================================   
+        <form-bean dynamic="false" name="devisEnLigneForm" type="com.except.struts.devis.DevisForm"/>
+
+-->
+        <form-bean dynamic="false" name="devisEnLigneForm" type="com.except.struts.form.DevisEnLigneForm"/>
+        
+        <!-- ========== Formulaire de saisie pour génération Doc WORD ================================== -->
+ 
+        <form-bean dynamic="false" name="promptVarForm" type="com.except.docWord.struts.form.PromptVarForm"/>
+        
+        
+         <!-- ==================================================================== -->
+   
+    </form-beans>
+     
+     
+     
+    <!-- ========== Global Exception Definitions ============================== -->
+    <global-exceptions/>
+    
+    
+    
+    <!-- ========== Global Forward Definitions =============================== -->
+    <global-forwards>
+        <forward name="loginA" path="/EspaceAdh/loginAdh.jsp" redirect="false" contextRelative="false"/>
+        <forward name="loginA_spe" path="/EspaceAdh/loginAdh_newStyle.jsp" redirect="false" contextRelative="false"/>
+        <forward name="loginE" path="/EspaceEnt/loginEnt.jsp" redirect="false" contextRelative="false"/>
+            
+        <forward name="loginG" path="/EspaceGrp/loginGrp.jsp" redirect="false" contextRelative="false"/>
+        
+        <forward name="loginCollab" path="/EspaceCollab/loginCollab.jsp" redirect="false" contextRelative="false"/>
+            
+        <forward name="loginMCA" path="/EspaceMCA/loginMCA.jsp" redirect="false" contextRelative="false"/>
+        
+        <forward name="msgEnt" path="/EspaceEnt/msgEntPage.jsp" redirect="false" contextRelative="false"/>
+        <forward name="msgAdh" path="/EspaceAdh/msgAdhPage.jsp" redirect="false" contextRelative="false"/>
+        <forward name="msgGrp" path="/EspaceGrp/msgGrpPage.jsp" redirect="false" contextRelative="false"/>
+        <forward name="msgCollab" path="/EspaceCollab/msgCollabPage.jsp" redirect="false" contextRelative="false"/>
+        <forward name="msgNoDet" path="/EspaceEnt/NoDetAppelsCotN.jsp" redirect="false" contextRelative="false"/>
+        
+        <forward name="changeAdress" path="/EspaceAdh/gestionAdresse.jsp" redirect="false" contextRelative="false"/>
+        
+        <forward name="ChgPswdE" path="/EspaceEnt/ChgPswdEntPage.jsp" redirect="false" contextRelative="false"/>
+        <forward name="ChgPswdA" path="/EspaceAdh/ChgPswdAdhPage.jsp" redirect="false" contextRelative="false"/>
+        <forward name="ChgPswdG" path="/EspaceGrp/ChgPswdGrpPage.jsp" redirect="false" contextRelative="false"/>
+        <forward name="ChgPswdC" path="/EspaceCollab/ChgPswdCollabPage.jsp" redirect="false" contextRelative="false"/>
+        
+        <forward name="ChgMailE" path="/EspaceEnt/ChgMailEntPage.jsp" redirect="false" contextRelative="false"/>
+        <forward name="ChgMailA" path="/EspaceAdh/ChgMailAdhPage.jsp" redirect="false" contextRelative="false"/>
+        <forward name="ChgMailG" path="/EspaceGrp/ChgMailGrpPage.jsp" redirect="false" contextRelative="false"/>
+        
+        <forward name="ClosePopUp" path="/Commun/MvtDone.html" redirect="false" contextRelative="false"/>
+        <forward name="ErrorPopUp" path="/Commun/popupError.jsp" redirect="false" contextRelative="false"/>
+        
+    </global-forwards>
+    
+    <!-- ========== Action Mapping Definitions =============================== -->
+    <action-mappings>
+    
+        <action path="/sort" type="fr.improve.struts.taglib.layout.sort.SortAction" scope="request" validate="false">
+    	</action>
+    
+    	<action path="/treeview" type="fr.improve.struts.taglib.layout.treeview.TreeviewAction" scope="request" validate="false">
+    	</action>
+    
+       
+        <action attribute="loginForm" input="/EspaceAdh/loginAdh.jsp" name="loginForm" path="/loginA" scope="request" type="com.except.struts.action.LoginAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/mainMenuAdh.jsp" redirect="false" contextRelative="false"/>
+            <forward name="successnomail" path="/EspaceAdh/GetMailAdhPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action attribute="loginForm" input="/EspaceAdh/loginAdh_newStyle.jsp" name="loginForm" path="/loginA_spe" scope="request" type="com.except.struts.action.LoginAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/mainMenuAdh.jsp" redirect="false" contextRelative="false"/>
+            <forward name="successnomail" path="/EspaceAdh/GetMailAdhPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+ 
+        <action attribute="loginForm" input="/EspaceEnt/loginEnt.jsp" name="loginForm" path="/loginE" scope="request" type="com.except.struts.action.LoginAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/mainMenuEnt.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+           <!-- profil interlocuteur Groupe / Entreprise 	--> 
+       
+        <action path="/profInter" scope="session" type="com.except.struts.action.profInterAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/ProfInter.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action attribute="changeInterForm" name="changeInterForm" input="/EspaceEnt/ProfInter.jsp" path="/envoiProfInter" scope="session" type="com.except.struts.action.EnvoiProfInterAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/msgEntEnvoi.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+          <!-- ======================================================================== -->
+    
+    
+        <!-- profil interlocuteur Adhérent 	--> 
+       
+        <action path="/profInter_ADH" scope="session" type="com.except.struts.action.profInterAction_ADH" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/ProfInter.jsp" redirect="false" contextRelative="false"/>
+        </action>
+    
+        
+        <action attribute="changeInterForm" name="changeInterForm" input="/EspaceAdh/ProfInter.jsp" path="/envoiProfInter_ADH" scope="session" type="com.except.struts.action.EnvoiProfInterAction_ADH" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/msgAdhEnvoi.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+          <!-- ======================================================================== -->
+    
+    
+      
+        <action path="/contactInit" scope="request" type="com.except.struts.action.ContactAction" unknown="false" validate="true">
+            <forward name="success" path="/Commun/Contact.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+            <action attribute="contactForm" name="contactForm" input="/Commun/Contact.jsp" path="/contactSend" scope="request" type="com.except.struts.action.ContactSendAction" unknown="false" validate="true">
+            <forward name="success" path="/Commun/msgEnvoi.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action attribute="loginForm" input="/EspaceGrp/loginGrp.jsp" name="loginForm" path="/loginG" scope="request" type="com.except.struts.action.LoginAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceGrp/mainMenuGrp.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action input="/EspaceGrp/mainMenuGrp.jsp" path="/goEnt" scope="request" type="com.except.struts.action.GoEntrepriseAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/mainMenuEnt.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action path="/manageMvt" scope="request" type="com.except.struts.action.MouvementAppCotAction" unknown="false" validate="true" parameter="action">
+         <forward name="successDelete" path="/EspaceEnt/MvtDone.jsp" redirect="false" contextRelative="false"/>
+         <forward name="successManage" path="/EspaceEnt/mouvementAppCot.jsp" redirect="false" contextRelative="true"/>
+                
+        </action>
+        
+        <action path="/mouvement" attribute="MouvementForm" name="MouvementForm" scope="request" type="com.except.struts.action.DoMouvementAction" input="/EspaceEnt/mouvementAppCot.jsp" unknown="false" validate="true">
+        	<forward name="success" path="/EspaceEnt/MvtDone.jsp" redirect="false" contextRelative="false"/>
+        </action>
+  
+             
+        <action path="/getTeleCommentaire" scope="request" type="com.except.struts.action.GetTeleCommentaireAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/teleCommentaire.jsp" redirect="false" contextRelative="true"/>
+        </action>
+        
+        <action path="/setTeleCommentaire" attribute="teleCommentaireForm" input="/EspaceEnt/teleCommentaire.jsp" name="teleCommentaireForm" scope="request" parameter="action" type="com.except.struts.action.ValideTeleCommentaireAction" unknown="false" validate="true">
+            <forward name="success" path="/Commun/MvtDone.html" redirect="false" contextRelative="false"/>
+        </action>
+ 
+        <action attribute="SubscribeForm" input="/Commun/Suscribe.jsp" name="SubscribeForm" path="/subscribeAdh" scope="request" type="com.except.struts.action.SubscribeAdhAction" unknown="false" validate="true">
+            <forward name="success" path="/Commun/msgSubscribePage.jsp" redirect="false" contextRelative="false"/>
+   			<forward name="error" path="/Commun/Suscribe.jsp" redirect="false" contextRelative="true"/>
+        </action>
+
+        <action attribute="changePasswordForm" input="/EspaceEnt/ChgPswdEntPage.jsp" name="changePasswordForm" path="/ChgPswdE" scope="request" type="com.except.struts.action.ChangePasswordAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/msgEntPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action attribute="changeMailForm" input="/EspaceEnt/ChgMailEntPage.jsp" name="changeMailForm" path="/ChgMailE" scope="request" type="com.except.struts.action.ChangeMailAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/msgEntPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+      	<action attribute="forgetPasswordForm" input="/EspaceEnt/ForgetPasswordEntPage.jsp" name="forgetPasswordForm" path="/FpswrdE" scope="request" type="com.except.struts.action.ForgetPasswordAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/msgEntLogPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+           <action attribute="forgetPasswordForm" input="/EspaceAdh/ForgetPasswordAdhPage.jsp" name="forgetPasswordForm" path="/FpswrdA" scope="request" type="com.except.struts.action.ForgetPasswordAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/msgAdhLogPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+     
+                <action attribute="forgetPasswordForm" input="/EspaceGrp/ForgetPasswordGrpPage.jsp" name="forgetPasswordForm" path="/FpswrdG" scope="request" type="com.except.struts.action.ForgetPasswordAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceGrp/msgGrpLogPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action attribute="changePasswordForm" input="/EspaceAdh/ChgPswdAdhPage.jsp" name="changePasswordForm" path="/ChgPswdA" scope="request" type="com.except.struts.action.ChangePasswordAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/msgAdhPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action attribute="changeMailForm" input="/EspaceAdh/ChgMailAdhPage.jsp" name="changeMailForm" path="/ChgMailA" scope="request" type="com.except.struts.action.ChangeMailAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/msgAdhPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+         <action attribute="setMailForm" input="/EspaceAdh/GetMailAdhPage.jsp" name="setMailForm" path="/SetMailA" scope="request" type="com.except.struts.action.SetMailAction" unknown="false" validate="true">
+         <forward name="success" path="/EspaceAdh/msgAdhCompleted.jsp" redirect="false" contextRelative="false"/>
+         <forward name="error"  path="/EspaceAdh/msgAdhLogPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action attribute="changePasswordForm" input="/EspaceGrp/ChgPswdGrpPage.jsp" name="changePasswordForm" path="/ChgPswdG" scope="request" type="com.except.struts.action.ChangePasswordAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceGrp/msgGrpPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action attribute="changeMailForm" input="/EspaceGrp/ChgMailGrpPage.jsp" name="changeMailForm" path="/ChgMailG" scope="request" type="com.except.struts.action.ChangeMailAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceGrp/msgGrpPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+              
+        <action attribute="adressForm" input="/EspaceAdh/gestionAdresse.jsp" name="adressForm" path="/changeAdress" scope="request" type="com.except.struts.action.ChangeAdressAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/msgAdhPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/viewEffectifs" scope="request" type="com.except.struts.action.ListeEffectifsAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/listeEffectifs.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/viewAppCot" scope="request" type="com.except.struts.action.ListeAppelsCotsAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/listeAppelsCot.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/viewSuiviTele" scope="request" type="com.except.struts.action.ListeSuiviTeledeclarationsAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/listeSuiviTeledeclarations.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/manageAppCot" scope="request" type="com.except.struts.action.GestionAppelsCotsAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/ModifVisuAppelsCot.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action path="/teledeclaration" scope="request" type="com.except.struts.action.ListeDetSuiviTeletransmissionAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/detailTeledeclaration.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+
+      
+	
+                 
+        <action path="/viewRecapAppCot" scope="request" type="com.except.struts.action.RecapAppelsCotsAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/RecapAppelsCot.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/viewDetAppCotN" scope="request" type="com.except.struts.action.ListeDetAppelsCotsNAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/listeDetAppelsCotN.jsp" redirect="false" contextRelative="false"/>
+        </action>
+            
+            
+          <action path="/getDetAppCotN" scope="request" type="com.except.struts.action.GetDetAppelsCotsNAction" unknown="false" validate="true">
+            <forward name="success" path="/Commun/waitstart.html" redirect="false" contextRelative="false"/>
+        </action>
+            
+            
+            
+            
+            
+            
+        <action path="/mailDetAppCotN" scope="request" type="com.except.struts.action.MailDetAppelsCotsNAction" unknown="false" validate="true">
+            <forward name="success" path="/Commun/waitstart.html" redirect="false" contextRelative="false"/>
+        </action>
+        
+      
+        <action path="/previewDetAppCotN" scope="request" type="com.except.struts.action.PreviewDetAppelsCotsNAction" unknown="false" validate="true">
+            <forward name="success" path="/Commun/waitstart.html" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/mailBordereau" scope="request" type="com.except.struts.action.MailBordereauAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/msgValide.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/copyBordereau" scope="request" type="com.except.struts.action.CopyBordereauAction" unknown="false" validate="true">
+            <forward name="success" path="/Commun/waitstart.html" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/previewBordereau" scope="request" type="com.except.struts.action.PreviewBordereauAction" unknown="false" validate="true">
+            <forward name="success" path="/Commun/waitstart.html" redirect="false" contextRelative="false"/>
+        </action>
+        
+         <action path="/documentServe" scope="request" type="com.except.struts.action.DocumentServeAction" unknown="false" validate="true">
+            <forward name="success" path="/Commun/documentServe.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+          <action path="/wait" scope="request" type="com.except.struts.action.WaitExecuteAction" unknown="false" validate="true">
+            <forward name="success" path="/Commun/wait.jsp" redirect="false" contextRelative="false"/>
+        </action>
+      
+      
+        <action path="/logoutA" scope="session" type="com.except.struts.action.LogoutAdhAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/loginAdh.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/logoutE" scope="session" type="com.except.struts.action.LogoutEntAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceEnt/loginEnt.jsp" redirect="false" contextRelative="false"/>
+            <forward name="groupe" path="/EspaceGrp/mainMenuGrp.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/logoutG" scope="session" type="com.except.struts.action.LogoutGrpAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceGrp/loginGrp.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action path="/viewBeneficiaires" scope="session" type="com.except.struts.action.ListeBeneficiairesAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/listeBeneficiaires.jsp" redirect="false" contextRelative="false"/>
+        </action>  
+       
+        <action path="/manageAdress" scope="session" type="com.except.struts.action.AdresseAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/gestionAdresse.jsp" redirect="false" contextRelative="false"/>
+        </action> 
+        
+        <action path="/viewPaiements" scope="session" type="com.except.struts.action.ListePaiementsAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/listePaiementsTabbed.jsp" redirect="false" contextRelative="false"/>
+        </action>  
+        
+        <action path="/viewPaiementsInstance" scope="session" type="com.except.struts.action.ListePaiementsInstanceAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/listePaiementsInstance.jsp" redirect="false" contextRelative="false"/>
+        </action> 
+        
+        <action path="/viewPaiementsTabbed" scope="session" type="com.except.struts.action.ListePaiementsTabbedAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/listePaiementsTabbed.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action path="/viewDecomptes" scope="session" type="com.except.struts.action.ListeDecomptesAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/listeDecomptes.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        <action attribute="selectDecPaie" input="/EspaceAdh/listeDecomptes.jsp" name="selectDecPaie" path="/MAJLstPresta" scope="request" type="com.except.struts.action.ListeDecomptesAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceAdh/listeDecomptes.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action forward="/EspaceEnt/mainMenuEnt.jsp" path="/mainMenuE" scope="session" unknown="false" validate="true"/>
+            
+     	<action forward="/mainMenuA.jsp" path="/mainMenuA" scope="session" unknown="false" validate="true"/> 
+            
+        <action forward="/EspaceEnt/listeAppelsCot.jsp" path="/listAppCot" scope="session" unknown="false" validate="true"/>  
+            
+            
+            <!-- ========== Devis ============================ --> 
+            
+           
+				<action 	attribute="devisForm" 
+									input="/Commun/DevisAdh.jsp" 
+									name="devisForm" 
+									path="/calculDevis" 
+									scope="session" 
+									type="com.except.struts.action.CalculDevisAction" 
+									unknown="false" 
+									validate="true" >
+            	<forward name="success" path="/Commun/DevisAdh.jsp" redirect="false" contextRelative="false"/>
+       
+       			 </action>
+            
+            
+            
+            
+       			 <action 	path="/initDevisAdh" 
+        					scope="session" 
+        					type="com.except.struts.action.InitDevisAction" 
+        					unknown="false" 
+        					validate="true"
+        					>
+            	<forward name="success" path="/Commun/DevisAdh.jsp" redirect="false" contextRelative="false"/>
+        		</action> 
+            
+            
+       <!--	recharge les données pour la page main-->
+            
+        		<action path="/mainA" scope="session" type="com.except.struts.action.vueGlobalAdhAction" unknown="false" validate="true">
+            		<forward name="success" path="/EspaceAdh/mainMenuAdh.jsp" redirect="false" contextRelative="false"/>
+        		</action>
+            
+       <!-- ==============  Dossier Adhérent  ============================= -->
+     
+        
+        <action
+            path="/vueGlobAdh"
+            scope="session"
+            type="com.except.struts.action.vueGlobalAdhAction"
+            unknown="false"
+            validate="true">
+            <forward
+                name="success"
+                path="/AdhBenef/vueAdhBenef.jsp"
+                redirect="false"
+                contextRelative="false" />
+        </action>
+        <action
+            path="/vueGlobAdh_ongl"
+            scope="session"
+            type="com.except.struts.action.vueGlobalAdhAction"
+            unknown="false"
+            validate="true">
+            <forward
+                name="success"
+                path="/AdhBenef/DossAdh_ongl.jsp"
+                redirect="false"
+                contextRelative="false" />
+        </action>
+        
+        
+        <action
+        	attribute="actBenefForm"
+            input="/AdhBenef/vueAdhBenef.jsp"
+            name="actBenefForm"
+            path="/modAdh"
+            scope="session"
+            type="com.except.struts.action.AdhAction"
+            unknown="false"
+            validate="true">
+            <forward name="modben" path="/AdhBenef/ModBenef.jsp" redirect="false" contextRelative="false" />
+            <forward name="addben" path="/AdhBenef/ModBenef.jsp" redirect="false" contextRelative="false" />
+            <forward name="modadr" path="/AdhBenef/ModAdr.jsp" redirect="false" contextRelative="false" />
+            <forward name="modtel" path="/AdhBenef/ModTel.jsp" redirect="false" contextRelative="false" />
+            <forward name="modrib" path="/AdhBenef/ModRIB.jsp" redirect="false" contextRelative="false" />
+            <forward name="modmail" path="/AdhBenef/ModMail.jsp" redirect="false" contextRelative="false" />
+            <forward name="message" path="/AdhBenef/Message.jsp" redirect="false" contextRelative="false" />
+            <forward name="devisdent" path="/Documents/Bulletin.pdf"  redirect="false" contextRelative="false" />
+        </action>
+        
+        <action
+            attribute="modBenefForm"
+            input="/AdhBenef/ModBenef.jsp"
+            name="modBenefForm"
+            path="/updateBenef"
+            scope="request"
+            type="com.except.struts.action.EnvoiModBenefAction"
+            unknown="false"
+            validate="true">
+            <forward
+                name="success"
+                path="/Commun/msgEnvoi.jsp"
+                redirect="false"
+                contextRelative="false" />
+        </action>
+        
+        <action
+            attribute="changeTelForm"
+            input="/AdhBenef/ModTel.jsp"
+            name="changeTelForm"
+            path="/updateTel"
+            scope="request"
+            type="com.except.struts.action.EnvoiModBenefAction"
+            unknown="false"
+            validate="true">
+            <forward
+                name="success"
+                path="/Commun/msgEnvoi.jsp"
+                redirect="false"
+                contextRelative="false" />
+        </action>
+        
+        <action
+            attribute="modRIBForm"
+            input="/AdhBenef/ModRIB.jsp"
+            name="modRIBForm"
+            path="/updateRIB"
+            scope="request"
+            type="com.except.struts.action.EnvoiModBenefAction"
+            unknown="false"
+            validate="true">
+            <forward
+                name="success"
+                path="/Commun/msgEnvoi.jsp"
+                redirect="false"
+                contextRelative="false" />
+        </action>
+        
+        <action
+            attribute="changeMailForm"
+            input="/AdhBenef/ModMail.jsp"
+            name="changeMailForm"
+            path="/updatemail"
+            scope="request"
+            type="com.except.struts.action.EnvoiModBenefAction"
+            unknown="false"
+            validate="true">
+            <forward
+                name="success"
+                path="/Commun/msgEnvoi.jsp"
+                redirect="false"
+                contextRelative="false" />
+        </action>
+        
+  		<!--      <action
+            		attribute="messageForm"
+            		input="/AdhBenef/Message.jsp"
+            		name="messageForm"
+            		path="/sendMessage"
+            		scope="request"
+            		type="com.except.struts.action.EnvoiModBenefAction"
+            		unknown="false"
+            		validate="true">
+            	<forward
+                		name="success"
+                path="/Commun/msgEnvoi.jsp"
+                redirect="false"
+                contextRelative="false" />
+        		</action>
+  		 -->
+        
+        <action
+            attribute="adressForm"
+            input="/AdhBenef/ModAdr.jsp"
+            name="adressForm"
+            path="/updateadr"
+            scope="request"
+            type="com.except.struts.action.EnvoiModBenefAction"
+            unknown="false"
+            validate="true">
+            <forward
+                name="success"
+                path="/Commun/msgEnvoi.jsp"
+                redirect="false"
+                contextRelative="false" />
+        </action>
+        
+               
+ 
+        <!-- Devis en ligne : -->   
+        <!-- Remarque: la validation est appelé dans le contrôleur 
+        						en raison de l'utilisation du DispatchAction  --> 
+				<action path="/DevisEnLigne"
+						name="devisEnLigneForm"
+						type="com.except.struts.action.DevisEnLigneAction"
+						parameter="reqCode"
+						validate="false" 
+						input="/Commun/DevisAdherent_newStyle.jsp"
+						scope="request"
+						>
+						<forward name="display" path="/Commun/DevisAdherent_newStyle.jsp"/>
+						<forward name="calcul" path="/Commun/DevisAdherent_newStyle.jsp"/>
+				</action>
+		    <!-- ======================================================================== -->
+
+  
+  
+  
+  		<!-- =====================   Espace Collaboratif   ====================== -->
+    
+    	<action forward="/EspaceCollab/mainMenuCollab.jsp" path="/mainMenuCollab" scope="session" unknown="false" validate="true"/>
+        
+		<action attribute="loginForm" input="/EspaceCollab/loginCollab.jsp" name="loginForm" path="/loginCollab" scope="request" type="com.except.struts.action.LoginAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceCollab/mainMenuCollab.jsp" redirect="false" contextRelative="false"/>
+        </action>      
+      
+      	<action attribute="forgetPasswordForm" input="/EspaceCollab/ForgetPasswordCollabPage.jsp" name="forgetPasswordForm" path="/FpswrdCollab" scope="request" type="com.except.struts.action.ForgetPasswordAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceCollab/msgCollabLogPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+                        
+        <action path="/logoutCollab" scope="session" type="com.except.struts.action.LogoutCollabAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceCollab/loginCollab.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action attribute="changePasswordForm" input="/EspaceCollab/ChgPswdCollabPage.jsp" name="changePasswordForm" path="/ChgPswdCollab" scope="request" type="com.except.struts.action.ChangePasswordAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceCollab/msgCollabPage.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action path="/profInterCollab" scope="session" type="com.except.struts.action.profInterAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceCollab/ProfInter.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action attribute="changeInterForm" name="changeInterForm" input="/EspaceCollab/ProfInter.jsp" path="/envoiProfInterCollab" scope="session" type="com.except.struts.action.EnvoiProfInterAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceCollab/msgCollabEnvoi.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        		<!-- ============   Doc WORD   ============ -->
+              
+   		<action path="/listeDocWord" scope="session" type="com.except.docWord.struts.action.ListeDocWordAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceCollab/listeDocWordCollab.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action path="/listeVarInDoc2" scope="session" type="com.except.docWord.struts.action.ListeVarInDocAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceCollab/listeVarInDocCollab.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/listeVarInDoc" scope="session" type="com.except.docWord.struts.action.ListeVarInDocAction" unknown="false" validate="true">
+            <forward name="success" path="/EspaceCollab/promptVarDoc.jsp" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action 	attribute="promptVarForm" 
+									input="/EspaceCollab/promptVarDoc.jsp" 
+									name="promptVarForm" 
+									path="/sendVarDoc" 
+									scope="request" 
+									type="com.except.docWord.struts.action.SendVarDocAction" 
+									unknown="false" 
+									validate="true" >
+            	<forward name="success" path="/EspaceCollab/RecapVarDocWord.jsp" redirect="false" contextRelative="false"/>
+       			<forward name="again" path="/EspaceCollab/promptVarDoc.jsp" redirect="false" contextRelative="false"/>
+        
+    	</action>
+        
+        <action 	path="/backVarDoc" scope="request" type="com.except.docWord.struts.action.BackVarDocAction" 
+									unknown="false" validate="true" >
+            	<forward name="success" path="/EspaceCollab/promptVarDoc.jsp" redirect="false" contextRelative="false"/>
+        </action>
+       			 
+     	<action 	path="/genDocWord" scope="request" type="com.except.docWord.struts.action.GenDocWordAction" 
+									unknown="false" validate="true" >
+            	<forward name="success" path="/EspaceCollab/msgCollabEnvoi.jsp" redirect="false" contextRelative="false"/>
+       	</action>
+
+    
+	<action forward="/Commun/Assistance.jsp" path="/Assistance" scope="session" unknown="false" validate="true"/>
+       	
+       	
+       	
+        <!-- ======================================================================== -->
+          
+            
+    </action-mappings>
+    
+    <!-- ========== Controller Configuration ================================ 
+    <controller
+        bufferSize="4096"
+        contentType="text/html; charset=UTF-8"
+        debug="1"
+        locale="false"
+        maxFileSize="250M"
+        multipartClass="org.apache.struts.upload.CommonsMultipartRequestHandler"
+        nocache="false"
+        processorClass="org.apache.struts.action.RequestProcessor"
+         />
+    -->
+  
+    
+    
+    
+     <!-- ========== Message Resources Definitions ============================ -->
+    
+     <message-resources factory="org.apache.struts.util.PropertyMessageResourcesFactory" key="org.apache.struts.action.MESSAGE" null="true" parameter="com.except.struts.ApplicationResources"/>
+        
+        
+          <!-- ========== Plug Ins Configuration ================================== -->
+
+  <plug-in className="net.sf.navigator.menu.MenuPlugIn">
+    <set-property property="menuConfig" value="/WEB-INF/menu-config.xml"/>
+  </plug-in>
+        
+
+               
+</struts-config>
+

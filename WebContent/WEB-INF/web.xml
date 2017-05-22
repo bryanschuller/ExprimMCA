@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/j2ee/dtds/web-app_2_3.dtd">
+
+<web-app reloadable='true'>
+	
+	<listener>
+		<listener-class>
+			com.exprimweb.util.listener.InitialisationApplication
+		</listener-class>
+	</listener>
+	
+	
+	<error-page>  
+		<error-code>403</error-code>  
+		<location>/jsp/erreur/erreur403.jsp</location>  
+	</error-page> 
+	
+	<error-page>  
+		<error-code>404</error-code>  
+		<location>/jsp/erreur/erreur404.jsp</location>  
+	</error-page> 
+	
+	
+	<error-page>  
+		<error-code>500</error-code>  
+		<location>/jsp/erreur/erreur500.jsp</location>  
+	</error-page> 
+	
+	
+	
+	
+	<filter>
+   		<filter-name>LogValuesSetFilter</filter-name>
+       	<filter-class>com.exprimweb.struts.filter.LogValuesSetFilter</filter-class>
+   	</filter>
+   	<filter-mapping>
+   		<filter-name>LogValuesSetFilter</filter-name>
+   		<url-pattern>*.jsp</url-pattern> 
+   	</filter-mapping> 
+   	<filter-mapping>
+   		<filter-name>LogValuesSetFilter</filter-name>
+   		<url-pattern>*.do</url-pattern> 
+   	</filter-mapping> 
+    
+	<filter>
+   		<filter-name>LayoutFilter</filter-name>
+       	<filter-class>com.exprimweb.struts.filter.LayoutFilter</filter-class>
+   	</filter>
+   	<filter-mapping>
+   		<filter-name>LayoutFilter</filter-name>
+   		<url-pattern>/tilesLayout/*</url-pattern> 
+   	</filter-mapping>
+    
+
+    
+	<filter>
+		<filter-name>LostConnectionFilter</filter-name>
+		<filter-class>com.exprimweb.struts.filter.LostConnectionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LostConnectionFilter</filter-name>
+		<url-pattern>/msgPrblTech.do</url-pattern>
+	</filter-mapping> 
+	
+	<filter>
+		<filter-name>MaintenanceFilter</filter-name>
+		<filter-class>com.exprimweb.struts.filter.MaintenanceFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MaintenanceFilter</filter-name>
+		<url-pattern>/msgMaintenance.do</url-pattern>
+	</filter-mapping> 
+    
+    <!-- 
+	<filter>
+		<filter-name>ActionFilter</filter-name>
+		<filter-class>com.exprimweb.struts.filter.ActionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ActionFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>ErreursFilter</filter-name>
+		<filter-class>com.exprimweb.struts.filter.ErreursFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ErreursFilter</filter-name>
+		<url-pattern>/jsp/erreur/*</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>com.exprimweb.util.listener.InitialisationApplication</listener-class>
+	</listener>
+
+    -->
+ 
+
+    
+
+
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+		    <param-name>config</param-name>
+		    <param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		
+		<init-param>
+		    <param-name>debug</param-name>
+		    <param-value>3</param-value>
+		</init-param>
+		
+		<init-param>
+		    <param-name>detail</param-name>
+		    <param-value>3</param-value>
+		</init-param>
+		
+		 <init-param>
+		    <param-name>validate</param-name>
+		    <param-value>true</param-value>
+		</init-param>
+		
+		<init-param>
+		    <param-name>definitions-config</param-name>
+		    <param-value>/WEB-INF/tiles-defs.xml</param-value>
+		</init-param>
+		
+		
+		<init-param>
+		    <param-name>urlBase</param-name>
+		    <param-value>http://localhost:8080/ExprimMCA/</param-value>
+		</init-param>
+		
+		<multipart-config>
+			<!-- 50MB max -->
+			<max-file-size>52428800</max-file-size>
+			<max-request-size>52428800</max-request-size>
+			<file-size-threshold>0</file-size-threshold>
+		</multipart-config>
+
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+    
+	
+	<servlet>
+		<description></description>
+		<display-name>TelechargerFichier</display-name>
+		<servlet-name>TelechargerFichier</servlet-name>
+		<servlet-class>com.exprimweb.util.TelechargerFichier</servlet-class>
+	</servlet>
+ 
+ 	<servlet>
+		<servlet-name>PdfServlet</servlet-name>
+		<servlet-class>com.except.struts.util.PdfServlet</servlet-class>
+	</servlet> 
+    
+ 
+	<!-- Action Servlet Mapping -->
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TelechargerFichier</servlet-name>
+		<url-pattern>/TelechargerFichier</url-pattern>
+	</servlet-mapping>
+    
+      <servlet-mapping>
+		<servlet-name>PdfServlet</servlet-name>
+		<url-pattern>/PdfServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<!-- Paiement en ligne -->
+    <servlet>
+        <servlet-name>PaiementRequestServlet</servlet-name>
+        <servlet-class>com.except.paiement.RequestServlet</servlet-class>          
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PaiementRequestServlet</servlet-name>
+        <url-pattern>/PaiementRequest</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>PaiementAutoResponseServlet</servlet-name>
+        <servlet-class>com.except.paiement.AutoResponseServlet</servlet-class>          
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PaiementAutoResponseServlet</servlet-name>
+        <url-pattern>/PaiementAutoResponse</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>PaiementResponseServlet</servlet-name>
+        <servlet-class>com.except.paiement.ResponseServlet</servlet-class>          
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PaiementResponseServlet</servlet-name>
+        <url-pattern>/PaiementResponse</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Fin paiement en ligne -->
+	
+	
+	
+	
+	
+
+	<!-- The Welcome File List -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- Application Tag Library Descriptors -->
+	
+	<taglib>
+		<taglib-uri>/WEB-INF/app.tld</taglib-uri>
+		<taglib-location>/WEB-INF/app.tld</taglib-location>
+	</taglib>
+	
+	
+	<!-- Struts Tag Library Descriptors -->
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-html.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-html.tld</taglib-location>
+	</taglib>
+	
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-logic.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-logic.tld</taglib-location>
+	</taglib>
+	
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-bean.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-bean.tld</taglib-location>
+	</taglib>
+	
+	
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-layout.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-layout.tld</taglib-location>
+	</taglib>
+	
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-tiles.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-tiles.tld</taglib-location>
+	</taglib>
+
+	<!--Context Params -->
+	
+
+	
+	<context-param>
+	    	<description>Niveau d'execution</description>
+	    	<param-name>NiveauExec</param-name>
+	    	<param-value>dev</param-value>
+	</context-param>
+	
+	<context-param>
+	    	<description>Nom de l'auteur des message de la Mutuelle</description>
+	    	<param-name>AuteurInterne</param-name>
+	    	<param-value>MCA</param-value>
+	</context-param>  
+	
+	<context-param>
+		<description>Domiciliation bancaire Obligatoire</description>
+	    	<param-name>DomiciliationBancaire</param-name>
+	    	<param-value>N</param-value>
+	</context-param>
+    
+     <!-- Restrict all users from accessing /secure.jsp -->
+ 
+  <!-- Login Configuration --> 
+ 
+</web-app>

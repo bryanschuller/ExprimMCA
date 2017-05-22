@@ -1,0 +1,428 @@
+
+
+
+
+
+
+
+
+
+/*	BODY MCA	*/
+BODY 	{
+
+background-color      : #FFFFFF;
+color : #231F20;
+font-family : Verdana, Arial, Helvetica, sans-serif;
+text-decoration: none;
+scrollbar-3d-light-color : #FFFFFF;
+scrollbar-arrow-color : #231F20;
+scrollbar-base-color : #888888;
+scrollbar-dark-shadow-color : #231F20;
+scrollbar-face-color : #FFD98F;
+scrollbar-highlight-color : F1F1F3;
+scrollbar-shadow-color : #231F20;
+}
+
+/*	Barre d etat	*/
+.INFOLINE {
+	background-color: #FFEFCF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #231F20;
+	font-weight: bold;
+	height: 22px;
+}
+.INFOLINE_LOGIN {
+	background-color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #231F20;
+	font-weight: bold;
+	height: 22px;
+}
+
+/*	BOUTTONS	*/
+
+INPUT.BOUT1{
+	background-color: #FFD98F;
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	padding: 1px;
+	border: 1px outset #FFD98F;
+	cursor: pointer;
+}
+
+/*	pages LOGIN, changePSW, changeMAIL, gestionAdresse	*/
+.LOGIN_BACKG{
+	background-color: #FFEFCF;
+	height:100%;
+	vertical-align:center;
+	
+}
+TABLE.LOGIN_FORM{
+	border: 1px solid #FFFFFF;
+	background-color: #FDB913;
+}
+TD.LOGIN_FORM{
+
+}
+.LOGIN_LABEL{
+
+}
+.ADRESSE_LABEL {
+	width : 60px;
+	vertical-align : top;
+}
+.ADRESSE_DONNEES {
+	text-align : left;
+}
+/*	fin	*/
+
+
+/*	pages MSG	*/
+.BACKG{
+	 height:100%;
+	 vertical-align:top;
+}
+.ENTETE{
+	background-color: #FDB913;
+	border:0;
+	font-weight: bold; 
+	font-size: 11px;
+}
+TABLE.CORPS_MSG{
+	background-color: #FFEFCF;
+	text-align: center;
+	font-size: 11px;
+	border: 1px solid #FDB913;
+}
+TABLE.CORPS_DONNE{
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 11px;
+	border: 1px solid #FDB913;
+}
+TABLE.SOUS_CORPS_DONNE{
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 11px;
+	
+}
+TABLE.CORPS_TOTAL{
+	background-color: #FFFFFF;
+	font-size: 9px;
+}
+TABLE.CORPS_TOTAL TH{
+	text-align: left;
+}
+TABLE.CORPS_TOTAL TD{
+	text-align: right;
+}
+TABLE.DONNE{
+	background-color: #231F20;
+}
+TH.DONNE{
+	background-color: #FDB913;
+	font-size: 11px;
+	font-weight: bold;
+}
+TD.DONNE{
+	background-color: #FFD98F;
+	text-align: center;
+	font-size: 11px;
+}
+TD.DONNE_INTER{
+	background-color: #FFEFCF;
+	text-align: center;
+	font-size: 11px;
+}
+TABLE.TOTAL {
+	background-color :  #FFFFFF;
+}
+
+TABLE.TOTAL TD {
+	background-color :  #FFEFCF;
+	text-align: right;
+	font-size: 11px; 
+    font-weight:bold;
+}
+
+TABLE.TOTAL TH {
+	background-color :  #FFFFFF;
+	color :#FDB913;
+	text-align: left;
+	font-size: 11px; 
+	font-weight:bold;
+}
+.SEPARATOR{
+	background-color : #FDB913;
+	height: 1px;
+	font-size: 1px;
+}
+
+
+
+
+
+
+/*	------------------	Ancien Style	--------------------------- */
+
+/* definition des liens */
+
+
+A { color : #FDB913; 
+	text-decoration: none; 
+}
+
+A:link {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #FDB913;
+	font-size: 10px;
+	font-style: normal;
+}
+
+A:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FDB913;
+	font-weight: bold;
+}
+A:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #F7941D;
+}
+
+
+
+
+
+
+TH.ERROR {
+	background-color : #FFFFFF; 
+	text-decoration: none;
+	font-size: 11px;
+	color: #231F20;
+}
+
+TD.ERROR {
+	background-color : #FFEFCF; 
+	text-decoration: none;
+	font-size: 11px;
+	color: #D71920;
+}
+
+/* Apparence du PAGER */
+.PAGER {
+	background-color :  #FFFFFF; 
+font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	text-decoration: none;
+	font-size: 11px;
+	font-weight: bold;
+	color: #333333;
+}
+
+A.PAGER  { color : #FDB913; 
+	text-decoration: none; 
+}
+
+A:link.PAGER  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #FDB913;
+	font-size: 11px;
+	font-style: normal;
+}
+
+A:visited.PAGER  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FDB913;
+	font-weight: bold;
+}
+A:hover.PAGER  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #F7941D;
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+/**
+ * Calendar classes
+ */
+
+TD.CALENDRIER {
+	background-color: #C2C2C2; 
+	font-weight: bold; 
+	text-align: center; 
+	font-size: 10px;
+}
+
+A.CALENDRIER {
+	text-decoration: none; 
+	color: #231F20;
+}
+
+.CALENDARBORDER {
+	background-color: #336699; //#231F20; 
+}
+
+.CALENDARTITLE {
+	background-color: #336699; //#C9252C;
+}
+
+.CALENDARWEEK {
+	background-color: #FFFFFF;
+}
+
+.CALENDARWEEKEND {
+	background-color: #FFF4E5;
+}
+
+.CALENDARSELECTED {
+	background-color: #FF8F01;
+}
+
+
+
+img {
+	border: none;
+}
+
+
+.tah10 {
+	font-family: Tahoma;
+	font-size: 10px;
+	text-decoration: none;
+	color: #231F20;
+}
+.tah11 {
+	font-family: Tahoma;
+	font-size: 11px;
+	text-decoration: none;
+	color: #231F20;
+}
+.ver10 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold; 
+	font-size: 10px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.ver10b {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold; 
+	font-size: 10px;
+	text-decoration: none;
+	color: #FFD98F;
+}
+
+
+
+
+
+
+.ver9b {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold; 
+	font-size: 9px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.ver11 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	color: #231F20;
+}
+.ver11b {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #231F20;
+}
+.ver11b_claire {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.tah9 {
+	font-family: Tahoma;
+	font-size: 9px;
+	text-decoration: none;
+	color: #231F20;
+}
+
+.tah9b {
+	font-family: Tahoma;
+	font-size: 9px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+
+.ver9 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	text-decoration: none;
+	color: #231F20;
+}
+
+h1 {
+	color: #231F20;
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+	font-size: 20px;
+
+}
+
+h2 {
+	color: #231F20;
+}
+
+h3, h4 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+h5, h6 {
+	color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+SELECT { font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ background-color: #FFEFCF;
+  border: #231F20;
+  border-style: solid;
+   border-top-width: 1px;
+ border-right-width: 1px;
+  border-bottom-width: 1px;
+   border-left-width: 1px;
+   }
+
+

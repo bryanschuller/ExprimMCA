@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+	<!--
+		========== Data Source Configuration ===============================
+	-->
+	<data-sources />
+
+	<!--
+		========== Form Bean Definitions ==================================
+	-->
+	<form-beans>
+
+		<form-bean name="AuthentificationInterneForm"
+			type="com.exprimweb.struts.form.AuthentificationInterneForm" />
+		<form-bean name="ChangementMotPasseForm"
+			type="com.exprimweb.struts.form.ChangementMotPasseForm" />
+		<form-bean name="ModificationInfoInterlocuteurForm"
+			type="com.exprimweb.struts.form.ModificationInfoInterlocuteurForm" />
+		<form-bean dynamic="false" name="adressForm"
+			type="com.exprimweb.struts.form.AdressForm" />
+		<form-bean dynamic="false" name="modRIBForm"
+			type="com.exprimweb.struts.form.RIBForm" />
+		<form-bean dynamic="false" name="modEmailForm"
+			type="com.exprimweb.struts.form.ChangeEmailForm" />
+		<form-bean dynamic="false" name="envoyerMsgForm"
+			type="com.exprimweb.struts.form.EnvoyerMessageForm" />
+		<form-bean dynamic="false" name="uploadForm"
+			type="com.exprimweb.struts.form.UploadForm" />
+		<form-bean dynamic="false" name="repondreEchangeForm"
+			type="com.exprimweb.struts.form.RepondreEchangeForm" />
+		<form-bean dynamic="false" name="detailEffectifsForm"
+			type="com.exprimweb.struts.form.DetailEffectifsForm" />
+		<form-bean dynamic="false" name="forgetPasswordForm"
+			type="com.exprimweb.struts.form.ForgetPasswordForm" />
+	<!--	<form-bean dynamic="false" name="paiementLigneForm"
+			type="com.exprimweb.struts.form.PaiementLigneForm" />	-->
+
+		<!-- ========== Teledeclaration =============================== -->
+		<form-bean dynamic="false" name="MouvementForm"
+			type="com.except.struts.form.MouvementForm" />
+		<form-bean dynamic="false" name="teleCommentaireForm"
+			type="com.except.struts.form.TeleCommentaireForm" />
+			
+	<!-- =====================devis en ligne======================= -->
+          
+	    <form-bean dynamic="false" name="devisEnLigneForm" type="com.except.struts.form.DevisEnLigneForm"/>
+	    <form-bean dynamic="false" name="devisEnLigneFormEnfant" type="com.except.struts.form.DevisEnLigneFormEnfant"/>
+	         
+    <!-- ========== Formulaire de saisie pour génération Doc WORD ================================== -->
+ 
+        <form-bean dynamic="false" name="promptVarForm" type="com.except.docWord.struts.form.PromptVarForm"/>
+
+
+	<!-- ========== Paiement en ligne ================================== -->
+ 		<form-bean dynamic="false" name="paiementLigneForm" type="com.except.struts.form.PaiementLigneForm"/>
+	
+	<!-- =======================Gestionnaire============================ -->
+		
+		<form-bean dynamic="false" name="LoginGestionnaireForm" type="com.exprimweb.struts.form.LoginGestionnaireForm"/>
+		
+	<!-- ========== Prise En Charge en ligne (PEC) ================================== -->
+ 		<form-bean dynamic="false" name="PECAdherentForm" type="com.exprimweb.struts.form.PECAdherentForm"/>
+		<form-bean dynamic="false" name="PECFacturerForm" type="com.exprimweb.struts.form.PECFacturerForm"/>
+		<form-bean dynamic="false" name="PECFiltreListeForm" type="com.exprimweb.struts.form.PECFiltreListeForm"/>
+		<form-bean dynamic="false" name="PECForm" type="com.exprimweb.struts.form.PECForm"/>
+		
+		
+	</form-beans>
+
+
+
+	<!--
+		========== Global Exception Definitions ==============================
+	-->
+	<global-exceptions />
+
+
+
+
+	<!--
+		========== Global Forward Definitions ===============================
+	-->
+	<global-forwards>
+
+		
+		<forward name="maintenance" path="pageMaintenance" redirect="false"
+			contextRelative="false" />
+		<forward name="authentifier" path="/redirectLogin.do"
+			redirect="false" contextRelative="false" />
+
+		<forward name="selectDossier" path="/listeDossiers.do"
+			redirect="false" contextRelative="false" />
+
+		<forward name="saisieMail" path="/loadAllEmails.do?type=Finalise"
+			redirect="false" contextRelative="false" />
+
+		<forward name="msgOk" path="pageMsgOk" redirect="false"
+			contextRelative="false" />
+		<forward name="msgFinalise" path="pageMsgFinalise" redirect="false"
+			contextRelative="false" />
+		<forward name="msgErreur" path="pageMsgErreur" redirect="false"
+			contextRelative="false" />
+			
+		<forward name="msgOkMsg" path="pageMsgOkMsg" redirect="false"
+			contextRelative="false" />
+		<forward name="msgErreurMsg" path="pageMsgErreurMsg" redirect="false"
+			contextRelative="false" />
+			
+		<forward name="noDoss" path="pageNoDoss" redirect="false" contextRelative="false"/>
+		
+		<forward name="saisieInterloc" path="/finaliseInfoInterlocuteur.do?action=initForm" redirect="false" contextRelative="false" />
+
+		<!-- ========== Teledeclaration =============================== -->
+		<forward name="ClosePopUp" path="/Commun/MvtDone.html"
+			redirect="false" contextRelative="false" />
+		<forward name="ErrorPopUp" path="/Commun/popupError.jsp"
+			redirect="false" contextRelative="false" />
+
+		<!-- =========== Génération Documents ========================= -->
+		
+		<forward name="msgCollab" path="/jsp/EspaceCollab/msgCollabPage.jsp" redirect="false" contextRelative="false"/>
+ 	
+	</global-forwards>
+
+
+
+	<!--
+		========== Action Mapping Definitions ===============================
+	-->
+	<action-mappings>
+
+		<action path="/sort" type="fr.improve.struts.taglib.layout.sort.SortAction"
+			scope="request" validate="false">
+		</action>
+
+		<action path="/page" type="fr.improve.struts.taglib.layout.sort.PageAction"
+			scope="request" validate="false" />
+
+		<action path="/treeview"
+			type="fr.improve.struts.taglib.layout.treeview.TreeviewAction" scope="request"
+			validate="false">
+		</action>
+
+		<action path="/documentServe" scope="request"
+			type="com.exprimweb.struts.action.DocumentServeAction" unknown="false"
+			validate="true">
+			<forward name="succes" path="/jsp/documentServe.jsp"
+				redirect="false" contextRelative="false" />
+		</action>
+
+		<action path="/documentDossServe" scope="request"
+			type="com.exprimweb.struts.action.DocumentDossServeAction" unknown="false"
+			validate="true">
+			<forward name="succes" path="/jsp/documentServe.jsp"
+				redirect="false" contextRelative="false" />
+		</action>
+
+		<action path="/retourArriere" scope="request"
+			type="com.exprimweb.struts.action.RetourArriereAction" unknown="false"
+			validate="true">
+			<forward name="succes" path="/presenterResumeDossier.do" />
+		</action>
+
+
+
+
+
+
+		<action path="/forgetPswd" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageForgetPswd" />
+		</action>
+
+		<action name="forgetPasswordForm" input="pageForgetPswd" path="/MotPasseForget"
+			scope="request" type="com.exprimweb.struts.action.ForgetPasswordAction"
+			unknown="false" validate="true">
+		</action>
+
+		<action path="/accueil" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageAccueil" />
+		</action>
+
+		<action path="/msgPrblTech" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pagePrblTech" />
+		</action>
+
+		<action path="/login"
+			type="com.exprimweb.struts.action.AuthentificationInitAction">
+			<forward name="succes" path="pageLogin" />
+		</action>
+
+		<action path="/loginADH"
+			type="com.exprimweb.struts.action.AuthentificationInitAction">
+			<forward name="succes" path="pageLogin" />
+		</action>
+
+		<action path="/loginENT"
+			type="com.exprimweb.struts.action.AuthentificationInitAction">
+			<forward name="succes" path="pageLogin" />
+		</action>
+
+		<action path="/loginTIE"
+			type="com.exprimweb.struts.action.AuthentificationInitAction">
+			<forward name="succes" path="pageLogin" />
+		</action>
+		
+		<action path="/loginGest" type="com.exprimweb.struts.action.LoginGestInitAction" validate="true">
+			<forward name="succes" path="pageLoginGest" />
+		</action>
+		
+		
+		
+		<action path="/authGest" input="pageLoginGest" name="LoginGestionnaireForm"  scope="session" type="com.exprimweb.struts.action.LoginGestAction" validate="true">
+        	<forward name="echec" path="pageLoginGest" />
+        	<forward name="succes" path="/accederDossier.do?id=1" />
+        </action>
+
+		<action path="/authentifier"
+			type="com.exprimweb.struts.action.AuthentificationExterneAction">
+			<forward name="succes" path="/jsp/externe/authentifier.jsp" />
+		</action>
+		
+		
+	<!-- <action path="/deconnexion" type="com.exprimweb.struts.action.DeconnexionAction">
+			<forward name="succesADH" path="/loginADH.do" />
+			<forward name="succesENT" path="/loginENT.do" />
+			<forward name="succesTIE" path="/loginTIE.do" />
+			<forward name="succesUNK" path="/login.do" />
+			<forward name="succesGES" path="/loginGest.do" />
+		</action>
+	 -->
+	 
+		<action path="/deconnexion" type="com.exprimweb.struts.action.DeconnexionAction">
+			<forward name="succesADH" path="http://www.mc-alsace.fr/adherent-particulier.html"
+			redirect="true" />
+			<forward name="succesENT" path="http://www.mc-alsace.fr/acces-Entreprise.html"
+			redirect="true" />
+			<forward name="succesTIE" path="/loginTIE.do" />
+			<forward name="succesUNK" path="http://www.mc-alsace.fr/acces-Entreprise.html"
+			redirect="true" />
+			<forward name="succesGES" path="/loginGest.do" />
+		</action>
+
+		<action path="/redirectLogin" type="com.exprimweb.struts.action.RedirectLoginAction">
+			<forward name="succesADH" path="http://www.mc-alsace.fr/adherent-particulier.html"
+			redirect="true" />
+			<forward name="succesENT" path="http://www.mc-alsace.fr/acces-Entreprise.html"
+			redirect="true" />
+			<forward name="succesTIE" path="/loginTIE.do" />
+			<forward name="succesUNK" path="http://www.mc-alsace.fr/acces-Entreprise.html"
+			redirect="true" />
+			<forward name="succesGES" path="/loginGest.do" />
+		</action>
+
+		<action path="/listeDossiers"
+			type="com.exprimweb.struts.action.ChangementDossierAction">
+			<forward name="succes" path="pageListeDossiers" />
+			<forward name="succesUnDoss" path="/accederDossier.do?id=1" />
+		</action>
+
+		<action path="/accederDossier" type="com.exprimweb.struts.action.AccederDossierAction">
+			<forward name="succes" path="/presenterResumeDossier.do" />
+		</action>
+
+		<action path="/presenterResumeDossier"
+			type="com.exprimweb.struts.action.PresenterResumeDossierAction">
+			<forward name="succes" path="pageAccederDossier" />
+		</action>
+
+		<action path="/authinterne"
+			type="com.exprimweb.struts.action.AuthentificationInterneAction"
+			input="pageLogin" name="AuthentificationInterneForm" scope="session">
+			<forward name="succes" path="pageListeDossiers" />
+			<forward name="accesDoss" path="/accederDossier.do?id=1" />
+			<forward name="echec" path="/redirectLogin.do" />
+			<forward name="noDossToDisplay" path="/deconnexion.do?type=noDoss"/>
+		</action>
+
+		<action path="/authinterneMask"
+			type="com.exprimweb.struts.action.AuthentificationInterneAction"
+			scope="session">
+			<forward name="succes" path="pageListeDossiers" />
+			<forward name="accesDoss" path="/accederDossier.do?id=1" />
+			<forward name="echec" path="pageLogin" />
+		</action>
+
+		<action path="/changementMotPasse" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageChangementMotPasse" />
+		</action>
+
+		<action path="/changerMotPasse"
+			type="com.exprimweb.struts.action.ChangementMotPasseAction" input="pageChangementMotPasse"
+			name="ChangementMotPasseForm" validate="true" scope="session">
+			<forward name="succes" path="pageLogin" />
+		</action>
+
+		<action path="/modifInfoInterlocuteur" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageModifInfoInterlocuteur" />
+		</action>
+
+		<action path="/modifierInfoInterlocuteur"
+			type="com.exprimweb.struts.action.ModificationInfoInterlocuteurAction"
+			input="pageLogin" name="ModificationInfoInterlocuteurForm" scope="session">
+			<forward name="succes" path="confirmeModifInfoInterlocuteur" />
+			<forward name="echec" path="pageErreurModifInfoInterlocuteur" />
+		</action>  
+
+		<action path="/confirmeModifInfoInterlocuteur" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageConfirmeModifInfoInterlocuteur" />
+		</action>
+		<action path="/erreurModifInfoInterlocuteur" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageErreurModifInfoInterlocuteur" />
+		</action>
+
+		<action path="/detailAdherent" type="com.exprimweb.struts.action.DetailAdherentAction">
+			<forward name="succes" path="pageDetailAdherent" />
+		</action>
+
+		<action path="/detailContrat" type="com.exprimweb.struts.action.DetailContratAction">
+			<forward name="succes" path="pageDetailContrat" />
+		</action>
+
+		<action path="/listeDocuments" type="com.exprimweb.struts.action.ListeDocumentsAction">
+			<forward name="succes" path="pageListeDocuments" />
+		</action>
+
+		<action path="/listeDocumentsExged" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageListeDocumentsExged" />
+		</action>
+		
+		<action path="/msgEnvoi" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageMsgEnvoi" />
+		</action>
+
+
+
+		<!-- Paiement en ligne
+		<action path="/telePaiementInit" attribute="paiementLigneForm"
+			type="com.exprimweb.struts.action.PaiementLigneInitAction">
+			<forward name="succes" path="pagePaiementLigne" />
+		</action>
+
+		<action attribute="paiementLigneForm" input="pagePaiementLigne"
+			name="paiementLigneForm" path="/telePaiement" scope="request"
+			type="com.exprimweb.struts.action.PaiementLigneAction" unknown="false"
+			validate="true">
+			<forward name="succes" path="/echangeMsg.do?action=sendModif" />
+		</action> -->
+
+
+
+		<action path="/semiModifAdresse" attribute="adressForm"
+			type="com.exprimweb.struts.action.PreFormModifAdresseAction">
+			<forward name="succes" path="pageSemiModifAdresse" />
+		</action>
+
+		<action attribute="adressForm" input="pageSemiModifAdresse"
+			name="adressForm" path="/updateadr" scope="request"
+			type="com.exprimweb.struts.action.SemiModifAdresseAction" unknown="false"
+			validate="true">
+			<forward name="succes" path="/echangeMsg.do?action=sendModif" />
+		</action>
+
+
+		<action path="/semiModifBanque" attribute="modRIBForm"
+			type="com.exprimweb.struts.action.PreFormModifBanqueAction">
+			<forward name="succes" path="pageSemiModifBanque" />
+		</action>
+
+		<action attribute="modRIBForm" input="pageSemiModifBanque"
+			name="modRIBForm" path="/updatebqe" scope="request"
+			type="com.exprimweb.struts.action.SemiModifBanqueAction" unknown="false"
+			validate="true">
+			<forward name="succes" path="/echangeMsg.do?action=sendModif" />
+		</action>
+
+		<!--
+			<action path="/changeEmails" attribute="modEmailForm"
+			type="com.exprimweb.struts.action.PreFormModifEmailAction"> <forward
+			name="succes" path="pageModifEmails" /> </action> <action
+			attribute="modEmailForm" input="pageModifEmails" name="modEmailForm"
+			path="/sendChangeEmails" scope="request"
+			type="com.exprimweb.struts.action.SendChangeEmailsAction"
+			unknown="false" validate="true"> </action>
+		-->
+
+		<!--
+			Remarque: la validation est appelé dans le contrôleur en raison de
+			l'utilisation du DispatchAction
+		-->
+		<action path="/changementEmails" name="modEmailForm"
+			type="com.exprimweb.struts.action.ChangementEmailsAction" unknown="false"
+			parameter="action" validate="true" input="pageModifEmails" scope="session">
+			<forward name="sendForm" path="pageModifEmails" />
+			<forward name="succes" path="pageModifEmails" />
+		</action>
+
+		<action path="/validationEmails"
+			type="com.exprimweb.struts.action.ValidationEmailsReceptAction">
+  			<forward name="succesADH" path="/loginADH.do" />
+			<forward name="succesENT" path="/loginENT.do" />
+			<forward name="succesTIE" path="/loginTIE.do" />
+			<forward name="succesUNK" path="/login.do" /> 
+		</action>
+
+		<action path="/viewPaiements" scope="session"
+			type="com.exprimweb.struts.action.ListePaiementsAction" unknown="false">
+			<forward name="succes" path="pagePrestations" redirect="false"
+				contextRelative="false" />
+		</action>
+
+		<action path="/viewPaiementsDossierTiers" scope="session"
+			type="com.exprimweb.struts.action.ListePaiementsDossierTiersAction"
+			unknown="false">
+			<forward name="succes" path="pagePrestationsTiers" redirect="false"
+				contextRelative="false" />
+		</action>
+
+		<action path="/envoyerMessage" attribute="envoyerMsgForm"
+			type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageEnvoyerMessage" />
+		</action>
+
+		<action path="/envoyerMsg" type="com.exprimweb.struts.action.EnvoyerMessageAction"
+			input="pageEnvoyerMessage" name="envoyerMsgForm" validate="true"
+			scope="session">
+			<forward name="succes" path="pageMsgEnvoi" />
+		</action>
+
+
+		<action path="/echangeMsg" name="envoyerMsgForm"
+			type="com.exprimweb.struts.action.EchangeMsgAction" unknown="false"
+			parameter="action" validate="true" input="pageEnvoyerMessage" scope="session">
+
+			<forward name="succes" path="pageEnvoyerMessage" />
+			<forward name="uploadFile_old" path="pageEnvoyerMessage" />
+			<forward name="repondre_old" path="pageRepondreEchange" />
+			<forward name="succesSend" path="/listeEchanges.do" />
+
+		</action>
+
+		<action path="/uploadFile" name="uploadForm"
+			type="com.exprimweb.struts.action.UploadAction" unknown="false"
+			parameter="action" validate="true" input="pageUpload" scope="session">
+
+			<forward name="succes" path="pageUpload" />
+			<forward name="sendForm" path="pageUpload" />
+		</action>
+
+
+		<action path="/listeEchanges" type="com.exprimweb.struts.action.ListeEchangesAction">
+			<forward name="succes" path="pageListeEchanges" />
+			<forward name="succesDetail" path="/detailsEchange.do" />
+		</action>
+
+		<action path="/detailsEchange" type="com.exprimweb.struts.action.DetailsEchangeAction">
+			<forward name="succes_old" path="pageDetailsEchange" />
+			<forward name="succes" path="/repondreEchange.do?action=initForm" />
+		</action>
+
+		<action path="/telechargerPJ"
+			type="com.exprimweb.struts.action.TelechargerPiecesJointesAction">
+			<forward name="succes" path="pageDetailsEchange" />
+		</action>
+		
+		<action path="/telechargerDocExged"
+			type="com.exprimweb.struts.action.TelechargerDocumentExgedAction">
+			<forward name="succes" path="pageMsgOk" />
+		</action>
+		
+		<action path="/docCtrExged"
+			type="com.exprimweb.struts.action.TelechargerDocumentContratExgedAction">
+			<forward name="succes" path="pageMsgOk" />
+		</action>
+		
+
+		<action path="/repondreEchange"
+			type="com.exprimweb.struts.action.RepondreEchangeAction" name="repondreEchangeForm"
+			unknown="false" parameter="action" validate="true" input="pageDetailsEchange"
+			scope="session">
+			<forward name="succes" path="pageDetailsEchange" />
+			<forward name="succesSend" path="/detailsEchange.do" />
+		</action>
+
+		<action path="/cloturerEchange"
+			type="com.exprimweb.struts.action.CloturerEchangeAction">
+			<forward name="succes" path="pageMsgOk" />
+		</action>
+
+		
+		
+		
+		<action path="/page"
+			type="com.exprimweb.struts.action.PageTexteAction">
+			<forward name="succes" path="pageTexte" />
+		</action>
+
+
+
+
+
+
+		<action path="/effXl" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="demoDetailEffectifsXL" />
+		</action>
+
+		<action path="/changementTelephone" name="ModificationInfoInterlocuteurForm"
+			type="com.exprimweb.struts.action.ChangementTelephoneAction" unknown="false"
+			parameter="action" validate="true" input="pageModifTelephone" scope="session">
+			<forward name="succesInitForm" path="pageModifTelephone" />
+			<forward name="succesSendForm" path="/refreshListeDossier.do" />
+		</action>
+
+
+		<action path="/modifierInfoInterlocuteur" name="ModificationInfoInterlocuteurForm"
+			type="com.exprimweb.struts.action.ChangementInfosInterlocuteurAction"
+			unknown="false" parameter="action" validate="true" input="pageModifInterlocuteur"
+			scope="session">
+			<forward name="succesInitForm" path="pageModifInterlocuteur" />
+			<forward name="succesSendForm" path="/refreshListeDossier.do" />
+		</action>
+		
+		<action path="/finaliseInfoInterlocuteur" name="ModificationInfoInterlocuteurForm"
+			type="com.exprimweb.struts.action.ChangementInfosInterlocuteurAction"
+			unknown="false" parameter="action" validate="true" input="pageFinaliseInfosInterloc"
+			scope="session">
+			<forward name="succesInitFormFinalise" path="pageFinaliseInfosInterloc" />
+			<forward name="succesSendFormFinalise" path="/accederDossier.do" />
+		</action>
+		
+		
+		
+
+		<action path="/loadAllEmails" type="com.exprimweb.struts.action.LoadAllEmailsAction"
+			parameter="action">
+			<forward name="succesChange" path="pageModifAllEmails" />
+			<forward name="succesFinalise" path="pageFinaliseEmails" />
+		</action>
+
+		<action path="/changementAllEmails" name="modEmailForm"
+			type="com.exprimweb.struts.action.ChangementAllEmailsAction" unknown="false"
+			validate="true" input="pageModifAllEmails" scope="session">
+			<forward name="succes" path="pageModifAllEmails" />
+		</action>
+
+		<action path="/changementFinaliseEmails" name="modEmailForm"
+			type="com.exprimweb.struts.action.ChangementAllEmailsAction" unknown="false"
+			validate="true" input="pageFinaliseEmails" scope="session">
+			<forward name="succes" path="/deconnexion.do?type=finalise" />
+			<forward name="succes2" path="pageFinaliseEmails" />
+		</action>
+
+
+		<action path="/msgMaintenance" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageMaintenance" />
+		</action>
+
+		<action path="/msgAssistance" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageAssistance" />
+		</action>
+
+		<action path="/msgIncident" type="com.exprimweb.struts.action.Dofirst">
+			<forward name="succes" path="pageIncident" />
+		</action>
+
+		<action path="/refreshListeDossier"
+			type="com.exprimweb.struts.action.RefreshListeDossierAction">
+			<forward name="succes" path="/presenterResumeDossier.do" />
+		</action>
+
+		<action path="/detailEffectifs"
+			type="com.exprimweb.struts.action.DetailsEffectifBlankAction" name="detailEffectifsForm"
+			unknown="false" parameter="action" validate="true" input="pageDetailsEffectif"
+			scope="session">
+
+			<forward name="sendForm" path="/viewDetailEffectifs.do" />
+			<!--         <forward name="succes" path="pageDetailsEffectif" /> -->
+			<forward name="succes" path="/viewDetailEffectifs.do" />
+		</action>
+
+		<action path="/viewDetailEffectifs" parameter="pageDetailsEffectif"
+			type="org.apache.struts.actions.ForwardAction" scope="session" />
+
+
+		<action path="/csvDetailEffectifs"
+			type="com.exprimweb.struts.action.CsvDetailEffectifsAction">
+			<!-- <forward name="succes" path="pageDetailsEffectif"/> -->
+			<forward name="succes" path="/TelechargerFichier?code=csvPath" />
+		</action>
+
+
+		<action name="noAction" path="" unknown="true" forward="pageNoAction" />
+
+
+		<!-- ========== Appels de cotisations ================================ -->
+
+		<action path="/viewAppCot" scope="request" 
+						type="com.exprimweb.struts.action.ListeAppelsCotsAction" 
+						unknown="false" validate="true">
+            <forward name="succes" path="/viewViewAppCot.do" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/viewViewAppCot" parameter="pageAppelsCot"
+			type="org.apache.struts.actions.ForwardAction" scope="request" />
+        
+        
+        <action path="/viewDetAppCotN" scope="request" 
+        				type="com.exprimweb.struts.action.ListeDetAppelsCotsNAction" 
+        				unknown="false" validate="true">
+            <forward name="succes" path="/viewViewDetAppCotN.do" redirect="false" contextRelative="false"/>
+        </action>
+        
+		<action path="/viewViewDetAppCotN" parameter="pageDetAppelsCot"
+			type="org.apache.struts.actions.ForwardAction" scope="request" />
+        	
+		<action path="/getDetAppCotN" scope="request" type="com.exprimweb.struts.action.GetDetAppelsCotsNAction" unknown="false" validate="true">
+            <forward name="succes" path="/jsp/teledeclarations/waitstart.html" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+
+
+
+		<!-- ========== Teledeclarations ================================ -->
+
+
+		<action path="/manageMvt" scope="request"
+			type="com.exprimweb.struts.action.teledeclaration.MouvementAppCotAction"
+			unknown="false" validate="true" parameter="action">
+			<forward name="succesDelete" path="/jsp/teledeclarations/MvtDone.jsp"
+				redirect="false" contextRelative="false" />
+			<forward name="succesManage" path="pageMouvAppCot" redirect="false"
+				contextRelative="true" />
+			<forward name="invalideAction" path="pageMouvAppCotImpossible"
+				redirect="false" contextRelative="true" />
+		</action>
+
+		<action path="/mouvement" attribute="MouvementForm" name="MouvementForm"
+			scope="request" type="com.exprimweb.struts.action.teledeclaration.DoMouvementAction"
+			input="pageMouvAppCot" unknown="false" validate="true">
+			<forward name="succes" path="/jsp/teledeclarations/MvtDone.jsp"
+				redirect="false" contextRelative="false" />
+		</action>
+
+		<action path="/getTeleCommentaire" scope="request"
+			type="com.exprimweb.struts.action.teledeclaration.GetTeleCommentaireAction">
+			<forward name="succes" path="pageGetTelecommentaire"
+				redirect="false" contextRelative="true" />
+		</action>
+
+		<action path="/setTeleCommentaire" attribute="teleCommentaireForm"
+			input="/jsp/teledeclarations/teleCommentaire.jsp" name="teleCommentaireForm"
+			scope="request" parameter="action"
+			type="com.exprimweb.struts.action.teledeclaration.ValideTeleCommentaireAction"
+			unknown="false" validate="true">
+			<forward name="succes" path="/jsp/teledeclarations/MvtDone.html"
+				redirect="false" contextRelative="false" />
+		</action>
+
+		<action path="/viewSuiviTele" scope="request"
+			type="com.exprimweb.struts.action.teledeclaration.ListeSuiviTeledeclarationsAction"
+			unknown="false" validate="true">
+			<!--
+				<forward name="success" path="pageListeSuiviTeledeclarations"
+				redirect="false" contextRelative="false"/>
+			-->
+			<forward name="succes" path="/viewViewSuiviTele.do" redirect="false"
+				contextRelative="false" />
+		</action>
+
+		<action path="/viewViewSuiviTele" parameter="pageListeSuiviTeledeclarations"
+			type="org.apache.struts.actions.ForwardAction" scope="request" />
+
+		<action path="/teledeclaration" scope="request"
+			type="com.exprimweb.struts.action.teledeclaration.ListeDetSuiviTeletransmissionAction"
+			unknown="false" validate="true">
+			<!--
+				<forward name="succes" path="pageDetailTeledeclaration"
+				redirect="false" contextRelative="false"/>
+			-->
+			<forward name="succes" path="/viewTeledeclaration.do"
+				redirect="false" contextRelative="false" />
+		</action>
+
+		<action path="/viewTeledeclaration" parameter="pageDetailTeledeclaration"
+			type="org.apache.struts.actions.ForwardAction" scope="request" />
+
+		<action path="/mailBordereau" scope="request"
+			type="com.exprimweb.struts.action.teledeclaration.MailBordereauAction"
+			unknown="false" validate="true">
+			<forward name="succes" path="pageMsgValide" redirect="false"
+				contextRelative="false" />
+		</action>
+
+		<action path="/copyBordereau" scope="request"
+			type="com.exprimweb.struts.action.teledeclaration.CopyBordereauAction"
+			unknown="false" validate="true">
+			<forward name="success" path="/jsp/teledeclarations/waitstart.html"
+				redirect="false" contextRelative="false" />
+		</action>
+
+		<action path="/previewBordereau" scope="request"
+			type="com.exprimweb.struts.action.teledeclaration.PreviewBordereauAction"
+			unknown="false" validate="true">
+			<forward name="succes" path="/jsp/teledeclarations/waitstart.html"
+				redirect="false" contextRelative="false" />
+		</action>
+
+		<action path="/wait" scope="request"
+			type="com.exprimweb.struts.action.teledeclaration.WaitExecuteAction"
+			unknown="false" validate="true">
+			<forward name="success" path="pageWait" redirect="false"
+				contextRelative="false" />
+		</action>
+
+		<action path="/manageAppCot" scope="request"
+			type="com.exprimweb.struts.action.teledeclaration.GestionAppelsCotsAction"
+			unknown="false" validate="true">
+			<!--
+				<forward name="success" path="pageManageAppCot" redirect="false"
+				contextRelative="false"/>
+			-->
+			<forward name="succes" path="/viewManageAppCot.do" redirect="false"
+				contextRelative="false" />
+		</action>
+
+		<action path="/viewManageAppCot" parameter="pageManageAppCot"
+			type="org.apache.struts.actions.ForwardAction" scope="request" />
+
+
+		<action path="/requestSend" type="com.exprimweb.struts.action.RequestSendAction">
+			<forward name="succes" path="http://www.mc-alsace.fr/"
+				redirect="true" />
+		</action>
+		
+		                <!-- Devis en ligne : -->   
+        <!-- Remarque: la validation est appelé dans le contrôleur 
+        						en raison de l'utilisation du DispatchAction  --> 
+		<action path="/DevisEnLigne"
+				name="devisEnLigneForm"
+				type="com.except.struts.action.DevisEnLigneAction"
+				parameter="reqCode"
+				validate="false" 
+				input="/jsp/DevisAdherent_newStyle.jsp"
+				scope="request"
+						>
+					<forward name="display" path="/jsp/DevisAdherent_newStyle.jsp"/>
+					<forward name="calcul" path="/jsp/DevisAdherent_newStyle.jsp"/>
+		</action>
+
+		        		<!-- ============   Doc WORD   ============ -->
+              
+   		<action path="/listeDocWord" scope="session" type="com.except.docWord.struts.action.ListeDocWordAction" unknown="false" validate="true">
+            <forward name="succes" path="pageListeDocWordCollab" redirect="false" contextRelative="false"/>
+        </action>
+        
+        
+        <action path="/listeVarInDoc2" scope="session" type="com.except.docWord.struts.action.ListeVarInDocAction" unknown="false" validate="true">
+            <forward name="succes" path="pageListeVarInDocCollab" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action path="/listeVarInDoc" scope="session" type="com.except.docWord.struts.action.ListeVarInDocAction" unknown="false" validate="true">
+            <forward name="succes" path="pagePromptVarDoc" redirect="false" contextRelative="false"/>
+        </action>
+        
+        <action 	attribute="promptVarForm" 
+									input="pagePromptVarDoc" 
+									name="promptVarForm" 
+									path="/sendVarDoc" 
+									scope="request" 
+									type="com.except.docWord.struts.action.SendVarDocAction" 
+									unknown="false" 
+									validate="true" >
+            	<forward name="succes" path="pageRecapVarDocWord" redirect="false" contextRelative="false"/>
+       			<forward name="again" path="pagePromptVarDoc" redirect="false" contextRelative="false"/>
+        
+    	</action>
+        
+        <action path="/backVarDoc" scope="request" type="com.except.docWord.struts.action.BackVarDocAction" unknown="false" validate="true" >
+            	<forward name="succes" path="pagePromptVarDoc" redirect="false" contextRelative="false"/>
+        </action>
+       			 
+     	<action path="/genDocWord" scope="request" type="com.except.docWord.struts.action.GenDocWordAction" unknown="false" validate="true" >
+            	<forward name="succes" path="pageMsgCollabEnvoi" redirect="false" contextRelative="false"/>
+       	</action>
+
+    
+	<action forward="/Commun/Assistance.jsp" path="/Assistance" scope="session" unknown="false" validate="true"/>
+
+
+
+
+	<!-- ========== Paiement en ligne ================================== -->
+	
+	<action path="/telePaiementInit"  attribute="paiementLigneForm" type="com.exprimweb.struts.action.PaiementLigneInitAction">
+            <forward name="succes" path="pagePaiementLigne" />
+	</action>
+        
+	<action attribute="paiementLigneForm" 
+		input="pagePaiementLigne"
+		name="paiementLigneForm" 
+		path="/telePaiement" 
+		scope="request"
+		type="com.exprimweb.struts.action.PaiementLigneSIPSRequestAction" 
+		unknown="false"
+		validate="true">
+		<forward name="succes" path="pagePaiementLigneSIPS" />
+	</action>
+		
+	<action path="/telePaiementReponse" type="com.exprimweb.struts.action.PaiementLigneSIPSResponseAction">
+            <forward name="succes" path="pagePaiementLigneSIPS" />
+	</action>
+
+
+	<!--   ========== Administration du site ================================   -->
+	
+		<action path="/admin/refreshChargementsGlobaux" type="com.exprimweb.struts.action.RefreshChargementsGlobauxAction" />
+
+
+
+
+	<!--   ========== Interface Gestion des échanges ================================   -->
+	
+		<action path="/WBE/sendNotif" type="com.exprimweb.struts.action.SendNotifAction" >
+			<forward name="succes" path="/jsp/WBE/result.jsp"/>
+		</action>
+
+		<action path="/stopMail" type="com.exprimweb.struts.action.StopMailAction" >
+		</action>
+		
+		
+	<!-- ========== Prise En Charge en ligne (PEC) ================================== -->
+		
+		<action path="/listePEC" type="com.exprimweb.struts.action.PECChargementListeAction"
+			attribute="PECFiltreListeForm" 
+			input="pageListePEC"
+			name="PECFiltreListeForm" 
+			scope="session" >
+			<forward name="succes_old" path="pageListePEC" />
+			<forward name="succes" path="/viewListePEC.do" redirect="false" contextRelative="false"/>
+			<forward name="succesDetail" path="/detailPEC.do"/>
+		</action>
+		<action path="/viewListePEC" parameter="pageListePEC"
+			type="org.apache.struts.actions.ForwardAction" scope="request" />
+        
+        
+        <action path="/detailPEC" type="com.exprimweb.struts.action.PECChargementDetailAction" >
+			<forward name="succes" path="pageDetailPEC" />
+		</action>
+
+		<action path="/annulerPEC" type="com.exprimweb.struts.action.PECAnnulerAction" >
+			<forward name="succes" path="/listePEC.do" />
+		</action>
+		
+		<action path="/facturerPEC" type="com.exprimweb.struts.action.PECFacturerInitAction" >
+			<forward name="succes" path="pageFacturerPEC" />
+		</action>
+		<action path="/facturerPECExec" type="com.exprimweb.struts.action.PECFacturerAction"
+			attribute="PECFacturerForm" 
+			input="pageFacturerPEC"
+			name="PECFacturerForm" >
+			<forward name="succes" path="/listePEC.do" />
+		</action>
+		
+		<action path="/creerPEC" type="com.exprimweb.struts.action.PECInitAction" >			
+			<forward name="succes" path="pageSaisieAdhPEC" />
+		</action>
+		<action path="/saisirPEC" type="com.exprimweb.struts.action.PECInitDetailAction" 
+			attribute="PECAdherentForm" 
+			input="pageSaisieAdhPEC"
+			name="PECAdherentForm" >
+			<forward name="succes" path="pageSaisieDetailPEC" />
+		</action>
+		<action path="/valoriserPEC" type="com.exprimweb.struts.action.PECValoriserAction"
+			attribute="PECForm" 
+			input="pageSaisieDetailPEC"
+			name="PECForm" >
+			<forward name="succes" path="/listePEC.do?resetFiltre=O" />
+		</action>
+		
+		<action path="/imprimerPEC" type="com.exprimweb.struts.action.PECTelechargerDocumentAction">
+			<forward name="succes" path="pageMsgOk" />
+		</action>
+			
+	<!-- ========== Exged ================================== -->
+	
+		
+		<action path="/listeDecSante" parameter="pageListeDecSante"
+			type="org.apache.struts.actions.ForwardAction" scope="request" />
+        
+        
+	</action-mappings>
+
+	<!--
+		========== Controller Configuration ================================
+	-->
+
+
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+		<set-property property="moduleAware" value="true" />
+		<set-property property="definitions-parser-validate"
+			value="true" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml, /WEB-INF/validation.xml" />
+	</plug-in>
+
+
+	<message-resources
+		parameter="com.exprimwebmca.struts.properties.ApplicationResources" />
+
+	<!--
+		controller
+		processorClass="org.apache.struts.tiles.TilesRequestProcessor" /
+	-->
+	<controller
+		processorClass="fr.improve.struts.taglib.layout.workflow.LayoutRequestProcessor" />
+
+</struts-config>
+

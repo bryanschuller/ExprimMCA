@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<!-- Definitions for Tiles  -->
+<!-- 
+  This file contains definitions common to all struts module.
+  In particular, it contains the main layout and the common menus.
+  There is also the main page as a portal.
+-->
+
+<tiles-definitions>
+
+  <!-- =======================================================  -->
+  <!-- Master definition  									-->
+  <!-- =======================================================  -->
+
+  <!-- Doc index page description  -->
+  <definition name="layoutLogin" path="/tilesLayout/layoutLogin.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+  </definition>
+  
+  
+
+  <!-- =======================================================  -->
+  <!-- Main page body definitions  									-->
+  <!-- =======================================================  -->
+
+ 
+<definition name="pageLogin" extends="layoutLogin">
+    <put name="body"   value="/jsp/login.jsp" />
+  </definition>
+  
+</tiles-definitions>

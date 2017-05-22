@@ -1,0 +1,310 @@
+
+
+
+/*	Back Ground Color	*/
+.INFOLINE_LOGIN, TABLE.CORPS_DONNE, TABLE.SOUS_CORPS_DONNE, TABLE.CORPS_TOTAL,
+TABLE.TOTAL, TABLE.TOTAL TH, TH.ERROR, .PAGER, .CALENDARWEEK
+{
+	background-color:	#FFFFFF;
+}
+.INFOLINE, .LOGIN_BACKG, TABLE.CORPS_MSG, TD.DONNE_INTER, TABLE.TOTAL TD,
+TD.ERROR, SELECT
+{
+	background-color:	#FFEFCF;
+}
+INPUT.BOUT1, TD.DONNE
+{
+	background-color:	#FFD98F;
+}
+TABLE.LOGIN_FORM, .ENTETE, TH.DONNE, .SEPARATOR
+{
+	background-color:	#FDB913;
+}
+TABLE.DONNE
+{
+	background-color:	#231F20;
+}
+TD.CALENDRIER
+{
+	background-color:	#C2C2C2;
+}
+.CALENDARBORDER, .CALENDARTITLE
+{
+	background-color:	#336699;
+}
+.CALENDARWEEKEND
+{
+	background-color:	#FFF4E5;
+}
+.CALENDARSELECTED
+{
+	background-color:	#FF8F01;
+}
+
+
+
+/*	Color	*/
+BODY, .INFOLINE, .INFOLINE_LOGIN, TH.ERROR, A.CALENDRIER, .tah10, .tah11, .ver11,
+.ver11b, .tah9, .ver9, h1, h2, 
+{
+	color: #231F20;
+}
+TABLE.TOTAL TH, A, A:link, A:visited, A.PAGER, A:link.PAGER, A:visited.PAGER,
+
+{
+	color: #FDB913;
+}
+A:hover, A:hover.PAGER
+{
+	color: #F7941D;
+}
+TD.ERROR
+{
+	color: #D71920;
+}
+.PAGER
+{
+	color: #333333;
+}
+.ver10, .ver9b, .ver11b_claire, .tah9b, h3, h4, h5, h6
+{
+	color: #FFFFFF;
+}
+.ver10b
+{
+	color: #FFD98F;
+}
+
+/*	Font Family	*/
+BODY, .INFOLINE, .INFOLINE_LOGIN, INPUT.BOUT1, A:link, A:visited, A:hover,
+.PAGER, A:link.PAGER, A:visited.PAGER, A:hover.PAGER, .ver10, .ver10b, .ver9b,
+.ver11, .ver11b, .ver11b_claire, .ver9, h1, SELECT
+{
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+.tah10, .tah11, .tah9, .tah9b
+{
+	font-family: Tahoma;
+	text-decoration: none;
+}
+
+/*	Font Size	*/
+.SEPARATOR
+{
+	font-size: 1px;
+}
+TABLE.CORPS_TOTAL, .ver9b, .tah9, .tah9b, .ver9
+{
+	font-size: 9px;
+}
+A:link, A:visited, A:hover, TD.CALENDRIER, .tah10, .ver10, .ver10b
+{
+	font-size: 10px;
+}
+.ENTETE, TABLE.CORPS_MSG, TABLE.CORPS_DONNE, TABLE.SOUS_CORPS_DONNE, TH.DONNE,
+TD.DONNE, TD.DONNE_INTER, TABLE.TOTAL TD, TABLE.TOTAL TH, TH.ERROR, TD.ERROR,
+.PAGER, A:link.PAGER, A:visited.PAGER, A:hover.PAGER, .tah11, .ver11, .ver11b,
+.ver11b_claire
+{
+	font-size: 11px;
+}
+.INFOLINE, .INFOLINE_LOGIN, INPUT.BOUT1, SELECT
+{
+	font-size: 12px;
+}
+h1
+{
+	font-size: 20px;
+}
+
+
+/*	Font Weight	*/
+.INFOLINE, .INFOLINE_LOGIN, .ENTETE, TH.DONNE, TABLE.TOTAL TD, TABLE.TOTAL TH,
+A:link, A:visited, A:hover, .PAGER, A:link.PAGER, A:visited.PAGER, A:hover.PAGER,
+TD.CALENDRIER, .ver10, .ver10b, .ver9b, .ver11b, .ver11b_claire, h3, h4
+{
+	font-weight: bold;
+}
+
+
+
+
+/*	Suite	*/
+
+
+
+
+/*	BODY MCA	*/
+BODY 	{
+
+
+scrollbar-3d-light-color : #FFFFFF;
+scrollbar-arrow-color : #231F20;
+scrollbar-base-color : #888888;
+scrollbar-dark-shadow-color : #231F20;
+scrollbar-face-color : #FFD98F;
+scrollbar-highlight-color : F1F1F3;
+scrollbar-shadow-color : #231F20;
+}
+
+/*	Barre d etat	*/
+.INFOLINE {
+	height: 22px;
+}
+.INFOLINE_LOGIN {
+	height: 22px;
+}
+
+/*	BOUTTONS	*/
+
+INPUT.BOUT1{
+	text-align: center;
+	padding: 1px;
+	border: 1px outset #FFD98F;
+	cursor: pointer;
+}
+
+/*	pages LOGIN, changePSW, changeMAIL, gestionAdresse	*/
+.LOGIN_BACKG{
+	height:100%;
+	vertical-align:center;
+	
+}
+TABLE.LOGIN_FORM{
+	border: 1px solid #FFFFFF;
+}
+TD.LOGIN_FORM{}
+.LOGIN_LABEL{}
+.ADRESSE_LABEL {
+	width : 60px;
+	vertical-align : top;
+}
+.ADRESSE_DONNEES {
+	text-align : left;
+}
+
+
+
+/*	pages MSG	*/
+.BACKG{
+	 height:100%;
+	 vertical-align:top;
+}
+.ENTETE{
+	border:0;
+}
+TABLE.CORPS_MSG{
+	text-align: center;
+	border: 1px solid #FDB913;
+}
+TABLE.CORPS_DONNE{
+	text-align: center;
+	border: 1px solid #FDB913;
+}
+TABLE.SOUS_CORPS_DONNE{
+	text-align: center;
+}
+TABLE.CORPS_TOTAL{}
+TABLE.CORPS_TOTAL TH{
+	text-align: left;
+}
+TABLE.CORPS_TOTAL TD{
+	text-align: right;
+}
+TABLE.DONNE{}
+TH.DONNE{}
+TD.DONNE{
+	text-align: center;
+}
+TD.DONNE_INTER{
+	text-align: center;
+}
+TABLE.TOTAL {}
+
+TABLE.TOTAL TD {
+
+	text-align: right;
+}
+
+TABLE.TOTAL TH {
+	text-align: left;
+}
+.SEPARATOR{
+	height: 1px;
+}
+
+
+/*	------------------	Ancien Style	--------------------------- */
+
+/* definition des liens */
+
+
+A {}
+A:link {
+	font-style: normal;
+}
+A:visited {}
+A:hover {}
+
+TH.ERROR {}
+TD.ERROR {}
+
+/* Apparence du PAGER */
+.PAGER {
+	text-align: center;
+}
+A.PAGER  {}
+A:link.PAGER  {}
+A:visited.PAGER  {}
+A:hover.PAGER  {}
+
+
+ 
+/**
+ * Calendar classes
+ */
+
+TD.CALENDRIER {
+	text-align: center; 
+}
+A.CALENDRIER {}
+.CALENDARBORDER {}
+.CALENDARTITLE {}
+.CALENDARWEEK {}
+.CALENDARWEEKEND {}
+.CALENDARSELECTED {}
+
+
+
+img {
+	border: none;
+}
+
+.tah10 {}
+.tah11 {}
+.ver10 {}
+.ver10b {}
+.ver9b {}
+.ver11 {}
+.ver11b {}
+.ver11b_claire {}
+.tah9 {}
+.tah9b {}
+.ver9 {}
+h1 {}
+h2 {}
+h3, h4 {}
+h5, h6 {}
+
+SELECT { 
+	border: #231F20;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+}
+
+
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib  
+    PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"  
+    "http://java.sun.com/dtd/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+
+  <!-- ============== Tag Library Description Elements ============= -->
+  <tlibversion>2.2-dev</tlibversion>
+  <jspversion>1.1</jspversion>
+  <shortname>except_onglet</shortname>
+  <uri></uri>
+  <info>
+  	taglib Gestion d'onglets
+  	Autor  Michael SCHATZ
+  </info>
+  
+    	<tag>
+	      <name>tete</name>
+	      <tagclass>com.except.taglib.onglets.Tete</tagclass>
+	      <bodycontent>JSP</bodycontent>
+	      <attribute>
+	          <name>name</name>
+	          <required>true</required>
+	          <rtexprvalue>true</rtexprvalue>
+	      </attribute>
+	 	<attribute>
+	          <name>tooltip</name>
+	          <required>false</required>
+	          <rtexprvalue>true</rtexprvalue>
+	      </attribute>
+	      <attribute>
+	          <name>reload</name>
+	          <required>false</required>
+	          <rtexprvalue>true</rtexprvalue>
+	      </attribute>
+	      <attribute>
+	          <name>test_been</name>
+	          <required>false</required>
+	          <rtexprvalue>true</rtexprvalue>
+	      </attribute>
+	      <attribute>
+	          <name>scope</name>
+	          <required>false</required>
+	          <rtexprvalue>true</rtexprvalue>
+	      </attribute>
+	      <attribute>
+	          <name>actionBase</name>
+	          <required>false</required>
+	          <rtexprvalue>true</rtexprvalue>
+	      </attribute>
+    	</tag>
+
+	<tag>
+	      <name>corps</name>
+	      <tagclass>com.except.taglib.onglets.Corps</tagclass>
+	      <bodycontent>JSP</bodycontent>
+	      <attribute>
+	          <name>name</name>
+	          <required>true</required>
+	          <rtexprvalue>true</rtexprvalue>
+	      </attribute>	 
+    	</tag>
+    
+	<tag>
+	      <name>onglet_Gr</name>
+	      <tagclass>com.except.taglib.onglets.Onglet_Gr</tagclass>
+	      <bodycontent>JSP</bodycontent>	 
+	</tag>
+	
+	<tag>
+	      <name>init</name>
+	      <tagclass>com.except.taglib.onglets.Init</tagclass>
+	      <bodycontent>JSP</bodycontent>
+	      <attribute>
+	          <name>def_ongl</name>
+	          <required>true</required>
+	          <rtexprvalue>true</rtexprvalue>
+	      </attribute>	 
+    	</tag>
+	
+</taglib>

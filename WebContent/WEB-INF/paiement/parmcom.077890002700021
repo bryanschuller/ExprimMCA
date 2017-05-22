@@ -1,0 +1,38 @@
+###############################################################################
+#
+#	Fichier des parametres du commercant
+#
+#	Remarque :	Ce fichier parametre est sous la responsabilite du
+#				commercant
+#
+###############################################################################
+
+
+# URL de retour automatique de la reponse du paiement
+
+AUTO_RESPONSE_URL!https://www.mc-alsace.fr/MCA/PaiementAutoResponse!
+
+# URL de retour suite a paiement refuse
+
+CANCEL_URL!https://www.mc-alsace.fr/MCA/telePaiementReponse.do!
+
+# URL de retour suite a paiement accepte
+
+RETURN_URL!https://www.mc-alsace.fr/MCA/telePaiementReponse.do!
+
+# Liste des moyens de paiement acceptes
+
+PAYMENT_MEANS!CB,1,VISA,1,MASTERCARD,1!
+
+# Personnalisation des pages SCELLIUS
+
+DATA!NO_COPYRIGHT;NO_WINDOWS_MSG!
+CANCEL_LOGO!annulerV2.gif!
+RETURN_LOGO!retourV2.gif!
+SUBMIT_LOGO!validerV2.gif!
+RECEIPT!<H2>R&egrave;glement de cotisations MCA</H2>!
+TEMPLATE!BankPaiementV2.tpl!
+
+# END OF FILE
+
+
