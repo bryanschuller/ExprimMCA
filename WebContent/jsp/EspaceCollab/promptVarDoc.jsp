@@ -97,7 +97,7 @@ request.setAttribute("indVar", Integer.toString(indVar));
 
 		<input type="button" value="Annuler" onclick="location.href='<%= (String)request.getContextPath()  %>/listeDocWord.do'" class="BOUT1"/>
     
-	<layout:reset styleClass="BOUT1" value="Rétablir"/> 
+	<layout:reset styleClass="btn" value="Rétablir"/> 
 	<bean:define id='pStep' name="pStep"/>
 	<bean:define id='nStep' name="nStep"/>
 	<%

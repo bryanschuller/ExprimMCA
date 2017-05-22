@@ -122,7 +122,7 @@ function msg_Joindre(el){
 				
 		<td>
 		 	<table>
-			<layout:submit styleClass="BOUT1" property="sJoin" 
+			<layout:submit styleClass="btn" property="sJoin" 
 				value="Joindre" reqCode="uploadFile"/>
 			</table> -->				
 		</td></tr>
@@ -171,7 +171,7 @@ function msg_Joindre(el){
 				
 				</layout:collection>
 				</table></td><td><table>
-				<layout:submit styleClass="BOUT1" property="sDel" value="Supprimer les pièces sélectionnées" reqCode="deleteFile"/>
+				<layout:submit styleClass="btn" property="sDel" value="Supprimer les pièces sélectionnées" reqCode="deleteFile"/>
 				</table></td></tr>
 		</table>
 		</td></tr>
@@ -232,8 +232,8 @@ function msg_Joindre(el){
 
 
 <layout:formActions> 
-<layout:reset styleClass="BOUT1" value="Rétablir"/> 
-<layout:submit styleClass="BOUT1" property="sAll" value="Envoyer" reqCode="sendForm"/> 
+<layout:reset styleClass="btn" value="Rétablir"/> 
+<layout:submit styleClass="btn" property="sAll" value="Envoyer" reqCode="sendForm"/> 
 </layout:formActions> 
 
 </layout:form>

@@ -148,7 +148,7 @@
 	
 	
 	/****************************************/
-	/* Infos adhérent en haut de page       */
+	/* Infos adh?ent en haut de page       */
 	#InfosAdherent,#InfosEnt {
 		width: 100% ;	/* 600px; */
 		background-color: #FFFFFF;
@@ -191,7 +191,7 @@
 		text-align: right;
 	}
 	/****************************************/
-	/* TABLE standard avec en-têtes en haut */
+	/* TABLE standard avec en-t?es en haut */
 	TABLE.DONNE_100p100 {
 		margin-left: 15px;
 		}
@@ -304,7 +304,7 @@
 		font-size: 11px;
 	}
 	/************************************/
-		/* TABLE avec en-têtes à gauche  */
+		/* TABLE avec en-t?es ?gauche  */
 	TABLE.CORPS_ADRESSE {
 		margin-left: 40px;
 		text-align: left;
@@ -325,7 +325,7 @@
 		height: 30px;
 	}
 	/************************************/
-	/* TABLE avec en-têtes en haut (RIB)  */
+	/* TABLE avec en-t?es en haut (RIB)  */
 	TABLE.CORPS_RIB {
 		margin-left: 40px;
 		text-align: center;
@@ -462,25 +462,9 @@
 		font-size: 11px;
 		color: red;
 	}
-	/*	BOUTONS	*/
-	INPUT.BOUT1 {
-		background-color: #EFE700; /*6CEF00;*/
-		color: black;
-		/* font-family: Verdana, Arial, Helvetica, sans-serif; */
-		font-family: "Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;
-		font-size: 12px;
-		text-align: center;
-		padding: 4px 8px;
-		border: 3px outset #FDB913;
-		cursor: pointer;
-	}
-	INPUT.BOUT1:hover {
-		background-color: #A54A00;
-		color: #EFE700;
-	}
-	
+
 	/**
-	* Calendrier pour sélection d'une date
+	* Calendrier pour s?ection d'une date
 	*/
 	#caltitre,#caljour {
 		background-color: #FFEFCF;
@@ -587,7 +571,7 @@
 		margin-top: 50px;
 	}
 
-	/* pour en-têtes avec icones ou liens incorporés placés à droite */
+	/* pour en-t?es avec icones ou liens incorpor? plac? ?droite */
 	.texteH {
 		float: left;
 	}
@@ -1145,7 +1129,7 @@
 		background-color: #FFEFCF;
 		font-family: "Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;
 		font-size: 12px;
-		/*arrondir les coins en haut à gauche et en bas à droite*/
+		/*arrondir les coins en haut ?gauche et en bas ?droite*/
 	
 	}
 	

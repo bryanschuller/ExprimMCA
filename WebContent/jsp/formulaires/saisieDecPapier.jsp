@@ -54,7 +54,7 @@
 
 <layout:formActions> 
 <layout:row>
-<layout:submit styleClass="BOUT1" property="submit" value="Valider" /> 
+<layout:submit styleClass="btn" property="submit" value="Valider" /> 
 </layout:row>
 </layout:formActions> 
 </layout:form>

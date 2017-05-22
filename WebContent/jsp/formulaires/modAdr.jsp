@@ -135,8 +135,8 @@ function firstCheckValue(fieldName){
 
 <layout:formActions>
 <layout:row>
-	<layout:reset styleClass="BOUT1" value="Rétablir"/> 
-	<layout:submit styleClass="BOUT1" property="submit" value="Envoyer le changement d'adresse"/> 
+	<layout:reset styleClass="btn" value="Rétablir"/> 
+	<layout:submit styleClass="btn" property="submit" value="Envoyer le changement d'adresse"/> 
 </layout:row>
 
 </layout:formActions> 

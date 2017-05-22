@@ -86,7 +86,7 @@
 				
 				</td><td>
 			<table>
-			<layout:submit styleClass="BOUT1" property="submit" 
+			<layout:submit styleClass="btn" property="submit" 
 				value="Joindre" reqCode="uploadFile"/>
 			</table>				
 		</td></tr>
@@ -108,7 +108,7 @@
 				
 				</layout:collection>
 				</table></td><td><table>
-				<layout:submit styleClass="BOUT1" property="submit" value="Supprimer les pièces sélectionnés" reqCode="deleteFile"/>
+				<layout:submit styleClass="btn" property="submit" value="Supprimer les pièces sélectionnés" reqCode="deleteFile"/>
 				</table></td></tr>
 		</table>
 		</td></tr>
@@ -136,8 +136,8 @@
 
 
 <layout:formActions> 
-<layout:reset styleClass="BOUT1" value="Rétablir"/> 
-<layout:submit styleClass="BOUT1" property="submit" value="Envoyer" reqCode="sendForm"/> 
+<layout:reset styleClass="btn" value="Rétablir"/> 
+<layout:submit styleClass="btn" property="submit" value="Envoyer" reqCode="sendForm"/> 
 </layout:formActions> 
 </layout:form>
 

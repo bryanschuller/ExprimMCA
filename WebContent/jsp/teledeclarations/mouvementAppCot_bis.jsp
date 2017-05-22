@@ -205,10 +205,10 @@ document.getElementsByName("totMvt")[0].value = ver11;
 
 <layout:formActions>
 <layout:row> 
-<layout:button styleClass="BOUT1" value="Fermer" onclick="window.close();" />
+<layout:button styleClass="btn" value="Fermer" onclick="window.close();" />
 <logic:notEqual name="MouvementForm" property="action" value="View">
-<layout:reset styleClass="BOUT1" value="Rétablir" /> 
-<layout:submit styleClass="BOUT1" property="submit" value="Valider" onclick="javascript:tdate();"/> 
+<layout:reset styleClass="btn" value="Rétablir" /> 
+<layout:submit styleClass="btn" property="submit" value="Valider" onclick="javascript:tdate();"/> 
 </logic:notEqual>
 </layout:row>
 </layout:formActions> 

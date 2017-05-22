@@ -20,7 +20,7 @@
 
 <br><br><br>
 <div align="center">
-<layout:button styleClass="BOUT1" value="Fermer" onclick="window.close();" />
+<layout:button styleClass="btn" value="Fermer" onclick="window.close();" />
 </div>
 
 <tr height="50"/>

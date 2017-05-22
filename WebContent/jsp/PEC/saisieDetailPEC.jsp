@@ -314,12 +314,12 @@ if (null == typePEC){
 
 	<layout:formActions>
 		<layout:row>
-			<layout:reset styleClass="BOUT1" value="Rétablir"/> 
+			<layout:reset styleClass="btn" value="Rétablir"/> 
 			<logic:equal name="PECForm" property="validPEC" value="O">
-				<layout:submit styleClass="BOUT1" property="submit" value="Valoriser la prise en charge ..."/>
+				<layout:submit styleClass="btn" property="submit" value="Valoriser la prise en charge ..."/>
 			</logic:equal> 
 			<logic:notEqual name="PECForm" property="validPEC" value="O">
-				<layout:submit styleClass="BOUT1" property="submit" value="Contrôler la saisie ..."/>
+				<layout:submit styleClass="btn" property="submit" value="Contrôler la saisie ..."/>
 			</logic:notEqual>
 		</layout:row>	
 	</layout:formActions> 

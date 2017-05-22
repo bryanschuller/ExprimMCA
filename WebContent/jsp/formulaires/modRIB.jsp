@@ -248,8 +248,8 @@ function initCheckValue(fieldName, fType){
 	<layout:formActions>
 	
 		<layout:row space="false">
-			<layout:reset styleClass="BOUT1" value="Rétablir" />
-			<layout:submit styleClass="BOUT1" property="submit" value="Envoyer la demande de changement de RIB" /> 
+			<layout:reset styleClass="btn" value="Rétablir" />
+			<layout:submit styleClass="btn" property="submit" value="Envoyer la demande de changement de RIB" /> 
 		</layout:row>
 	
 	</layout:formActions> 

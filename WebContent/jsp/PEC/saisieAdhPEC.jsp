@@ -106,7 +106,7 @@ function firstCheckValue(fieldName){
 
 	<layout:formActions>
 		<layout:row>
-			<layout:submit styleClass="BOUT1" property="submit" value="Continuer ..."/> 
+			<layout:submit styleClass="btn" property="submit" value="Continuer ..."/> 
 		</layout:row>	
 	</layout:formActions> 
 

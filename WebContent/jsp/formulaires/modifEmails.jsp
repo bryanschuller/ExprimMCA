@@ -46,7 +46,7 @@
 
 
 <layout:formActions> 
-<layout:reset styleClass="BOUT1" value="Rétablir"/> 
-<layout:submit styleClass="BOUT1" property="submit" value="Valider" /> 
+<layout:reset styleClass="btn" value="Rétablir"/> 
+<layout:submit styleClass="btn" property="submit" value="Valider" /> 
 </layout:formActions> 
 </layout:form>

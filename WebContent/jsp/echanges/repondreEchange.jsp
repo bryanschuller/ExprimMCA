@@ -28,7 +28,7 @@
 		
 	<html:file size="80" property="fichier" />
 			
-	<layout:submit styleClass="BOUT1" property="submit" value="Joindre" reqCode="uploadFile"/>
+	<layout:submit styleClass="btn" property="submit" value="Joindre" reqCode="uploadFile"/>
 	
 </layout:row>
 
@@ -54,7 +54,7 @@
 		
 		</layout:collection>
 		
-		<layout:submit styleClass="BOUT1" property="submit" value="Supprimer" reqCode="deleteFile"/>
+		<layout:submit styleClass="btn" property="submit" value="Supprimer" reqCode="deleteFile"/>
 		
 	</layout:row>
 </logic:present>
@@ -76,8 +76,8 @@
 
 
 <layout:formActions> 
-<layout:reset styleClass="BOUT1" value="Rétablir"/> 
-<layout:submit styleClass="BOUT1" property="submit" value="Envoyer" reqCode="sendForm"/> 
+<layout:reset styleClass="btn" value="Rétablir"/> 
+<layout:submit styleClass="btn" property="submit" value="Envoyer" reqCode="sendForm"/> 
 </layout:formActions> 
 </layout:form>
 

@@ -48,8 +48,8 @@ Connexion à l'espace collaborateur
 	<layout:field key="app.password" property="password" size="16" maxlength="10" type="password" styleClass="LOGIN_LABEL" isRequired="true"/> 
 	<html:hidden property="acces" value="Collaborateur"/> 	    
 	<layout:formActions>
-		<layout:reset styleClass="BOUT1" value="Rétablir"/> 
-		<layout:submit styleClass="BOUT1" property="submit" value="Valider"/>  
+		<layout:reset styleClass="btn" value="Rétablir"/> 
+		<layout:submit styleClass="btn" property="submit" value="Valider"/>  
 	</layout:formActions> 
 </layout:form>
 

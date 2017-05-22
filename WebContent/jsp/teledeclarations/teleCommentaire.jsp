@@ -56,10 +56,10 @@ if (document.getElementById)
 
 <layout:formActions align="center"> 
 <layout:row>
-<layout:submit styleClass="BOUT1" value="Supprimer" onclick="return supcomm();" />
-<layout:button styleClass="BOUT1" value="Fermer" onclick="window.close();" />
-<layout:reset styleClass="BOUT1" value="Rétablir" /> 
-<layout:submit styleClass="BOUT1" property="submit" value="Valider" /> 
+<layout:submit styleClass="btn" value="Supprimer" onclick="return supcomm();" />
+<layout:button styleClass="btn" value="Fermer" onclick="window.close();" />
+<layout:reset styleClass="btn" value="Rétablir" /> 
+<layout:submit styleClass="btn" property="submit" value="Valider" /> 
 
 <tr height="25"></tr>
 

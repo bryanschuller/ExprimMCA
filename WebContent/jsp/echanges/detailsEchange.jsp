@@ -47,7 +47,7 @@
 			<html:file size="40" property="fichier"	/>		
 		</td><td>
 			<table>
-			<layout:submit styleClass="BOUT1" property="submit" 
+			<layout:submit styleClass="btn" property="submit" 
 				value="Joindre" reqCode="uploadFile"/>
 			</table>				
 		</td></tr>
@@ -84,7 +84,7 @@
 			
 			</layout:collection>
 			
-			<layout:submit styleClass="BOUT1" property="submit" value="Supprimer" reqCode="deleteFile"/>
+			<layout:submit styleClass="btn" property="submit" value="Supprimer" reqCode="deleteFile"/>
 			
 		</td></tr>
 	</logic:greaterThan>	
@@ -115,8 +115,8 @@
 
 <layout:formActions> 
 <layout:row>
-<layout:reset styleClass="BOUT1" value="Rétablir"/> 
-<layout:submit styleClass="BOUT1" property="submit" value="Envoyer" reqCode="sendForm"/> 
+<layout:reset styleClass="btn" value="Rétablir"/> 
+<layout:submit styleClass="btn" property="submit" value="Envoyer" reqCode="sendForm"/> 
 </layout:row>
 </layout:formActions> 
 </layout:form>
