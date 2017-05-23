@@ -115,7 +115,7 @@
 
 <layout:formActions> 
 <layout:row>
-<layout:reset styleClass="btn" value="Rétablir"/> 
+<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
 <layout:submit styleClass="btn" property="submit" value="Envoyer" reqCode="sendForm"/> 
 </layout:row>
 </layout:formActions> 

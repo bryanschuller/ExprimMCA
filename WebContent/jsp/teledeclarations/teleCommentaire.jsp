@@ -58,8 +58,8 @@ if (document.getElementById)
 <layout:row>
 <layout:submit styleClass="btn" value="Supprimer" onclick="return supcomm();" />
 <layout:button styleClass="btn" value="Fermer" onclick="window.close();" />
-<layout:reset styleClass="btn" value="Rétablir" /> 
-<layout:submit styleClass="btn" property="submit" value="Valider" /> 
+<layout:reset styleClass="btn btn-danger" value="Rétablir" /> 
+<layout:submit styleClass="btn btn-success" property="submit" value="Valider" /> 
 
 <tr height="25"></tr>
 

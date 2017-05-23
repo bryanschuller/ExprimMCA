@@ -31,7 +31,7 @@
 					<div>
 						<layout:formActions> 
 							<layout:row>
-								<layout:submit styleClass="btn" property="submit" value="Valider" /> 
+								<layout:submit styleClass="btn btn-success" property="submit" value="Valider" /> 
 							</layout:row>
 						</layout:formActions> 
 					</div>

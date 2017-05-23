@@ -12,8 +12,8 @@
 	<layout:field key="gestionnaire.dossier.souhaite" property="idDossier" size="16" maxlength="7" type="number" isRequired="true"/>	 
 	<html:hidden property="typeDossier" value="ADH"/> 	    
 	<layout:formActions>
-		<layout:reset styleClass="btn" value="Rétablir"/> 
-		<layout:submit styleClass="btn" property="submit" value="Valider"/>  
+		<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
+		<layout:submit styleClass="btn btn-success" property="submit" value="Valider"/>  
 	</layout:formActions> 
 </layout:form>
 <font color="red"><html:errors property="gestionnaire"/></font>

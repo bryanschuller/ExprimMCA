@@ -395,13 +395,8 @@
 	/************************************/
 	/*	feuille de style pour formulaire BENEF	*/
 	TABLE.FORM_BEN, TABLE.FORM_BEN_R {
-		background-color: #FFEFCF;
-		/*background-image: url("../pictures/bande-verte.jpg");*/
 		text-align: center;
 		font-size: 10px;
-		border: 1px solid #A54A00;
-		/*margin-right: auto;
-		margin-left: auto;*/
 	}
 	TABLE.FORM_BEN TH {
 		background-color: transparent;

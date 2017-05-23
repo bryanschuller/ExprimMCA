@@ -18,8 +18,8 @@
 	
 		<layout:formActions>
 			<layout:row>
-				<layout:reset styleClass="btn" value="Rétablir" /> 
-				<layout:submit styleClass="btn" property="submit" value="Valider" onclick="setTimeout('wait()',2000);"/>  
+				<layout:reset styleClass="btn btn-danger" value="Rétablir" /> 
+				<layout:submit styleClass="btn btn-success" property="submit" value="Valider" onclick="setTimeout('wait()',2000);"/>  
 			</layout:row>
 		</layout:formActions> 
 	</layout:form>

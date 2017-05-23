@@ -87,8 +87,8 @@ if (!grantFile) {
         <%
 			String typeAcces = "MAP.AB";
 		%>  
-        <input type="reset" value="Rétablir" class="bouton reset"> 
-        <input type="submit" name="submit" value="Valider" class="bouton valid" >  
+        <input type="reset" value="Rétablir" class="btn btn-danger"> 
+        <input type="submit" name="submit" value="Valider" class="btn btn-success" >  
     </td></tr>
 
  

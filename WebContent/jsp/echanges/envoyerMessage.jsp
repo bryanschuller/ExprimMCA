@@ -232,7 +232,7 @@ function msg_Joindre(el){
 
 
 <layout:formActions> 
-<layout:reset styleClass="btn" value="Rétablir"/> 
+<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
 <layout:submit styleClass="btn" property="sAll" value="Envoyer" reqCode="sendForm"/> 
 </layout:formActions> 
 

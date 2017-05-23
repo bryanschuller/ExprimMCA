@@ -96,10 +96,10 @@
 			<% } %>		
 				
 			<% if(null != typeD){ %>	
-					<li ><a href="<%=strContPath%>/listeEchanges.do" ><i class="fa fa-circle-o"></i><span>Mes Echanges</span></a></li>
-					<li ><a href="<%=strContPath%>/listeDocuments.do" ><i class="fa fa-circle-o"></i><span>Mes documents</span></a></li>
+					<li ><a href="<%=strContPath%>/listeEchanges.do" ><i class="fa fa-arrows-h"></i><span>Mes Echanges</span></a></li>
+					<li ><a href="<%=strContPath%>/listeDocuments.do" ><i class="fa fa-file-text-o"></i><span>Mes documents</span></a></li>
 				<% if(typeD.equals("ADH") || typeD.equals("BEN")){ %>
-					<li ><a href="<%=strContPath%>/listeDecSante.do"><i class="fa fa-circle-o"></i><span>Mes décomptes santé</span></a></li>
+					<li ><a href="<%=strContPath%>/listeDecSante.do"><i class="fa fa-list"></i><span>Mes décomptes santé</span></a></li>
 					
 					<% if (!internaute.getModeAcces().equals("SUP")) { %>
 					

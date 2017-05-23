@@ -73,8 +73,8 @@
 	<html:hidden property="acces" value="Collaborateur"/> 
 	 
 	<layout:formActions> 
-	<layout:reset styleClass="btn" value="Rétablir"/> 
-	<layout:submit styleClass="btn" property="submit" value="Valider"/> 
+	<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
+	<layout:submit styleClass="btn btn-success" property="submit" value="Valider"/> 
 	</layout:formActions> 
 </layout:form> 
 
