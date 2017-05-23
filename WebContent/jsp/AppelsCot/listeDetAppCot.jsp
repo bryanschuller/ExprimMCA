@@ -14,8 +14,8 @@
 		<div  class="pay_vis">
 			<a href="<%= (String)request.getContextPath()  %>/getDetAppCotN.do?id=<%=(String)request.getParameter("id")%>&action=PDF" target = "blank" > <html:img page="/images/docpdf.gif" alt="Obtenir une copie au format pdf" border="0"/></a>
     		<a href="<%= (String)request.getContextPath()  %>/getDetAppCotN.do?id=<%=(String)request.getParameter("id")%>&action=MAIL" target = "blank" > <html:img page="/images/mail.gif" alt="Obtenir une copie par mail" border="0"/></a>
-    		<a href="javascript:window.print()"><html:img page="/images/PRINT.gif" alt="imprimer la page" border="0"/></a>
-			<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><html:img page="/images/RETURN.gif" alt="Retour" border="0"/></a>
+    		<a href="javascript:window.print()"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer"></i></a>
+			<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
 		</div>
 	</div>
 </H1>
@@ -28,7 +28,7 @@
     <td width="85%" height="18" align="left"> <layout:message key="appcot.detail.titre"/>  N° <%=(String)request.getAttribute("numpiece")%>  - Contrat N° <%=(String)request.getAttribute("numcontrat")%> </td>
     <td width="5%" align="center" ><a href="<%= (String)request.getContextPath()  %>/getDetAppCotN.do?numPiece=<%=(String)request.getAttribute("numpiece")%>&action=PDF" target = "blank" > <html:img page="/images/docpdf.gif" alt="Obtenir une copie au format pdf" border="0"/></a></td>
     <td width="5%" align="center" ><a href="<%= (String)request.getContextPath()  %>/getDetAppCotN.do?numPiece=<%=(String)request.getAttribute("numpiece")%>&action=MAIL" target = "blank" > <html:img page="/images/mail.gif" alt="Obtenir une copie par mail" border="0"/></a></td>
-    <td width="5%" align="center" ><a href="javascript:window.print()"><html:img page="/images/PRINT.gif" alt="imprimer la page" border="0"/></td>
+    <td width="5%" align="center" ><a href="javascript:window.print()"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer"></i></td>
    <td width="5%" align="center" ><a href="<%= (String)request.getContextPath()  %>/listAppCot.do"><html:img page="/images/RETURN.gif" alt="retour à la liste" border="0"/></td>
   </tr>
 </table>

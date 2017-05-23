@@ -11,7 +11,7 @@
   <tr>
     <td width="1%" align="center" > </td>
     <td width="85%" height="18" align="left"> <layout:message key="adherent.dossier.modif"/> </td>
-    <td width="5%" align="center" ><a href="javascript:window.print()"><html:img page="/images/PRINT.gif" alt="imprimer la page" border="0"/></td>
+    <td width="5%" align="center" ><a href="javascript:window.print()"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer"></i></td>
 	 
   </tr>
 </table>

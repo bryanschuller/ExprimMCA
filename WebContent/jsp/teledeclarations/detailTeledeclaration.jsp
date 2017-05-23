@@ -16,7 +16,7 @@ request.setAttribute("Numiterate", "0");
     	<a href="javascript:prevBor()" > <html:img page="/images/docpdf.gif" alt="Obtenir une copie au format pdf" border="0"/></a>
     	<a href="javascript:copyBor()" > <html:img page="/images/mail.gif" alt="Obtenir une copie par mail" border="0"/></a>
     </logic:equal>
-<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><html:img page="/images/RETURN.gif" alt="Retour" border="0"/></a>	</div>
+<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>	</div>
 </H1>
 <br/><br/>
 

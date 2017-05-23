@@ -90,6 +90,9 @@ if(null == internaute){
       $('table.LIGNE_A').each(function(){
         $(this).find('table:first').addClass('table table-striped');
       });
+
+      // gestion des tooltips
+      $('[data-toggle="tooltip"]').tooltip(); 
     });
 </script>
 
