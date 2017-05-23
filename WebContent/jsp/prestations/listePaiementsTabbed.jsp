@@ -9,7 +9,6 @@
 
 <script type="text/javascript" src="<%= (String)request.getContextPath()  %>/scripts/paiement.js"></script>
 
-
 <H1>
 	<div class="texteH">
 		<bean:message key="paie.histo.paiements"/>
@@ -24,83 +23,103 @@
 </H1>
 <br/><br/>
 
-<div class="pay_vis">
-	<onglets:onglet_Gr >
-	   	<onglets:tete name="2" tooltip="Prestations santé" 			test_been="lstPaiementsEff" actionBase="/viewPaiements.do" >Prestations santé</onglets:tete>
-	   	<onglets:tete name="3" tooltip="Remboursements aux tiers" 	test_been="lstPaiementsTiers" actionBase="/viewPaiements.do" >Remboursements aux tiers</onglets:tete>
-	   	<onglets:tete name="4" tooltip="Prestations prévoyance" 	test_been="lstPaiementsPrev" actionBase="/viewPaiements.do" >Prestations prévoyance</onglets:tete>
-	</onglets:onglet_Gr>
-</div>
-
 <% int actTab = 1;
 	String adhRO = (String) session.getAttribute("adhRO");
 	if(null == adhRO || !adhRO.equals("O"))	actTab = 2; 
 	String actTabA = request.getParameter("tab");
-	
 	if(null != actTabA){
 		actTab = Integer.parseInt(actTabA);
 	}
 %>
-		
 
- 
-<onglets:corps name="2">
-	<logic:present name="lstPaiementsInst" scope="request">
-		<%@ include file="/jsp/prestations/incl/incl_listePaiements_Inst.jsp"%>
-	</logic:present>
-	<logic:present name="lstPaiementsEff" scope="request"> 
-		<%@ include file="/jsp/prestations/incl/incl_listePaiements_Eff.jsp"%>
-	</logic:present>
-	<% if(actTab == 2){ %>
-		<logic:notPresent name="lstPaiementsEff" scope="request">
-			<logic:notPresent name="lstPaiementsInst" scope="request">		
-				<div class="callout callout-info">
-					<strong>
-						Aucune prestation santé
-					</strong> 
-				</div><br style="clear:both;">
-			</logic:notPresent>
-		</logic:notPresent>
-	<% } %>
-</onglets:corps>	
+<div class="row">
+	<div class="col-xs-12">
+		<div class="nav-tabs-custom">
+			<ul class="nav nav-tabs">
+				<%
+					String tab2class = "";
+					String tab3class = "";
+					String tab4class = "";
 
-<onglets:corps name="3">
-	<logic:present name="lstPaiementsTiers" scope="request">
-		<%@ include file="/jsp/prestations/incl/incl_listePaiements_Tiers.jsp"%>
-	</logic:present>
-	<% if(actTab == 3){ %>		
-		<logic:notPresent name="lstPaiementsTiers" scope="request">	
-			<div class="callout callout-info">
-				<strong>
-					<html:errors property="tiers"/>
-				</strong>     
-			</div><br style="clear:both;"> 			
-		</logic:notPresent>
-	<% } %>
-</onglets:corps>
+					switch(actTab)
+					{
+						case 2:
+							tab2class = "active";
+							break;
+						case 3:
+							tab3class = "active";
+							break;
+						case 4:
+							tab4class = "active";
+							break;
+					}
+				%>
+					<li class="<%= tab2class %>"><a href="<%= (String)request.getContextPath() %>/viewPaiements.do?tab=2">Prestations santé</a></li>
+					<li class="<%= tab3class %>"><a href="<%= (String)request.getContextPath() %>/viewPaiements.do?tab=3">Remboursements aux tiers</a></li>
+					<li class="<%= tab4class %>"><a href="<%= (String)request.getContextPath() %>/viewPaiements.do?tab=4">Prestations prévoyance</a></li>
+			</ul>
+			<div class="tab-content">
+			<%
+				tab2class = "tab-pane";
+				tab3class = "tab-pane";
+				tab4class = "tab-pane";
 
-<onglets:corps name="4">
-	<logic:present name="lstPaiementsPrev" scope="request">
-		<%@ include file="/jsp/prestations/incl/incl_listePaiements_Prev.jsp"%>
-	</logic:present>
-	<% if(actTab == 4){ %>
-		<logic:notPresent name="lstPaiementsPrev" scope="request">			
-			<div class="callout callout-info">
-				<strong>
-					<html:errors property="prevoyance"/>
-				</strong>     
-			</div><br style="clear:both;"> 			
-		</logic:notPresent>
-	<% } %>
-</onglets:corps>
+				switch(actTab)
+				{
+					case 2:
+						tab2class += " active";
+						break;
+					case 3:
+						tab3class += " active";
+						break;
+					case 4:
+						tab4class += " active";
+						break;
+				}
+			%>
 
-<BR>&nbsp;
-
-
-<logic:equal name="adhRO" value="O">
-	<onglets:init def_ongl="1"></onglets:init>
-</logic:equal>
-<logic:notEqual name="adhRO" value="O">
-	<onglets:init def_ongl="2"></onglets:init>
-</logic:notEqual>
-
+				<div class="<%= tab2class %>" id="tab_2">
+					<logic:present name="lstPaiementsInst" scope="request">
+						<%@ include file="/jsp/prestations/incl/incl_listePaiements_Inst.jsp"%>
+					</logic:present>
+					<logic:present name="lstPaiementsEff" scope="request"> 
+						<%@ include file="/jsp/prestations/incl/incl_listePaiements_Eff.jsp"%>
+					</logic:present>
+					<logic:notPresent name="lstPaiementsEff" scope="request">
+						<logic:notPresent name="lstPaiementsInst" scope="request">		
+							<div class="callout callout-info">
+								<strong>
+									<li>Aucune prestation santé</li>
+								</strong> 
+							</div><br style="clear:both;">
+						</logic:notPresent>
+					</logic:notPresent>
+				</div>
+				<div class="<%= tab3class %>" id="tab_3">
+					<logic:present name="lstPaiementsTiers" scope="request">
+						<%@ include file="/jsp/prestations/incl/incl_listePaiements_Tiers.jsp"%>
+					</logic:present>
+					<logic:notPresent name="lstPaiementsTiers" scope="request">	
+						<div class="callout callout-info">
+							<strong>
+								<html:errors property="tiers"/>
+							</strong>     
+						</div><br style="clear:both;"> 			
+					</logic:notPresent>
+				</div>
+				<div class="<%= tab4class %>" id="tab_4">
+					<logic:present name="lstPaiementsPrev" scope="request">
+						<%@ include file="/jsp/prestations/incl/incl_listePaiements_Prev.jsp"%>
+					</logic:present>
+					<logic:notPresent name="lstPaiementsPrev" scope="request">			
+						<div class="callout callout-info">
+							<strong>
+								<html:errors property="prevoyance"/>
+							</strong>     
+						</div><br style="clear:both;"> 			
+					</logic:notPresent>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -55,7 +55,7 @@ if (null == typePEC){
 }
 %>
 
-<layout:form action="valoriserPEC.do" focus="dateOrdonnance" styleClass="FORMULAIRE" width="80%" > 
+<layout:form action="valoriserPEC.do" focus="dateOrdonnance" styleClass="box" > 
 
 	<tr><td colspan="2">
 		<table class="FORM_BEN" width="90%" align="center">

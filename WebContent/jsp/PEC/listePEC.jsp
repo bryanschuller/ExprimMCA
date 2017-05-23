@@ -53,7 +53,7 @@
 		<bean:message key="tiers.filtre.pec" />
 	</div>
 </H2>
-<layout:form action="listePEC.do?action=filtre" focus="nomAdh" styleClass="FORMULAIRE" width="80%" > 
+<layout:form action="listePEC.do?action=filtre" focus="nomAdh" styleClass="box" > 
 
 	<tr><td colspan="2">
 		<table class="FORM_BEN" width="90%" align="center">

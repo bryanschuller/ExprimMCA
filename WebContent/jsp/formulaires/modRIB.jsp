@@ -36,7 +36,7 @@ function initCheckValue(fieldName, fType){
 
 	
 <br/><br/>
-<layout:form action="updatebqe.do" focus="code_banque" styleClass="FORMULAIRE" width="80%">
+<layout:form action="updatebqe.do" focus="code_banque" styleClass="box">
 
 
 		<logic:empty name="sepaSaisieObligatoire">

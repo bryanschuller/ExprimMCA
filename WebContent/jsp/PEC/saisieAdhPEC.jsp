@@ -27,7 +27,7 @@ function firstCheckValue(fieldName){
 
 <br/><br/>
 
-<layout:form action="saisirPEC.do" focus="numAdherent" styleClass="FORMULAIRE" width="80%" > 
+<layout:form action="saisirPEC.do" focus="numAdherent" styleClass="box" > 
 
 	<tr><td colspan="2">
 		<table class="FORM_BEN" width="90%" align="center">

@@ -17,7 +17,7 @@
 </H1> 
 <BR>
 
-<layout:form action="/changementAllEmails" focus="newEmail" styleClass="FORMULAIRE" width="80%" onsubmit="return validateModEmailForm(this)"> 
+<layout:form action="/changementAllEmails" focus="newEmail" styleClass="box" onsubmit="return validateModEmailForm(this)"> 
 
 <tr><td colspan="2" style="font-size:12px;">
 

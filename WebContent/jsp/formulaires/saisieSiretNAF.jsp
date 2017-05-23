@@ -9,7 +9,7 @@
 </H1> 
 <BR>
 
-<layout:form action="/changementSiretNAF" styleClass="FORMULAIRE" width="80%" reqCode="sendModif" > 
+<layout:form action="/changementSiretNAF" styleClass="box" reqCode="sendModif" > 
 
 <tr><td colspan="2" style="font-size:12px;">
 	Dans le cadre de la mise en oeuvre de la DSN (Déclaration Sociale Nominative),<BR>

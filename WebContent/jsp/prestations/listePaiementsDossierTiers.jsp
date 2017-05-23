@@ -24,7 +24,7 @@
 </H1>
 <br/><br/>
 
-<layout:form action="filtrePaiementsDossierTiers.do" focus="numFiltre" styleClass="FORMULAIRE" width="80%" > 
+<layout:form action="filtrePaiementsDossierTiers.do" focus="numFiltre" styleClass="box" > 
 
 	<tr><td colspan="2">
 		<table class="FORM_BEN" width="90%" align="center">

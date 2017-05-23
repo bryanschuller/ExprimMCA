@@ -96,17 +96,16 @@
 			<% } %>		
 				
 			<% if(null != typeD){ %>	
-					<li ><a href="<%=strContPath%>/listeEchanges.do" ><span id="verticalMiddleSpan">Mes Echanges</span></a></li>
-					<li ><a href="<%=strContPath%>/listeDocuments.do" ><span id="verticalMiddleSpan">Mes documents</span></a></li>
+					<li ><a href="<%=strContPath%>/listeEchanges.do" ><i class="fa fa-circle-o"></i><span>Mes Echanges</span></a></li>
+					<li ><a href="<%=strContPath%>/listeDocuments.do" ><i class="fa fa-circle-o"></i><span>Mes documents</span></a></li>
 				<% if(typeD.equals("ADH") || typeD.equals("BEN")){ %>
-					<li ><a href="<%=strContPath%>/listeDecSante.do"  
-					style="background-image: none; background-color: #FF9999; border: 1px solid #FF0000;">Mes décomptes santé</a></li>
+					<li ><a href="<%=strContPath%>/listeDecSante.do"><i class="fa fa-circle-o"></i><span>Mes décomptes santé</span></a></li>
 					
 					<% if (!internaute.getModeAcces().equals("SUP")) { %>
 					
 					<logic:present name="AttDocDefListe" scope="session">
 						<logic:notEmpty name="AttDocDefListe" property="listeDef" scope="session">
-							<li ><a href="<%=strContPath%>/listeDocAdmin.do" ><span id="verticalMiddleSpan">Administrateur</span></a></li>		
+							<li ><a href="<%=strContPath%>/listeDocAdmin.do" ><i class="fa fa-circle-o"></i><span>Administrateur</span></a></li>		
 						</logic:notEmpty>
 					</logic:present>
 					<% } %>
@@ -115,15 +114,15 @@
 
 			<% if (null != typeD) { %>
 				<logic:equal name="dossierActuel" property="typeDossier" value="XXX">
-					<li ><a href="<%=strContPath%>/listeDocumentsExged.do" ><span id="verticalMiddleSpan">Télécharger Exged</span></a></li>
+					<li ><a href="<%=strContPath%>/listeDocumentsExged.do" ><i class="fa fa-circle-o"></i><span>Télécharger Exged</span></a></li>
 				
-					<li ><a href="<%=strContPath%>/listeDocuments.do" >Documentation</a></li>
-					<li ><a href="<%=strContPath%>/echangeMsg.do?action=initForm" >Envoyer Message</a></li>
-					<li ><a href="<%=strContPath%>/uploadFile.do?action=initForm" >Uploader un fichier</a></li>
-					<li ><a href="<%=strContPath%>/listeEchanges.do" >Liste des échanges</a></li>
-					<li ><a href="<%=strContPath%>/contactInit.do" >Nous contacter</a></li>
+					<li ><a href="<%=strContPath%>/listeDocuments.do" ><i class="fa fa-circle-o"></i><span>Documentation</span></a></li>
+					<li ><a href="<%=strContPath%>/echangeMsg.do?action=initForm" ><i class="fa fa-circle-o"></i><span>Envoyer Message</span></a></li>
+					<li ><a href="<%=strContPath%>/uploadFile.do?action=initForm" ><i class="fa fa-circle-o"></i><span>Uploader un fichier</span></a></li>
+					<li ><a href="<%=strContPath%>/listeEchanges.do" ><i class="fa fa-circle-o"></i><span>Liste des échanges</span></a></li>
+					<li ><a href="<%=strContPath%>/contactInit.do" ><i class="fa fa-circle-o"></i><span>Nous contacter</span></a></li>
 					
-					<li ><a href="<%=strContPath%>/jsp/messages/Assist.jsp" >Incident technique</a></li>
+					<li ><a href="<%=strContPath%>/jsp/messages/Assist.jsp" ><i class="fa fa-circle-o"></i><span>Incident technique</span></a></li>
 				</logic:equal>
 			<%} %>	
 		<% } %>
@@ -145,7 +144,7 @@
 	          </span>
 	      </a>
 	      <ul class="treeview-menu">
-	        <li><a href="<%=strContPath%>/admin/refreshChargementsGlobaux.do">Rechargement global</a></li>
+	        <li><a href="<%=strContPath%>/admin/refreshChargementsGlobaux.do"><i class="fa fa-circle-o"></i><span>Rechargement global</span></a></li>
 	      </ul>
 	    </li>
 	<% } %>

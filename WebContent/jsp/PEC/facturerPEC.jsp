@@ -38,7 +38,7 @@
 <br />
 
 <layout:form action="facturerPECExec.do" focus="numFacture"
-	styleClass="FORMULAIRE" width="80%" enctype="multipart/form-data">
+	styleClass="box" enctype="multipart/form-data">
 
 	<tr>
 		<td colspan="2">
