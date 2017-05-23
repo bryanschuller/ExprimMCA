@@ -3,7 +3,7 @@
 <br><br><br><br><br>
 
 <H1>Erreur lors de la tentative de connexion ...
-<div id="EXC_MESSAGE_INFO_ERREUR_RED">
+<div class="callout callout-danger">
 <p><strong>Espaces Sécurisés inaccessible</strong></p>
 <p>Bonjour,</p> 
 <p>En raison de problèmes techniques, nous ne pouvons donner suite à votre demande de connexion.<br>

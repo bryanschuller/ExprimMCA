@@ -10,4 +10,4 @@
 </H1>
 <br><br><br><br>
 
-<div id="EXC_MESSAGE_INFO"><strong> <html:errors /> </strong></div>
+<div class="callout callout-info"><strong> <html:errors /> </strong></div>

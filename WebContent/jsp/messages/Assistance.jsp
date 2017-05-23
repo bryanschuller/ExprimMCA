@@ -26,7 +26,7 @@
 			J'utilise Internet Explorer 8 et certaines fonctionnalités ne répondent pas
 		</div>
 	</H2><br>
-	<div id="EXC_MESSAGE_INFO">
+	<div class="callout callout-info">
 		Il est nécessaire d'activer &laquo;l'affichage de compatibilité&raquo;<br/>
 		<%-- <img src="<%= (String)request.getContextPath()  %>/images/Assistance/IE8_Compatib.png"/>	--%>
 		<br/>
@@ -44,7 +44,7 @@
 			Après avoir saisi mon identifiant et mon mot de passe, certaines fonctionnalités ne répondent pas
 		</div>
 	</H2><br>
-    <div id="EXC_MESSAGE_INFO">
+    <div class="callout callout-info">
 		<%-- <a href="<%= (String)request.getContextPath()  %>/images/Assistance/menupresent.png"><img src="<%= (String)request.getContextPath()  %>/images/Assistance/menupresent.png" width="281" height="130"/></a><br/>	--%>
 		Il est possible que Javascript ne soit pas activé sur votre navigateur.<br/>
 		<br/>
@@ -63,7 +63,7 @@
 			Lorsque je clique sur un lien, je suis automatiquement redirigé sur la page de saisie de mon identifiant/mot de passe.
 		</div>
 	</H2><br>
-	<div id="EXC_MESSAGE_INFO">
+	<div class="callout callout-info">
 		Le problème de connexion à votre Espace peut être dû à votre navigateur qui n'accepterait pas les cookies.<br/>
 		Vous trouverez sur cette page les instructions pour les activer : <a href="http://www.sdl.com/fr/Legal/cookie-instructions.asp">http://www.sdl.com/fr/Legal/cookie-instructions.asp</a><br/>
 		<br/>

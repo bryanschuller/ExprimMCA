@@ -147,7 +147,7 @@
 </logic:notEmpty>
 
 <logic:empty name="listePEC">
-	<div id="EXC_MESSAGE_PRESTA">
+	<div class="callout callout-info">
 		<strong>
 			Aucune prise en charge
 		</strong> 

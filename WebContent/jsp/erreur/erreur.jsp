@@ -26,7 +26,7 @@ if (execContext.equals("dev")) { %>
      
 <%} else  {%>  
 
-		<div id="EXC_MESSAGE_INFO_ERREUR_RED">
+		<div class="callout callout-danger">
 				
 				
 				<strong>Une erreur est survenue...</strong>

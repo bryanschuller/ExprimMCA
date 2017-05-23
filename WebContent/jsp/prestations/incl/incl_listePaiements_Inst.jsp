@@ -71,7 +71,7 @@ document.getElementById('imageI0').src = "<%= (String)request.getContextPath()  
 else
 {
 %>
-<div id="EXC_MESSAGE">
+<div class="callout callout-info">
 	<strong>
 		<html:errors  property="instance"/>
 	</strong> 

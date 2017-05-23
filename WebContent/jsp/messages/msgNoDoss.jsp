@@ -10,4 +10,4 @@
 </H1>
 <br><br><br><br>
 
-<div id="EXC_MESSAGE_INFO"><strong> <layout:message key="no.doss"/> </strong></div>
+<div class="callout callout-info"><strong> <layout:message key="no.doss"/> </strong></div>

@@ -17,7 +17,7 @@
 
 <logic:notPresent name="lEchange" scope="request">
 	<div id="EXC_CONTENT_MIDDLE">
-		<div id="EXC_MESSAGE">
+		<div class="callout callout-info">
 			<strong>
 				Il n'y a aucun échange
 			</strong>     

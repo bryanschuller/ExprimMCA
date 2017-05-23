@@ -19,7 +19,7 @@ request.setAttribute("Numiterate", "0");
 
 <logic:notPresent name="lstsuivi">
 
-	<div id="EXC_MESSAGE_PRESTA">
+	<div class="callout callout-info">
 			<strong>
 				<html:errors/>
 			</strong>     

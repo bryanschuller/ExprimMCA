@@ -1095,76 +1095,6 @@
 		border-top: 1px solid #A54A00;	
 	}
 	
-	
-	
-	#EXC_MESSAGE {
-		border: 1px solid #A54A00;  
-		 /*  #3476B0;   */
-		padding: 20px 40px 20px 40px;
-		float: left;
-		margin-top: 60px;
-		margin-left: 80px;
-		background-color: #FFEFCF;
-		font-family: "Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;
-		font-size: 12px;
-	}
-	
-	#EXC_MESSAGE_PRESTA {
-		border: 1px solid #A54A00;  
-		 /*  #3476B0;   */
-		padding: 20px 40px 20px 40px;
-		/* float: left; */
-		margin-top: 60px;
-		margin-left: 80px;
-		width: 300px;
-		background-color: #FFEFCF;
-		font-family: "Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;
-		font-size: 12px;
-	}
-	
-	#EXC_MESSAGE_INFO {
-		border: 1px solid #A54A00;
-		padding: 20px 40px 20px 20px;
-		margin-left: 20px;
-		background-color: #FFEFCF;
-		font-family: "Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;
-		font-size: 12px;
-		/*arrondir les coins en haut ?gauche et en bas ?droite*/
-	
-	}
-	
-	
-	#EXC_MESSAGE_INFO_PANNEAU_GAUCHE {
-		border: 1px solid #A54A00;
-		padding: 10px 10px 10px 10px;
-		margin-left: 0px;
-		text-align: justify;
-		/* background-color: #DFF5FF; */
-		font-family: "Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;
-		font-size: 11px;
-	}
-	
-	
-	#EXC_MESSAGE_INFO_ERREUR_RED {
-		border: 1px solid #990000;
-		padding: 20px 40px 20px 20px;
-		margin-left: 20px;
-		background-color: #FFAAAA;
-		font-family: "Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;
-		font-size: 12px;
-	}
-	
-	#EXC_MESSAGE_INFO_ASSISTANCE {
-		border: 1px solid #990000;
-		padding: 20px 40px 20px 20px;
-		margin-left: 20px;
-		background-color: #66CCFF;
-		font-family: "Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;
-		font-size: 16px;
-		font-weight : bold;
-	}
-	
-	
 	.EXC_TEXTE {
 		font-size: 12px;
 		color: #7F4A1F; /* #3476B0; */		
@@ -1430,7 +1360,9 @@
 
 
 /* Ajout Bryan */ 
-
+[class^="bg-"].bg-lg {
+    padding: 10px 15px;
+}
 
 
 

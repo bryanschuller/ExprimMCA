@@ -46,7 +46,7 @@
 </layout:form> 
 
 <logic:present name="erreurFiltre">
-	<div id="EXC_MESSAGE">
+	<div class="callout callout-info">
 		<strong>
 			Aucune correspondance pour le filtre saisie.
 		</strong> 
@@ -158,7 +158,7 @@
 	else
 	{
 	%>
-	<div id="EXC_MESSAGE">
+	<div class="callout callout-info">
 		<strong>
 			<html:errors property="effectue"/>
 		</strong> 

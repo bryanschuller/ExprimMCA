@@ -21,7 +21,7 @@
 	<p class="navbar-text">
 	<!--
 		<logic:present name="internaute">
-			<div id="EXC_MESSAGE_INFO" style="margin-left:50px; width:350px;">
+			<div class="callout callout-info">
 				<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" class="pay_mask_imp">
 			  		<tr><td>Internaute N° <layout:write name="internaute" property="idInternaute"/></td></tr>
 			  		<logic:present name="dossierActuel">

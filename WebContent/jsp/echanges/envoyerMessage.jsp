@@ -18,7 +18,7 @@
 <br>
 
 <logic:present name="annotation" scope="request">
-	<div id="EXC_MESSAGE_INFO">
+	<div class="callout callout-info">
 		<layout:write name="annotation" filter="false"></layout:write>
 	</div>
 	<BR>

@@ -69,7 +69,7 @@
 </logic:present>
 
 <logic:notPresent name="lstDetappelscot">			
-	<div id="EXC_MESSAGE_PRESTA">
+	<div class="callout callout-info">
 		<strong>
 			<html:errors/>
 		</strong>     

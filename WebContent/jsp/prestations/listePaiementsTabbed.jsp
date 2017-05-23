@@ -54,7 +54,7 @@
 	<% if(actTab == 2){ %>
 		<logic:notPresent name="lstPaiementsEff" scope="request">
 			<logic:notPresent name="lstPaiementsInst" scope="request">		
-				<div id="EXC_MESSAGE_PRESTA">
+				<div class="callout callout-info">
 					<strong>
 						Aucune prestation santé
 					</strong> 
@@ -70,7 +70,7 @@
 	</logic:present>
 	<% if(actTab == 3){ %>		
 		<logic:notPresent name="lstPaiementsTiers" scope="request">	
-			<div id="EXC_MESSAGE_PRESTA">
+			<div class="callout callout-info">
 				<strong>
 					<html:errors property="tiers"/>
 				</strong>     
@@ -85,7 +85,7 @@
 	</logic:present>
 	<% if(actTab == 4){ %>
 		<logic:notPresent name="lstPaiementsPrev" scope="request">			
-			<div id="EXC_MESSAGE_PRESTA">
+			<div class="callout callout-info">
 				<strong>
 					<html:errors property="prevoyance"/>
 				</strong>     

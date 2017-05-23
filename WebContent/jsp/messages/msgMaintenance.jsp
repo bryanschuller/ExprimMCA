@@ -8,7 +8,7 @@
 	
 	
 <br><br><br><br><br>
-<div id="EXC_MESSAGE_INFO_ERREUR_RED">
+<div class="callout callout-danger">
 <strong> Espace non disponible actuellement : travaux de maintenance en cours.... </strong>
 </div>
 

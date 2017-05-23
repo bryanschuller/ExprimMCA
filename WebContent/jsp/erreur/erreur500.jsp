@@ -33,7 +33,7 @@
 				
 				<br/><br/><br/><br/><br/><br/>
 				
-				<div id="EXC_MESSAGE_INFO_ERREUR_RED">
+				<div class="callout callout-danger">
 				
 				
 				<strong>erreur 500 : ERREUR INTERNE DU SERVEUR</strong>

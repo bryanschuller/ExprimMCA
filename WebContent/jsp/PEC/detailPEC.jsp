@@ -151,7 +151,7 @@
 
 <logic:notPresent name="ActPEC">
 <br/><br/>
-	<div id="EXC_MESSAGE_INFO_ERREUR_RED">
+	<div class="callout callout-danger">
 				
 			<strong>Prise en charge non trouvée</strong>
 			

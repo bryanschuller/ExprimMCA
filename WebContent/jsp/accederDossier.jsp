@@ -59,7 +59,7 @@
 <logic:notPresent name="gestionnaire" scope="session">
 
 <logic:present name="listeMessagesMSG" scope="session">
-	<div id="EXC_MESSAGE_INFO">
+	<div class="callout callout-info">
 		<logic:iterate name="listeMessagesMSG" property="listeMessages"
 			id="message">
 			<layout:write name="message" property="message" layout="false"

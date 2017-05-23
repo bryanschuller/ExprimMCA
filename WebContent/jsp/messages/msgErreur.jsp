@@ -12,5 +12,5 @@
 </H1>
 <br><br><br><br>
 
-<div id="EXC_MESSAGE_INFO_ERREUR_RED"><strong> <html:errors /> </strong></div>
+<div class="callout callout-danger"><strong> <html:errors /> </strong></div>
 	   

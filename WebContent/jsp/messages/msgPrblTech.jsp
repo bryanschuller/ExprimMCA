@@ -1,7 +1,7 @@
 <%@ include file="/declaration/taglibs.jsp"%>
  
  
-<div id="EXC_MESSAGE_INFO_ERREUR_RED">
+<div class="callout callout-danger">
 Erreur lors de la tentative de connexion ...
 </div>
   

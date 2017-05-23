@@ -8,7 +8,7 @@
 	</H2>
 	
 	
-		<div id="EXC_MESSAGE" style="margin-top:0px;">
+		<div class="callout callout-info" style="margin-top:0px;">
 			<strong>
 				<li> Vos cotisations sont réglées via votre employeur.</li>
 			</strong> 
@@ -16,7 +16,7 @@
 	</logic:notEqual>
 	
 <%-- 	<logic:equal name="contrat" property="typeAppelCot" value="M">
-		<div id="EXC_MESSAGE" style="margin-top:0px;">
+		<div class="callout callout-info" style="margin-top:0px;">
 			<strong>
 				<li> Vos cotisations sont réglées en partie via votre employeur.</li>
 			</strong> 

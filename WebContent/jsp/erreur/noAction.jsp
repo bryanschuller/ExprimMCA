@@ -4,7 +4,7 @@
 <% Logger loggerExprim = Logger.getLogger("com.exprimweb.erreur.noAction");
 	loggerExprim.warn("Action ExprimWeb Inexistante"); %>
 
-<div id="EXC_MESSAGE_INFO_ERREUR_RED">				
+<div class="callout callout-danger">				
 				
 	<strong>ACTION INEXISTANTE</strong>				
 				
