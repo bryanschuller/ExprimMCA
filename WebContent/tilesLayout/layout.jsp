@@ -83,7 +83,13 @@ if(null == internaute){
 
 <script type="text/javascript">
     $(document).ready(function () {
+      // ajout du thème CSS MCA
       $('body').addClass('skin-red-light skin-mca fixed sidebar-mini');
+
+      // ajout des lignes sur les tableaux via bootstrap
+      $('table.LIGNE_A').each(function(){
+        $(this).find('table:first').addClass('table table-striped');
+      });
     });
 </script>
 
