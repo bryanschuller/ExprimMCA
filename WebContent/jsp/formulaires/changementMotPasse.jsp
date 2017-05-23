@@ -1,14 +1,14 @@
 <%@ include file="/declaration/taglibs.jsp"%>
 
-<H1 >
+<div>
 	<div class="texteH">Personnaliser votre mot de passe</div>
 	<div class="iconesH">
 		<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
 	</div>
-	</H1>
-<br>
+</div>
+<div class="clearfix"></div>
 
-<layout:form action="changerMotPasse.do" focus="ancienMotpasse" styleClass="FORMULAIRE"  width="80%"> 
+<layout:form action="changerMotPasse.do" focus="ancienMotpasse" style="box box-mca-yellow"> 
 
 	<tr><td colspan="2">
 		<table class="FORMULAIRE" width="90%" align="center">

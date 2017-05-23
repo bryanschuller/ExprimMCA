@@ -9,17 +9,15 @@
 	if(null != dossAct){
 		typeD = (String) dossAct.getTypeDossier();
 	}
-	
-	
-	
 %>
 
-<H1>
+<div>
 	<div class="texteH">Administrateur MCA</div>
 	<div class="iconesH">
 		<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
 	</div>
-</H1>
+</div>
+<div class="clearfix"></div>
 
 
 <% int indexAttDef = 1; %>
@@ -29,8 +27,6 @@
 <div id="EXC_PRESENT_ONGLET_TETE_COL_1">
 	
 	<ul id="EXC_PRESENT_ONGLET_TETE_COL_1_LIST">
-	
-	
 		<logic:present name="AttDocDefListe" scope="session">
 			<logic:notEmpty name="AttDocDefListe" property="listeDef" scope="session">
 				<logic:iterate name="AttDocDefListe" property="listeDef" id="attDocDef">
@@ -41,8 +37,6 @@
 				</logic:iterate>
 			</logic:notEmpty>
 		</logic:present>
-
-
 	</ul>
 </div>
 
@@ -54,9 +48,7 @@
 	<logic:present name="AttDocDefListe" scope="session">
 		<logic:notEmpty name="AttDocDefListe" scope="session">
 			<logic:iterate name="AttDocDefListe" property="listeDef" id="attDocDef">
-			
-			
-			<div id="ongl_<%= indexAttDef %>" style="display:none; float:left; width:100%;">
+			<div id="ongl_<%= indexAttDef %>" style="display:none; width:100%;">
 				<H2>
 					<div class="texteH"><bean:write name="attDocDef" property="libelle"/></div>
 				</H2>
@@ -96,7 +88,7 @@
 					
 						<logic:iterate name="attDocDef" property="lstBranches" id="attDocDefSub">				
 				
-							<div id="ongl_<%= indexAttDef %>_sub_<%= indexAttDefSub %>" style="display:none; float:left; width:100%;">
+							<div id="ongl_<%= indexAttDef %>_sub_<%= indexAttDefSub %>" style="display:none; width:100%;">
 								<H2>
 									<div class="texteH"><bean:write name="attDocDefSub" property="libelle"/></div>
 								</H2>	
@@ -121,32 +113,21 @@
 					
 				</logic:notEmpty>
 			</div>
-							
 			<% indexAttDef++; %>
 			</logic:iterate>		
 		</logic:notEmpty>
 	</logic:present>
-	
-		
-	
-		
 </div>
 
-
-
-
-
 <script>
+	ongl_bg_col_unsel = '#FFFFFF';
+	ongl_txt_col_unsel = '#231F20';
+	ongl_bg_col_sel = '#000000';
 
-ongl_bg_col_unsel = '#FFFFFF';
-ongl_txt_col_unsel = '#231F20';
-ongl_bg_col_sel = '#000000';
-
-ongl_sub_bg_col_unsel = '#FFFFFF';
-ongl_sub_txt_col_unsel = '#231F20';
-ongl_sub_bg_col_sel = '#000000';
- 
-view_tab_sub(<%= (String)request.getAttribute("tab")  %>, <%= (String)request.getAttribute("sub")  %>);
-
+	ongl_sub_bg_col_unsel = '#FFFFFF';
+	ongl_sub_txt_col_unsel = '#231F20';
+	ongl_sub_bg_col_sel = '#000000';
+	 
+	view_tab_sub(<%= (String)request.getAttribute("tab")  %>, <%= (String)request.getAttribute("sub")  %>);
 </script>
 

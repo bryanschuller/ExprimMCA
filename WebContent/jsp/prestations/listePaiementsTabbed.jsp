@@ -9,7 +9,7 @@
 
 <script type="text/javascript" src="<%= (String)request.getContextPath()  %>/scripts/paiement.js"></script>
 
-<H1>
+<div>
 	<div class="texteH">
 		<bean:message key="paie.histo.paiements"/>
 	</div>
@@ -20,8 +20,8 @@
 	        <a href="javascript:window.print()" title="Imprimer les paiements cochés ci-dessous"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer les paiements séléctionnés"></i></a>
         </div> 
 	</div>
-</H1>
-<br/><br/>
+</div>
+<div class="clearfix"></div>
 
 <% int actTab = 1;
 	String adhRO = (String) session.getAttribute("adhRO");

@@ -2,7 +2,7 @@
 
 <bean:size name="lEmails" id="tailleListe"/>
 
-<H1>
+<div>
 	<div class="texteH">
 		<logic:equal name="tailleListe" value="1">		
 	    	<layout:message key="title.change.one.mail"/>	    	
@@ -14,8 +14,8 @@
 	<div class="iconesH">
 		<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
 	</div>
-</H1> 
-<BR>
+</div>
+<div class="clearfix"></div>
 
 <layout:form action="/changementAllEmails" focus="newEmail" styleClass="box" onsubmit="return validateModEmailForm(this)"> 
 

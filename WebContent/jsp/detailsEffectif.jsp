@@ -18,7 +18,7 @@
 <br>
 
 
-<layout:form action="detailEffectifs.do" styleClass="FORMULAIRE"  width="80%" reqCode="sendForm">
+<layout:form action="detailEffectifs.do" style="box box-mca-yellow" reqCode="sendForm">
 
 	<tr><td>
 		Sélectionnez les filtres du chargement :

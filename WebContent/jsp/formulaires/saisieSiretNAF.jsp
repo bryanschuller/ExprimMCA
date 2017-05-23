@@ -1,13 +1,13 @@
 <%@ include file="/declaration/taglibs.jsp"%>
 
-<H1>
+<div>
 	<div class="texteH">
 	    Déclaration Sociale Nominative
 	</div>
 	<div class="iconesH">
 	</div>
-</H1> 
-<BR>
+</div>
+<div class="clearfix"></div>
 
 <layout:form action="/changementSiretNAF" styleClass="box" reqCode="sendModif" > 
 

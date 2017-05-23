@@ -9,7 +9,7 @@
 <script type="text/javascript" src="<%= (String)request.getContextPath()  %>/scripts/paiement.js"></script>
 
 
-<H1>
+<div>
 	<div class="texteH">
 		<bean:message key="paie.histo.paiements"/>
 	</div>
@@ -21,8 +21,8 @@
 		<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
 		<a href="javascript:window.print()" title="Imprimer les paiements cochés ci-dessous"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer les paiements séléctionnés"></i></a>
 	</div>
-</H1>
-<br/><br/>
+</div>
+<div class="clearfix"></div>
 
 <layout:form action="filtrePaiementsDossierTiers.do" focus="numFiltre" styleClass="box" > 
 

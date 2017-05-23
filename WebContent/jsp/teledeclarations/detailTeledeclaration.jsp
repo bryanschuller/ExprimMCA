@@ -7,7 +7,7 @@ request.setAttribute("Numiterate", "0");
      
 
 
-<H1>
+<div>
 	<div class="texteH">
     <%=(String)request.getAttribute("titre")%>
 	</div>
@@ -17,8 +17,8 @@ request.setAttribute("Numiterate", "0");
     	<a href="javascript:copyBor()" > <html:img page="/images/mail.gif" alt="Obtenir une copie par mail" border="0"/></a>
     </logic:equal>
 <a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>	</div>
-</H1>
-<br/><br/>
+</div>
+<div class="clearfix"></div>
 
 
 <div class="row">

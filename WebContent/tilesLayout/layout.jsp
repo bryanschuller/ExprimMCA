@@ -93,6 +93,9 @@ if(null == internaute){
 
       // gestion des tooltips
       $('[data-toggle="tooltip"]').tooltip(); 
+
+      // gestion des formulaires boxés (impossible de définir une classe sur un ayout:form, on triche)
+      $('[style="box box-mca-yellow"]').addClass('box box-mca-yellow');
     });
 </script>
 

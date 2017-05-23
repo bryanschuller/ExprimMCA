@@ -2,21 +2,21 @@
 <%@ page import="com.exprimweb.struts.modele.*" %>
 <%@ page import="java.util.Vector" %>
 
-<H1>
+<div>
 	<div class="texteH">
 		Détail d'un échange avec la mutuelle
 	</div>
 	<div class="iconesH">
 		<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
 	</div>
-</H1>
-<br>
+</div>
+<div class="clearfix"></div>
 
 
 <div id="EXC_CONTENT_ECHANGE_REPONSE">
 
 
-<layout:form action="repondreEchange.do" focus="corps" styleClass="FORMULAIRE"  width="80%" enctype="multipart/form-data"  reqCode="sendForm"> 
+<layout:form action="repondreEchange.do" focus="corps" style="box box-mca-yellow" enctype="multipart/form-data"  reqCode="sendForm"> 
 
 
 

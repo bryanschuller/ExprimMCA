@@ -7,7 +7,7 @@
 </H1>
 <br>
 
-<layout:form action="telePaiement.do" focus="montant" styleClass="FORMULAIRE"  width="80%"> 
+<layout:form action="telePaiement.do" focus="montant" style="box box-mca-yellow"> 
 
 	<tr><td colspan="2">
 		<table class="FORM_BEN" width="90%" align="center">

@@ -1,13 +1,13 @@
 <%@ include file="/declaration/taglibs.jsp"%>
 
 
-<H1>
+<div>
 	<div class="texteH">Liste des échanges avec la mutuelle</div>
 	<div class="iconesH">
 		<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
 	</div>
-</H1>
-<br>
+</div>
+<div class="clearfix"></div>
 
 <logic:present name="lEchange" scope="request">
 	<div id="EXC_CONTENT_MIDDLE">

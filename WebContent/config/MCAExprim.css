@@ -574,15 +574,12 @@
 	/* pour en-t?es avec icones ou liens incorpor? plac? ?droite */
 	.texteH {
 		float: left;
+		font-size: 30px;
 	}
 	.iconesH {
-		font-family: "Trebuchet MS",Verdana, Geneva, Arial, Helvetica, sans-serif;
 		float: right;
 		margin-right: 10px;
 	}
-	
-	
-	
 	
 	#EXC_PRESENT_DATA_1 {
 		/* margin-bottom: 10px; */
@@ -1362,6 +1359,11 @@
 /* Ajout Bryan */ 
 [class^="bg-"].bg-lg {
     padding: 10px 15px;
+}
+
+form.box > table {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 

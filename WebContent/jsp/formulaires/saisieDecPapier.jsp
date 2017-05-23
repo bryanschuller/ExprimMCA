@@ -1,13 +1,13 @@
 <%@ include file="/declaration/taglibs.jsp"%>
 
-<H1>
+<div>
 	<div class="texteH">
 		Décomptes santé
 	</div>
 	<div class="iconesH">
 	</div>
-</H1> 
-<BR>
+</div>
+<div class="clearfix"></div>
 
 <div class="row">
 	<div class="col-xs-12">

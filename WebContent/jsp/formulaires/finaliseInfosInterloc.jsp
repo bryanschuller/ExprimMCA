@@ -1,10 +1,11 @@
 <%@ include file="/declaration/taglibs.jsp"%>
 
-<H1>
+<div>
 	<div class="texteH">
 	<layout:message key="title.getmail.edit"/> 
 	</div>
-</H1>
+</div>
+<div class="clearfix"></div>
 
 <br>
 <layout:form action="finaliseInfoInterlocuteur.do" styleClass="FORMULAIRE"
