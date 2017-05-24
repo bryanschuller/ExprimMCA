@@ -1366,12 +1366,20 @@ form.box > table {
 	margin-left: 5px;
 }
 
+.login-page
+{
+	background-image: url(https://www.mc-alsace.fr/extranet/uploads/backgrounds/bg-spring.jpg);
+    background-size: cover;
+}
 
-
-
-
-
-
+.login-page .login-box-body {
+    border-top: 3px solid #dd4b39;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+}
 
 
 
@@ -1390,6 +1398,10 @@ form.box > table {
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
+.skin-mca.sidebar-collapse .main-header .logo {
+  background: transparent url("https://www.mc-alsace.fr/extranet/bundles/web/img/logo-xsmall.png") no-repeat center center;
+}
+
 .skin-mca header.main-header .logo:hover {
   background-color: transparent;
 }

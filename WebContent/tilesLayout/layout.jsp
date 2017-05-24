@@ -36,10 +36,6 @@ if(null == internaute){
 
 <layout:html layout="false">
 
-<!--[if lte IE 7]><link rel="stylesheet" href="<%= (String)request.getContextPath()  %>/config/MCAExprim_IE.css" type="text/css"><![endif]-->
-<!--[if IE 8]><link rel="stylesheet" href="<%= (String)request.getContextPath()  %>/config/MCAExprim_IE_8.css" type="text/css"><![endif]-->
-
-
 <div id="container" class="wrapper">
 	<header class="main-header">
 		<tiles:insert attribute="header" />

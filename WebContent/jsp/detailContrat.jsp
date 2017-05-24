@@ -15,9 +15,3 @@
 <%@ include file="/jsp/incl/contrat.jsp"%>
 
 <%@ include file="/jsp/incl/remboursementPrestations.jsp"%>
-
-<%-- 
-<%@ include file="/jsp/incl/telechargementDocuments.jsp"%>
-
---%>
-
