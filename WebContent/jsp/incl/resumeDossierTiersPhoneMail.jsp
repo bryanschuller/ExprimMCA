@@ -18,7 +18,9 @@
 							<layout:write name="InfoInterloc" property="telephone" layout="false"  type="numPhone"/>
 						</div>
 						<div class="col-xs-12 col-md-4">
-							<a href="<%=(String) request.getContextPath()%>/modifierInfoInterlocuteur.do?action=initForm"><layout:message key="libelle.modifier" /></a>
+							<div class="btn-group">
+								<a href="<%=(String) request.getContextPath()%>/modifierInfoInterlocuteur.do?action=initForm" class="btn btn-flat btn-sm btn-default"><i class="fa fa-pencil"></i><span class="hidden-sm hidden-xs"><layout:message key="libelle.modifier" /></span></a>
+							</div>
 						</div>
 					</div>
 					<div class="row">
@@ -49,7 +51,9 @@
 							<layout:write name="InfoInterloc" property="adresseMail" layout="false" />
 						</div>
 						<div class="col-xs-12 col-md-4">
-							<a href="<%=(String) request.getContextPath()%>/loadAllEmails.do?type=Change"><layout:message key="libelle.modifier" /></a>
+							<div class="btn-group">
+								<a href="<%=(String) request.getContextPath()%>/loadAllEmails.do?type=Change" class="btn btn-flat btn-sm btn-default"><i class="fa fa-pencil"></i><span class="hidden-sm hidden-xs"><layout:message key="libelle.modifier" /></span></a>
+							</div>
 						</div>
 					</div>
 					<logic:equal name="nftActive" value="O">

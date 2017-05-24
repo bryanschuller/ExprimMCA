@@ -45,11 +45,13 @@ request.setAttribute("Numiterate", "0");
       <layout:collectionItem title="suivi.option" >
 
       <logic:equal  name ="mode" value ="V" scope="request">
-      <a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>"> Visualiser </a>
+        <a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>"> Visualiser </a>
       </logic:equal>
 
       <logic:equal  name ="mode" value ="M" scope="request">
-      <a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>"> Modifier </a>
+        <div class="btn-group">
+          <a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>" class="btn btn-flat btn-sm btn-default"><i class="fa fa-pencil"></i><span class="hidden-sm hidden-xs"><layout:message key="libelle.modifier" /></span></a>
+        </div>
       </logic:equal>
 
 

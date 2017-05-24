@@ -30,15 +30,18 @@
 						<layout:collectionItem title="&nbsp;&nbsp;&nbsp;&nbsp;">
 							<logic:equal name="banque" property="bqeTop" value="OUI">
 								<logic:equal name="banque" value="P" property="typeUsed">
-									<a href="<%= (String)request.getContextPath()  %>/semiModifBanque.do?id=<bean:write name="banque" property="index"/>"><layout:message key="libelle.modifier" /></a>
-								<logic:notEqual name="banque" property="dateModifDemande" value="0">
-									<br>
-								<span class="EXC_TEXTE_MODIF_DEMANDE">(Dem. au : <layout:write name="banque" property="dateModifDemande" type="dateYMD" />)</span>
-								</logic:notEqual>
-							
+									<div class="btn-group">
+										<a href="<%= (String)request.getContextPath()  %>/semiModifBanque.do?id=<bean:write name="banque" property="index"/>" class="btn btn-flat btn-sm btn-default"><i class="fa fa-pencil"></i><span class="hidden-sm hidden-xs"><layout:message key="libelle.modifier" /></span></a>
+									</div>
+									<logic:notEqual name="banque" property="dateModifDemande" value="0">
+										<br>
+										<span class="EXC_TEXTE_MODIF_DEMANDE">(Dem. au : <layout:write name="banque" property="dateModifDemande" type="dateYMD" />)</span>
+									</logic:notEqual>
 								</logic:equal>
 								<logic:equal name="banque" value="C" property="typeUsed">
-									<a href="<%= (String)request.getContextPath()  %>/documentServe.do?code=docAutPrel" target="_blank"><layout:message key="libelle.modifier" /></a>
+									<div class="btn-group">
+										<a href="<%= (String)request.getContextPath()  %>/documentServe.do?code=docAutPrel" class="btn btn-flat btn-sm btn-default" target="_blank"><i class="fa fa-pencil"></i><span class="hidden-sm hidden-xs"><layout:message key="libelle.modifier" /></span></a>
+									</div>
 								</logic:equal>	
 							</logic:equal>			
 						</layout:collectionItem>

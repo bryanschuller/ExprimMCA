@@ -33,7 +33,9 @@
 						<layout:collectionItem title="Du" property="effetBanque" type="dateYMD" width="90px"/>
 						<layout:collectionItem title="Au" property="finBanque" type="dateYMD" width="90px"/>
 						<layout:collectionItem title="&nbsp;">
-							<a href="<%= (String)request.getContextPath()  %>/semiModifBanque.do?id=<bean:write name="bqeTiers" property="index"/>"><layout:message key="libelle.modifier" /></a>
+							<div class="btn-group">
+								<a href="<%= (String)request.getContextPath()  %>/semiModifBanque.do?id=<bean:write name="bqeTiers" property="index"/>" class="btn btn-flat btn-sm btn-default"><i class="fa fa-pencil"></i><span class="hidden-sm hidden-xs"><layout:message key="libelle.modifier" /></span></a>
+							</div>
 							<logic:notEqual name="bqeTiers" property="dateModifDemande" value="0">
 								<br>
 								<span class="EXC_TEXTE_MODIF_DEMANDE">(Dem. au : <layout:write name="bqeTiers" property="dateModifDemande" type="dateYMD" />)</span>

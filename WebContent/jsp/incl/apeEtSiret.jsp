@@ -10,9 +10,9 @@
 			</div>
 			<div class="iconesH">
 				<logic:notEqual name="ATT_DS0" value="ACTIVE">
-					<a href="<%=(String) request.getContextPath()%>/changementSiretNAF.do?reqCode=initForm">
-						<layout:message key="libelle.modifier" /> 
-					</a>		
+					<div class="btn-group">
+						<a href="<%=(String) request.getContextPath()%>/changementSiretNAF.do?reqCode=initForm" class="btn btn-flat btn-sm btn-default"><i class="fa fa-pencil"></i><span class="hidden-sm hidden-xs"><layout:message key="libelle.modifier" /></span></a>
+					</div>
 				</logic:notEqual>
 			</div>
 		</H2>

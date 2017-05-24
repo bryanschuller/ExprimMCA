@@ -72,7 +72,9 @@
 										<layout:collectionItem title="Du" property="effetBanque" type="dateYMD" width="90px"/>
 										<layout:collectionItem title="Au" property="finBanque" type="dateYMD" width="90px"/>
 										<layout:collectionItem title="&nbsp;">
-											<a href="<%= (String)request.getContextPath()  %>/documentServe.do?code=docAutPrel" target="_blank"><layout:message key="libelle.modifier" /></a>
+											<div class="btn-group">
+												<a href="<%= (String)request.getContextPath()  %>/documentServe.do?code=docAutPrel" class="btn btn-flat btn-sm btn-default" target="_blank"><i class="fa fa-pencil"></i><span class="hidden-sm hidden-xs"><layout:message key="libelle.modifier" /></span></a>
+											</div>
 										</layout:collectionItem>
 									</layout:collection>
 								</div>

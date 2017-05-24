@@ -32,11 +32,13 @@
 						
 						<layout:collectionItem title="&nbsp;">
 							<logic:equal name="adresse" property="adrTop" value="OUI">
-							<a href="<%= (String)request.getContextPath()  %>/semiModifAdresse.do?id=<bean:write name="adresse" property="index"/>"><layout:message key="libelle.modifier" /></a>
+								<div class="btn-group">
+									<a href="<%= (String)request.getContextPath()  %>/semiModifAdresse.do?id=<bean:write name="adresse" property="index"/>" class="btn btn-flat btn-sm btn-default"><i class="fa fa-pencil"></i><span class="hidden-sm hidden-xs"><layout:message key="libelle.modifier" /></span></a>
+								</div>
+
 								<logic:notEqual name="adresse" property="dateModifDemande" value="0">
 									<br>
 									<span class="EXC_TEXTE_MODIF_DEMANDE">(Dem. au : <layout:write name="adresse" property="dateModifDemande" type="dateYMD" />)</span>
-								
 								</logic:notEqual>
 							</logic:equal>
 						</layout:collectionItem>
