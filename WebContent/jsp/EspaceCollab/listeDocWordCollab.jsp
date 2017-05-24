@@ -12,13 +12,15 @@
 	</div>
 </H1>
 
-<br>
+<div class="clearfix"></div>
 
 <H2>
 	<div class="texteH">
 	 <layout:message key="docWord.liste.titre"/> 
 	</div>
 </H2>
+
+<div class="clearfix"></div>
 
 <div class="row">
 	<div class="col-xs-12">

@@ -1362,8 +1362,9 @@ form.box > table {
 	margin-right: auto;
 }
 
-
-
+.content .btn .fa+span{
+	margin-left: 5px;
+}
 
 
 

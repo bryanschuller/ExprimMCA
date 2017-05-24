@@ -7,7 +7,6 @@
 	</div>
 </H1>
 
-
-<br><br><br>
+<div class="clearfix"></div>
 
 <div class="callout callout-info"><strong> <html:errors /> </strong></div>

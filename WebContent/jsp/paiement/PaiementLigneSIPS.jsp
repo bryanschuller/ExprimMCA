@@ -5,7 +5,8 @@
 	 <layout:message key="paiement.titre"/> 
 	</div>
 </H1>
-<br>
+
+<div class="clearfix"></div>
 
 <H2>
 	<div class="texteH">
@@ -13,9 +14,10 @@
 	</div>
 </H2>
 
-<br><br><br><br><br><br><br>
+<div class="clearfix"></div>
+
 <div align="center">
-							<layout:write name="SIPSReturn" filter="false"/>
+	<layout:write name="SIPSReturn" filter="false"/>
 </div>
 
 

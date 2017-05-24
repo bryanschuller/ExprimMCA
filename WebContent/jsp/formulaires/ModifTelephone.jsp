@@ -9,8 +9,8 @@
 <br />
 <br />
 
-		<layout:form action="changementTelephone.do" styleClass="FORMULAIRE"
-			focus="telephone" width="80%" reqCode="sendForm">
+		<layout:form action="changementTelephone.do" styleClass="box"
+			focus="telephone" reqCode="sendForm">
 
 			<tr><td colspan="2">
 				<table class="FORM_BEN" width="90%" align="center">

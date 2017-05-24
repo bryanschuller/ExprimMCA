@@ -8,8 +8,8 @@
 <div class="clearfix"></div>
 
 <br>
-<layout:form action="finaliseInfoInterlocuteur.do" styleClass="FORMULAIRE"
-			focus="" width="80%" reqCode="sendForm" align="left">
+<layout:form action="finaliseInfoInterlocuteur.do" styleClass="box"
+			focus="" reqCode="sendForm" align="left">
 			
 			<tr><td colspan="2" style="font-size:12px;">
 			Bonjour, <br/>
@@ -39,19 +39,14 @@
 		
 <script>
 	function formatTel(el) {
-
 		var telform = el.value;
-		// if (telform.length > 10 && telform.length < 0) {
 		if (telform.length >= 10) {
 			telform = telform.replace(/^\+33/, "0");
 			if (!telform.match(/\+/)) {
-
 				telform = telform.replace(/[^\d|\+]/g, "");
 				telform = telform.replace(/(\d{2})(?!$)/g, "$1 ");
 				el.value = telform;
 			}
 		}
-		// return el;
-
 	}
 </script>

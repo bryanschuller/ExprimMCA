@@ -2,19 +2,16 @@
 
 
 <logic:notEmpty name="lAdresse">
-<H2>
-	<div class="texteH">
-		<bean:message key="adherent.principale.coord" />
-	</div>
-</H2>
-
-
-<div class="row">
-	<div class="col-xs-12">
-		<div class="box box-mca-yellow">
-			<layout:collection name="lAdresse" id="adresse" title=""
-						styleClass="LIGNE_A" styleClass2="LIGNE_B" >
-
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="box box-mca-yellow">
+				<div class="box-header with-border">
+					<h3 class="box-title">
+						<bean:message key="adherent.principale.coord" />
+					</h3>
+				</div>
+				<div class="box-body">
+					<layout:collection name="lAdresse" id="adresse" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B" >
 						<layout:collectionItem title="Adresse">
 							<bean:write name="adresse" property="adresse1"/>
 							<logic:notEmpty name="adresse" property="adresse2">
@@ -43,15 +40,9 @@
 								</logic:notEqual>
 							</logic:equal>
 						</layout:collectionItem>
-						
-						
-			</layout:collection>
+					</layout:collection>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
-
-
-<br>
 </logic:notEmpty>
-
-

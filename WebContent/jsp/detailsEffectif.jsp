@@ -15,7 +15,7 @@
 	</div>
 
 </H1>
-<br>
+<div class="clearfix"></div>
 
 
 <layout:form action="detailEffectifs.do" style="box box-mca-yellow" reqCode="sendForm">

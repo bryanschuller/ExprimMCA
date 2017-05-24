@@ -117,5 +117,7 @@
 </div>
 
 <script type="text/javascript">
-	$('.nav-tabs a:first').tab('show')
+    $(document).ready(function () {
+		$('.nav-tabs a:first').tab('show');
+	});
 </script>

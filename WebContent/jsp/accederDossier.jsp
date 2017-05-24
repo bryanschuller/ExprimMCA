@@ -43,101 +43,65 @@
 		property="nom1" layout="false" />
 <% } else if (typeD.equals("COL")) {%>
 	Collaborateur
-
 <%} %>
-
-
-
 
 	</div>
 	<div class="iconesH">
 		<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
 	</div>
 </H1>
-<br>
+<div class="clearfix"></div>
 
 <logic:notPresent name="gestionnaire" scope="session">
-
-<logic:present name="listeMessagesMSG" scope="session">
-	<div class="callout callout-info">
-		<logic:iterate name="listeMessagesMSG" property="listeMessages"
-			id="message">
-			<layout:write name="message" property="message" layout="false"
-				filter="false" /><BR>
-		</logic:iterate>
-	</div>
-	<br>
-</logic:present>
-
-
-<logic:present name="lEchange" scope="request">
-	<H2>
-		<% if(((Vector) request.getAttribute("lEchange")).size() == 1){ %>
-			<div class="texteH">Vous avez un message non lu</div>
-		<% }else{ %>
-			<div class="texteH">Vous avez des messages non lus</div>
-		<% } %>
-		<div class="iconesH">
-			<a href="<%= (String) request.getContextPath() %>/listeEchanges.do" >Voir tous les échanges</a>
+	<logic:present name="listeMessagesMSG" scope="session">
+		<div class="callout callout-info">
+			<logic:iterate name="listeMessagesMSG" property="listeMessages"
+				id="message">
+				<layout:write name="message" property="message" layout="false"
+					filter="false" /><BR>
+			</logic:iterate>
 		</div>
-	</H2>
-	<br>
-	<%@ include file="/jsp/echanges/incl/incl_listeEchanges.jsp"%>	
-</logic:present>
+		<br>
+	</logic:present>
 
+	<logic:present name="lEchange" scope="request">
+		<H2>
+			<% if(((Vector) request.getAttribute("lEchange")).size() == 1){ %>
+				<div class="texteH">Vous avez un message non lu</div>
+			<% }else{ %>
+				<div class="texteH">Vous avez des messages non lus</div>
+			<% } %>
+			<div class="iconesH">
+				<a href="<%= (String) request.getContextPath() %>/listeEchanges.do" >Voir tous les échanges</a>
+			</div>
+		</H2>
+		<br>
+		<%@ include file="/jsp/echanges/incl/incl_listeEchanges.jsp"%>	
+	</logic:present>
 </logic:notPresent>
-
 
 <% if(typeD.equals("ADH") || typeD.equals("BEN")){ %>
-
-<logic:notPresent name="gestionnaire" scope="session">
-
-	<%@ include file="/jsp/incl/listeContratsADH.jsp"%>
-	
-	
-	<%@ include file="/jsp/incl/adresse.jsp"%>
-	
-	
-	<%@ include file="/jsp/incl/infosINTERLOC.jsp"%>
-	
-</logic:notPresent>
-
+	<logic:notPresent name="gestionnaire" scope="session">
+		<%@ include file="/jsp/incl/listeContratsADH.jsp"%>
+		<%@ include file="/jsp/incl/adresse.jsp"%>
+		<%@ include file="/jsp/incl/infosINTERLOC.jsp"%>
+	</logic:notPresent>
 	<%@ include file="/jsp/incl/infosSOLDE.jsp"%>
-	
-<logic:notPresent name="gestionnaire" scope="session">
-	
-	<%@  include file="/jsp/incl/prestas.jsp"%>	
-	
-</logic:notPresent>
-
+	<logic:notPresent name="gestionnaire" scope="session">
+		<%@  include file="/jsp/incl/prestas.jsp"%>	
+	</logic:notPresent>
 <% }else if(typeD.equals("ENT")){ %>
-
 	<%@ include file="/jsp/incl/apeEtSiret.jsp"%>
-	
 	<%@ include file="/jsp/incl/adresse.jsp"%>
-	
 	<%@ include file="/jsp/incl/listeInterlocuteurs.jsp"%>
-	
 	<%@ include file="/jsp/incl/resumeEffectifs.jsp"%>
-
 	<%@ include file="/jsp/incl/appCot.jsp"%>	
-
-
-
-
 <% }else if(typeD.equals("TIE") || typeD.equals("COL")) { %>
-
 	<%@ include file="/jsp/incl/resumeDossierTiersInfosInterloc.jsp"%>
-	
 	<%@ include file="/jsp/incl/adresse.jsp"%>
-	
 	<%@ include file="/jsp/incl/resumeDossierTiersPhoneMail.jsp"%>
-	
 	<% if (typeD.equals("TIE")) {%>
-	
-	<%@ include file="/jsp/incl/resumeDossierTiersBanque.jsp"%>
-	
+		<%@ include file="/jsp/incl/resumeDossierTiersBanque.jsp"%>
 	<%} %>
-	
 <% } %>
 

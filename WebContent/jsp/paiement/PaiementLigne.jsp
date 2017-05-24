@@ -5,11 +5,8 @@
 	 <layout:message key="paiement.titre"/> 
 	</div>
 </H1>
-<br>
 
-<br><br><br><br>
-
-			 
+<div class="clearfix"></div>	 
 			 
 <layout:form action="telePaiement.do" focus="montant" width="600px" styleClass="FORMULAIRE"> 
 	

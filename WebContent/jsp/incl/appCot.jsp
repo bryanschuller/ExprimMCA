@@ -3,17 +3,16 @@
 
 
 <% if(null != typeD && typeD.equals("ENT")) { %>
-
-
-	<H2>
-	<div class="texteH">Vos appels de cotisations</div>
-
-	</H2>
-	<div style="margin: 20px 50px 0px 50px;">
-	<div><a
-		href="<%=(String) request.getContextPath()%>/viewAppCot.do">Consultez
-	vos appels de cotisations. </a></div>
-	<br>
+	<div class="box box-mca-yellow">
+		<div class="box-header with-border">
+			<h3 class="box-title">Vos appels de cotisations</h3>
+		</div>
+		<div class="box-body">
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="<%=(String) request.getContextPath()%>/viewAppCot.do">Consultez vos appels de cotisations.</a>
+				</div>
+			</div>
+		</div>
 	</div>
-
 <% } %>

@@ -9,7 +9,7 @@
 	</div>
 </H1>
 
-<br>
+<div class="clearfix"></div>
 
 <H2>
 	<div class="texteH">
@@ -17,7 +17,7 @@
 	</div>
 </H2>
  
-<br>
+<div class="clearfix"></div>
 	    
 <!--
 	    <td width="5%" align="center" ><a href="javascript:preview(7)"><html:img page="/images/PREVIEW.gif" alt="prévisualiser la page" border="0"/></td>

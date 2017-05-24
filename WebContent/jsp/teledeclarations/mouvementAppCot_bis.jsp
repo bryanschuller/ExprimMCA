@@ -82,7 +82,7 @@ if(type.equals("C")){
   </tr>
 </table>
 
-<layout:form action="mouvement.do" styleClass="FORMULAIRE" width="100%" focus="<%= defFocus%>">
+<layout:form action="mouvement.do" styleClass="box" focus="<%= defFocus%>">
 <layout:text key="" property="typeMouvement" size="2" mode="H,H,H" maxlength="2" styleClass="LABEL" isRequired="false" />
 	
   

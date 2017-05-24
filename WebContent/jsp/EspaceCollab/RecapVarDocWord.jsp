@@ -7,7 +7,7 @@
 	</div>
 </H1>
 
-<br>
+<div class="clearfix"></div>
 
 <H2>
 	<div class="texteH">
@@ -15,7 +15,7 @@
 	</div>
 </H2>
 
-<br>
+<div class="clearfix"></div>
 
 <div id="EXC_PRESENT_DATA_COL_1">
 

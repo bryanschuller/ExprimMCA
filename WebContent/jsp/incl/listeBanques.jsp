@@ -1,16 +1,16 @@
 <%@ include file="/declaration/taglibs.jsp"%>
 
 <logic:notEmpty name="lBanque">
-<H2>
-	<div class="texteH">
-		<bean:message key="adherent.principale.banque" />
-	</div>
-</H2>
-<div class="row">
-	<div class="col-xs-12">
-		<div class="box box-mca-yellow">
-			<layout:collection name="lBanque" id="banque" title=""
-						styleClass="LIGNE_A" styleClass2="LIGNE_B" >
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="box box-mca-yellow">
+				<div class="box-header with-border">
+					<h3 class="box-title">
+						<bean:message key="adherent.principale.banque" />
+					</h3>
+				</div>
+				<div class="box-body">
+					<layout:collection name="lBanque" id="banque" title=""styleClass="LIGNE_A" styleClass2="LIGNE_B" >
 						<layout:collectionItem title="Type d'utilisation" property="typeUsed" type="type_banque"/>
 						<logic:equal name="sepaAffWeb" value="IBAN">
 							<layout:collectionItem title="Compte IBAN" property="compteIBAN" type="compteIBAN" width="250px"/>	
@@ -28,7 +28,6 @@
 						<layout:collectionItem title="Du" property="effetBanque" type="dateYMD" width="90px"/>
 						<layout:collectionItem title="Au" property="finBanque" type="dateYMD" width="90px"/>
 						<layout:collectionItem title="&nbsp;&nbsp;&nbsp;&nbsp;">
-						
 							<logic:equal name="banque" property="bqeTop" value="OUI">
 								<logic:equal name="banque" value="P" property="typeUsed">
 									<a href="<%= (String)request.getContextPath()  %>/semiModifBanque.do?id=<bean:write name="banque" property="index"/>"><layout:message key="libelle.modifier" /></a>
@@ -38,18 +37,14 @@
 								</logic:notEqual>
 							
 								</logic:equal>
-				<%-- 			<logic:equal name="banque" value="U" property="typeUsed">
-									<a href="<%= (String)request.getContextPath()  %>/semiModifBanque.do?id=<bean:write name="banque" property="index"/>"><layout:message key="libelle.modifier" /></a>
-								</logic:equal> --%>
 								<logic:equal name="banque" value="C" property="typeUsed">
 									<a href="<%= (String)request.getContextPath()  %>/documentServe.do?code=docAutPrel" target="_blank"><layout:message key="libelle.modifier" /></a>
 								</logic:equal>	
 							</logic:equal>			
 						</layout:collectionItem>
-						
-			</layout:collection>
+					</layout:collection>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
-<br>
 </logic:notEmpty>
