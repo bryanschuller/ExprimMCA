@@ -8,8 +8,6 @@
 
 if (execContext.equals("dev")) { %>
 
-
-	
 <strong>Nom de l'exception : </strong><br>
 <%= exception.toString() %> <br><br><br>
 
@@ -17,21 +15,11 @@ if (execContext.equals("dev")) { %>
 <%= exception.getMessage() %> <br><br><br>
 
 <strong>Trace :</strong><br>
-
     <% 
-
 	 java.io.PrintWriter outstream = new java.io.PrintWriter(out);
-
      exception.printStackTrace(outstream); %>
-     
 <%} else  {%>  
-
 		<div class="callout callout-danger">
-				
-				
-				<strong>Une erreur est survenue...</strong>
-				
-				
+			<strong>Une erreur est survenue...</strong>
 		</div>
-
 <% } %>
