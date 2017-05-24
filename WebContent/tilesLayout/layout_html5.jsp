@@ -32,39 +32,31 @@ if(null == internaute){
 
 <!doctype html>
 <layout:html layout="false">
+	<div id="container">
 
-<!--[if lte IE 7]><link rel="stylesheet" href="<%= (String)request.getContextPath()  %>/config/MCAExprim_IE.css" type="text/css"><![endif]-->
-<!--[if IE 8]><link rel="stylesheet" href="<%= (String)request.getContextPath()  %>/config/MCAExprim_IE_8.css" type="text/css"><![endif]-->
-
-
-<div id="container">
-
-	<div id="header">
-		<tiles:insert attribute="header" />
-	</div>
-	
-	<div class="menu">
-		<tiles:insert attribute="menu"/>
-	</div>
-	
-	<div class="content">
-	
-	<progress></progress>
-	
-		<div  id="panneauCentreALeft">
-			<tiles:insert attribute="body" />
+		<div id="header">
+			<tiles:insert attribute="header" />
 		</div>
 		
+		<div class="menu">
+			<tiles:insert attribute="menu"/>
+		</div>
 		
-		<div id="footerMCA">		
-			<tiles:insert attribute="footer" />			
+		<div class="content">
+		
+		<progress></progress>
+		
+			<div  id="panneauCentreALeft">
+				<tiles:insert attribute="body" />
+			</div>
+			
+			
+			<div id="footerMCA">		
+				<tiles:insert attribute="footer" />			
+			</div>
 		</div>
 	</div>
-	
 
-</div>
-
-<div  id="wait" class="wait_mask" ></div>
-<div  id="wait_fond" class="wait_mask_fond"></div> 
-
+	<div  id="wait" class="wait_mask" ></div>
+	<div  id="wait_fond" class="wait_mask_fond"></div> 
 </layout:html>
