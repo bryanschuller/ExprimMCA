@@ -12,8 +12,9 @@
 	</div>
 	<div class="iconesH">
 		<div  class="pay_vis">
-			<a href="<%= (String)request.getContextPath()  %>/getDetAppCotN.do?id=<%=(String)request.getParameter("id")%>&action=PDF" target = "blank" > <html:img page="/images/docpdf.gif" alt="Obtenir une copie au format pdf" border="0"/></a>
-    		<a href="<%= (String)request.getContextPath()  %>/getDetAppCotN.do?id=<%=(String)request.getParameter("id")%>&action=MAIL" target = "blank" > <html:img page="/images/mail.gif" alt="Obtenir une copie par mail" border="0"/></a>
+			<a href="<%= (String)request.getContextPath()  %>/getDetAppCotN.do?id=<%=(String)request.getParameter("id")%>&action=PDF" target = "blank" > 
+<i class="fa fa-file-pdf-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie au format PDF"></i></a>
+    		<a href="<%= (String)request.getContextPath()  %>/getDetAppCotN.do?id=<%=(String)request.getParameter("id")%>&action=MAIL" target = "blank" ><i class="fa fa-envelope-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie par mail"></i></a>
     		<a href="javascript:window.print()"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer"></i></a>
 			<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
 		</div>

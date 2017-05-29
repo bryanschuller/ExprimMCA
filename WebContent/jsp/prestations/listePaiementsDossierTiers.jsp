@@ -26,12 +26,6 @@
 
 <div class="box box-mca-yellow">
 	<div class="box-body">
-
-	</div>
-</div>
-
-<div class="box box-mca-yellow">
-	<div class="box-body">
 		<layout:form action="filtrePaiementsDossierTiers.do" focus="numFiltre"> 
 			<tr><td colspan="2">
 				<table class="FORM_BEN" width="90%" align="center">

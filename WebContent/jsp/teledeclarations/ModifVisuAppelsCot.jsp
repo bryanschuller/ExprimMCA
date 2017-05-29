@@ -116,50 +116,48 @@ request.setAttribute("Numiterate", "0");
 			<layout:panel  styleClass="EXC_NONE" key="" width="100%" align="center">
 				<layout:pager linksLocation ="top" maxPageItems ="10" styleClass="PAGER" >
 			  
-				<layout:collection name="lstDetAppCotSui" id="lstapp" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B" >
-			 
-					<logic:equal  name ="Numiterate" value ="0" scope="request">
-						<layout:collectionItem title="appcot.nomprenom" />
-						<layout:collectionItem title="appcot.adherent" />
-						<layout:collectionItem title="appcot.vref"  />
-						<layout:collectionItem title="appcot.conjoint"  />
-						<layout:collectionItem title="appcot.enfant"  />
-						<layout:collectionItem title="appcot.total"  />
-						<layout:collectionItem title="appcot.regime"  />
-						<layout:collectionItem title="appcot.periode"  />
-						<layout:collectionItem title="appcot.type" />
-						<layout:collectionItem title="appcot.taux" />
-						<layout:collectionItem title="appcot.cotisation" width="80px" />
-					</logic:equal>
+					<layout:collection name="lstDetAppCotSui" id="lstapp" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B" >
+				 
+						<logic:equal  name ="Numiterate" value ="0" scope="request">
+							<layout:collectionItem title="appcot.nomprenom" />
+							<layout:collectionItem title="appcot.adherent" />
+							<layout:collectionItem title="appcot.vref"  />
+							<layout:collectionItem title="appcot.conjoint"  />
+							<layout:collectionItem title="appcot.enfant"  />
+							<layout:collectionItem title="appcot.total"  />
+							<layout:collectionItem title="appcot.regime"  />
+							<layout:collectionItem title="appcot.periode"  />
+							<layout:collectionItem title="appcot.type" />
+							<layout:collectionItem title="appcot.taux" />
+							<layout:collectionItem title="appcot.cotisation" width="80px" />
+						</logic:equal>
 
-					<logic:notEqual  name ="Numiterate" value ="0" scope="request">
-						<layout:collectionItem title="appcot.nomprenom" property="WNOMPRENOM"/>
-						<layout:collectionItem title="appcot.adherent" property="WAA" />
-						<layout:collectionItem title="appcot.vref" property="WVREFERENCES"/>
-						<layout:collectionItem title="appcot.conjoint" property="WNBCNJ" />
-						<layout:collectionItem title="appcot.enfant" property="WNBENF" />
-						<layout:collectionItem title="appcot.total" property="WNBTOT" />
-						<layout:collectionItem title="appcot.regime" property="WARO" />
-						<layout:collectionItem title="appcot.periode" property="WPCONCERNE" />
-						<layout:collectionItem title="appcot.type" property="WTYPEPIECE" />
-						<layout:collectionItem title="appcot.taux" property="WTAUX" style="text-align:right;" />
-						<layout:collectionItem title="appcot.cotisation" property="WMONTANTREEL" type="money" style="text-align:right;"/>
-					</logic:notEqual>
+						<logic:notEqual  name ="Numiterate" value ="0" scope="request">
+							<layout:collectionItem title="appcot.nomprenom" property="WNOMPRENOM"/>
+							<layout:collectionItem title="appcot.adherent" property="WAA" />
+							<layout:collectionItem title="appcot.vref" property="WVREFERENCES"/>
+							<layout:collectionItem title="appcot.conjoint" property="WNBCNJ" />
+							<layout:collectionItem title="appcot.enfant" property="WNBENF" />
+							<layout:collectionItem title="appcot.total" property="WNBTOT" />
+							<layout:collectionItem title="appcot.regime" property="WARO" />
+							<layout:collectionItem title="appcot.periode" property="WPCONCERNE" />
+							<layout:collectionItem title="appcot.type" property="WTYPEPIECE" />
+							<layout:collectionItem title="appcot.taux" property="WTAUX" style="text-align:right;" />
+							<layout:collectionItem title="appcot.cotisation" property="WMONTANTREEL" type="money" style="text-align:right;"/>
+						</logic:notEqual>
 
-				<%
-				request.setAttribute("Numiterate", "1");
-				request.setAttribute("Numiterate2", "0");
-				%>
+					<%
+					request.setAttribute("Numiterate", "1");
+					request.setAttribute("Numiterate2", "0");
+					%>
 
-				</layout:collection>
-				<layout:row> 
-			    	<layout:pagerStatus key="pager.status.pager" /> 
-			    	<layout:pagerStatus key="pager.status.items"/> 
-				</layout:row> 
-				
+					</layout:collection>
+					<layout:row> 
+				    	<layout:pagerStatus key="pager.status.pager" /> 
+				    	<layout:pagerStatus key="pager.status.items"/> 
+					</layout:row> 
 				</layout:pager>
-				</layout:panel>
-			</layout:pagerStatus>
+			</layout:panel>
 		</div>
 	</div>
 </div>

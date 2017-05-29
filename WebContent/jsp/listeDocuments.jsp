@@ -65,7 +65,7 @@
 				styleClass="LIGNE_A" styleClass2="LIGNE_B" >
 				
 					<layout:collectionItem title="&nbsp;">
-						<a href="<%= (String)request.getContextPath()  %>/documentDossServe.do?code=formus&indexDoc=<bean:write name="formulaire" property="index"/>" target="_blank" ><img src="<%= (String)request.getContextPath()  %>/images/docpdf.gif" height="14" width="14"></a>
+						<a href="<%= (String)request.getContextPath()  %>/documentDossServe.do?code=formus&indexDoc=<bean:write name="formulaire" property="index"/>" target="_blank" ><i class="fa fa-file-pdf-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie au format PDF"></i></a>
 					</layout:collectionItem>
 				
 					<layout:collectionItem title="Document" property="libelleDocument"/>			
@@ -80,7 +80,7 @@
 				styleClass="LIGNE_A" styleClass2="LIGNE_B" >
 				
 					<layout:collectionItem title="&nbsp;">
-						<a href="<%= (String)request.getContextPath()  %>/documentDossServe.do?code=documents&indexDoc=<bean:write name="docu" property="index"/>" target="_blank"><img src="<%= (String)request.getContextPath()  %>/images/docpdf.gif" height="14" width="14"></a>
+						<a href="<%= (String)request.getContextPath()  %>/documentDossServe.do?code=documents&indexDoc=<bean:write name="docu" property="index"/>" target="_blank"><i class="fa fa-file-pdf-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie au format PDF"></i></a>
 					</layout:collectionItem>
 				
 					<layout:collectionItem title="Document" property="libelleDocument"/>			

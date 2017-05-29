@@ -13,8 +13,8 @@ request.setAttribute("Numiterate", "0");
 	</div>
 	<div class="iconesH">
     <logic:equal  name ="mode" value ="V" scope="request">
-    	<a href="javascript:prevBor()" > <html:img page="/images/docpdf.gif" alt="Obtenir une copie au format pdf" border="0"/></a>
-    	<a href="javascript:copyBor()" > <html:img page="/images/mail.gif" alt="Obtenir une copie par mail" border="0"/></a>
+    	<a href="javascript:prevBor()" > <i class="fa fa-file-pdf-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie au format PDF"></i></a>
+    	<a href="javascript:copyBor()" > <i class="fa fa-envelope-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie par mail"></i></a>
     </logic:equal>
 <a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>	</div>
 </div>

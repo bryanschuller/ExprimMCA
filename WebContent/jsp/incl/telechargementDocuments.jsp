@@ -21,7 +21,7 @@
 	<logic:notEqual name="contrat" property="docFicheGar" value="">
 		<tr>
 			<td class="LIGNE_B"><a href="<%= (String)request.getContextPath()  %>/documentServe.do?code=docFicheGar" target="_blank">
-				<img src="<%= (String)request.getContextPath()  %>/images/docpdf.gif" height="14" width="14"></a>
+				<i class="fa fa-file-pdf-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie au format PDF"></i></a>
 				</td>
 			<td class="LIGNE_B" style="text-align:left;">Résumé de la garantie</td>
 		</tr>
@@ -30,7 +30,7 @@
 	<logic:notEqual name="contrat" property="docRgltMut" value="">
 		<tr>
 			<td class="LIGNE_A"><a href="<%= (String)request.getContextPath()  %>/documentServe.do?code=docRgltMut" target="_blank">
-				<img src="<%= (String)request.getContextPath()  %>/images/docpdf.gif" height="14" width="14"></a>
+				<i class="fa fa-file-pdf-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie au format PDF"></i></a>
 				</td>
 			<td class="LIGNE_A" style="text-align:left;">Règlement mutualiste</td>
 		</tr>
@@ -39,7 +39,7 @@
 	<logic:notEqual name="contrat" property="docAdjonction" value="">
 		<tr>
 			<td class="LIGNE_B"><a href="<%= (String)request.getContextPath()  %>/documentServe.do?code=docAdjonction" target="_blank">
-				<img src="<%= (String)request.getContextPath()  %>/images/docpdf.gif" height="14" width="14"></a>
+				<i class="fa fa-file-pdf-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie au format PDF"></i></a>
 				</td>
 			<td class="LIGNE_B" style="text-align:left;">Bulletin d'adjonction</td>
 		</tr>

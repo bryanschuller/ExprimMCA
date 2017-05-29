@@ -37,7 +37,7 @@
 							<layout:collectionItem title="F. Gar.">
 								<logic:notEqual name="effectifs" property="ficheProduit" value="">
 									<a href="<%= (String)request.getContextPath()  %>/docCtrExged.do?code=docFicheGar&id=<bean:write name="effectifs" property="index"/>&userCode=USER_STD" target="_blank">
-											<img src="<%= (String)request.getContextPath()  %>/images/docpdf.gif" height="14" width="14"></a>
+											<i class="fa fa-file-pdf-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie au format PDF"></i></a>
 								</logic:notEqual>
 							</layout:collectionItem>		
 						</logic:equal>

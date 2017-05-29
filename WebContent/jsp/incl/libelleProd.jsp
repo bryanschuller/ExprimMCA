@@ -44,7 +44,7 @@
 				                    <div class="col-xs-12 col-md-6"><label>Fiche garantie</label></div>
 				                    <div class="col-xs-12 col-md-6">
 										<a href="<%= (String)request.getContextPath()  %>/docCtrExged.do?code=docFicheGar&id=<bean:write name="contrat" property="index"/>&userCode=USER_STD" target="_blank">
-										<img src="<%= (String)request.getContextPath()  %>/images/docpdf.gif" height="14" width="14"> (Télécharger la fiche)</a>
+										<i class="fa fa-file-pdf-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie au format PDF"></i> (Télécharger la fiche)</a>
 				                    </div>
 				                </div>
 							</logic:notEqual>
