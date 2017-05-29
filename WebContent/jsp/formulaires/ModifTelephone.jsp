@@ -8,9 +8,9 @@
 </H1>
 <br />
 <br />
-
-		<layout:form action="changementTelephone.do" styleClass="box"
-			focus="telephone" reqCode="sendForm">
+<div class="box box-mca-yellow">
+	<div class="box-body">
+		<layout:form action="changementTelephone.do" focus="telephone" reqCode="sendForm">
 
 			<tr><td colspan="2">
 				<table class="FORM_BEN" width="90%" align="center">
@@ -39,7 +39,8 @@
 				</layout:row>
 			</layout:formActions>
 		</layout:form>
-
+	</div>
+</div>
 
 <script>
 	function formatTel(el) {

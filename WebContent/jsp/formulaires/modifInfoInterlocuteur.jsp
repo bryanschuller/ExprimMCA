@@ -8,30 +8,33 @@
 </H1>
 <div class="clearfix"/>
 
-<layout:form action="modifierInfoInterlocuteur.do" styleClass="box"
-	focus="" reqCode="sendForm">
-	<tr><td colspan="2">
-		<table class="FORM_BEN" width="90%" align="center">
-			<tr><td align="center">
-				<table class="FORM_BEN_SUB_LEFT">
-					<layout:field key="Nom" property="nomInterlocuteur" size="30" maxlength="80" isRequired="true" /> 
-					<layout:field key="info.interloc.fonction" property="fonction" size="30" maxlength="80" isRequired="false"/> 
-					<layout:field key="info.interloc.tel" property="telephone" size="20" maxlength="20" isRequired="false" /> 
-					<layout:field key="info.interloc.mobile" property="telephonePortable" size="20" maxlength="20" isRequired="false"/>  
-					<layout:field key="info.interloc.telpro" property="telephoneProfessionnel" size="20" maxlength="20" isRequired="false" />  
+<div class="box box-mca-yellow">
+	<div class="box-body">
+		<layout:form action="modifierInfoInterlocuteur.do" focus="" reqCode="sendForm">
+			<tr><td colspan="2">
+				<table class="FORM_BEN" width="90%" align="center">
+					<tr><td align="center">
+						<table class="FORM_BEN_SUB_LEFT">
+							<layout:field key="Nom" property="nomInterlocuteur" size="30" maxlength="80" isRequired="true" /> 
+							<layout:field key="info.interloc.fonction" property="fonction" size="30" maxlength="80" isRequired="false"/> 
+							<layout:field key="info.interloc.tel" property="telephone" size="20" maxlength="20" isRequired="false" /> 
+							<layout:field key="info.interloc.mobile" property="telephonePortable" size="20" maxlength="20" isRequired="false"/>  
+							<layout:field key="info.interloc.telpro" property="telephoneProfessionnel" size="20" maxlength="20" isRequired="false" />  
+						</table>
+					</td></tr>
 				</table>
 			</td></tr>
-		</table>
-	</td></tr>
-	<tr><td colspan="4">&nbsp;</td></tr>
+			<tr><td colspan="4">&nbsp;</td></tr>
 
-	<layout:formActions>
-		<layout:row>
-			<layout:reset styleClass="btn btn-danger" value="Rétablir" />
-			<layout:submit styleClass="btn btn-success" property="submit" value="Valider" />
-		</layout:row>
-	</layout:formActions>
-</layout:form>
+			<layout:formActions>
+				<layout:row>
+					<layout:reset styleClass="btn btn-danger" value="Rétablir" />
+					<layout:submit styleClass="btn btn-success" property="submit" value="Valider" />
+				</layout:row>
+			</layout:formActions>
+		</layout:form>
+	</div>
+</div>
 		
 <script>
 	function formatTel(el) {

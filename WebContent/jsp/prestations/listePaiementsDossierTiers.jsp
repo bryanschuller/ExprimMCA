@@ -24,26 +24,34 @@
 </div>
 <div class="clearfix"></div>
 
-<layout:form action="filtrePaiementsDossierTiers.do" focus="numFiltre" styleClass="box" > 
+<div class="box box-mca-yellow">
+	<div class="box-body">
 
-	<tr><td colspan="2">
-		<table class="FORM_BEN" width="90%" align="center">
-			<tr><td align="center">
-				<table class="FORM_BEN_SUB_LEFT" style="min-width:300px;">
-					<layout:field key="tiers.liste.paiement.filtre.libelle" property="numFiltre" size="30" maxlength="13" type="text" isRequired="false"/>									
+	</div>
+</div>
+
+<div class="box box-mca-yellow">
+	<div class="box-body">
+		<layout:form action="filtrePaiementsDossierTiers.do" focus="numFiltre"> 
+			<tr><td colspan="2">
+				<table class="FORM_BEN" width="90%" align="center">
+					<tr><td align="center">
+						<table class="FORM_BEN_SUB_LEFT" style="min-width:300px;">
+							<layout:field key="tiers.liste.paiement.filtre.libelle" property="numFiltre" size="30" maxlength="13" type="text" isRequired="false"/>									
+						</table>
+					</td></tr>
 				</table>
 			</td></tr>
-		</table>
-	</td></tr>
 
-	<layout:formActions>
-		<layout:row>
-			<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
-			<layout:submit styleClass="btn" property="submit" value="Filtrer"/> 
-		</layout:row>	
-	</layout:formActions> 
-
-</layout:form> 
+			<layout:formActions>
+				<layout:row>
+					<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
+					<layout:submit styleClass="btn" property="submit" value="Filtrer"/> 
+				</layout:row>	
+			</layout:formActions> 
+		</layout:form> 	
+	</div>
+</div>
 
 <logic:present name="erreurFiltre">
 	<div class="callout callout-info">

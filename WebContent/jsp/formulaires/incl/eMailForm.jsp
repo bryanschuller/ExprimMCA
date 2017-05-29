@@ -6,17 +6,11 @@
 		<table class="FORM_BEN" width="90%" align="center">
 			<tr>
 				<td colspan="2">
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="box box-mca-yellow">
-								<layout:collection name="lEmails" id="lEmails" title=""
-									styleClass="LIGNE_A" styleClass2="LIGNE_B" >
-										<layout:collectionItem title="Designation" property="designation" width="400px"/>
-										<layout:collectionItem title="e-mail" property="email" width="150px"/>
-								</layout:collection>
-							</div>
-						</div>
-					</div>
+					<layout:collection name="lEmails" id="lEmails" title=""
+						styleClass="LIGNE_A" styleClass2="LIGNE_B" >
+							<layout:collectionItem title="Designation" property="designation" width="400px"/>
+							<layout:collectionItem title="e-mail" property="email" width="150px"/>
+					</layout:collection>
 				</td>
 			</tr>
 					

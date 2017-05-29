@@ -54,33 +54,39 @@
 		<bean:message key="tiers.filtre.pec" />
 	</div>
 </H2>
-<layout:form action="listePEC.do?action=filtre" focus="nomAdh" styleClass="box" > 
 
-	<tr><td colspan="2">
-		<table class="FORM_BEN" width="90%" align="center">
-			<tr><td align="center">
-				<table class="FORM_BEN_SUB_LEFT" style="min-width:300px;">
-					<layout:field key="tiers.liste.pec.filtre.nom" property="nomAdh" size="30" maxlength="30" type="text" isRequired="false"/> 
-					<tr><td colspan = '2'>
-						<table><tr>
-						<td><layout:checkbox property="stateOk" value="O" layout="false"/></td><th style="width:100px"><bean:message key="tiers.liste.pec.filtre.accepte" /></th>
-						<td><layout:checkbox property="stateFac" value="O" layout="false"/></td><th style="width:100px"><bean:message key="tiers.liste.pec.filtre.facture" /></th>
-						<td><layout:checkbox property="stateRej" value="O" layout="false"/></td><th style="width:100px"><bean:message key="tiers.liste.pec.filtre.rejete" /></th>
-						</tr></table>
-					</td></tr>					
-				</table>
-			</td></tr>
-		</table>
-	</td></tr>
+<div class="box box-mca-yellow">
+	<div class="box-body">
+		<layout:form action="listePEC.do?action=filtre" focus="nomAdh"> 
+			<tr>
+				<td colspan="2">
+					<table class="FORM_BEN" width="90%" align="center">
+						<tr><td align="center">
+							<table class="FORM_BEN_SUB_LEFT" style="min-width:300px;">
+								<layout:field key="tiers.liste.pec.filtre.nom" property="nomAdh" size="30" maxlength="30" type="text" isRequired="false"/> 
+								<tr><td colspan = '2'>
+									<table><tr>
+									<td><layout:checkbox property="stateOk" value="O" layout="false"/></td><th style="width:100px"><bean:message key="tiers.liste.pec.filtre.accepte" /></th>
+									<td><layout:checkbox property="stateFac" value="O" layout="false"/></td><th style="width:100px"><bean:message key="tiers.liste.pec.filtre.facture" /></th>
+									<td><layout:checkbox property="stateRej" value="O" layout="false"/></td><th style="width:100px"><bean:message key="tiers.liste.pec.filtre.rejete" /></th>
+									</tr></table>
+								</td></tr>					
+							</table>
+						</td></tr>
+					</table>
+				</td>
+			</tr>
 
-	<layout:formActions>
-		<layout:row>
-			<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
-			<layout:submit styleClass="btn" property="submit" value="Filtrer"/> 
-		</layout:row>	
-	</layout:formActions> 
+			<layout:formActions>
+				<layout:row>
+					<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
+					<layout:submit styleClass="btn" property="submit" value="Filtrer"/> 
+				</layout:row>	
+			</layout:formActions> 
+		</layout:form> 
+	</div>
+</div>
 
-</layout:form> 
 
 <br/>
 

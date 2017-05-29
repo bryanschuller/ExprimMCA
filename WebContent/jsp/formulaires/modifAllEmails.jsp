@@ -17,28 +17,25 @@
 </div>
 <div class="clearfix"></div>
 
-<layout:form action="/changementAllEmails" focus="newEmail" styleClass="box" onsubmit="return validateModEmailForm(this)"> 
+<div class="box box-mca-yellow">
+	<div class="box-body">
+		<layout:form action="/changementAllEmails" focus="newEmail" onsubmit="return validateModEmailForm(this)"> 
+			<tr>
+				<td colspan="2" style="font-size:12px;"></td>
+			</tr>
 
-<tr><td colspan="2" style="font-size:12px;">
-
-
-
-
-
-
-	
-</td></tr>
-
-<%@ include file="/jsp/formulaires/incl/eMailForm.jsp"%>
+			<%@ include file="/jsp/formulaires/incl/eMailForm.jsp"%>
 
 
-<layout:formActions> 
-<layout:row>
-<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
-<layout:submit styleClass="btn btn-success" property="submit" value="Valider" /> 
-</layout:row>
-</layout:formActions> 
-</layout:form>
+			<layout:formActions> 
+				<layout:row>
+					<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
+					<layout:submit styleClass="btn btn-success" property="submit" value="Valider" /> 
+				</layout:row>
+			</layout:formActions> 
+		</layout:form>				
+	</div>
+</div>
 
 <html:javascript formName="modEmailForm" />
 

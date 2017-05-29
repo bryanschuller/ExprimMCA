@@ -364,10 +364,8 @@
 	/*	feuille de style pour formulaire simple	*/
 	TABLE.FORMULAIRE {
 		background-color: #FFFFFF;
-		/*background-image: url("../pictures/bande-verte.jpg");*/
 		text-align: center;
 		font-size: 11px;
-		border: 1px solid #A54A00;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -645,15 +643,11 @@
 		text-align: center;
 	}
 	
-	
 	.PEC_OK {
-		border: 1px solid #231F20;
 	}
 	.PEC_REJ {
-		border: 1px solid #F00;
 		color: red;
 	}
-	
 	
 	
 	#EXC_PEC_RESULT {
@@ -1291,12 +1285,10 @@
 		position:absolute;
 		top:0px;
 		left:0px;
-		background :  url("../images/wait_anim_opaque.png") no-repeat;
+		background :  url("../images/wait_anim_new.gif") no-repeat;
 		background-position:center;
 		height : 100%;
 		width : 100%;
-	/*	max-width: 1000px; 
-		min-width: 800px; */
 		margin:0;
 		padding:0;
 		z-index:1;

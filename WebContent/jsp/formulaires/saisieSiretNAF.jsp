@@ -9,59 +9,63 @@
 </div>
 <div class="clearfix"></div>
 
-<layout:form action="/changementSiretNAF" styleClass="box" reqCode="sendModif" > 
+<div class="box box-mca-yellow">
+	<div class="box-body">
+		<layout:form action="/changementSiretNAF" reqCode="sendModif" > 
 
-<tr><td colspan="2" style="font-size:12px;">
-	Dans le cadre de la mise en oeuvre de la DSN (Déclaration Sociale Nominative),<BR>
-	merci de compléter et/ou corriger les informations ci-dessous :<BR>&nbsp;
-</td></tr>
+		<tr><td colspan="2" style="font-size:12px;">
+			Dans le cadre de la mise en oeuvre de la DSN (Déclaration Sociale Nominative),<BR>
+			merci de compléter et/ou corriger les informations ci-dessous :<BR>&nbsp;
+		</td></tr>
 
 
-<tr><td>
-<table class="FORM_BEN" width="90%" align="center">
-<tr><td colspan="2">
-&nbsp; 
-</td></tr>
+		<tr><td>
+		<table class="FORM_BEN" width="90%" align="center">
+		<tr><td colspan="2">
+		&nbsp; 
+		</td></tr>
 
-<tr><td colspan="2">
-	
-	<table align="center" style="text-align:left;">
-		<layout:field key="ent.saisie.ape" property="naf" size="8" maxlength="5" isRequired="true" type="text"/> 
-
-		<tr><td colspan="2"><table>			
-		<layout:datagrid 	model="datagrid" property="listSiret" 
-							multipleSelectionAllowed="false" selectionAllowed="false">
+		<tr><td colspan="2">
 			
-			<layout:datagridColumn title="ent.saisie.siren" property="siren" />								
-			<layout:datagridColumn title="ent.saisie.nic" property="nic" />
-			
-		</layout:datagrid>
-		</table></td></tr>
-			
-	</table>
-	
-</td></tr>
-			
-<tr class="ERROR"><td colspan="2">
-&nbsp; <html:errors property="siret"/>
-</td></tr>
+			<table align="center" style="text-align:left;">
+				<layout:field key="ent.saisie.ape" property="naf" size="8" maxlength="5" isRequired="true" type="text"/> 
 
-<tr><td colspan="2">
-	<img src="<%=(String) request.getContextPath() %>/images/ast.gif"><bean:message key="general.formulaire.obligatoire"/>
-</td></tr>
+				<tr><td colspan="2"><table>			
+				<layout:datagrid 	model="datagrid" property="listSiret" 
+									multipleSelectionAllowed="false" selectionAllowed="false">
+					
+					<layout:datagridColumn title="ent.saisie.siren" property="siren" />								
+					<layout:datagridColumn title="ent.saisie.nic" property="nic" />
+					
+				</layout:datagrid>
+				</table></td></tr>
+					
+			</table>
 			
-</table>
-</td></tr>
+		</td></tr>
+					
+		<tr class="ERROR"><td colspan="2">
+		&nbsp; <html:errors property="siret"/>
+		</td></tr>
 
-<tr><td colspan="4">&nbsp;</td></tr>
+		<tr><td colspan="2">
+			<img src="<%=(String) request.getContextPath() %>/images/ast.gif"><bean:message key="general.formulaire.obligatoire"/>
+		</td></tr>
+					
+		</table>
+		</td></tr>
+
+		<tr><td colspan="4">&nbsp;</td></tr>
 
 
-<layout:formActions> 
-<layout:row>
-<layout:submit styleClass="btn btn-success" property="submit" value="Valider"/> 
-</layout:row>
-</layout:formActions> 
-</layout:form>
+		<layout:formActions> 
+		<layout:row>
+		<layout:submit styleClass="btn btn-success" property="submit" value="Valider"/> 
+		</layout:row>
+		</layout:formActions> 
+		</layout:form>
+	</div>
+</div>
 
 <script>
 
