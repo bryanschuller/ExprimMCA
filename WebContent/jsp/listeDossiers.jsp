@@ -5,13 +5,18 @@
 <div class="row">
 	<div class="col-xs-12">
 		<div class="box box-mca-yellow">
-			<layout:collection name="lDossier" title="" id="dossier" styleClass="LIGNE_A" styleClass2="LIGNE_B">
-					<layout:collectionItem title="Choisissez le dossier que vous souhaitez consulter" >
-						<a href="<%= (String)request.getContextPath()  %>
-						/accederDossier.do?id=<bean:write name="dossier" property="index"/>" onclick="setTimeout('wait()',2000);">
-						 <bean:write name="dossier" property="designation"/> </a>
+			<div class="box-header">
+				<h3>Choisissez le dossier que vous souhaitez consulter</h3>
+			</div>
+			<div class="box-body">
+				<layout:collection name="lDossier" id="dossier" styleClass="LIGNE_A" styleClass2="LIGNE_B">
+					<layout:collectionItem>
+						<a href="<%= (String)request.getContextPath()  %>/accederDossier.do?id=<bean:write name="dossier" property="index"/>" onclick="setTimeout('wait()',2000);">
+					 		<bean:write name="dossier" property="designation"/>
+					 	</a>
 					</layout:collectionItem>
-			</layout:collection>
+				</layout:collection>
+			</div>
 		</div>
 	</div>
 </div>

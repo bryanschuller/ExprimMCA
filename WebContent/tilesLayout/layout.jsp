@@ -32,7 +32,7 @@ if(null == internaute){
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- jQuery 3.1.1 -->
-<script src="https://adminlte.io/themes/AdminLTE/plugins/jQuery/jquery-3.1.1.min.js"></script>
+<script src="<%= (String)request.getContextPath()  %>/scripts/new_theme/jquery-3.1.1.min.js"></script>
 
 <layout:html layout="false">
 
@@ -73,9 +73,9 @@ if(null == internaute){
 <div  id="wait_fond" class="wait_mask_fond"></div> 
 
 <!-- Bootstrap 3.3.7 -->
-<script src="https://adminlte.io/themes/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
+<script src="<%= (String)request.getContextPath()  %>/scripts/new_theme/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
-<script src="https://adminlte.io/themes/AdminLTE/dist/js/adminlte.js"></script>
+<script src="<%= (String)request.getContextPath()  %>/scripts/new_theme/adminlte.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {

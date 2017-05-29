@@ -1360,7 +1360,7 @@ form.box > table {
 
 .login-page
 {
-	background-image: url(https://www.mc-alsace.fr/extranet/uploads/backgrounds/bg-spring.jpg);
+	background-image: url(../images/new_theme/bg-spring.jpg);
     background-size: cover;
 }
 
@@ -1371,6 +1371,10 @@ form.box > table {
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     border-radius: 3px;
+}
+
+table.LIGNE_A {
+	width: 100%;
 }
 
 
@@ -1386,12 +1390,12 @@ form.box > table {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .skin-mca header.main-header .logo {
-  background: transparent url("https://www.mc-alsace.fr/extranet/bundles/web/img/logo-text-white.png") no-repeat center center;
+  background: transparent url("../images/new_theme/logo-text-white.png") no-repeat center center;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
 .skin-mca.sidebar-collapse .main-header .logo {
-  background: transparent url("https://www.mc-alsace.fr/extranet/bundles/web/img/logo-xsmall.png") no-repeat center center;
+  background: transparent url("../images/new_theme/logo-xsmall.png") no-repeat center center;
 }
 
 .skin-mca header.main-header .logo:hover {
@@ -1429,7 +1433,7 @@ form.box > table {
   color: #003F8A;*/
 }
 .skin-mca.sidebar-open .main-header .logo {
-  background: transparent url("../img/logo-xsmall.png") no-repeat center center;
+  background: transparent url("../images/new_theme/logo-xsmall.png") no-repeat center center;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }

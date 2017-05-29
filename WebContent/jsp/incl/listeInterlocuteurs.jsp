@@ -6,15 +6,15 @@
 		<div class="box box-mca-yellow">
 			<div class="box-header with-border">
 				<h3 class="box-title">
-					<bean:message key="info.ent.interlocuteur" />
+					<bean:message key="info.ent.interlocuteurs" />
 				</h3>
 			</div>
 
 			<div class="box-body">
 				<layout:collection name="listeInterlocuteurs" id="interlocuteur" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B" >
-					<layout:collectionItem  title="Nom" property="nom"/>
-					<layout:collectionItem  title="Fonction" property="fonction"/>
-					<layout:collectionItem  title="E-Mail" property="adresseMail"/>
+					<layout:collectionItem title="Nom" property="nom"/>
+					<layout:collectionItem title="Fonction" property="fonction"/>
+					<layout:collectionItem title="E-Mail" property="adresseMail"/>
 					<layout:collectionItem title="&nbsp;">
 						<logic:equal name="interlocuteur" property="numInterlocuteur" value="<%= String.valueOf((Integer) ((Interlocuteur) session.getAttribute("InfoInterloc")).getNumInterlocuteur()) %>">
 							<div class="btn-group">

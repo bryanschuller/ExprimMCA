@@ -40,31 +40,30 @@
 <div class="row">
 	<div class="col-xs-12">
 		<div class="box box-mca-yellow">
-		<layout:panel  styleClass="EXC_NONE" key="" width="98%" align="center">
-			<layout:pager linksLocation ="top" maxPageItems ="12"  styleClass="PAGER">
-			  
-				<layout:collection name="lstDetappelscot" id="lstapp" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >
-				 
-					<layout:collectionItem title="appcot.nomprenom" property="WNOMPRENOM"/>
-					<layout:collectionItem title="appcot.adherent" property="WAA" />
-					<layout:collectionItem title="appcot.periode" property="WPCONCERNE"/>
-					<layout:collectionItem title="appcot.du" property="WDATEDU" />
-					<layout:collectionItem title="appcot.au" property="WDATEAU" />
-					<layout:collectionItem title="appcot.taux" property="WTAUX" />
-					<layout:collectionItem title="appcot.montant" property="WMONTANTREEL" style="text-align:right;" />
-					<layout:collectionItem title="appcot.regle" property="WDATERGLT" />
-					<layout:collectionItem title="appcot.observation" property="WTYPEPIECE" />
-				
-				</layout:collection>
-				
-				<layout:row> 
-				    <layout:pagerStatus key="pager.status.pager"/> 
-				    <layout:pagerStatus key="pager.status.items"/> 
-				</layout:row> 
-			
-			</layout:pager>
-		</layout:panel>
-		
+			<layout:panel key="" width="98%" align="center">
+				<layout:pager linksLocation ="top" maxPageItems ="12"  styleClass="PAGER">
+				  
+					<layout:collection name="lstDetappelscot" id="lstapp" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >
+					 
+						<layout:collectionItem title="appcot.nomprenom" property="WNOMPRENOM"/>
+						<layout:collectionItem title="appcot.adherent" property="WAA" />
+						<layout:collectionItem title="appcot.periode" property="WPCONCERNE"/>
+						<layout:collectionItem title="appcot.du" property="WDATEDU" />
+						<layout:collectionItem title="appcot.au" property="WDATEAU" />
+						<layout:collectionItem title="appcot.taux" property="WTAUX" />
+						<layout:collectionItem title="appcot.montant" property="WMONTANTREEL" style="text-align:right;" />
+						<layout:collectionItem title="appcot.regle" property="WDATERGLT" />
+						<layout:collectionItem title="appcot.observation" property="WTYPEPIECE" />
+					
+					</layout:collection>
+					
+					<layout:row> 
+					    <layout:pagerStatus key="pager.status.pager"/> 
+					    <layout:pagerStatus key="pager.status.items"/> 
+					</layout:row> 
+				</layout:pager>
+			</layout:panel>
+		</div>
 	</div>
 
 </logic:present>

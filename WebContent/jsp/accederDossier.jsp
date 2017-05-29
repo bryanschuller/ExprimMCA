@@ -92,13 +92,25 @@
 	</logic:notPresent>
 <% }else if(typeD.equals("ENT")){ %>
 	<%@ include file="/jsp/incl/apeEtSiret.jsp"%>
-	<%@ include file="/jsp/incl/adresse.jsp"%>
-	<%@ include file="/jsp/incl/listeInterlocuteurs.jsp"%>
+	<div class="row">
+		<div class="col-md-6">
+			<%@ include file="/jsp/incl/resumeDossierTiersInfosInterloc.jsp"%>
+		</div>
+		<div class="col-md-6">
+			<%@ include file="/jsp/incl/listeInterlocuteurs.jsp"%>
+		</div>
+	</div>
 	<%@ include file="/jsp/incl/resumeEffectifs.jsp"%>
 	<%@ include file="/jsp/incl/appCot.jsp"%>	
 <% }else if(typeD.equals("TIE") || typeD.equals("COL")) { %>
-	<%@ include file="/jsp/incl/resumeDossierTiersInfosInterloc.jsp"%>
-	<%@ include file="/jsp/incl/adresse.jsp"%>
+	<div class="row">
+		<div class="col-md-6">
+			<%@ include file="/jsp/incl/resumeDossierTiersInfosInterloc.jsp"%>
+		</div>
+		<div class="col-md-6">
+			<%@ include file="/jsp/incl/adresse.jsp"%>
+		</div>
+	</div>
 	<%@ include file="/jsp/incl/resumeDossierTiersPhoneMail.jsp"%>
 	<% if (typeD.equals("TIE")) {%>
 		<%@ include file="/jsp/incl/resumeDossierTiersBanque.jsp"%>
