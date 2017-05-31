@@ -6,7 +6,7 @@
 		<div class="box box-mca-yellow">
 			<div class="box-header with-border">
 				<h3 class="box-title">
-					<bean:message key="info.ent.interlocuteurs" />
+					<bean:message key="info.ent.interlocuteur" />
 				</h3>
 			</div>
 

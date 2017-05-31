@@ -4,35 +4,27 @@
  if(((Vector)request.getAttribute("lstPaiementsEff")).size() > 0 )
  {
  %> 
-<logic:iterate name="lstPaiementsEff" id="paiementEff"  indexId="ind">
- 
- 	<div id="paieFullE<bean:write name="ind"/>" class="pay_vis" style="clear:both;">
-		<div id="EXC_PRESENT_PAIEMENT">
-			<!--  EN TETE DU PAIEMENT -->
-			<div id="entete_paieE<bean:write name="ind"/>" class="pay_vis">
-				<div class="headerPaie" onClick="javascript:detailPaie('E' + <bean:write name="ind"/>)">
-									
-					<div class="texteH" >
-					    <img src="<%= (String)request.getContextPath()  %>/images/Rarrow.gif" id="imageE<bean:write name="ind"/>" alt="voir le détail" border="0"/>
-				    	
-				    	<bean:message key="paie.paiement"/>
-					  	<bean:write name="paiementEff" property="DATEPAIE"/>
-						de <layout:write name="paiementEff" property="MNTPAIE"   type="money" layout="false" /> &euro;
-					</div>
-						
-					<div class="iconesH">
-				        <input type="checkbox" style="cursor:pointer; " 
-				        title="Cocher pour inclure ce paiement dans l'impression."
-				        onClick="javascript:chkImpr('E' + <bean:write name="ind"/>, event);" class="pay_vis">
-				         </input>
-			    	</div> 
-				
-				</div>
+<logic:iterate name="lstPaiementsEff" id="paiementEff" indexId="ind">
+	<div class="box box-mca-yellow collapsed-box" id="paieFullE<bean:write name="ind"/>">
+		<div class="box-header with-border">
+			<div class="pull-left">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
+            </div>
+
+			<h3 class="box-title">
+		    	<bean:message key="paie.paiement"/>
+			  	<bean:write name="paiementEff" property="DATEPAIE"/>
+				de <layout:write name="paiementEff" property="MNTPAIE" type="money" layout="false" /> &euro;
+			</h3>
+
+			<div class="box-tools pull-right">
+				<input type="checkbox" style="cursor:pointer; " title="Cocher pour inclure ce paiement dans l'impression" onClick="javascript:chkImpr('E' + <bean:write name="ind"/>, event);" class="pay_vis">
+				</input>
 			</div>
-			
-			
-			<!-- CONTENU UN PAIEMENT  --> 
-			<div id="paieE<bean:write name="ind"/>" class="pay_mask">
+		</div>
+		<div class="box-body" style="display: none;">
+			<div id="paieE<bean:write name="ind"/>">
 				<!-- Libellé infos banque -->
 				<div class="headerContPaie">
 					<bean:message key="paie.rembourse"/> <layout:write name="paiementEff" property="TYPEPAIE"  layout="false" />
@@ -55,45 +47,26 @@
 					</logic:notEqual>
 				</div>
 				<div class="row">
-					<div class="col-xs-12">
-						<div class="box box-mca-yellow">
-							<!--  TABLEAU DES LIGNES -->
-							<layout:collection name="paiementEff" id="listPresta" title="" property="listePrestations" styleClass="LIGNE_A" styleClass2="LIGNE_B">
-								 
-								<layout:collectionItem title="paie.benef.soins" property="NPNBEN" style="text-align:left;"/>
-								<layout:collectionItem title="paie.nature" property="PRESTA" style="text-align:left;"/>
-								<layout:collectionItem title="paie.date" property="DATPRE"/>
-								<layout:collectionItem title="paie.honoraire" property="HONO" style="text-align:right;" type="money"/>
-								<layout:collectionItem title="paie.base" property="BASE" style="text-align:right;" type="money"/>
-								<layout:collectionItem title="paie.taux" property="TAUX" style="text-align:right;" type="pourcent_negatif"/> 
-								<layout:collectionItem title="paie.remb.ss" property="RBSECU" style="text-align:right;" type="money"/>
-								<layout:collectionItem title="paie.remb.mut" property="RBMUT" style="text-align:right;" type="money"/>
-							
-							</layout:collection>
-							
-							<!-- TEXTE ASSOCIE AU DECOMPTE  -->
-							<div>
-							 	<layout:write name="paiementEff" property="REMARQUE"  layout="false" />
-							</div>
-						</div>
-					</div>				
-				</div> 
-				<!-- SEPARATEUR  pour impression-->
-				<%-- <div height="10px">
-					<hr id="sep_E<bean:write name="ind"/>" class="pay_mask" size=2 width=250 align="center">
-				</div>  --%>
-			
+					<!--  TABLEAU DES LIGNES -->
+					<layout:collection name="paiementEff" id="listPresta" title="" property="listePrestations" styleClass="LIGNE_A" styleClass2="LIGNE_B">
+						<layout:collectionItem title="paie.benef.soins" property="NPNBEN" style="text-align:left;"/>
+						<layout:collectionItem title="paie.nature" property="PRESTA" style="text-align:left;"/>
+						<layout:collectionItem title="paie.date" property="DATPRE"/>
+						<layout:collectionItem title="paie.honoraire" property="HONO" style="text-align:right;" type="money"/>
+						<layout:collectionItem title="paie.base" property="BASE" style="text-align:right;" type="money"/>
+						<layout:collectionItem title="paie.taux" property="TAUX" style="text-align:right;" type="pourcent_negatif"/> 
+						<layout:collectionItem title="paie.remb.ss" property="RBSECU" style="text-align:right;" type="money"/>
+						<layout:collectionItem title="paie.remb.mut" property="RBMUT" style="text-align:right;" type="money"/>
+					</layout:collection>
+					<!-- TEXTE ASSOCIE AU DECOMPTE  -->
+					<div>
+					 	<layout:write name="paiementEff" property="REMARQUE"  layout="false" />
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </logic:iterate>
-
-<script>
-<!-- REND VISIBLE 1ER PAIEMENT AU CHARGEMENT 
-document.getElementById("paieE0").className = "pay_vis";
-document.getElementById('imageE0').src = "<%= (String)request.getContextPath()  %>/images/Darrow.gif";
--->
-</script>
 
 <%
 }
@@ -109,3 +82,12 @@ else
 }
 %>
 
+<script type="text/javascript">
+	$(document).ready(function () {
+		var element = $("[data-widget='collapse']")[0];
+		if(element != null)
+		{
+			element.click();
+		}
+	});
+</script>

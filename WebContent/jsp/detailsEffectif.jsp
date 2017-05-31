@@ -17,50 +17,51 @@
 </H1>
 <div class="clearfix"></div>
 
+<div class="box box-mca-yellow">
+	<div class="box-body">
+		<layout:form action="detailEffectifs.do" reqCode="sendForm">
 
-<layout:form action="detailEffectifs.do" style="box box-mca-yellow" reqCode="sendForm">
-
-	<tr><td>
-		Sélectionnez les filtres du chargement :
-		<table class="FORM_BEN" width="90%" align="center">
 			<tr><td>
-				<bean:define id="selEff" name="SelectFltCatPO" property="selectFltCatPO" />
+				Sélectionnez les filtres du chargement :
+				<table class="FORM_BEN" width="90%" align="center">
+					<tr><td>
+						<bean:define id="selEff" name="SelectFltCatPO" property="selectFltCatPO" />
+						
+						<layout:select property="catPO" layout="false" styleClass="FIELD">
+							<layout:options collection="selEff" property="code" labelProperty="libelle"/>
+						</layout:select>
+					</td><td>
+					
+						<layout:date key="info.interloc.dateeffet" property="dateEffet" layout="false"
+							patternKey="format.date" size="10" maxlength="10" 
+							isRequired="true" startYear="2009" endYear="2015" 
+							onblur="javascript:return isDate(this.value);"
+							calendarTooltip="Sélectionner la date"  />
+						<span class="ERROR">
+				     		<html:errors property="dateEffet" />
+				    	</span>
+				     
+					</td><td>
+						<layout:checkbox property="avecBenef" value="O" maxlength="10" layout="false"  >
+							Avec bénéficiaires
+						</layout:checkbox>
 				
-				<layout:select property="catPO" layout="false" styleClass="FIELD">
-					<layout:options collection="selEff" property="code" labelProperty="libelle"/>
-				</layout:select>
-			</td><td>
-			
-				<layout:date key="info.interloc.dateeffet" property="dateEffet" layout="false"
-					patternKey="format.date" size="10" maxlength="10" 
-					isRequired="true" startYear="2009" endYear="2015" 
-					onblur="javascript:return isDate(this.value);"
-					calendarTooltip="Sélectionner la date"  />
-				<span class="ERROR">
-		     		<html:errors property="dateEffet" />
-		    	</span>
-		     
-			</td><td>
-				<layout:checkbox property="avecBenef" value="O" maxlength="10" layout="false"  >
-					Avec bénéficiaires
-				</layout:checkbox>
-		
+					</td></tr>
+				</table>
 			</td></tr>
-		</table>
-	</td></tr>
-	
-	
-	<layout:formActions>
-	
-		<layout:row space="false">	
-			<layout:reset styleClass="btn btn-danger" value="Rétablir" />
-			<layout:submit styleClass="btn btn-success" property="submit" value="Valider" />	 
-		</layout:row>
-	
-	</layout:formActions>
-
-</layout:form>
-
+			
+			
+			<layout:formActions>
+			
+				<layout:row space="false">	
+					<layout:reset styleClass="btn btn-danger" value="Rétablir" />
+					<layout:submit styleClass="btn btn-success" property="submit" value="Valider" />	 
+				</layout:row>
+			
+			</layout:formActions>
+		</layout:form>
+	</div>
+</div>
 
 
 <logic:notEmpty name="detailEffectifsEntreprise">

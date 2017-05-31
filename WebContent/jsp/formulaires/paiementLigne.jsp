@@ -7,28 +7,28 @@
 </H1>
 <br>
 
-<layout:form action="telePaiement.do" focus="montant" style="box box-mca-yellow"> 
-
-	<tr><td colspan="2">
-		<table class="FORM_BEN" width="90%" align="center">
-			<tr><td align="center">
-				<table class="FORM_BEN_SUB_LEFT">
-				
-					<%-- <layout:field key="paiement.montant" property="montant" size="10" maxlength="10" isRequired="true" type="text" editType="money" /> --%>
-					<layout:text key="paiement.montant" property="montant" size="10"
-						maxlength="10" isRequired="true"  editType="money"/>
+<div class="box box-mca-yellow">
+	<div class="box-body">
+		<layout:form action="telePaiement.do" focus="montant"> 
+			<tr><td colspan="2">
+				<table class="FORM_BEN" width="90%" align="center">
+					<tr><td align="center">
+						<table class="FORM_BEN_SUB_LEFT">
+						
+							<%-- <layout:field key="paiement.montant" property="montant" size="10" maxlength="10" isRequired="true" type="text" editType="money" /> --%>
+							<layout:text key="paiement.montant" property="montant" size="10"
+								maxlength="10" isRequired="true"  editType="money"/>
+						</table>
+					</td></tr>
 				</table>
-			</td></tr>
-		</table>
-	</td></tr> 
-	
-		
-	<layout:formActions> 
-		<layout:row>
-			<layout:reset styleClass="btn btn-danger" value="Rétablir" /> 
-			<layout:submit styleClass="btn btn-success" property="submit" value="Valider"/> 
-		</layout:row>
-	</layout:formActions> 
-	
-</layout:form> 
-
+			</td></tr> 
+			
+			<layout:formActions> 
+				<layout:row>
+					<layout:reset styleClass="btn btn-danger" value="Rétablir" /> 
+					<layout:submit styleClass="btn btn-success" property="submit" value="Valider"/> 
+				</layout:row>
+			</layout:formActions> 
+		</layout:form> 
+	</div>
+</div>

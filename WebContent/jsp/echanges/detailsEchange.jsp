@@ -16,7 +16,7 @@
 <div id="EXC_CONTENT_ECHANGE_REPONSE">
 
 
-<layout:form action="repondreEchange.do" focus="corps" style="box box-mca-yellow" enctype="multipart/form-data"  reqCode="sendForm"> 
+<layout:form action="repondreEchange.do" focus="corps" enctype="multipart/form-data"  reqCode="sendForm"> 
 
 
 

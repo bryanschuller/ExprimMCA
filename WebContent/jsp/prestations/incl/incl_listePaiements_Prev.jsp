@@ -1,38 +1,23 @@
-
-
-
 <logic:iterate name="lstPaiementsPrev" id="paiementPrev"  indexId="ind">
-	
-	<%--<div id="paieFullP<bean:write name="ind"/>" class="pay_vis" style="clear:both;"> --%>
-		<div id="EXC_PRESENT_PAIEMENT">
-			<div id="entete_paieP<bean:write name="ind"/>" class="pay_vis">
-				<div class="headerPaie" onClick="javascript:detailPaie('P' + <bean:write name="ind"/>)">
-		
-					<div class="texteH">
-					    <img src="<%= (String)request.getContextPath()  %>/images/Rarrow.gif" id="imageP<bean:write name="ind"/>" alt="voir le détail" border="0"/>
-					  	
-					  	<logic:equal name="paiementPrev" property="datePaiement" value="99999999">				  	
-							Prestations en cours de traitement 
-					  	</logic:equal>
-					  	<logic:notEqual name="paiementPrev" property="datePaiement" value="99999999">
-					  		Paiement du <layout:write name="paiementPrev" property="datePaiement" layout="false" type="dateYMD" />
-					  		 de <layout:write name="paiementPrev" property="mntTotal" layout="false" type="money_euro" filter="false" />
-					  	</logic:notEqual>
-					  	
-					  	
-					</div>
-					
-	<%-- 				<div class="iconesH">
-				        <input type="checkbox" style="cursor:pointer;"
-				        title="Cocher pour inclure ce paiement dans l'impression."
-				        onClick="javascript:chkImpr('P' + <bean:write name="ind"/>, event);" class="pay_vis">
-				         </input>
-			    	</div> --%>
-				</div> 
+	<div class="box box-mca-yellow collapsed-box">
+		<div class="box-header with-border">
+			<div class="pull-left">
+				<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+				</button>
 			</div>
-			
-			
-			<div  id="paieP<bean:write name="ind"/>" class="pay_mask">
+
+			<h3 class="box-title">
+				<logic:equal name="paiementPrev" property="datePaiement" value="99999999">				  	
+					Prestations en cours de traitement 
+				</logic:equal>
+				<logic:notEqual name="paiementPrev" property="datePaiement" value="99999999">
+					Paiement du <layout:write name="paiementPrev" property="datePaiement" layout="false" type="dateYMD" />
+					de <layout:write name="paiementPrev" property="mntTotal" layout="false" type="money_euro" filter="false" />
+				</logic:notEqual>
+			</h3>
+		</div>
+		<div class="box-body" style="display: none;">
+			<div id="paieP<bean:write name="ind"/>">
 				<div class="headerContPaie">	
 					<layout:write name="paiementPrev" property="mntPaiement" layout="false" type="money_euro" filter="false" />
 					remboursé par <layout:write name="paiementPrev" property="modePaiement" layout="false"/>
@@ -60,41 +45,29 @@
 					
 				</div>	
 				<div class="row">
-					<div class="col-xs-12">
-						<div class="box box-mca-yellow">
-				
-							<layout:collection name="paiementPrev" id="listeSoins" title="" property="listePrestations" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >
-							  				 
-								<layout:collectionItem title="paie.benef.soins" property="nomBenef" style="text-align:left;"/>
-								<layout:collectionItem title="paie.garantie" property="libGarantie" style="text-align:left;"/>
-								<layout:collectionItem title="paie.presta.du" property="prestaDu" style="text-align:right;" type="dateYMD"/>
-								<layout:collectionItem title="paie.presta.au" property="prestaAu" style="text-align:right;" type="dateYMD"/>
-								<layout:collectionItem title="paie.montant.presta" property="mntPresta" style="text-align:right;" type="money"/>
-								<layout:collectionItem title="Situation Administrative" property="libSituAdmin" style="text-align:left;"/> 
-								<layout:collectionItem title="paie.presta.du" property="situDu" style="text-align:right;" type="dateYMD"/>
-								<layout:collectionItem title="paie.presta.au" property="situAu" style="text-align:right;" type="dateYMD"/>
-							
-							</layout:collection>
-
-						</div>
-					</div>
+					<layout:collection name="paiementPrev" id="listeSoins" title="" property="listePrestations" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >
+						<layout:collectionItem title="paie.benef.soins" property="nomBenef" style="text-align:left;"/>
+						<layout:collectionItem title="paie.garantie" property="libGarantie" style="text-align:left;"/>
+						<layout:collectionItem title="paie.presta.du" property="prestaDu" style="text-align:right;" type="dateYMD"/>
+						<layout:collectionItem title="paie.presta.au" property="prestaAu" style="text-align:right;" type="dateYMD"/>
+						<layout:collectionItem title="paie.montant.presta" property="mntPresta" style="text-align:right;" type="money"/>
+						<layout:collectionItem title="Situation Administrative" property="libSituAdmin" style="text-align:left;"/> 
+						<layout:collectionItem title="paie.presta.du" property="situDu" style="text-align:right;" type="dateYMD"/>
+						<layout:collectionItem title="paie.presta.au" property="situAu" style="text-align:right;" type="dateYMD"/>
+					</layout:collection>
 				</div>
 			</div>
-			<div>
-				<hr id="sep_P<bean:write name="ind"/>" class="pay_mask" size=2 width=250 align="center">
-			</div>
-			
-			
 		</div>
-	<%--</div> --%>
+	</div>
 </logic:iterate>
 
 
-<script>
-
-document.getElementById("paieP0").className = "pay_vis";
-document.getElementById('imageP0').src = "<%= (String)request.getContextPath()  %>/images/Darrow.gif";
-
+<script type="text/javascript">
+	$(document).ready(function () {
+		var element = $("[data-widget='collapse']")[0];
+		if(element != null)
+		{
+			element.click();
+		}
+	});
 </script>
-
-

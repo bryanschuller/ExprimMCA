@@ -21,19 +21,6 @@
 	</div>
 </H1>
 <br>
- 
- <!-- 
-<table  align="center" width="98%" class="ENTETE">
-  <tr>
-    <td width="1%" align="center" > </td>
-    <td width="85%" height="18" align="left"> <layout:message key="appcot.detail.titre"/>  N° <%=(String)request.getAttribute("numpiece")%>  - Contrat N° <%=(String)request.getAttribute("numcontrat")%> </td>
-    <td width="5%" align="center" ><a href="<%= (String)request.getContextPath()  %>/getDetAppCotN.do?numPiece=<%=(String)request.getAttribute("numpiece")%>&action=PDF" target = "blank" > <html:img page="/images/docpdf.gif" alt="Obtenir une copie au format pdf" border="0"/></a></td>
-    <td width="5%" align="center" ><a href="<%= (String)request.getContextPath()  %>/getDetAppCotN.do?numPiece=<%=(String)request.getAttribute("numpiece")%>&action=MAIL" target = "blank" > <html:img page="/images/mail.gif" alt="Obtenir une copie par mail" border="0"/></a></td>
-    <td width="5%" align="center" ><a href="javascript:window.print()"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer"></i></td>
-   <td width="5%" align="center" ><a href="<%= (String)request.getContextPath()  %>/listAppCot.do"><html:img page="/images/RETURN.gif" alt="retour à la liste" border="0"/></td>
-  </tr>
-</table>
- -->
 
 <logic:present name="lstDetappelscot">
 	
@@ -44,7 +31,6 @@
 				<layout:pager linksLocation ="top" maxPageItems ="12"  styleClass="PAGER">
 				  
 					<layout:collection name="lstDetappelscot" id="lstapp" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >
-					 
 						<layout:collectionItem title="appcot.nomprenom" property="WNOMPRENOM"/>
 						<layout:collectionItem title="appcot.adherent" property="WAA" />
 						<layout:collectionItem title="appcot.periode" property="WPCONCERNE"/>
@@ -54,7 +40,6 @@
 						<layout:collectionItem title="appcot.montant" property="WMONTANTREEL" style="text-align:right;" />
 						<layout:collectionItem title="appcot.regle" property="WDATERGLT" />
 						<layout:collectionItem title="appcot.observation" property="WTYPEPIECE" />
-					
 					</layout:collection>
 					
 					<layout:row> 

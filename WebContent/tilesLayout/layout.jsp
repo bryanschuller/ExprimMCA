@@ -90,8 +90,18 @@ if(null == internaute){
       // gestion des tooltips
       $('[data-toggle="tooltip"]').tooltip(); 
 
-      // gestion des formulaires boxés (impossible de définir une classe sur un ayout:form, on triche)
-      $('[style="box box-mca-yellow"]').addClass('box box-mca-yellow');
+      // gestion des div collapse
+      $("[data-widget='collapse']").click(function() {
+        var box = $(this).parents(".box").first();
+        var bf = box.find(".box-body, .box-footer");
+        if (!$(this).children().hasClass("fa-plus")) {
+          $(this).children(".fa-minus").removeClass("fa-minus").addClass("fa-plus");
+          bf.slideUp();
+        } else {
+          $(this).children(".fa-plus").removeClass("fa-plus").addClass("fa-minus");
+          bf.slideDown();
+        }
+      });
     });
 </script>
 
