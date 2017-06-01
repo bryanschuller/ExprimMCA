@@ -8,23 +8,31 @@
 
 <script type="text/javascript" src="<%= (String)request.getContextPath()  %>/scripts/paiement.js"></script>
 
+<style type="text/css">
+	@media print
+	{    
+	    .collapsed-box
+	    {
+	        display: none !important;
+	    }
+	}
+</style>
 
 <div>
 	<div class="texteH">
 		<bean:message key="paie.histo.paiements"/>
 	</div>
-	<div class="iconesH">
+	<div class="iconesH hidden-print">
 		<logic:notEqual name="TiersPaiementsRetro" value="MAX">
 			<a href="<%= (String)request.getContextPath()  %>/viewPaiementsDossierTiers.do?retro=MAX">Visualiser les paiements sur 1 an</a>
 		</logic:notEqual>
-<%--		<a href="<%= (String)request.getContextPath()  %>/listeDocuments.do?tab=4">Télécharger vos décomptes de prestations</a> --%>
 		<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
-		<a href="javascript:window.print()" title="Imprimer les paiements cochés ci-dessous"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer les paiements séléctionnés"></i></a>
+		<a href="javascript:window.print()" title="Imprimer les paiements ouverts ci-dessous"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer les paiements séléctionnés"></i></a>
 	</div>
 </div>
 <div class="clearfix"></div>
 
-<div class="box box-mca-yellow">
+<div class="box box-mca-yellow hidden-print">
 	<div class="box-body">
 		<layout:form action="filtrePaiementsDossierTiers.do" focus="numFiltre"> 
 			<tr><td colspan="2">
@@ -57,12 +65,12 @@
 
 <logic:notPresent name="erreurFiltre">
 	<logic:present name="infoFiltre">
-		<h2>
+		<h2 class="hidden-print">
 			<layout:write name="infoFiltre" layout="false" />
 		</h2>
 	</logic:present>
 	<logic:notPresent name="infoFiltre">
-		<h2>Toutes les prestations remboursées</h2>
+		<h2 class="hidden-print">Toutes les prestations remboursées</h2>
 	</logic:notPresent>
 	
 	<% if ((Vector)request.getAttribute("lstPaiementsEff") != null) {
@@ -81,13 +89,6 @@
 					<bean:message key="paie.paiement"/>
 					<bean:write name="paiementEff" property="DATEPAIE"/> de <layout:write name="paiementEff" property="MNTPAIE"   type="money" layout="false" /> &euro;
 				</h3>
-
-				<div class="box-tools pull-right">
-					<input type="checkbox" style="cursor:pointer; " 
-					title="Cocher pour inclure ce paiement dans l'impression."
-					onClick="javascript:chkImpr('E' + <bean:write name="ind"/>, event);" class="pay_vis">
-					 </input>
-				</div>
 			</div>
 			<div class="box-body" style="display: none;">
 				<!-- Libellé infos banque -->

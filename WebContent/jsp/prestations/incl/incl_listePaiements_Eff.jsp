@@ -17,11 +17,6 @@
 			  	<bean:write name="paiementEff" property="DATEPAIE"/>
 				de <layout:write name="paiementEff" property="MNTPAIE" type="money" layout="false" /> &euro;
 			</h3>
-
-			<div class="box-tools pull-right">
-				<input type="checkbox" style="cursor:pointer; " title="Cocher pour inclure ce paiement dans l'impression" onClick="javascript:chkImpr('E' + <bean:write name="ind"/>, event);" class="pay_vis">
-				</input>
-			</div>
 		</div>
 		<div class="box-body" style="display: none;">
 			<div id="paieE<bean:write name="ind"/>">

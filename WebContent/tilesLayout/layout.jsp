@@ -31,13 +31,14 @@ if(null == internaute){
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!-- jQuery 3.1.1 -->
-<script src="<%= (String)request.getContextPath()  %>/scripts/new_theme/jquery-3.1.1.min.js"></script>
 
 <!--[if lt IE 9]>
   <script src="<%= (String)request.getContextPath()  %>/scripts/new_theme/html5shiv.min.js"></script>
   <script src="<%= (String)request.getContextPath()  %>/scripts/new_theme/respond.min.js"></script>
 <![endif]-->
+
+<!-- jQuery 3.1.1 -->
+<script src="<%= (String)request.getContextPath()  %>/scripts/new_theme/jquery-3.1.1.min.js"></script>
 
 <layout:html layout="false" styleClass="skin-red-light skin-mca fixed sidebar-mini">
 

@@ -10,13 +10,6 @@
 				Règlement de <layout:write name="paiementTiers" property="MNT_TOTAL" type="money" layout="false"/> &euro; 
 					  	à <bean:write name="paiementTiers" property="TIERS_NOM"/>
 			</h3>
-
-			<div class="box-tools pull-right">
-				<input type="checkbox" style="cursor:pointer;"
-				title="Cocher pour inclure ce paiement dans l'impression."
-				onClick="javascript:chkImpr('T' + <bean:write name="ind"/>, event);" class="pay_vis">
-				 </input>
-			</div>
 		</div>
 		<div class="box-body" style="display: none;">
 			<div  id="paieT<bean:write name="ind"/>" class="pay_mask">

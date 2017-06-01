@@ -16,13 +16,6 @@
 			<h3 class="box-title">
 				<layout:write name="paiementInst"  property="message"  layout="false" filter="false"/>
 			</h3>
-
-			<div class="box-tools pull-right">
-				<input type="checkbox" style="cursor:pointer;"
-			        title="Imprimer les <bean:write name="paiementInst" property="message"/>"
-			        onClick="javascript:chkImpr('I' + <bean:write name="ind"/>, event);" class="pay_vis">
-			         </input> 
-			</div>
 		</div>
 		<div class="box-body" style="display: none;">
 			<layout:collection name="paiementInst" id="listPresta" title="" property="listePresta" styleClass="LIGNE_A" styleClass2="LIGNE_B">

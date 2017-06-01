@@ -9,15 +9,24 @@
 
 <script type="text/javascript" src="<%= (String)request.getContextPath()  %>/scripts/paiement.js"></script>
 
+<style type="text/css">
+	@media print
+	{    
+	    .collapsed-box
+	    {
+	        display: none !important;
+	    }
+	}
+</style>
+
 <div>
 	<div class="texteH">
 		<bean:message key="paie.histo.paiements"/>
 	</div>
-	<div class="iconesH">
+	<div class="iconesH hidden-print">
 		<div  class="pay_vis">
-<%--		<a href="<%= (String)request.getContextPath()  %>/listeDocuments.do?tab=4">Télécharger vos décomptes de prestations</a> --%>
 			<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
-	        <a href="javascript:window.print()" title="Imprimer les paiements cochés ci-dessous"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer les paiements séléctionnés"></i></a>
+	        <a href="javascript:window.print()" title="Imprimer les paiements ouverts ci-dessous"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer les paiements séléctionnés"></i></a>
         </div> 
 	</div>
 </div>

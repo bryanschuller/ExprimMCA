@@ -9,13 +9,6 @@
 			<h3 class="box-title">
 				<layout:write name="paiementRO" property="libellePaiement"  layout="false" filter="false"/>
 			</h3>
-
-			<div class="box-tools pull-right">
-				<input type="checkbox" style="cursor:pointer;"
-				title="Cocher pour inclure ce paiement dans l'impression."
-				onClick="javascript:chkImpr('R' + <bean:write name="ind"/>, event);" class="pay_vis">
-				 </input>
-			</div>
 		</div>
 		<div class="box-body" style="display: none;">
 			<div  id="paieR<bean:write name="ind"/>">

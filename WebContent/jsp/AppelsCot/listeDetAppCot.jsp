@@ -10,7 +10,7 @@
 			  - Contrat N° <%=(String)request.getAttribute("numcontrat")%>
 		</logic:present>
 	</div>
-	<div class="iconesH">
+	<div class="iconesH hidden-print">
 		<div  class="pay_vis">
 			<a href="<%= (String)request.getContextPath()  %>/getDetAppCotN.do?id=<%=(String)request.getParameter("id")%>&action=PDF" target = "blank" > 
 <i class="fa fa-file-pdf-o" data-toggle="tooltip" data-placement="bottom" data-original-title="Obtenir une copie au format PDF"></i></a>

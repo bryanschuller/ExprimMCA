@@ -1,7 +1,7 @@
 <%@ include file="/declaration/taglibs.jsp"%>
 <%@ page import="com.exprimweb.struts.modele.Dossier"%>
 
-<footer class="main-footer">
+<footer class="main-footer hidden-print">
 	<!-- To the right -->
 	<div class="pull-right hidden-xs">
 		<div>
@@ -25,7 +25,4 @@
 			<a href="https://www.mc-alsace.fr/contact/"
 				 title="Nous contacter" id="pdp_contact">Nous contacter</a>
 		<% } %>
-</footer>
-
-
-	
+</footer>	
