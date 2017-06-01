@@ -27,7 +27,7 @@
 			<a href="<%= (String)request.getContextPath()  %>/viewPaiementsDossierTiers.do?retro=MAX">Visualiser les paiements sur 1 an</a>
 		</logic:notEqual>
 		<a href="<%= (String)request.getContextPath()  %>/retourArriere.do<%= (null != (String)request.getAttribute("pileRequestReqParam")?(String)request.getAttribute("pileRequestReqParam"):"") %>"><i class="fa fa-arrow-left" data-toggle="tooltip" data-placement="bottom" data-original-title="Retour"></i></a>
-		<a href="javascript:window.print()" title="Imprimer les paiements ouverts ci-dessous"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer les paiements séléctionnés"></i></a>
+		<a href="javascript:window.print()" title="Imprimer les paiements ouverts ci-dessous"><i class="fa fa-print" data-toggle="tooltip" data-placement="bottom" data-original-title="Imprimer les paiements ouverts ci-dessous"></i></a>
 	</div>
 </div>
 <div class="clearfix"></div>

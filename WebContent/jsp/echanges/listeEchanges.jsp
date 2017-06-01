@@ -9,14 +9,28 @@
 </div>
 <div class="clearfix"></div>
 
-<logic:present name="lEchange" scope="request">
-	<div id="EXC_CONTENT_MIDDLE">
-		<%@ include file="/jsp/echanges/incl/incl_listeEchanges.jsp"%>
+<div class="box box-mca-yellow">
+	<div class="box-header with-border">
+		<h3 class="box-title">
+			Actions
+		</h3>
 	</div>
+	<div class="box-body">
+		<a href="<%= (String) request.getContextPath() %>/echangeMsg.do?action=initForm">Ouvrir un echange</a>
+	</div>
+	<logic:present name="listeDemandes" scope="session">
+		<div class="box-footer">
+			<%@ include file="/jsp/echanges/incl/incl_listeDemandesPredefinit.jsp"%>		
+		</div>
+	</logic:present>
+</div>
+
+<logic:present name="lEchange" scope="request">
+	<%@ include file="/jsp/echanges/incl/incl_listeEchanges.jsp"%>
 </logic:present>
 
 <logic:notPresent name="lEchange" scope="request">
-	<div id="EXC_CONTENT_MIDDLE">
+	<div class="row">
 		<div class="callout callout-info">
 			<strong>
 				Il n'y a aucun échange
@@ -24,18 +38,3 @@
 		</div><br style="clear:both;">
 	</div>
 </logic:notPresent>
-
-<div id="EXC_CONTENT_RIGHT">
-
-	<div style="margin-left: 40px">
-		<h2>Actions</h2>
-	</div>
-	
-	<ul><li><a href="<%= (String) request.getContextPath() %>/echangeMsg.do?action=initForm">Ouvrir un echange</a></li></ul>
-	
-	<logic:present name="listeDemandes" scope="session">
-		<%@ include file="/jsp/echanges/incl/incl_listeDemandesPredefinit.jsp"%>		
-	</logic:present>
-</div>
-
-

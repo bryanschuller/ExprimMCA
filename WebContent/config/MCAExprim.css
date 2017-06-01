@@ -124,6 +124,10 @@
 	.pay_mask_imp {
 		display: block;
 	}
+	.content-wrapper {
+		margin-top: 150px;
+	}
+
 }
 
 @media all{

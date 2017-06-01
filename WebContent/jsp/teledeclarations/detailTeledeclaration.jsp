@@ -88,158 +88,160 @@ request.setAttribute("Numiterate", "0");
 </div>
 
 
-
-
-<table class="CORPS_TOTAL"  height="78" width="200px" border="0" cellpadding="0" cellspacing="1" align = "right">
-
-<tr><td height="18"><td></tr>
-
-  <tr >
-    <th>TOTAL ECHEANCE</th>
-    <td width="60px"><%=(String)request.getAttribute("totecheance")%> &euro;</td>
-  </tr>
-  
-  <td height="9px" colspan="2" class="ENTETE"></td>
-  
-  <tr>
-    <th>TOTAL REGULARISATION</th>
-    <td><%=(String)request.getAttribute("totregul")%> &euro;</td>
-  </tr>
-   <td height="9px" colspan="2" class="ENTETE"></td>
-   <tr>
-    <th  >SOLDE</th>
-    <td><%=(String)request.getAttribute("solde")%> &euro;</td>
-  </tr>
-  <td height="18px" colspan="2" class="ENTETE"></td>
-
-  <tr>
-    <th>NET A PAYER</th>
-    <td><%=(String)request.getAttribute("totnet")%> &euro;</td>
-  </tr>
-
-</table>
-
-
-<layout:panel  styleClass="CORPS_DONNE" key="" width="530px" >
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+    <layout:panel  styleClass="CORPS_DONNE" key="" width="530px" >
 
 
 
-<td width="5px"> </td>
+    <td width="5px"> </td>
 
 
-<td><H3>COMMENTAIRE</H3></td>
+    <td><H3>COMMENTAIRE</H3></td>
 
-<tr >
-<td width="5px"  > </td>
-<td >
-
-<logic:equal  name ="mode" value ="M" scope="request">
-<layout:textarea key="" name="detail" layout="false" property="commentaire" styleClass="COMMENTAPPEL" maxlength="1024" isRequired="false" mode="R,R,R" onclick="javascript:changeCommentaire();"/> 
-</logic:equal>
-<logic:notEqual name ="mode" value ="M" scope="request">
-<layout:textarea key="" name="detail" layout="false" property="commentaire" size="52" maxlength="1024" isRequired="false" mode="R,R,R" /> 
-</logic:notEqual>
-
-</td>
-</tr>
-<tr>
-<td width="5px"  > </td>
-<td><H3>TYPE DE REGLEMENT</H3></td>
-</tr><tr>
-<td width="5px"  > </td>
-<td >
-<logic:equal  name ="mode" value ="V" scope="request">
-<layout:select key="" property="typereg" name="detail" layout="false" mode="D,D,D" >
-<layout:options collection="lstmdp" property="WCMDP" labelProperty="WLIBMDP"/>
-</layout:select>
-</logic:equal>
-
-<logic:equal  name ="mode" value ="M" scope="request">
-
-<logic:equal  name ="rgltlck" value ="O" scope="request">
-<layout:select key="" property="typereg" name="detail" layout="false" mode="D,D,D" >
-<layout:options collection="lstmdp" property="WCMDP" labelProperty="WLIBMDP"/>
-</layout:select>
-</logic:equal>
-
-<logic:notEqual  name ="rgltlck"  value ="O" scope="request">
-<layout:select key="" property="typereg" name="detail" layout="false" mode="E,E,E" >
-<layout:options collection="lstmdp" property="WCMDP" labelProperty="WLIBMDP"/>
-</layout:select>
-</logic:notEqual>
-
-</logic:equal>
-</td>
-</tr>
-
-</layout:panel>
-<layout:panel  styleClass="CORPS_DONNE" key="" width="100%" >
-<div>
-
-  <tr >
-    <td width="100%" height="14" align="left" class="INFOLINE_MDP">
-    <strong>
-  Net à payer : <%=(String)request.getAttribute("totnet")%> &euro;
-  	</strong>
-    </td>
-  </tr>
-  
-<% if ((String)request.getAttribute("libPrelevemnt")!= null) {
-%>
     <tr >
-    <td width="100%" height="14" align="left" class="INFOLINE_MDP"> 
-    <%=(String)request.getAttribute("libPrelevemnt")%>
-    </td>   
-  </tr>
-<%
-}
-%>
- <% if ((String)request.getAttribute("libcompte")  != null) {
-%>
-
-   <tr>
-      <td width="100%" height="14" align="left" class="INFOLINE_MDP"> 
-    <%=(String)request.getAttribute("libcompte")%>
-    </td>
-    </tr>
-<%
-  }
-%>
-
-
-
-
-  <tr heigth = "24">
-    
-    <td width="60%" height="18" align="left" class="INFOLINE_LOGIN"> 
-    
-    <logic:equal  name ="mode" value ="V" scope="request">
-    Cette télé-déclaration ne peut être modifiée...
-    </logic:equal>   
-    </td>   
+    <td width="5px"  > </td>
+    <td >
 
     <logic:equal  name ="mode" value ="M" scope="request">
-     <td  align="center" >
-     <input type="button" value="Aperçu avant envoi" onclick="javascript:prevBor();" class="BOUT1"/>
-     </td>
-     <td  align="center" >
-     <input type="button" value="Valider" onclick="javascript:mailBor();" class="BOUT1"/>
+    <layout:textarea key="" name="detail" layout="false" property="commentaire" styleClass="COMMENTAPPEL" maxlength="1024" isRequired="false" mode="R,R,R" onclick="javascript:changeCommentaire();"/> 
+    </logic:equal>
+    <logic:notEqual name ="mode" value ="M" scope="request">
+    <layout:textarea key="" name="detail" layout="false" property="commentaire" size="52" maxlength="1024" isRequired="false" mode="R,R,R" /> 
+    </logic:notEqual>
+
     </td>
-    </logic:equal>  
-  </tr>
-  
+    </tr>
+    <tr>
+    <td width="5px"  > </td>
+    <td><H3>TYPE DE REGLEMENT</H3></td>
+    </tr><tr>
+    <td width="5px"  > </td>
+    <td >
+    <logic:equal  name ="mode" value ="V" scope="request">
+    <layout:select key="" property="typereg" name="detail" layout="false" mode="D,D,D" styleClass="form-control" >
+    <layout:options collection="lstmdp" property="WCMDP" labelProperty="WLIBMDP"/>
+    </layout:select>
+    </logic:equal>
+
+    <logic:equal  name ="mode" value ="M" scope="request">
+
+    <logic:equal  name ="rgltlck" value ="O" scope="request">
+    <layout:select key="" property="typereg" name="detail" layout="false" mode="D,D,D"  styleClass="form-control">
+    <layout:options collection="lstmdp" property="WCMDP" labelProperty="WLIBMDP"/>
+    </layout:select>
+    </logic:equal>
+
+    <logic:notEqual  name ="rgltlck"  value ="O" scope="request">
+    <layout:select key="" property="typereg" name="detail" layout="false" mode="E,E,E"  styleClass="form-control">
+    <layout:options collection="lstmdp" property="WCMDP" labelProperty="WLIBMDP"/>
+    </layout:select>
+    </logic:notEqual>
+
+    </logic:equal>
+    </td>
+    </tr>
+
+    </layout:panel>
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <div class="box box-mca-yellow">
+      <div class="box-body">
+        <table>
+          <tr>
+            <th>TOTAL ECHEANCE</th>
+            <td width="10"></td>
+            <td><%=(String)request.getAttribute("totecheance")%> &euro;</td>
+          </tr>
+
+          <tr>
+            <th>TOTAL REGULARISATION</th>
+            <td></td>
+            <td><%=(String)request.getAttribute("totregul")%> &euro;</td>
+          </tr>
+
+          <tr>
+            <th>SOLDE</th>
+            <td></td>
+            <td><%=(String)request.getAttribute("solde")%> &euro;</td>
+          </tr>
+
+          <tr>
+            <th>NET A PAYER</th>
+            <td></td>
+            <td><%=(String)request.getAttribute("totnet")%> &euro;</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
 
+<div class="row">
+  <layout:panel  styleClass="CORPS_DONNE" key="" width="100%" >
+    <div>
+
+      <tr >
+        <td width="100%" height="14" align="left" class="INFOLINE_MDP">
+        <strong>
+      Net à payer : <%=(String)request.getAttribute("totnet")%> &euro;
+        </strong>
+        </td>
+      </tr>
+      
+    <% if ((String)request.getAttribute("libPrelevemnt")!= null) {
+    %>
+        <tr >
+        <td width="100%" height="14" align="left" class="INFOLINE_MDP"> 
+        <%=(String)request.getAttribute("libPrelevemnt")%>
+        </td>   
+      </tr>
+    <%
+    }
+    %>
+     <% if ((String)request.getAttribute("libcompte")  != null) {
+    %>
+
+       <tr>
+          <td width="100%" height="14" align="left" class="INFOLINE_MDP"> 
+        <%=(String)request.getAttribute("libcompte")%>
+        </td>
+        </tr>
+    <%
+      }
+    %>
+      <tr heigth = "24">
+        
+        <td width="60%" height="18" align="left" class="INFOLINE_LOGIN"> 
+        
+        <logic:equal  name ="mode" value ="V" scope="request">
+        Cette télé-déclaration ne peut être modifiée...
+        </logic:equal>   
+        </td>   
+
+        <logic:equal  name ="mode" value ="M" scope="request">
+         <td  align="center" >
+         <input type="button" class="btn btn-warning" value="Aperçu avant envoi" onclick="javascript:prevBor();" class="BOUT1"/>
+         </td>
+         <td  align="center" >
+         <input type="button" class="btn btn-success" value="Valider" onclick="javascript:mailBor();" class="BOUT1"/>
+        </td>
+        </logic:equal>  
+      </tr>
+      
+    </div>
 
 
 
-<div>
-  <tr> 
-    <td width="5%" height="27"><html:img page="/images/info.gif" border="0"/>  Les fenêtres pop-pup doivent êtres autorisées sur le site</td>
-  </tr>
+
+    <div>
+      <tr> 
+        <td width="5%" height="27"><html:img page="/images/info.gif" border="0"/>  Les fenêtres pop-pup doivent êtres autorisées sur le site</td>
+      </tr>
+    </div>
+    
+  </layout:panel>
 </div>
-  
-</layout:panel>
 
 
 

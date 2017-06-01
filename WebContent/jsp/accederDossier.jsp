@@ -75,7 +75,7 @@
 				<a href="<%= (String) request.getContextPath() %>/listeEchanges.do" >Voir tous les échanges</a>
 			</div>
 		</H2>
-		<br>
+		<div class="clearfix"></div>
 		<%@ include file="/jsp/echanges/incl/incl_listeEchanges.jsp"%>	
 	</logic:present>
 </logic:notPresent>
@@ -97,7 +97,7 @@
 			<%@ include file="/jsp/incl/apeEtSiret.jsp"%>
 		</div>
 		<div class="col-md-6">
-			<%@ include file="/jsp/incl/resumeDossierTiersInfosInterloc.jsp"%>		
+			<%@ include file="/jsp/incl/adresse.jsp"%>		
 		</div>
 	</div>
 	<%@ include file="/jsp/incl/listeInterlocuteurs.jsp"%>

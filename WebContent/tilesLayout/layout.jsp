@@ -43,9 +43,8 @@ if(null == internaute){
 <layout:html layout="false" styleClass="skin-red-light skin-mca fixed sidebar-mini">
 
 <div id="container" class="wrapper">
-	<header class="main-header">
-		<tiles:insert attribute="header" />
-	</header>
+	
+	<tiles:insert attribute="header" />
 	
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
@@ -54,15 +53,6 @@ if(null == internaute){
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <!-- 
-    <section class="content-header">
-      <h1>
-        Titre de la page
-        <small>Petit texte</small>
-      </h1>
-    </section>
-    -->
 
     <!-- Main content -->
     <section class="content">

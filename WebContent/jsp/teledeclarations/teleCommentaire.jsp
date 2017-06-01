@@ -37,37 +37,37 @@ if (document.getElementById)
  
  <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >
  
-<H2>
-	<div class="texteH">
-		<layout:message key="appcot.titre.telecommentaire.declaration"/>
+<div class="box box-mca-yellow">
+	<div class="box-header with-border">
+		<h3 class="box-title">
+			<layout:message key="appcot.titre.telecommentaire.declaration"/>
+		</h3>
 	</div>
-</H2>
-
-<br>
-
-
-<layout:form action="setTeleCommentaire.do" focus="commentaire" styleClass="CORPS_MSG" width="100%" >
-<layout:text key="" property="action" size="10" maxlength="20"  isRequired="false" mode="H,H,H"/>
-<layout:text key="" property="idSuivi" size="10" maxlength="20"  isRequired="false" mode="H,H,H"/>
-<layout:textarea key="" rows="4" property="commentaire" size="56" maxlength="1024" isRequired="false" mode="E,E,E" /> 
+	<div class="box-body">
+		<layout:form action="setTeleCommentaire.do" focus="commentaire" width="100%" >
+		<layout:text key="" property="action" size="10" maxlength="20"  isRequired="false" mode="H,H,H"/>
+		<layout:text key="" property="idSuivi" size="10" maxlength="20"  isRequired="false" mode="H,H,H"/>
+		<layout:textarea key="" rows="4" property="commentaire" size="56" maxlength="1024" isRequired="false" mode="E,E,E" /> 
 
 
-<tr height="25"></tr>
+		<tr height="25"></tr>
 
-<layout:formActions align="center"> 
-<layout:row>
-<layout:submit styleClass="btn" value="Supprimer" onclick="return supcomm();" />
-<layout:button styleClass="btn" value="Fermer" onclick="window.close();" />
-<layout:reset styleClass="btn btn-danger" value="Rétablir" /> 
-<layout:submit styleClass="btn btn-success" property="submit" value="Valider" /> 
+		<layout:formActions align="center"> 
+		<layout:row>
+		<layout:submit styleClass="btn" value="Supprimer" onclick="return supcomm();" />
+		<layout:button styleClass="btn" value="Fermer" onclick="window.close();" />
+		<layout:reset styleClass="btn btn-danger" value="Rétablir" /> 
+		<layout:submit styleClass="btn btn-success" property="submit" value="Valider" /> 
 
-<tr height="25"></tr>
+		<tr height="25"></tr>
 
-</layout:row>
+		</layout:row>
 
-</layout:formActions> 
+		</layout:formActions> 
 
-</layout:form>
+		</layout:form>
+	</div>
+</div>
 
 
 
