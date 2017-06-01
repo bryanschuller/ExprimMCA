@@ -153,7 +153,7 @@
 		var element = $("[data-widget='collapse']")[0];
 		if(element != null)
 		{
-			element.click();
+			setTimeout(function(){ element.click(); }, 500);
 		}
 	});
 </script>
