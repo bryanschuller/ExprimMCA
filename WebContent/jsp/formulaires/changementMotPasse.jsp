@@ -12,7 +12,7 @@
 	<div class="box-body">
 		<layout:form action="changerMotPasse.do" focus="ancienMotpasse"> 
 			<tr><td colspan="2">
-				<table class="FORMULAIRE" width="90%" align="center">
+				<table class="FORMULAIRE" align="center">
 					<tr><td align="center">
 						<table class="FORM_BEN_SUB_LEFT" style="min-width:300px;">
 							<layout:field key="app.idinternaute" property="idInternaute" size="16" maxlength="11" isRequired="true" type="text" /> 
@@ -28,7 +28,7 @@
 			</td></tr>
 			
 			<tr><td colspan="2">
-				<table class="FORM_BEN" width="90%" align="center">
+				<table class="FORM_BEN" align="center">
 					<tr><td align="center">
 						<table class="FORM_BEN_SUB_LEFT" style="min-width:300px;">
 							<layout:field key="app.password.new" property="nouveauMotpasse" size="16" maxlength="10" type="password" isRequired="true"/> 

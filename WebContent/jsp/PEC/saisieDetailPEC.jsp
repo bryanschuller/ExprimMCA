@@ -62,7 +62,7 @@ if (null == typePEC){
 	<div class="box-body">
 		<layout:form action="valoriserPEC.do" focus="dateOrdonnance"> 
 			<tr><td colspan="2">
-				<table class="FORM_BEN" width="90%" align="center">
+				<table class="FORM_BEN" align="center">
 					<tr><td align="center">
 						<table class="FORM_BEN_SUB_LEFT" style="min-width:300px;">
 							<tr>
@@ -105,7 +105,7 @@ if (null == typePEC){
 									<span class="ERROR" style="text-align:left;">
 										<html:errors property="lppL1" />
 									</span>
-									<span style="text-align:left;">
+									<span style="text-align:left;margin:5px;">
 										<bean:write name="PECLibLPP" property="libL1"/>
 									</span>
 								</td>

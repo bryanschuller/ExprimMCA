@@ -36,7 +36,7 @@ if(null == idInternaute) {idInternaute = "";}
 
 <layout:form action="MotPasseForget.do" focus="idInternaute" styleClass="FORMULAIRE" width="550px" align="center"  > 
 <tr><td colspan="2">
-	<table class="FORM_BEN" width="90%" align="center">
+	<table class="FORM_BEN" align="center">
 		<tr><td  align="center">
 			<table>
 				<tr>

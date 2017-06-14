@@ -36,7 +36,7 @@
 	<div class="box-body">
 		<layout:form action="filtrePaiementsDossierTiers.do" focus="numFiltre"> 
 			<tr><td colspan="2">
-				<table class="FORM_BEN" width="90%" align="center">
+				<table class="FORM_BEN" align="center">
 					<tr><td align="center">
 						<table class="FORM_BEN_SUB_LEFT" style="min-width:300px;">
 							<layout:field key="tiers.liste.paiement.filtre.libelle" property="numFiltre" size="30" maxlength="13" type="text" isRequired="false"/>									

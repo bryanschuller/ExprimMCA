@@ -16,7 +16,7 @@
 	<div class="box-body">
 		<layout:form action="repondreEchange.do" focus="corps" enctype="multipart/form-data"  reqCode="sendForm"> 
 			<tr><td colspan="2">
-				<table class="FORM_BEN" width="90%" align="center">
+				<table class="FORM_BEN" align="center">
 					<layout:textarea key="info.envmsg.corps" property="corps" cols="50" rows="8"
 					maxlength="1000" isRequired="true"/>
 				</table>
@@ -27,7 +27,7 @@
 
 			<tr>
 				<td colspan="2">	
-					<table class="FORM_BEN" width="90%" align="center">
+					<table class="FORM_BEN" align="center">
 					
 						<%	ParametrageEchange paramEchange = (ParametrageEchange) getServletContext().getAttribute("paramEchange");  
 						Vector lFile = (Vector) session.getAttribute("lFile");  

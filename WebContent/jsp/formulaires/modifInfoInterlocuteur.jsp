@@ -12,7 +12,7 @@
 	<div class="box-body">
 		<layout:form action="modifierInfoInterlocuteur.do" focus="" reqCode="sendForm">
 			<tr><td colspan="2">
-				<table class="FORM_BEN" width="90%" align="center">
+				<table class="FORM_BEN" align="center">
 					<tr><td align="center">
 						<table class="FORM_BEN_SUB_LEFT">
 							<layout:field key="Nom" property="nomInterlocuteur" size="30" maxlength="80" isRequired="true" /> 

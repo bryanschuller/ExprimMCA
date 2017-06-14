@@ -13,7 +13,7 @@
 		<layout:form action="changementTelephone.do" focus="telephone" reqCode="sendForm">
 
 			<tr><td colspan="2">
-				<table class="FORM_BEN" width="90%" align="center">
+				<table class="FORM_BEN" align="center">
 					<tr><td align="center">
 						<table class="FORM_BEN_SUB_LEFT">
 						

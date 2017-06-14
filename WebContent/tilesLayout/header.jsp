@@ -41,33 +41,5 @@
 		<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
 		    <span class="sr-only">Toggle navigation</span>
 		</a>
-	    <div class="navbar-custom-menu">
-	        <ul class="nav navbar-nav">
-				<logic:present name="internaute">
-					<li class="dropdown user user-menu">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							<span class="hidden-xs">Internaute N&deg; <layout:write name="internaute" property="idInternaute"/></span>
-						</a>
-				  		<logic:present name="dossierActuel">
-							<ul class="dropdown-menu">
-								<li class="user-body">
-									Dossier <layout:write name="dossierActuel" property="designation" />
-								</li>
-						  		<logic:equal name="dossierActuel" property="typeDossier" value="ADH">
-									<li class="user-body">
-										<layout:message key="info.adh.nro"/> : <layout:write name="adherent" property="numRO" />
-									</li>
-								</logic:equal>
-								<logic:equal name="dossierActuel" property="typeDossier" value="BEN">
-									<li class="user-body">
-										<layout:message key="info.adh.nro"/> : <layout:write name="adherent" property="numRO" />
-									</li>
-								</logic:equal>
-							</ul>
-						</logic:present>
-					</li>
-				</logic:present>
-	        </ul>
-	    </div>
 	</nav>
 </header>

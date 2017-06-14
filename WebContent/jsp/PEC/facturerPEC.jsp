@@ -40,7 +40,7 @@
 		<layout:form action="facturerPECExec.do" focus="numFacture" enctype="multipart/form-data">
 			<tr>
 				<td colspan="2">
-				<table class="FORM_BEN" width="90%" align="center">
+				<table class="FORM_BEN" align="center">
 					<tr>
 						<td align="center">
 						<table class="FORM_BEN_SUB_LEFT" style="min-width: 300px;">

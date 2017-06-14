@@ -8,7 +8,7 @@
  <p>&nbsp;</p>
 <p>&nbsp;</p>
   
-  <table border="0" cellspacing="0" width="90%" cellpadding="0"><tr><td>
+  <table border="0" cellspacing="0" cellpadding="0"><tr><td>
 
 <table  align="center" width="100%" class="ENTETE">
   	<tr>
@@ -34,11 +34,11 @@ request.setAttribute("indVar", "-1");
 
 
 
-<layout:form action="sendVarDoc.do" focus="var_1" styleClass="CORPS_ADRESSE"  width="90%"> 
+<layout:form action="sendVarDoc.do" focus="var_1" styleClass="CORPS_ADRESSE" > 
 	
 	
 	<tr><td colspan="2">
-		<table class="CORPS_MSG" width="90%" align="center">
+		<table class="CORPS_MSG" align="center">
 	
 		<tr><td colspan = '2' >
 		

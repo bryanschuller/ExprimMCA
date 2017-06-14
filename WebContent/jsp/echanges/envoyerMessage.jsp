@@ -29,7 +29,7 @@
 			<tr><td colspan="2">
 
 			<logic:present name="saisieLocked" scope="session">
-				<table class="FORM_BEN" width="90%" align="center">
+				<table class="FORM_BEN" align="center">
 					<layout:text key="info.envmsg.titre" property="titre" 
 					size="50" maxlength="30" isRequired="true" readonly="true"/>
 				
@@ -39,7 +39,7 @@
 			</logic:present>
 
 			<logic:notPresent name="saisieLocked" scope="session">
-				<table class="FORM_BEN" width="90%" align="center">
+				<table class="FORM_BEN" align="center">
 				<%-- 	<html:hidden property="service" value=""/> --%>
 					<layout:text key="info.envmsg.titre" property="titre" 
 					size="50" maxlength="30" isRequired="true"/>
@@ -60,7 +60,7 @@
 			<logic:greaterThan name="size" value="0">
 
 				<tr><td colspan="2">
-					<table class="FORM_BEN" width="90%" align="center">
+					<table class="FORM_BEN" align="center">
 						<tr><td>
 							<layout:collection name="lPiecesRequise" property="listePieces" id="piece" title=""
 								styleClass="LIGNE_A" styleClass2="LIGNE_B" >
@@ -91,7 +91,7 @@
 
 				
 			<tr><td colspan="2">
-				<table class="FORM_BEN" width="90%" align="center">
+				<table class="FORM_BEN" align="center">
 				
 
 			<%	ParametrageEchange paramEchange = (ParametrageEchange) getServletContext().getAttribute("paramEchange");  

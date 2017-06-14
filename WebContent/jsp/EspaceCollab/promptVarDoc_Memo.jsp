@@ -39,7 +39,7 @@ request.setAttribute("indVar", "-1");
 	
 	
 	<tr><td colspan="2">
-		<table class="CORPS_MSG" width="90%" align="center">
+		<table class="CORPS_MSG" align="center">
 	
 		<tr><td colspan = '2' >
 		

@@ -26,7 +26,7 @@
 <layout:form action="ChgMailCollab.do" focus="mail" styleClass="CORPS_ADRESSE" width="60%"> 
 
 <tr><td colspan="2">
-	<table class="CORPS_MSG" width="90%" align="center">
+	<table class="CORPS_MSG" align="center">
 		<tr><th width="41%"><span class="LOGIN_LABEL">
 			<bean:message key="app.mail.current"/>
 		</span></th><td>
@@ -36,7 +36,7 @@
 </td></tr>
 
 <tr><td colspan="2">
-<table class="CORPS_MSG" width="90%" align="center">
+<table class="CORPS_MSG" align="center">
 		<layout:text key="app.mail.new" property="mail" size="30" maxlength="80" styleClass="LOGIN_LABEL" isRequired="true"/> 
 		<layout:text key="app.mail.confirm" property="confmail" size="30" maxlength="80" styleClass="LOGIN_LABEL" isRequired="true"/>  
 </table>

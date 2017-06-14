@@ -21,7 +21,7 @@
 
 			<tr>
 				<td colspan="2">
-					<table class="FORM_BEN" width="90%" align="center">
+					<table class="FORM_BEN" align="center">
 					<layout:field key="Nom" property="nomInterlocuteur" size="30" maxlength="80" isRequired="true" /> 
 						<layout:field key="info.interloc.fonction" property="fonction" size="30" maxlength="80" isRequired="false"/> 
 						<layout:field key="info.interloc.tel" property="telephone" size="20" maxlength="20" isRequired="false" /> 

@@ -31,7 +31,7 @@ function firstCheckValue(fieldName){
 		<layout:form action="updateadr.do" focus="adr1"> 
 
 		<tr><td colspan="2">
-			<table class="FORM_BEN" width="90%" align="center">
+			<table class="FORM_BEN" align="center">
 				<tr><td  align="center">
 					<table>
 			

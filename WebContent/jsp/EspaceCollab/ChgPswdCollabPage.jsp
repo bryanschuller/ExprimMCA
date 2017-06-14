@@ -34,7 +34,7 @@
 	
 	
 	<tr><td colspan="2">
-		<table class="CORPS_MSG" width="90%" align="center">
+		<table class="CORPS_MSG" align="center">
 	<tr><td>
 			<layout:field key="app.password.current" property="password" size="16" maxlength="10" type="password" styleClass="LOGIN_LABEL" isRequired="true"/>
 			</td></tr>
@@ -46,7 +46,7 @@
 	
 	
 	<tr><td colspan="2">
-	<table class="CORPS_MSG" width="90%" align="center">
+	<table class="CORPS_MSG" align="center">
 	<tr><td>
 			<layout:field key="app.password.new" property="newpassword" size="16" maxlength="10" type="password" styleClass="LOGIN_LABEL" isRequired="true"/> 
 			<layout:field key="app.password.confirm" property="confirmpassword" size="16" maxlength="10" type="password" styleClass="LOGIN_LABEL" isRequired="true"/>  

@@ -3,7 +3,7 @@
 
 <tr>
 	<td>
-		<table class="FORM_BEN" width="90%" align="center">
+		<table class="FORM_BEN" align="center">
 			<tr>
 				<td colspan="2">
 					<layout:collection name="lEmails" id="lEmails" title=""

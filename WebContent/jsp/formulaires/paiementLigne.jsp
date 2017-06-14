@@ -11,7 +11,7 @@
 	<div class="box-body">
 		<layout:form action="telePaiement.do" focus="montant"> 
 			<tr><td colspan="2">
-				<table class="FORM_BEN" width="90%" align="center">
+				<table class="FORM_BEN" align="center">
 					<tr><td align="center">
 						<table class="FORM_BEN_SUB_LEFT">
 						
