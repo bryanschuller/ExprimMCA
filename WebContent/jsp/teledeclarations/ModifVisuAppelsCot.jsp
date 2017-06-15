@@ -177,30 +177,27 @@ request.setAttribute("Numiterate", "0");
 	</div>
 </H2>
 
-
-
 <logic:equal  name ="nbmvts" value ="0" scope="request">
-	<div class="EXC_TEXTE" id="EXC_PRESENT_DATA_COL_1" style="margin-top: 20px;"
-			align="left">
-		<layout:message key="appcot.aucune.regul"/>
+	<div class="row">
+		<div class="EXC_TEXTE" align="left">
+			<layout:message key="appcot.aucune.regul"/>
+		</div>
+		<br>
+		<logic:equal  name ="mode" value ="M" scope="request">
+	 		<layout:select key="" property="typeM" name="selectMvt" mode="E,E,E" layout="false" styleClass="LABEL" >
+			<layout:options collection="LstMvt" property="WCODETMVT" labelProperty="WLIBTMVT" />
+			</layout:select>
+			<input type="button" value="Ajouter" onclick="javascript:mouvement('Create', 0);" class="BOUT1">
+		</logic:equal>
+
+		<table border="0" width="100%">
+			<tr align="right">
+			    <td width="85%"><strong><layout:message key="appcot.total.regularisation"/></strong></td>
+			    <td width="15%"><strong><%=(String)request.getAttribute("totMvts")%> &euro; </strong></td>
+		  	</tr>
+		</table>
 	</div>
-	<br>
-	<logic:equal  name ="mode" value ="M" scope="request">
- 		<layout:select key="" property="typeM" name="selectMvt" mode="E,E,E" layout="false" styleClass="LABEL" >
-		<layout:options collection="LstMvt" property="WCODETMVT" labelProperty="WLIBTMVT" />
-		</layout:select>
-		<input type="button" value="Ajouter" onclick="javascript:mouvement('Create', 0);" class="BOUT1">
-	</logic:equal>
-
-	<table border="0" width="100%">
-		<tr align="right">
-		    <td width="85%"><strong><layout:message key="appcot.total.regularisation"/></strong></td>
-		    <td width="15%"><strong><%=(String)request.getAttribute("totMvts")%> &euro; </strong></td>
-	  	</tr>
-	</table>
 </logic:equal>
-
-
 
 <logic:notEqual  name ="nbmvts" value ="0" scope="request">
 	<div class="row">

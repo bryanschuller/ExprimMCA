@@ -35,7 +35,7 @@
 						<td style="padding: 10px;">
 							<layout:date key="info.interloc.dateeffet" property="dateEffet" layout="false"
 								patternKey="format.date" size="10" maxlength="10" 
-								isRequired="true" startYear="2009" endYear="2015" 
+								isRequired="true" startYear="2009" endYear="2025" 
 								onblur="javascript:return isDate(this.value);"
 								calendarTooltip="Sélectionner la date"  />
 
@@ -51,7 +51,6 @@
 					</tr>
 				</table>
 			</td></tr>
-			
 			
 			<layout:formActions>
 				<layout:row space="false">	

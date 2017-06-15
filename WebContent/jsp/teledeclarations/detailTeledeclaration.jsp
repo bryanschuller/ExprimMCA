@@ -24,64 +24,53 @@ request.setAttribute("Numiterate", "0");
 <div class="row">
   <div class="col-xs-12">
     <div class="box box-mca-yellow">
-      <layout:panel  styleClass="EXC_NONE" key="" width="98%" align="center">
-      <layout:pager linksLocation ="top" maxPageItems ="10"  styleClass="PAGER">
+      <layout:panel styleClass="EXC_NONE" key="" width="98%" align="center">
+        <layout:pager linksLocation ="top" maxPageItems ="10"  styleClass="PAGER">
+          <layout:collection name="lstDetsuivi" width="100%" id="lstrecap" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >
+            <logic:equal name ="Numiterate" value ="0" scope="request">
+              <tr>
+                <th class="LIGNE_A"><bean:message key="suivi.option"/></th>
+                <th class="LIGNE_A"><bean:message key="appcot.numeroappel"/></th>
+                <th class="LIGNE_A"><bean:message key="appcot.famille"/></th>
+                <th class="LIGNE_A"><bean:message key="appcot.garantie"/></th>
+                <th class="LIGNE_A"><bean:message key="appcot.periode"/></th>
+                <th class="LIGNE_A" style="text-align:right;"><bean:message key="appcot.montant"/></th>
+                <th class="LIGNE_A" style="text-align:right;"><bean:message key="appcot.regularisation"/></th>
+                <th width="75" class="LIGNE_A" style="text-align:right; "><bean:message key="appcot.total"/></th>
+              </tr>
+            </logic:equal>
 
-      <layout:collection name="lstDetsuivi" width="100%" id="lstrecap" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B"  >
-       
-      <logic:equal  name ="Numiterate" value ="0" scope="request">
-      <layout:collectionItem title="suivi.option"  />
-      <layout:collectionItem title="appcot.numeroappel" />
-      <layout:collectionItem title="appcot.famille" />
-      <layout:collectionItem title="appcot.garantie"  />
-      <layout:collectionItem title="appcot.periode"  />
-      <layout:collectionItem title="appcot.montant"  />
-      <layout:collectionItem title="appcot.regularisation"  />
-      <layout:collectionItem title="appcot.total" width="75px" />
-      </logic:equal>
+            <logic:notEqual  name ="Numiterate" value ="0" scope="request">
+              <layout:collectionItem title="suivi.option" >
+                <logic:equal  name ="mode" value ="V" scope="request">
+                  <a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>"> Visualiser </a>
+                </logic:equal>
 
-      <logic:notEqual  name ="Numiterate" value ="0" scope="request">
+                <logic:equal  name ="mode" value ="M" scope="request">
+                  <div class="btn-group">
+                    <a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>" class="btn btn-flat btn-sm btn-default"><i class="fa fa-pencil"></i><span class="hidden-sm hidden-xs"><layout:message key="libelle.modifier" /></span></a>
+                  </div>
+                </logic:equal>
+              </layout:collectionItem>
 
-      <layout:collectionItem title="suivi.option" >
+              <layout:collectionItem title="appcot.numeroappel" property="WB2APP"/>
+              <layout:collectionItem title="appcot.famille" property="WB2FAM" />
+              <layout:collectionItem title="appcot.garantie" property="WB2GAR"/>
+              <layout:collectionItem title="appcot.periode" property="WLIBPER" />
+              <layout:collectionItem title="appcot.montant" property="WB2MNT" type="money" style="text-align:right;"/>
+              <layout:collectionItem title="appcot.regularisation" property="WB2REG" type="money" style="text-align:right;"/>
+              <layout:collectionItem title="appcot.total" property="WMNTNET" type="money" style="text-align:right;"/>
+            </logic:notEqual>
+            <%
+            request.setAttribute("Numiterate", "1");
+            %>
+          </layout:collection>
 
-      <logic:equal  name ="mode" value ="V" scope="request">
-        <a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>"> Visualiser </a>
-      </logic:equal>
-
-      <logic:equal  name ="mode" value ="M" scope="request">
-        <div class="btn-group">
-          <a href="<%= (String)request.getContextPath()  %>/manageAppCot.do?id=<%=(String)request.getAttribute("idSuivi")%>&numPiece=<bean:write name="lstrecap" property="WB2APP"/>" class="btn btn-flat btn-sm btn-default"><i class="fa fa-pencil"></i><span class="hidden-sm hidden-xs"><layout:message key="libelle.modifier" /></span></a>
-        </div>
-      </logic:equal>
-
-
-      </layout:collectionItem>
-
-
-      <layout:collectionItem title="appcot.numeroappel" property="WB2APP"/>
-      <layout:collectionItem title="appcot.famille" property="WB2FAM" />
-      <layout:collectionItem title="appcot.garantie" property="WB2GAR"/>
-      <layout:collectionItem title="appcot.periode" property="WLIBPER" />
-      <layout:collectionItem title="appcot.montant" property="WB2MNT" type="money" style="text-align:right;"/>
-      <layout:collectionItem title="appcot.regularisation" property="WB2REG" type="money" style="text-align:right;"/>
-      <layout:collectionItem title="appcot.total" property="WMNTNET" type="money" style="text-align:right;"/>
-
-      </logic:notEqual>
-
-      <%
-
-      request.setAttribute("Numiterate", "1");
-
-      %>
-
-      </layout:collection>
-
-      <layout:row> 
-          <layout:pagerStatus key="pager.status.pager" /> 
-          <layout:pagerStatus key="pager.status.items"/> 
-      </layout:row> 
-
-      </layout:pager>
+          <layout:row> 
+              <layout:pagerStatus key="pager.status.pager" /> 
+              <layout:pagerStatus key="pager.status.items"/> 
+          </layout:row> 
+        </layout:pager>
       </layout:panel>
     </div>
   </div>
@@ -147,29 +136,29 @@ request.setAttribute("Numiterate", "0");
   <div class="col-xs-12 col-md-4">
     <div class="box box-mca-yellow">
       <div class="box-body">
-        <table>
+        <table style="width: 100%;">
           <tr>
             <th>TOTAL ECHEANCE</th>
             <td width="10"></td>
-            <td><%=(String)request.getAttribute("totecheance")%> &euro;</td>
+            <td style="text-align: right;"><%=(String)request.getAttribute("totecheance")%> &euro;</td>
           </tr>
 
           <tr>
             <th>TOTAL REGULARISATION</th>
             <td></td>
-            <td><%=(String)request.getAttribute("totregul")%> &euro;</td>
+            <td style="text-align: right;"><%=(String)request.getAttribute("totregul")%> &euro;</td>
           </tr>
 
           <tr>
             <th>SOLDE</th>
             <td></td>
-            <td><%=(String)request.getAttribute("solde")%> &euro;</td>
+            <td style="text-align: right;"><%=(String)request.getAttribute("solde")%> &euro;</td>
           </tr>
 
           <tr>
             <th>NET A PAYER</th>
             <td></td>
-            <td><%=(String)request.getAttribute("totnet")%> &euro;</td>
+            <td style="text-align: right;"><%=(String)request.getAttribute("totnet")%> &euro;</td>
           </tr>
         </table>
       </div>
@@ -178,69 +167,69 @@ request.setAttribute("Numiterate", "0");
 </div>
 
 <div class="row">
-  <layout:panel  styleClass="CORPS_DONNE" key="" width="100%" >
-    <div>
+  <div class="col-xs-12">
+    <layout:panel  styleClass="CORPS_DONNE" key="" width="100%" >
+      <div>
 
-      <tr >
-        <td width="100%" height="14" align="left" class="INFOLINE_MDP">
-        <strong>
-      Net à payer : <%=(String)request.getAttribute("totnet")%> &euro;
-        </strong>
-        </td>
-      </tr>
-      
-    <% if ((String)request.getAttribute("libPrelevemnt")!= null) {
-    %>
         <tr >
-        <td width="100%" height="14" align="left" class="INFOLINE_MDP"> 
-        <%=(String)request.getAttribute("libPrelevemnt")%>
-        </td>   
-      </tr>
-    <%
-    }
-    %>
-     <% if ((String)request.getAttribute("libcompte")  != null) {
-    %>
-
-       <tr>
-          <td width="100%" height="14" align="left" class="INFOLINE_MDP"> 
-        <%=(String)request.getAttribute("libcompte")%>
-        </td>
+          <td width="100%" height="14" align="left" class="INFOLINE_MDP">
+            <H3>Net à payer : <%=(String)request.getAttribute("totnet")%> &euro;</H3>
+          </td>
         </tr>
-    <%
+        
+      <% if ((String)request.getAttribute("libPrelevemnt")!= null) {
+      %>
+          <tr >
+          <td width="100%" height="14" align="left" class="INFOLINE_MDP"> 
+          <%=(String)request.getAttribute("libPrelevemnt")%>
+          </td>   
+        </tr>
+      <%
       }
-    %>
-      <tr heigth = "24">
-        
-        <td width="60%" height="18" align="left" class="INFOLINE_LOGIN"> 
-        
-        <logic:equal  name ="mode" value ="V" scope="request">
-        Cette télé-déclaration ne peut être modifiée...
-        </logic:equal>   
-        </td>   
+      %>
+       <% if ((String)request.getAttribute("libcompte")  != null) {
+      %>
 
-        <logic:equal  name ="mode" value ="M" scope="request">
-         <td  align="center" >
-         <input type="button" class="btn btn-warning" value="Aperçu avant envoi" onclick="javascript:prevBor();" class="BOUT1"/>
-         </td>
-         <td  align="center" >
-         <input type="button" class="btn btn-success" value="Valider" onclick="javascript:mailBor();" class="BOUT1"/>
-        </td>
-        </logic:equal>  
-      </tr>
+         <tr>
+            <td width="100%" height="14" align="left" class="INFOLINE_MDP"> 
+          <%=(String)request.getAttribute("libcompte")%>
+          </td>
+          </tr>
+      <%
+        }
+      %>
+        <tr heigth = "24">
+          
+          <td width="60%" height="18" align="left" class="INFOLINE_LOGIN"> 
+          
+          <logic:equal  name ="mode" value ="V" scope="request">
+          Cette télé-déclaration ne peut être modifiée...
+          </logic:equal>   
+          </td>   
+
+          <logic:equal  name ="mode" value ="M" scope="request">
+           <td  align="center" >
+           <input type="button" class="btn btn-warning" value="Aperçu avant envoi" onclick="javascript:prevBor();" class="BOUT1"/>
+           </td>
+           <td  align="center" >
+           <input type="button" class="btn btn-success" value="Valider" onclick="javascript:mailBor();" class="BOUT1"/>
+          </td>
+          </logic:equal>  
+        </tr>
+        
+      </div>
+
+
+
+
+      <div>
+        <tr> 
+          <td width="5%" height="27"><html:img page="/images/info.gif" border="0"/>  Les fenêtres pop-pup doivent êtres autorisées sur le site</td>
+        </tr>
+      </div>
       
-    </div>
-
-
-
-
-    <div>
-      <tr> 
-        <td width="5%" height="27"><html:img page="/images/info.gif" border="0"/>  Les fenêtres pop-pup doivent êtres autorisées sur le site</td>
-      </tr>
-    </div>
-    
-  </layout:panel>
+    </layout:panel>
+  </div>
 </div>
 
 

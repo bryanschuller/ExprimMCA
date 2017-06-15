@@ -20,12 +20,7 @@
 <div class="box box-mca-yellow">
 	<div class="box-body">
 		<layout:form action="/changementAllEmails" focus="newEmail" onsubmit="return validateModEmailForm(this)"> 
-			<tr>
-				<td colspan="2" style="font-size:12px;"></td>
-			</tr>
-
 			<%@ include file="/jsp/formulaires/incl/eMailForm.jsp"%>
-
 
 			<layout:formActions> 
 				<layout:row>

@@ -3,13 +3,12 @@
 
 <tr>
 	<td>
-		<table class="FORM_BEN" align="center">
+		<table align="center" style="width: 100%">
 			<tr>
 				<td colspan="2">
-					<layout:collection name="lEmails" id="lEmails" title=""
-						styleClass="LIGNE_A" styleClass2="LIGNE_B" >
-							<layout:collectionItem title="Designation" property="designation" width="400px"/>
-							<layout:collectionItem title="e-mail" property="email" width="150px"/>
+					<layout:collection name="lEmails" id="lEmails" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B" >
+						<layout:collectionItem title="Designation" property="designation"/>
+						<layout:collectionItem title="e-mail" property="email"/>
 					</layout:collection>
 				</td>
 			</tr>

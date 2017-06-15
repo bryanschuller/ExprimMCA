@@ -6,13 +6,9 @@
 --%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <layout:html layout ="false">
-	<div id="container">
-		<div id="header">
-			<tiles:insert attribute="header" />
-		</div>
-	  
+	<div id="container"> 
 		<div class="content">
-			<div  id="panneauCentre"> <!-- pour compatibilité avec footer_incl_commun  -->
+			<div>
 			    <noscript>
 					<span class="NO_JS">
 	    				<layout:message key="general.info.noscript" /> &nbsp;&nbsp;
@@ -23,13 +19,10 @@
 				<div class="LOGIN_BACKG" align="center">  
 					<tiles:insert attribute="body" />
 				</div>
-			 
-			</div> <!-- Fin "PANNEAUPRINCIPAL" du header -->
-		
-			<div id="footerMCA">
-			    <tiles:insert attribute="footer" />
-			</div>
-		  
-		</div> <!-- Fin "content" du header -->
-	</div> <!-- Fin "container" du header -->
+			</div> 	  
+		</div> 
+	</div>
+	<div>
+	    <tiles:insert attribute="footer" />
+	</div>
 </layout:html>

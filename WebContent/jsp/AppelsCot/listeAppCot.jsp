@@ -17,14 +17,12 @@
 			<div class="box box-mca-yellow">
 				<layout:panel  styleClass="EXC_NONE" key="" width="98%" align="center">
 					<layout:pager linksLocation="top" maxPageItems="12"  styleClass="PAGER">
-						<layout:collection  name="lstappelscot" id="lstapp" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B" >
+						<layout:collection  name="lstappelscot" id="lstapp" title="" styleClass="LIGNE_A" styleClass2="LIGNE_B" styleId="cotisationsList">
 						 	
 							<layout:collectionItem title="appcot.detail" >
-							
 								<logic:equal name="lstapp"  property="WTYPE" value="N" >
 									<a href="<%= (String)request.getContextPath()  %>/viewDetAppCotN.do?id=<bean:write name="lstapp" property="indexAppCot"/>" > <html:img page="/pictures/oeil.gif" alt="voir le détail" border="0"/> </a>
 								</logic:equal>
-							
 							</layout:collectionItem>
 							
 							<layout:collectionItem title="appcot.numeroappel" property="WNUMPIECE" />
@@ -43,6 +41,12 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+	    $(document).ready(function () {
+			$($('#cotisationsList').find('tr:first').find("th")[5]).css({'text-align':'right'})
+			$($('#cotisationsList').find('tr:first').find("th")[6]).css({'text-align':'right'})
+	    });
+	</script>
 </logic:present>
 
 <logic:notPresent name="lstappelscot">			
