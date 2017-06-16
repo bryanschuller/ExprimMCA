@@ -49,44 +49,46 @@
 </div>	
 </td></tr></table>	
 			
-<div class="box box-mca-yellow">
-	<div class="box-header with-border">
-		<h3 class="box-title"><bean:message key="tiers.filtre.pec" /></h3>
-	</div>
-	<div class="box-body">
-		<layout:form action="listePEC.do?action=filtre" focus="nomAdh"> 
-			<tr>
-				<td colspan="2">
-					<table class="FORM_BEN" align="center">
-						<tr><td align="center">
-							<table class="FORM_BEN_SUB_LEFT" style="min-width:300px;">
-								<layout:field key="tiers.liste.pec.filtre.nom" property="nomAdh" size="30" maxlength="30" type="text" isRequired="false"/> 
-								<tr><td colspan = '2'>
-									<table style="margin: 10px;"><tr>
-									<td><layout:checkbox property="stateOk" value="O" layout="false"/></td><th style="width:120px;padding-left: 5px;"><bean:message key="tiers.liste.pec.filtre.accepte" /></th>
-									<td><layout:checkbox property="stateFac" value="O" layout="false"/></td><th style="width:120px;padding-left: 5px;"><bean:message key="tiers.liste.pec.filtre.facture" /></th>
-									<td><layout:checkbox property="stateRej" value="O" layout="false"/></td><th style="width:120px;padding-left: 5px;"><bean:message key="tiers.liste.pec.filtre.rejete" /></th>
-									</tr></table>
-								</td></tr>					
+<div class="row">
+	<div class="col-xs-12 col-md-6">
+		<div class="box box-mca-yellow">
+			<div class="box-header with-border">
+				<h3 class="box-title"><bean:message key="tiers.filtre.pec" /></h3>
+			</div>
+			<div class="box-body">
+				<layout:form action="listePEC.do?action=filtre" focus="nomAdh"> 
+					<tr>
+						<td colspan="2">
+							<table class="FORM_BEN" align="center">
+								<tr><td align="center">
+									<table class="FORM_BEN_SUB_LEFT" style="min-width:300px;">
+										<layout:field key="tiers.liste.pec.filtre.nom" property="nomAdh" size="30" maxlength="30" type="text" isRequired="false"/> 
+										<tr><td colspan = '2'>
+											<table style="margin: 10px;"><tr>
+											<td><layout:checkbox property="stateOk" value="O" layout="false"/></td><th style="width:120px;padding-left: 5px;"><bean:message key="tiers.liste.pec.filtre.accepte" /></th>
+											<td><layout:checkbox property="stateFac" value="O" layout="false"/></td><th style="width:120px;padding-left: 5px;"><bean:message key="tiers.liste.pec.filtre.facture" /></th>
+											<td><layout:checkbox property="stateRej" value="O" layout="false"/></td><th style="width:120px;padding-left: 5px;"><bean:message key="tiers.liste.pec.filtre.rejete" /></th>
+											</tr></table>
+										</td></tr>					
+									</table>
+								</td></tr>
 							</table>
-						</td></tr>
-					</table>
-				</td>
-			</tr>
+						</td>
+					</tr>
 
-			<layout:formActions>
-				<layout:row>
-					<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
-					<layout:submit styleClass="btn" property="submit" value="Filtrer"/> 
-				</layout:row>	
-			</layout:formActions> 
-		</layout:form> 
+					<layout:formActions>
+						<layout:row>
+							<layout:reset styleClass="btn btn-danger" value="Rétablir"/> 
+							<layout:submit styleClass="btn" property="submit" value="Filtrer"/> 
+						</layout:row>	
+					</layout:formActions> 
+				</layout:form> 
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
 	</div>
 </div>
-
-
-<br/>
-
 
 <H2>
 	<div class="texteH">

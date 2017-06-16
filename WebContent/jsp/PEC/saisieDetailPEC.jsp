@@ -37,16 +37,34 @@ function unValid(){
 }
 </script>
 
-<br/>
-
-<div id="EXC_PRESENT_DATA_COL_1" style="margin-top:20px;">
-	<table >
-		<tr><th>Adhérent</th><td><bean:write name="PECAdherent" property="nomPrenom"/></td></tr>
-		<tr><th>N° S.S. de l'adhérent</th><td><layout:write name="PECAdherent" property="numRO" layout="false"/></td></tr>			
-	</table>
+<div class="row">
+	<div class="col-xs-12 col-md-6">
+		<div class="box box-mca-yellow">
+			<div class="box-body">
+				<div class="col-xs-12 col-md-6">
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<label>Adhérent</label>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<bean:write name="PECAdherent" property="nomPrenom"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<label>N° S.S. de l'adhérent</label>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<layout:write name="PECAdherent" property="numRO" layout="false"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6"></div>
 </div>
 
-<br/>
 
 <%
 String typePEC = (String) session.getAttribute("PECTypePEC");
@@ -295,7 +313,7 @@ if (null == typePEC){
 							</tr>			
 							
 							
-							<tr><td colspan="5" style="text-align:center;">
+							<tr><td colspan="5" style="text-align:center;padding: 5px;">
 								<span class="ERROR" style="text-align:left;">
 									<html:errors property="general" />
 								</span>
@@ -308,7 +326,7 @@ if (null == typePEC){
 				</table>
 			</td></tr>
 
-		<html:hidden name="PECForm" property="validPEC"/>
+			<html:hidden name="PECForm" property="validPEC"/>
 
 			<layout:formActions>
 				<layout:row>
