@@ -33,7 +33,6 @@
 			
 		</div> <!-- Fin "PANNEAUPRINCIPAL" du header -->
 		
-		<div id="footerMCA">
 			<tiles:insert attribute="footer" />
 		</div>
 		  
@@ -43,3 +42,9 @@
 
 		
 </layout:html>
+
+<style>
+	.main-footer {
+		margin-left: 0px; 
+	}
+</style>

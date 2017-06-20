@@ -22,7 +22,7 @@
 			</div> 	  
 		</div> 
 	</div>
-	<div>
+	<div style="position: absolute;bottom: 0px;height: 50px; width: 98%;">
 	    <tiles:insert attribute="footer" />
 	</div>
 </layout:html>

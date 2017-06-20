@@ -8,31 +8,47 @@
 	page="/images/RETURN.gif" alt="Retour" border="0" /></a></div>
 </H1>
 
+<div class="clearfix"></div>
 
-<br />
-
-<div id="EXC_PRESENT_DATA_COL_1" style="margin-top: 20px;">
-<table>
-	<tr>
-		<th>Prise en charge</th>
-		<td><layout:write name="ActPEC" property="typePEC" type="typePEC"
-			layout="false" /></td>
-	</tr>
-	<tr>
-		<th>Du</th>
-		<td><layout:write name="ActPEC" property="dateCreation"
-			type="dateYMD" layout="false" /></td>
-	</tr>
-	<tr>
-		<th>Adhérent</th>
-		<td><bean:write name="ActPEC" property="designationAdh" /></td>
-	</tr>
-	<tr>
-		<th>Montant facturé</th>
-		<td><layout:write name="ActPEC" property="mntFacture"
-			type="money" layout="false" /> &euro;</td>
-	</tr>
-</table>
+<div class="row">
+	<div class="col-xs-12 col-md-6">
+		<div class="box box-mca-yellow">
+			<div class="box-body">
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<label>Prise en charge</label>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<layout:write name="ActPEC" property="typePEC" type="typePEC" layout="false" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<label>Du</label>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<layout:write name="ActPEC" property="dateCreation" type="dateYMD" layout="false" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<label>Adhérent</label>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<bean:write name="ActPEC" property="designationAdh" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<label>Montant facturé</label>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<layout:write name="ActPEC" property="mntFacture" type="money" layout="false" /> &euro;
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="box box-mca-yellow">
@@ -76,7 +92,7 @@
 							<tr>
 								<th><bean:message key="tiers.facturer.modeJustif" /></th>
 								<td colspan="2"><layout:radios property="modeJustif" cols="2"
-									layout="false" styleClass="FORM_BEN"
+									layout="false" styleClass="margin5"
 									onchange="affMode(this.value);">
 									<layout:options collection="listeModeJustifPEC" property="tabcod"
 										labelProperty="tabdta" />

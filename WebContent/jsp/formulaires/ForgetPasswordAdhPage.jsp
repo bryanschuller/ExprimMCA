@@ -56,7 +56,11 @@
 <script type="text/javascript">
     $(document).ready(function () {
       $('body').addClass('login-page');
-
-      $('.main-footer').css({'margin-left':'0px'});
     });
 </script>
+
+<style>
+	.main-footer {
+		margin-left: 0px; 
+	}
+</style>

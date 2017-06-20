@@ -31,8 +31,7 @@
 		</div>
 		
 		
-		<div id="footerMCA">
-				<tiles:insert attribute="footer" />
+			<tiles:insert attribute="footer" />
 		</div>
 		  
 	</div> <!-- Fin "content" du header -->
@@ -41,3 +40,9 @@
 
 		
 </layout:html>
+
+<style>
+	.main-footer {
+		margin-left: 0px; 
+	}
+</style>

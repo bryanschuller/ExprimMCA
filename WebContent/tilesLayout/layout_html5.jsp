@@ -51,7 +51,7 @@ if(null == internaute){
 			</div>
 			
 			
-			<div id="footerMCA">		
+			<div>		
 				<tiles:insert attribute="footer" />			
 			</div>
 		</div>

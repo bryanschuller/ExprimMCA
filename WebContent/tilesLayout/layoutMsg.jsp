@@ -15,10 +15,6 @@ if (!grantFile) {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <layout:html layout ="false">
 	<div id="container">
-		<div id="header">
-			<tiles:insert attribute="header" />
-		</div>
-	  
 		<div class="content">
 			<div  id="panneauCentreALeft">
 				<noscript>
@@ -29,10 +25,14 @@ if (!grantFile) {
 				</noscript>
 				<tiles:insert attribute="body" />
 			</div>
-				
-			<div id="footerMCA">
 					<tiles:insert attribute="footer" />
 			</div>
 		</div>
 	</div>
 </layout:html>
+
+<style>
+	.main-footer {
+		margin-left: 0px; 
+	}
+</style>

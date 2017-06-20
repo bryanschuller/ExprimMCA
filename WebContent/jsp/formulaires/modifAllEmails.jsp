@@ -19,7 +19,7 @@
 
 <div class="box box-mca-yellow">
 	<div class="box-body">
-		<layout:form action="/changementAllEmails" focus="newEmail" onsubmit="return validateModEmailForm(this)"> 
+		<layout:form action="/changementAllEmails" focus="newEmail" styleId="emailForm" onsubmit="return validateModEmailForm(this)"> 
 			<%@ include file="/jsp/formulaires/incl/eMailForm.jsp"%>
 
 			<layout:formActions> 
@@ -34,3 +34,28 @@
 
 <html:javascript formName="modEmailForm" />
 
+<style type="text/css">
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 767px) { 
+		#emailForm > table:first-child
+		{
+			width: 100%;
+		}
+	}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 991px) {
+		#emailForm > table:first-child
+		{
+			width: 70%;
+		} 
+	 }
+
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: 1199) { 
+		#emailForm > table:first-child
+		{
+			width: 50%;
+		} 
+	 }
+</style>

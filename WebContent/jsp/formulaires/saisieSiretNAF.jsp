@@ -28,11 +28,10 @@
 		<tr><td colspan="2">
 			
 			<table align="center" style="text-align:left;">
-				<layout:field key="ent.saisie.ape" property="naf" size="8" maxlength="5" isRequired="true" type="text"/> 
+				<layout:field key="ent.saisie.ape" styleClass="codeApe" property="naf" size="8" maxlength="5" isRequired="true" type="text"/> 
 
 				<tr><td colspan="2"><table>			
-				<layout:datagrid 	model="datagrid" property="listSiret" 
-									multipleSelectionAllowed="false" selectionAllowed="false">
+				<layout:datagrid model="datagrid" property="listSiret" multipleSelectionAllowed="false" selectionAllowed="false">
 					
 					<layout:datagridColumn title="ent.saisie.siren" property="siren" />								
 					<layout:datagridColumn title="ent.saisie.nic" property="nic" />
@@ -236,3 +235,8 @@ Enfants_INIT();
 
 
 
+<style type="text/css">
+	th.codeApe, td.codeApe {
+		padding-bottom : 25px;
+	}
+</style>

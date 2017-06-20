@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<!-- Definitions for Tiles  -->
+<!-- 
+  This file contains definitions common to all struts module.
+  In particular, it contains the main layout and the common menus.
+  There is also the main page as a portal.
+-->
+
+<tiles-definitions>
+
+  <!-- =======================================================  -->
+  <!-- Master definition  										-->
+  <!-- =======================================================  -->
+
+  <!-- Doc index page description  -->
+ 
+  <definition name="layout" path="/tilesLayout/layout.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="menu"   value="/tilesLayout/menu.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+	  
+	  <put name="T1/header" value="/T1/tilesLayout/header.jsp" />
+	  <put name="T1/menu"   value="/T1/tilesLayout/menu.jsp" />
+	  <put name="T1/body"   value="" />
+	  <put name="T1/footer" value="/T1/tilesLayout/footer.jsp" />
+  </definition>
+  
+  <definition name="layoutNoDoss" path="/tilesLayout/layout.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="menu"   value="/tilesLayout/menuNoDoss.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+	  
+	  <put name="T1/header" value="/T1/tilesLayout/header.jsp" />
+	  <put name="T1/menu"   value="/T1/tilesLayout/menuNoDoss.jsp" />
+	  <put name="T1/body"   value="" />
+	  <put name="T1/footer" value="/T1/tilesLayout/footer.jsp" />
+  </definition>
+  
+  <definition name="layoutErreur" path="/tilesLayout/layoutErreur.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="menu"   value="/tilesLayout/menuNoDoss.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+	  
+	  <put name="T1/header" value="/T1/tilesLayout/header.jsp" />
+	  <put name="T1/menu"   value="/T1/tilesLayout/menuNoDoss.jsp" />
+	  <put name="T1/body"   value="" />
+	  <put name="T1/footer" value="/T1/tilesLayout/footer.jsp" />
+  </definition>
+  
+  <definition name="layoutLogin" path="/tilesLayout/layoutLogin.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+	  
+	  <put name="T1/header" value="/T1/tilesLayout/header.jsp" />
+	  <put name="T1/body"   value="" />
+	  <put name="T1/footer" value="/T1/tilesLayout/footer.jsp" />
+  </definition>
+  
+  <definition name="layoutMsg" path="/tilesLayout/layoutMsg.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+	  
+	  <put name="T1/header" value="/T1/tilesLayout/header.jsp" />
+	  <put name="T1/body"   value="" />
+	  <put name="T1/footer" value="/T1/tilesLayout/footer.jsp" />
+  </definition>
+  
+
+  
+  <definition name="layoutNoMenu" path="/tilesLayout/layoutNoMenu.jsp">
+	  <put name="header" value="/tilesLayout/header.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footer.jsp" />
+	  
+	  <put name="T1/header" value="/T1/tilesLayout/header.jsp" />
+	  <put name="T1/body"   value="" />
+	  <put name="T1/footer" value="/T1/tilesLayout/footer.jsp" />
+  </definition>
+  
+  
+  <definition name="layoutXL" path="/tilesLayout/layoutXL.jsp">
+	  <put name="body"   value="" />
+	  
+	  <put name="T1/body"   value="" />
+  </definition>
+  
+  <definition name="layoutPopUp" path="/tilesLayout/layoutPopUp.jsp">
+	  <put name="body"   value="" />
+	  
+	  <put name="T1/body"   value="" />
+  </definition>
+  
+
+  
+  <definition name="layoutMCA" path="/tilesLayout/layout.jsp">
+	  <put name="header"   value="/tilesLayout/headerMCA.jsp" />
+	  <put name="menu" value="/tilesLayout/menuMCA.jsp" />
+	  <put name="body"   value="" />
+	  <put name="footer" value="/tilesLayout/footerMCA.jsp" />
+  </definition>
+  
+    <definition name="pagetestMCA" extends="layoutMCA">
+    	<put name="body"   value="/jsp/blank.jsp" />
+  	</definition>
+  <!-- =======================================================  -->
+  <!-- Main page body definitions  									-->
+  <!-- =======================================================  -->
+
+	<definition name="pageErreur" extends="layoutErreur">
+    	<put name="body"   value="/jsp/erreur/erreur.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/erreur/erreur.jsp" />
+  	</definition>
+  	
+  	<definition name="pageErreur403" extends="layoutErreur">
+  		<put name="body" value="/jsp/erreur/erreur403.jsp" />
+  		<put name="T1/body" value="/T1/jsp/erreur/erreur403.jsp" />
+  	</definition>
+  	
+  	<definition name="pageErreur404" extends="layoutErreur">
+  		<put name="body" value="/jsp/erreur/erreur404.jsp" />
+  		<put name="T1/body" value="/T1/jsp/erreur/erreur404.jsp" />
+  	</definition>
+  	
+  	<definition name="pageErreur500" extends="layoutErreur">
+  		<put name="body" value="/jsp/erreur/erreur500.jsp" />
+  		<put name="T1/body" value="/T1/jsp/erreur/erreur500.jsp" />
+  	</definition>
+  	
+  	
+  	<definition name="pageLogin" extends="layoutLogin">
+    	<put name="body"   value="/jsp/formulaires/login.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/login.jsp" />
+  	</definition>
+  	
+  	 <definition name="pageLoginGest" extends="layoutLogin">
+    	<put name="body"   value="/jsp/EspaceGest/loginGest.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/EspaceGest/loginGest.jsp" />
+  	</definition>
+  	
+  	  	<definition name="pageLoginADH" extends="layoutLogin">
+    	<put name="body"   value="/jsp/formulaires/loginADH.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/loginADH.jsp" />
+  	</definition>
+  	
+  	  	<definition name="pageLoginENT" extends="layoutLogin">
+    	<put name="body"   value="/jsp/formulaires/loginENT.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/loginENT.jsp" />
+  	</definition>
+  	
+  	  	<definition name="pageLoginTIE" extends="layoutLogin">
+    	<put name="body"   value="/jsp/formulaires/loginTIE.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/loginTIE.jsp" />
+  	</definition>
+  
+
+  	<definition name="pageMaintenance" extends="layoutNoMenu">
+    	<put name="body" value="/jsp/messages/msgMaintenance.jsp" />
+    	<put name="T1/body" value="/T1/jsp/messages/msgMaintenance.jsp" />
+  	</definition>
+  	
+  	<definition name="pagePrblTech" extends="layoutNoMenu">
+    	<put name="body" value="/jsp/messages/msgPrblTech.jsp" />
+    	<put name="T1/body" value="/T1/jsp/messages/msgPrblTech.jsp" />
+  	</definition>
+  	
+  	 <definition name="pageAssistance" extends="layoutNoMenu">
+    	<put name="body" value="/jsp/messages/Assistance.jsp" />
+    	<put name="T1/body" value="/T1/jsp/messages/Assistance.jsp" />
+  	</definition>
+  	
+  	 <definition name="pageIncident" extends="layoutNoMenu">
+    	<put name="body" value="/jsp/messages/msgIncident.jsp" />
+    	<put name="T1/body" value="/T1/jsp/messages/msgIncident.jsp" />
+  	</definition>
+  	
+  	<definition name="pageAccueil" extends="layout">
+    	<put name="body" value="/jsp/accueil.jsp" />
+    	<put name="T1/body" value="/T1/jsp/accueil.jsp" />
+  	</definition>
+  
+	<definition name="pageTexte" extends="layout">
+    	<put name="body" value="/jsp/messages/pageTexte.jsp" />
+    	<put name="T1/body" value="/T1/jsp/messages/pageTexte.jsp" />
+  	</definition>
+    <definition name="pageTexteNoDoss" extends="layoutMsg">
+    	<put name="body" value="/jsp/messages/pageTexte.jsp" />
+    	<put name="T1/body" value="/T1/jsp/messages/pageTexte.jsp" />
+  	</definition>
+  
+  	<definition name="pageListeDossiers" extends="layout">
+    	<put name="body"   value="/jsp/listeDossiers.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/listeDossiers.jsp" />
+  	</definition>
+  
+  	<definition name="pageAccederDossier" extends="layout">
+    	<put name="body"   value="/jsp/accederDossier.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/accederDossier.jsp" />
+  	</definition>
+
+  	<definition name="pageChangementMotPasse" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/changementMotPasse.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/changementMotPasse.jsp" />
+  	</definition>
+  	
+  	<definition name="pageSaisieDecPapier" extends="layoutNoDoss">
+    	<put name="body"   value="/jsp/formulaires/saisieDecPapier.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/saisieDecPapier.jsp" />
+  	</definition>
+  	
+  	<definition name="pageSaisieSiretNAF" extends="layoutNoDoss">
+    	<put name="body"   value="/jsp/formulaires/saisieSiretNAF.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/saisieSiretNAF.jsp" />
+  	</definition>
+  	
+  	<definition name="pageModifSiretNAF" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/saisieSiretNAF.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/saisieSiretNAF.jsp" />
+  	</definition>
+  	
+  	<definition name="pageModifInfoInterlocuteur" extends="layout">
+    	<put name="body"   value="/jsp/modifInfoInterlocuteur.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/modifInfoInterlocuteur.jsp" />
+  	</definition>
+  	
+  	<definition name="pageFinaliseInfosInterloc" extends="layout">
+  		<put name="body" value="/jsp/formulaires/finaliseInfosInterloc.jsp"/>
+  		<put name="T1/body" value="/T1/jsp/formulaires/finaliseInfosInterloc.jsp"/>
+  	</definition>
+  	
+  	<definition name="pageConfirmeModifInfoInterlocuteur" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/confirmeModifInfoInterlocuteur.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/confirmeModifInfoInterlocuteur.jsp" />
+  	</definition>
+  	<definition name="pageErreurModifInfoInterlocuteur" extends="layout">
+    	<put name="body"   value="/jsp/erreurModifInfoInterlocuteur.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/erreurModifInfoInterlocuteur.jsp" />
+  	</definition>
+
+  <definition name="pageDetailAdherent" extends="layout">
+    	<put name="body"   value="/jsp/detailAdherent.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/detailAdherent.jsp" />
+  	</definition>
+  	
+  	<definition name="pageDetailContrat" extends="layout">
+    	<put name="body"   value="/jsp/detailContrat.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/detailContrat.jsp" />
+  	</definition>
+  	
+  	
+  	
+  	<definition name="pageSemiModifAdresse" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modAdr.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/modAdr.jsp" />
+  	</definition>
+  	
+  	<definition name="pageSemiModifBanque" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modRIB.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/modRIB.jsp" />
+  	</definition>
+  	
+  	<definition name="pageModifAdresse" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modAdr.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/modAdr.jsp" />
+  	</definition>
+  	
+  	<definition name="pageMsgOk" extends="layout">
+    	<put name="body"   value="/jsp/messages/msgOk.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/messages/msgOk.jsp" />
+  	</definition>
+  
+  <definition name="pageMsgFinalise" extends="layoutNoMenu">
+    	<put name="body"   value="/jsp/messages/msgOk.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/messages/msgOk.jsp" />
+  	</definition>
+  	
+  <definition name="pageMsgErreur" extends="layout">
+    	<put name="body"   value="/jsp/messages/msgErreur.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/messages/msgErreur.jsp" />
+  	</definition>
+  	
+  	
+  	
+  	<definition name="pageMsgOkMsg" extends="layoutMsg">
+    	<put name="body"   value="/jsp/messages/msgOk.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/messages/msgOk.jsp" />
+  	</definition>
+  
+  <definition name="pageMsgErreurMsg" extends="layoutMsg">
+    	<put name="body"   value="/jsp/messages/msgErreur.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/messages/msgErreur.jsp" />
+  	</definition>
+  	
+  	
+  	
+  
+  	<definition name="pageModifEmails" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modifEmails.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/modifEmails.jsp" />
+  	</definition>
+  	
+  	<definition name="pageFinaliseEmails" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/finaliseEmails.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/finaliseEmails.jsp" />
+  	</definition>
+	
+	<definition name="pageModifAllEmails" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modifAllEmails.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/modifAllEmails.jsp" />
+  	</definition>
+  	
+  	<definition name="pagePrestations" extends="layout">
+    	<put name="body"   value="/jsp/prestations/listePaiementsTabbed.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/prestations/listePaiementsTabbed.jsp" />
+  	</definition>
+  	
+  	<definition name="pagePrestationsTiers" extends="layout">
+  	    <put name="body"   value="/jsp/prestations/listePaiementsDossierTiers.jsp" />
+  	    <put name="T1/body"   value="/T1/jsp/prestations/listePaiementsDossierTiers.jsp" />
+  	</definition>
+
+  	<definition name="pageEnvoyerMessage" extends="layout">
+    	<put name="body"   value="/jsp/echanges/envoyerMessage.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/echanges/envoyerMessage.jsp" />
+  	</definition>
+  	
+  	<definition name="pageUpload" extends="layout">
+    	<put name="body"   value="/jsp/echanges/upload.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/echanges/upload.jsp" />
+  	</definition>
+  	
+  	<definition name="pageListeEchanges" extends="layout">
+    	<put name="body"   value="/jsp/echanges/listeEchanges.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/echanges/listeEchanges.jsp" />
+  	</definition>
+  	
+  	<definition name="pageDetailsEchange" extends="layout">
+    	<put name="body"   value="/jsp/echanges/detailsEchange.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/echanges/detailsEchange.jsp" />
+  	</definition>
+  	
+  	<definition name="pageRepondreEchange" extends="layout">
+    	<put name="body"   value="/jsp/echanges/repondreEchange.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/echanges/repondreEchange.jsp" />
+  	</definition>
+  	
+  	<definition name="pageDetailsEffectif" extends="layout">
+    	<put name="body"   value="/jsp/detailsEffectif.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/detailsEffectif.jsp" />
+  	</definition>
+  	
+  	<definition name="pageListeDocuments" extends="layout">
+    	<put name="body"   value="/jsp/listeDocuments.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/listeDocuments.jsp" />
+  	</definition>
+  	
+  	<definition name="pageListeDocAdmin" extends="layout">
+    	<put name="body"   value="/jsp/listeDocAdmin.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/listeDocAdmin.jsp" />
+  	</definition>
+  	  	
+  	<definition name="pageListeDocumentsExged" extends="layout">
+    	<put name="body"   value="/jsp/Exged/listesDocumentsExgedDossier.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/Exged/listesDocumentsExgedDossier.jsp" />
+  	</definition>
+  	
+  	
+  	<definition name="pageModifTelephone" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/ModifTelephone.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/ModifTelephone.jsp" />
+  	</definition>
+  	
+  	<definition name="pageModifInterlocuteur" extends="layout">
+    	<put name="body"   value="/jsp/formulaires/modifInfoInterlocuteur.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/formulaires/modifInfoInterlocuteur.jsp" />
+  	</definition>
+
+  	
+	<definition name="pageAppelsCot" extends="layout">
+    	<put name="body"   value="/jsp/AppelsCot/listeAppCot.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/AppelsCot/listeAppCot.jsp" />
+  	</definition>
+
+  	<definition name="pageDetAppelsCot" extends="layout">
+    	<put name="body"   value="/jsp/AppelsCot/listeDetAppCot.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/AppelsCot/listeDetAppCot.jsp" />
+  	</definition>
+  	
+  	
+  	
+  	<definition name="pageForgetPswd" extends="layoutNoMenu">
+  		<put name="body" value="/jsp/formulaires/ForgetPasswordAdhPage.jsp"/>
+  		<put name="T1/body" value="/T1/jsp/formulaires/ForgetPasswordAdhPage.jsp"/>
+  	</definition>
+  	
+  	<!-- ========== Prise En Charge en ligne (PEC) ================================== -->
+	
+  	<definition name="pageListePEC" extends="layout">
+    	<put name="body"   value="/jsp/PEC/listePEC.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/PEC/listePEC.jsp" />
+  	</definition>
+  	
+  	<definition name="pageDetailPEC" extends="layout">
+    	<put name="body"   value="/jsp/PEC/detailPEC.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/PEC/detailPEC.jsp" />
+  	</definition>
+  	
+  	<definition name="pageFacturerPEC" extends="layout">
+    	<put name="body"   value="/jsp/PEC/facturerPEC.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/PEC/facturerPEC.jsp" />
+  	</definition>
+  	
+  	<definition name="pageSaisieAdhPEC" extends="layout">
+    	<put name="body"   value="/jsp/PEC/saisieAdhPEC.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/PEC/saisieAdhPEC.jsp" />
+  	</definition>
+  	
+  	<definition name="pageSaisieDetailPEC" extends="layout">
+    	<put name="body"   value="/jsp/PEC/saisieDetailPEC.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/PEC/saisieDetailPEC.jsp" />
+  	</definition>
+  	
+  	<!-- ========== Exged ================================== -->
+	
+  	<definition name="pageListeDecSante" extends="layout">
+    	<put name="body"   value="/jsp/incl/listeDecSante.jsp" />
+    	<put name="T1/body"   value="/T1/jsp/incl/listeDecSante.jsp" />
+  	</definition>
+  	
+  	
+  	
+  
+  	<definition name="pageNoAction" extends="layoutNoMenu">
+  		<put name="body" value="/jsp/erreur/noAction.jsp" />
+  		<put name="T1/body" value="/T1/jsp/erreur/noAction.jsp" />
+  	</definition>
+	
+	  	<!-- ========== Teledeclarations ================================ -->
+  	
+  	<definition name="pageListeSuiviTeledeclarations" extends="layout">
+  		<put name="body" value="/jsp/teledeclarations/listeSuiviTeledeclarations.jsp" />
+  		<put name="T1/body" value="/T1/jsp/teledeclarations/listeSuiviTeledeclarations.jsp" />
+  	</definition>
+  	
+  	<definition name="pageDetailTeledeclaration" extends="layout">
+  		<put name="body" value="/jsp/teledeclarations/detailTeledeclaration.jsp" />
+  		<put name="T1/body" value="/T1/jsp/teledeclarations/detailTeledeclaration.jsp" />
+  	</definition>
+  	
+  	 <definition name="pageGetTelecommentaire" extends="layoutPopUp">
+  		<put name="body" value="/jsp/teledeclarations/teleCommentaire.jsp" />
+  		<put name="T1/body" value="/T1/jsp/teledeclarations/teleCommentaire.jsp" />
+  	</definition>
+  	
+  	<definition name="pageManageAppCot" extends="layout">
+  		<put name="body" value="/jsp/teledeclarations/ModifVisuAppelsCot.jsp" />
+  		<put name="T1/body" value="/T1/jsp/teledeclarations/ModifVisuAppelsCot.jsp" />
+  	</definition>
+  	
+   	<definition name="pageMsgValide" extends="layout">
+  		<put name="body" value="/jsp/teledeclarations/msgValide.jsp" />
+  		<put name="T1/body" value="/T1/jsp/teledeclarations/msgValide.jsp" />
+  	</definition>	
+  	
+  	<definition name="pageMvtDone" extends="layout">
+  		<put name="body" value="/jsp/teledeclarations/MvtDone.jsp" />
+  		<put name="T1/body" value="/T1/jsp/teledeclarations/MvtDone.jsp" />
+  	</definition>
+  	
+  	<definition name="pageMouvAppCot" extends="layoutPopUp">
+  		<put name="body" value="/jsp/teledeclarations/mouvementAppCot.jsp" />
+  		<put name="T1/body" value="/T1/jsp/teledeclarations/mouvementAppCot.jsp" />
+  	</definition>
+  	
+  	<definition name="pageWait" extends="layoutPopUp">
+  		<put name="body" value="/jsp/teledeclarations/wait.jsp"/>
+  		<put name="T1/body" value="/T1/jsp/teledeclarations/wait.jsp"/>
+  	</definition>
+  	
+  	<definition name="pageWaitHtml" extends="layoutPopUp">
+  		<put name="body" value="/jsp/teledeclarations/waitstart.html"/>
+  		<put name="T1/body" value="/T1/jsp/teledeclarations/waitstart.html"/>
+  	</definition>
+  	
+  	<definition name="pageMouvAppCotImpossible" extends="layoutPopUp">
+  		<put name="body" value="/jsp/teledeclarations/mouvementAppCotImpossible.jsp"/>
+  		<put name="T1/body" value="/T1/jsp/teledeclarations/mouvementAppCotImpossible.jsp"/>
+  	</definition>
+  	
+  	<definition name="pageNoDoss" extends="layoutNoMenu">
+  		<put name="body" value="/jsp/messages/msgNoDoss.jsp"/>
+  		<put name="T1/body" value="/T1/jsp/messages/msgNoDoss.jsp"/>
+  	</definition>
+
+
+  <!-- ======================doc generation================= -->
+  
+   <definition name="pageListeDocWordCollab" extends="layout">
+   		<put name="body" value="/jsp/EspaceCollab/listeDocWordCollab.jsp"/>
+   		<put name="T1/body" value="/T1/jsp/EspaceCollab/listeDocWordCollab.jsp"/>
+   </definition>
+   
+   <definition name="pageListeVarInDocCollab" extends="layout">
+   		<put name="body" value="/jsp/EspaceCollab/listeVarInDocCollab.jsp"/>
+   		<put name="T1/body" value="/T1/jsp/EspaceCollab/listeVarInDocCollab.jsp"/>
+   </definition>
+   
+    <definition name="pagePromptVarDoc" extends="layout">
+   		<put name="body" value="/jsp/EspaceCollab/promptVarDoc.jsp"/>
+   		<put name="T1/body" value="/T1/jsp/EspaceCollab/promptVarDoc.jsp"/>
+   </definition>
+   
+    <definition name="pageRecapVarDocWord" extends="layout">
+   		<put name="body" value="/jsp/EspaceCollab/RecapVarDocWord.jsp"/>
+   		<put name="T1/body" value="/T1/jsp/EspaceCollab/RecapVarDocWord.jsp"/>
+   </definition>
+   
+    <definition name="pageMsgCollabEnvoi" extends="layout">
+   		<put name="body" value="/jsp/EspaceCollab/msgCollabEnvoi.jsp"/>
+   		<put name="T1/body" value="/T1/jsp/EspaceCollab/msgCollabEnvoi.jsp"/>
+   </definition>
+   
+  <!-- =========================paiement en ligne ======================= -->
+  
+   <definition name="pagePaiementLigne" extends="layout">
+   		<put name="body" value="/jsp/paiement/PaiementLigne.jsp"/>
+   		<put name="T1/body" value="/T1/jsp/paiement/PaiementLigne.jsp"/>
+   </definition>
+  
+   <definition name="pagePaiementLigneSIPS" extends="layout">
+   		<put name="body" value="/jsp/paiement/PaiementLigneSIPS.jsp"/>
+   		<put name="T1/body" value="/T1/jsp/paiement/PaiementLigneSIPS.jsp"/>
+   </definition>
+   	
+</tiles-definitions>
