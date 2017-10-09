@@ -64,20 +64,22 @@
 		<br>
 	</logic:present>
 
-	<logic:present name="lEchange" scope="request">
-		<H2>
-			<% if(((Vector) request.getAttribute("lEchange")).size() == 1){ %>
-				<div class="texteH">Vous avez un message non lu</div>
-			<% }else{ %>
-				<div class="texteH">Vous avez des messages non lus</div>
-			<% } %>
-			<div class="iconesH">
-				<a href="<%= (String) request.getContextPath() %>/listeEchanges.do" >Voir tous les échanges</a>
-			</div>
-		</H2>
-		<div class="clearfix"></div>
-		<%@ include file="/jsp/echanges/incl/incl_listeEchanges.jsp"%>	
-	</logic:present>
+	<% if(!typeD.equals("TIE")) { %>
+		<logic:present name="lEchange" scope="request">
+			<H2>
+				<% if(((Vector) request.getAttribute("lEchange")).size() == 1){ %>
+					<div class="texteH">Vous avez un message non lu</div>
+				<% }else{ %>
+					<div class="texteH">Vous avez des messages non lus</div>
+				<% } %>
+				<div class="iconesH">
+					<a href="<%= (String) request.getContextPath() %>/listeEchanges.do" >Voir tous les échanges</a>
+				</div>
+			</H2>
+			<div class="clearfix"></div>
+			<%@ include file="/jsp/echanges/incl/incl_listeEchanges.jsp"%>	
+		</logic:present>
+	<% } %>
 </logic:notPresent>
 
 <% if(typeD.equals("ADH") || typeD.equals("BEN")){ %>
